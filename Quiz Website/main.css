@@ -1,0 +1,31 @@
+body {
+  font-family: arial;
+  background-color: rgb(24, 141, 195);
+  color: rgb(208, 212, 248);
+}
+
+img {
+  width: 50%;
+  border: 10px double white;
+}
+
+h1 {
+  text-shadow: 3px 3px rgb(77, 127, 128);
+  font-family: 'Franklin Gothic Medium';
+}
+
+button {
+  background-color: rgb(142, 142, 142);
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#FishResult,
+#PlanktonResult,
+#HumanResult,
+#SpiderResult,
+#NudibranchResult {
+  display: none;
+}
