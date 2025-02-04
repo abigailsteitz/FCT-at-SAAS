@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 body {
-  background: rgba(248, 196, 228, 0.3);
+  background: rgb(255, 0, 157);
   text-align: center;
 }
 
 h1 {
   font-size: 50px;
-  color: rgb(211, 99, 255);
+  color: rgba(145, 0, 203, 0.963);
 }
 
 p {
