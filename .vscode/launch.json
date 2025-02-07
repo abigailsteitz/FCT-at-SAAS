@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Poem Website",
             "type": "chrome",
@@ -18,6 +19,12 @@
             "type": "chrome",
             "request": "launch",
             "file": "${workspaceFolder}/Business Website/index.html"
+        },
+        {
+            "name": "HTML Forms",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}/HTML Forms/index.html"
         },
         {
             "name": "Quiz Website",
