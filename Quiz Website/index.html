@@ -1,81 +1,84 @@
-<!--This head tag is not shown to the user. It is metadata about the page and read by browsers and search engines-->
+<!--This head tag is not shown to the user. It is metadata about the page and read by browsers and search engines.--> 
 <head>
-  <!--This is the title at the top of your browser tab. Search engines will also use this to display to users-->
-  <title>Quiz Website</title>
-  <!--This tag brings in the CSS you write to add style to your webpage-->
+  <!--This is the title at the top of your browser tab. Search engines will also use this to display to users.--> 
+  <title>What Type of Person Are You?</title>
+  <!--This tag brings in the CSS you write to add style to your webpage.--> 
   <link rel="stylesheet" href="main.css" />
-  <!--This tag brings in the JavaScript you write to add behavior to your webpage-->
+  <!--This tag brings in the JavaScript you write to add behavior to your webpage.--> 
   <script src="app.js"></script>
 </head>
 
-<!--Start of student website-->
+<!--Start of quiz website--> 
 <body>
-  <h1>What animal is currently taking this quiz?</h1>
+  <h1>What Type of Person Are You?</h1>
 
-  <h2>Question 1: How many eyes do you have?</h2>
-  <input type="radio" name="eyes" id="8Eyes">
-  <label></label><br>
-  <input type="radio" name="eyes" id="2Eyes">
-  <label>2</label><br>
-  <input type="radio" name="eyes" id="PlanktonEyes">
-  <label>1, 2, 3 or more depending on the species</label><br>
+  <h2>Question 1: What’s your favorite way to spend a weekend?</h2>
+  <input type="radio" name="weekend" id="Adventure">
+  <label>Going on an adventure</label><br>
+  <input type="radio" name="weekend" id="Reading">
+  <label>Reading a book</label><br>
+  <input type="radio" name="weekend" id="VideoGames">
+  <label>Playing video games</label><br>
 
-  <h2>Question 2: How do you move?</h2>
-  <input type="radio" name="travel" id="Walk">
-  <label>Walk</label><br>
-  <input type="radio" name="travel" id="Swim">
-  <label>Swim</label><br>
-  <input type="radio" name="travel" id="SwimUpsideDown">
-  <label>Swim upside down</label><br>
+  <h2>Question 2: What’s your ideal vacation spot?</h2>
+  <input type="radio" name="vacation" id="Beach">
+  <label>Beach</label><br>
+  <input type="radio" name="vacation" id="Mountains">
+  <label>Mountains</label><br>
+  <input type="radio" name="vacation" id="City">
+  <label>Big city</label><br>
 
-  <h2>Question 3: Can you be drowned in water?</h2>
-  <input type="radio" name="ocean" id="Yes">
-  <label>Yes</label><br>
-  <input type="radio" name="ocean" id="No">
-  <label>No</label><br>
+  <h2>Question 3: What kind of food do you like the most?</h2>
+  <input type="radio" name="food" id="Sweet">
+  <label>Sweet</label><br>
+  <input type="radio" name="food" id="Savory">
+  <label>Savory</label><br>
+  <input type="radio" name="food" id="Spicy">
+  <label>Spicy</label><br>
 
-  <h2>Question 4: How would escape from being chased?</h2>
-  <input type="radio" name="chase" id="Fight">
-  <label>Fight back</label><br>
-  <input type="radio" name="chase" id="Run">
-  <label>Run</label><br>
-  <input type="radio" name="chase" id="Secrete">
-  <label>Secret acid, ink, or slime</label><br>
-  <input type="radio" name="chase" id="Diplomacy">
-  <label>Use diplomacy</label><br>
+  <h2>Question 4: What do you do when faced with a tough problem?</h2>
+  <input type="radio" name="problem" id="Think">
+  <label>Think it through</label><br>
+  <input type="radio" name="problem" id="Ask">
+  <label>Ask someone for help</label><br>
+  <input type="radio" name="problem" id="Ignore">
+  <label>Ignore it and hope it goes away</label><br>
 
-  <h2>Question 5: Are you smart?</h2>
-  <input type="radio" name="int" id="Of course">
-  <label>Yo, I'm a web designer, of course</label><br>
-  <input type="radio" name="int" id="Probably not">
-  <label>Probably not</label><br>
-  <input type="radio" name="int" id="Head empty">
-  <label>Head empty</label><br>
-  <input type="radio" name="int" id="Existential Crisis">
-  <label>Define "smart". Define "you". Define "are".</label>
+  <h2>Question 5: How do you like to express yourself?</h2>
+  <input type="radio" name="expression" id="Art">
+  <label>Through art</label><br>
+  <input type="radio" name="expression" id="Music">
+  <label>Through music</label><br>
+  <input type="radio" name="expression" id="Talking">
+  <label>By talking to people</label><br>
   <br>
   <br>
 
-  <button onclick="seeResult()">See Result</button>
-  <div id="FishResult">
-    <h1>You're a Fish</h1>
-    <img src='Fish.jpg'>
+  <button onclick="seeResult()">See My Result</button>
+  <div id="AdventureResult">
+    <h1>You are an Explorer!</h1>
+    <img src='download (1).jpg'>
+    <p>You love adventure and discovering new places. You are always up for a challenge and enjoy pushing your limits.</p>
   </div>
-  <div id="PlanktonResult">
-    <h1>You're Plankton</h1>
-    <img src='Plankton.jpg'>
+  <div id="BookResult">
+    <h1>You are a Thinker!</h1>
+    <img src='images (1).jpg'>
+    <p>You enjoy learning new things and exploring ideas. You prefer a quiet place to dive into books, creativity, or deep conversations.</p>
   </div>
-  <div id="HumanResult">
-    <h1>You're a Human</h1>
-    <img src='Human.jpg'>
+  <div id="GamerResult">
+    <h1>You are a Strategist!</h1>
+    <img src='download (2).jpg'>
+    <p>You like solving puzzles, planning ahead, and tackling challenges in fun and engaging ways. You probably love gaming and competition.</p>
   </div>
-  <div id="SpiderResult">
-    <h1>You're a Spider</h1>
-    <img src='Spider.jpg'>
+  <div id="BeachResult">
+    <h1>You are a Free Spirit!</h1>
+    <img src='download (3).jpg'>
+    <p>You go with the flow and love relaxation. You enjoy the simple pleasures of life and value peace and happiness.</p>
   </div>
-  <div id="NudibranchResult">
-    <h1>You're a Nudibranch (Sea Slug)</h1>
-    <img src='Nudibranch.jpg'>
+  <div id="MusicResult">
+    <h1>You are a Creative Soul!</h1>
+    <img src='download (4).jpg'>
+    <p>You express yourself through music, art, or conversation. You bring color and energy into the world around you.</p>
   </div>
 </body>
-<!--End of student website-->
+<!--End of quiz website-->
