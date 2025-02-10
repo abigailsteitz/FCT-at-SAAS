@@ -4,7 +4,7 @@
 
 /* Style the button that is used to open and close the collapsible content */
 #testCollapsibleButton {
-  background-color: whitesmoke;
+  background-color: rgb(141, 23, 23);
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -18,7 +18,7 @@
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 #testCollapsibleButton:hover {
-  background-color: #ccc;
+  background-color: #1900ff;
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -26,7 +26,7 @@
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #000000;
 }
 
 .result {
@@ -35,11 +35,11 @@
 }
 
 .yeppers {
-  color: green
+  color: rgb(0, 0, 0)
 }
 
 .nopers {
-  color: red
+  color: rgb(0, 0, 0)
 }
 
 /* Start the resulting level at hidden */
