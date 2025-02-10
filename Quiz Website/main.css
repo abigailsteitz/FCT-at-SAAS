@@ -1,21 +1,21 @@
 body {
   font-family: arial;
-  background-color: rgb(24, 141, 195);
-  color: rgb(208, 212, 248);
+  background-color: rgb(209, 231, 241);
+  color: rgb(0, 0, 0);
 }
 
 img {
   width: 50%;
-  border: 10px double white;
+  border: 10px double rgb(19, 37, 75);
 }
 
 h1 {
-  text-shadow: 3px 3px rgb(77, 127, 128);
+  text-shadow: 3px 3px rgb(6, 34, 59);
   font-family: 'Franklin Gothic Medium';
 }
 
 button {
-  background-color: rgb(142, 142, 142);
+  background-color: rgb(207, 228, 248);
   color: white;
   padding: 5px 10px;
   font-size: 16px;
