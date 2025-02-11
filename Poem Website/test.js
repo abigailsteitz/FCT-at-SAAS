@@ -33,7 +33,7 @@ let tests = [
     },
     {
         name: "Change the background color",
-        originalValueInCode: "rgba(248, 196, 228, 0.3)",
+        originalValueInCode: "hsla(323, 78.80%, 87.10%, 0.30)",
         getValueFunc: () => {
             let bodyStyle = window.getComputedStyle(document.body);
             return bodyStyle.backgroundColor;
