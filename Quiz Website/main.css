@@ -1,7 +1,7 @@
 body {
   font-family: arial;
-  background-color: rgb(24, 141, 195);
-  color: rgb(208, 212, 248);
+  background-color: rgb(204, 219, 226);
+  color: rgb(36, 36, 39);
 }
 
 img {
@@ -10,7 +10,6 @@ img {
 }
 
 h1 {
-  text-shadow: 3px 3px rgb(77, 127, 128);
   font-family: 'Franklin Gothic Medium';
 }
 
@@ -22,10 +21,10 @@ button {
   border-radius: 5px;
 }
 
-#FishResult,
-#PlanktonResult,
-#HumanResult,
-#SpiderResult,
-#NudibranchResult {
+#WineResult,
+#MatteResult,
+#FadeResult,
+#SmokeResult,
+#Stonecoldresult {
   display: none;
 }

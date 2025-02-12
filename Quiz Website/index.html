@@ -10,72 +10,96 @@
 
 <!--Start of student website-->
 <body>
-  <h1>What animal is currently taking this quiz?</h1>
+  <h1>Which colorpop palette reflects the real you?</h1>
 
-  <h2>Question 1: How many eyes do you have?</h2>
-  <input type="radio" name="eyes" id="8Eyes">
-  <label></label><br>
-  <input type="radio" name="eyes" id="2Eyes">
-  <label>2</label><br>
-  <input type="radio" name="eyes" id="PlanktonEyes">
-  <label>1, 2, 3 or more depending on the species</label><br>
+  <h2>What zodiac element is your sign?</h2>
+  <input type="radio" name="element" id="Fire">
+  <label>Fire (Aries, Leo, Sagittarius)</label><br>
+  <input type="radio" name="element" id="Earth">
+  <label>Earth (Taurus, Virgo, Capricorn)</label><br>
+  <input type="radio" name="element" id="Water">
+  <label>Water (Cancer, Scorpio, Pisces)</label><br>
+  <input type ="radio" name="element" id="Air">
+  <label>Air (Gemini, Libra, Aquarius)</label><br>
 
-  <h2>Question 2: How do you move?</h2>
-  <input type="radio" name="travel" id="Walk">
-  <label>Walk</label><br>
-  <input type="radio" name="travel" id="Swim">
-  <label>Swim</label><br>
-  <input type="radio" name="travel" id="SwimUpsideDown">
-  <label>Swim upside down</label><br>
+  <h2>What's one word would you use to describe yourself?</h2>
+  <input type="radio" name="word" id="Introspective">
+  <label>Introspective</label><br>
+  <input type="radio" name="word" id="Reliable">
+  <label>Reliable</label><br>
+  <input type="radio" name="word" id="Poised">
+  <label>Poised</label><br>
+  <input type="radio" name="word" id="Balanced">
+  <label>Balanced</label><br>
+  <input type="radio" name="word" id="Artsy">
+  <label>Artsy</label><br>
+  <input type="radio" name="word" id="Charismatic">
+  <label>Charismatic</label><br>
 
-  <h2>Question 3: Can you be drowned in water?</h2>
-  <input type="radio" name="ocean" id="Yes">
-  <label>Yes</label><br>
-  <input type="radio" name="ocean" id="No">
-  <label>No</label><br>
+  <h2>What breakfast item would you start your day with?</h2>
+  <input type="radio" name="breakfast" id="Coffee">
+  <label>A cup of coffee</label><br>
+  <input type="radio" name="breakfast" id="Avacado">
+  <label>Avacado toast</label><br>
+  <input type="radio" name="breakfast" id="Oatmeal">
+  <label>Oatmeal with cinnamon</label><br>
+  <input type="radio" name="breakfast" id="Smoothie">
+  <label>Smoothie bowl with fresh fruit</label><br>
+  <input type="radio" name="breakfast" id="Pancakes">
+  <label>Pancakes with blueberries</label><br>
+  <input type="radio" name="breakfast" id="Eggs">
+  <label>Eggs and toast</label><br>
 
-  <h2>Question 4: How would escape from being chased?</h2>
-  <input type="radio" name="chase" id="Fight">
-  <label>Fight back</label><br>
-  <input type="radio" name="chase" id="Run">
-  <label>Run</label><br>
-  <input type="radio" name="chase" id="Secrete">
-  <label>Secret acid, ink, or slime</label><br>
-  <input type="radio" name="chase" id="Diplomacy">
-  <label>Use diplomacy</label><br>
+  <h2>What's your go-to Saturday activity?</h2>
+  <input type="radio" name="activity" id="Home">
+  <label>Stay at home and read</label><br>
+  <input type="radio" name="activity" id="Friends">
+  <label>Meet up with friends</label><br>
+  <input type="radio" name="activity" id="Mall">
+  <label>Go to the mall</label><br>
+  <input type="radio" name="activity" id="Movies">
+  <label>Go to the movies</label><br>
+  <input type="radio" name="activity" id="Hike">
+  <label>Go for a hike</label><br>
+  <input type="radio" name="activity" id="Museum">
+  <label>Go to a museum or gallery</label><br>
 
-  <h2>Question 5: Are you smart?</h2>
-  <input type="radio" name="int" id="Of course">
-  <label>Yo, I'm a web designer, of course</label><br>
-  <input type="radio" name="int" id="Probably not">
-  <label>Probably not</label><br>
-  <input type="radio" name="int" id="Head empty">
-  <label>Head empty</label><br>
-  <input type="radio" name="int" id="Existential Crisis">
-  <label>Define "smart". Define "you". Define "are".</label>
+  <h2>What candle scent do you want for your home?</h2>
+  <input type="radio" name="scent" id="OceanBreeze">
+  <label>Ocean Breeze</label><br>
+  <input type="radio" name="scent" id="CashmereVanilla">
+  <label>Cashmere Vanilla</label><br>
+  <input type="radio" name="scent" id="LavenderChamomile">
+  <label>Lavender Chamomile</label><br>
+  <input type="radio" name="scent" id="SandalwoodAmber">
+  <label>Sandalwood Amber</label>
+  <input type="radio" name="scent" id="Tangerine">
+  <label>Tangerine</label>
+  <input type="radio" name="scent" id="BalsamCedar">
+  <label>Balsam Cedar</label>
   <br>
   <br>
 
   <button onclick="seeResult()">See Result</button>
-  <div id="FishResult">
-    <h1>You're a Fish</h1>
-    <img src='Fish.jpg'>
+  <div id="Stonecoldresult">
+    <h1>Stone Cold Fox!</h1>
+    <img src='stone.jpg'>
   </div>
-  <div id="PlanktonResult">
-    <h1>You're Plankton</h1>
-    <img src='Plankton.jpg'>
+  <div id="SmokeResult">
+    <h1>Smoke N' Roses!</h1>
+    <img src='Smoke.jpg'>
   </div>
-  <div id="HumanResult">
-    <h1>You're a Human</h1>
-    <img src='Human.jpg'>
+  <div id="FadeResult">
+    <h1>Fade Into Hue!</h1>
+    <img src='Fadeintohue.jpg'>
   </div>
-  <div id="SpiderResult">
-    <h1>You're a Spider</h1>
-    <img src='Spider.jpg'>
+  <div id="MatteResult">
+    <h1>Matte About Hue!</h1>
+    <img src='Matte.jpg'>
   </div>
-  <div id="NudibranchResult">
-    <h1>You're a Nudibranch (Sea Slug)</h1>
-    <img src='Nudibranch.jpg'>
+  <div id="WineResult">
+    <h1>Wine & Only!</h1>
+    <img src='wineonly.jpg'>
   </div>
 </body>
 <!--End of student website-->
