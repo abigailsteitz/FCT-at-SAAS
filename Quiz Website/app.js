@@ -2,10 +2,10 @@
 'use strict';
 
 function resetResult() {
-    document.getElementById("FishResult").style.display = "none";
-    document.getElementById("PlanktonResult").style.display = "none";
-    document.getElementById("HumanResult").style.display = "none";
-    document.getElementById("SpiderResult").style.display = "none";
+    document.getElementById("BeachResult").style.display = "none";
+    document.getElementById("MountainResult").style.display = "none";
+    document.getElementById("RelaxResult").style.display = "none";
+    document.getElementById("TownResult").style.display = "none";
 }
 function seeResult() {
     var Fish = 0;
@@ -74,14 +74,14 @@ function seeResult() {
     resetResult();
 
     if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Fish) {
-        document.getElementById("FishResult").style.display = "block";
+        document.getElementById("BeachResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Plankton) {
-        document.getElementById("PlanktonResult").style.display = "block";
+        document.getElementById("MountainResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Human) {
-        document.getElementById("HumanResult").style.display = "block";
+        document.getElementById("RelaxResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Spider) {
-        document.getElementById("SpiderResult").style.display = "block";
+        document.getElementById("TownResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Nudibranch) {
-        document.getElementById("NudibranchResult").style.display = "block";
+        document.getElementById("CityResult").style.display = "block";
     }
 }
