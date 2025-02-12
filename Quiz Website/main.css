@@ -1,7 +1,7 @@
 body {
   font-family: arial;
-  background-color: rgb(24, 141, 195);
-  color: rgb(208, 212, 248);
+  background-color: rgb(75, 89, 42);
+  color: rgb(255, 0, 174);
 }
 
 img {
@@ -10,22 +10,22 @@ img {
 }
 
 h1 {
-  text-shadow: 3px 3px rgb(77, 127, 128);
+  text-shadow: 3px 3px rgb(0, 255, 72);
   font-family: 'Franklin Gothic Medium';
 }
 
 button {
-  background-color: rgb(142, 142, 142);
+  background-color: rgb(141, 120, 74);
   color: white;
   padding: 5px 10px;
   font-size: 16px;
   border-radius: 5px;
 }
 
-#FishResult,
-#PlanktonResult,
-#HumanResult,
-#SpiderResult,
-#NudibranchResult {
+#milkresult,
+#frenchfryresult,
+#icecreamresult,
+#saladresult,
+#frostedflakesresult {
   display: none;
 }
