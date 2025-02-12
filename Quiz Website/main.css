@@ -22,10 +22,10 @@ button {
   border-radius: 5px;
 }
 
-#FishResult,
-#PlanktonResult,
-#HumanResult,
-#SpiderResult,
-#NudibranchResult {
+#Healthy,
+#VeryHealthy,
+#NotHealthy,
+#VeryNotHealthy,
+#Avereage {
   display: none;
 }

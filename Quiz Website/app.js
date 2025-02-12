@@ -2,86 +2,86 @@
 'use strict';
 
 function resetResult() {
-    document.getElementById("FishResult").style.display = "none";
-    document.getElementById("PlanktonResult").style.display = "none";
-    document.getElementById("HumanResult").style.display = "none";
-    document.getElementById("SpiderResult").style.display = "none";
+    document.getElementById("Healthy").style.display = "none";
+    document.getElementById("VeryHealthy").style.display = "none";
+    document.getElementById("NotHealthy").style.display = "none";
+    document.getElementById("VeryNotHealthy").style.display = "none";
+    document.getElementById("Average").style.display = "none"
 }
 function seeResult() {
-    var Fish = 0;
-    var Plankton = 0;
-    var Nudibranch = 0;
-    var Human = 0;
-    var Spider = 0;
+    var Healthy = 0;
+    var Very_Healthy = 0;
+    var Average = 0;
+    var Not_Healthy = 0;
+    var Very_not_Healthy = 0;
 
-    if (document.getElementById("8Eyes").checked) {
-        Spider += 1;
-    } else if (document.getElementById("2Eyes").checked) {
-        Human += 1;
-        Fish += 1;
-        Nudibranch += 1;
+    if (document.getElementById("2").checked) {
+        Very_not_Healthy += 1;
+    } else if (document.getElementById("1").checked) {
+        Not_Healthy += 1;
+        Healthy += 1;
+        Average += 2;
     } else {
         // 1, 2, 3 or more depending on the species
-        Plankton += 1;
+        Very_Healthy += 1;
     }
 
-    if (document.getElementById("Walk").checked) {
-        Human += 1;
-        Spider += 1;
-        Nudibranch += 1;
-    } else if (document.getElementById("Swim").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
+    if (document.getElementById("4").checked) {
+        Not_Healthy += 1;
+        Very_not_Healthy += 1;
+        Average += 1;
+    } else if (document.getElementById("5").checked) {
+        Healthy += 1;
+        Average += 1;
     } else {
         // Swim upside down
-        Nudibranch += 1;
+        Very_Healthy += 1;
     }
 
-    if (document.getElementById("Yes").checked) {
-        Human += 1;
-        Spider += 1;
-    } else if (document.getElementById("No").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
+    if (document.getElementById("8").checked) {
+        Not_Healthy += 1;
+        Very_not_Healthy += 1;
+    } else if (document.getElementById("7").checked) {
+        Healthy += 1;
+        Very_Healthy += 2;
+        Average += 1;
     }
 
-    if (document.getElementById("Fight").checked) {
-        Spider += 1;
-    } else if (document.getElementById("Run").checked) {
-        Fish += 1;
-        Plankton += 1;
-    } else if (document.getElementById("Secrete").checked) {
-        Nudibranch += 1;
+    if (document.getElementById("9").checked) {
+        Very_Healthy += 1;
+    } else if (document.getElementById("10").checked) {
+        Healthy += 1;
+        Very_Healthy += 1;
+    } else if (document.getElementById("12").checked) {
+        Average += 1;
     } else {
         // Use Diplomacy
-        Human += 1;
+        Not_Healthy += 1;
     }
 
-    if (document.getElementById("Of course").checked) {
-        Spider += 1;
-    } else if (document.getElementById("Probably not").checked) {
-        Fish += 1;
-    } else if (document.getElementById("Head empty").checked) {
-        Plankton += 1;
-        Nudibranch += 1;
+    if (document.getElementById("15").checked) {
+        Very_not_Healthy += 1;
+    } else if (document.getElementById("14").checked) {
+        Average += 1;
+    } else if (document.getElementById("13").checked) {
+        Very_Healthy += 1;
+        Healthy += 1;
     } else {
         // Existential Crisis
-        Human += 1;
+        Average += 1;
     }
 
     resetResult();
 
-    if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Fish) {
-        document.getElementById("FishResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Plankton) {
-        document.getElementById("PlanktonResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Human) {
-        document.getElementById("HumanResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Spider) {
-        document.getElementById("SpiderResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Nudibranch) {
-        document.getElementById("NudibranchResult").style.display = "block";
+    if (Math.max(Healthy, Very_Healthy, Not_Healthy, Very_not_Healthy, Average) === Healthy) {
+        document.getElementById("Healthy").style.display = "block";
+    } else if (Math.max(Healthy, Very_Healthy, Not_Healthy, Very_not_Healthy, Average) === Very_Healthy) {
+        document.getElementById("VeryHealthy").style.display = "block";
+    } else if (Math.max(Healthy, Very_Healthy, Not_Healthy, Very_not_Healthy, Average) === Not_Healthy) {
+        document.getElementById("NotHealthy").style.display = "block";
+    } else if (Math.max(Healthy, Very_Healthy, Not_Healthy, Very_not_Healthy, Average) === Very_not_Healthy) {
+        document.getElementById("VeryNotHealthy").style.display = "block";
+    } else if (Math.max(Healthy, Very_Healthy, Not_Healthy, Very_not_Healthy, Average) === Average) {
+        document.getElementById("Average").style.display = "block";
     }
 }
