@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://imageio.forbes.com/specials-images/dam/imageserve/877330410/0x0.jpg?format=jpg&height=600&width=1200&fit=bounds');
 
 body {
-  background: rgba(248, 196, 228, 0.3);
+  background: hsla(229, 90%, 55%, 0.302);
   text-align: center;
 }
 
 h1 {
   font-size: 50px;
-  color: rgb(211, 99, 255);
+  color: #08168f;
 }
 
 p {
