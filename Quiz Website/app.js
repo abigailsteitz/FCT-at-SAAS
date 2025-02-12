@@ -2,86 +2,86 @@
 'use strict';
 
 function resetResult() {
-    document.getElementById("FishResult").style.display = "none";
-    document.getElementById("PlanktonResult").style.display = "none";
-    document.getElementById("HumanResult").style.display = "none";
-    document.getElementById("SpiderResult").style.display = "none";
+    document.getElementById("EagleResult").style.display = "none";
+    document.getElementById("Barnicalresult").style.display = "none";
+    document.getElementById("MutantResult").style.display = "none";
+    document.getElementById("penguinResult").style.display = "none";
 }
 function seeResult() {
-    var Fish = 0;
-    var Plankton = 0;
-    var Nudibranch = 0;
-    var Human = 0;
-    var Spider = 0;
+    var Eagle = 0;
+    var Barnicle = 0;
+    var dumpling = 0;
+    var Mutant = 0;
+    var penguin = 0;
 
-    if (document.getElementById("8Eyes").checked) {
-        Spider += 1;
-    } else if (document.getElementById("2Eyes").checked) {
-        Human += 1;
-        Fish += 1;
-        Nudibranch += 1;
+    if (document.getElementById("Fruit").checked) {
+        penguin += 1;
+    } else if (document.getElementById("Vegtables").checked) {
+        Mutant += 1;
+        Eagle += 1;
+        dumpling += 1;
     } else {
         // 1, 2, 3 or more depending on the species
-        Plankton += 1;
+        Barnicle += 1;
     }
 
     if (document.getElementById("Walk").checked) {
-        Human += 1;
-        Spider += 1;
-        Nudibranch += 1;
+        Mutant += 1;
+        penguin += 1;
+        dumpling += 1;
     } else if (document.getElementById("Swim").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
+        Eagle += 1;
+        Barnicle += 1;
+        dumpling += 1;
     } else {
         // Swim upside down
-        Nudibranch += 1;
+        dumpling += 1;
     }
 
     if (document.getElementById("Yes").checked) {
-        Human += 1;
-        Spider += 1;
+        Mutant += 1;
+        penguin += 1;
     } else if (document.getElementById("No").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
+        Eagle += 1;
+        Barnicle += 1;
+        dumpling += 1;
     }
 
     if (document.getElementById("Fight").checked) {
-        Spider += 1;
+        penguin += 1;
     } else if (document.getElementById("Run").checked) {
-        Fish += 1;
-        Plankton += 1;
+        Eagle += 1;
+        Barnicle += 1;
     } else if (document.getElementById("Secrete").checked) {
-        Nudibranch += 1;
+        dumpling += 1;
     } else {
         // Use Diplomacy
-        Human += 1;
+        Mutant += 1;
     }
 
     if (document.getElementById("Of course").checked) {
-        Spider += 1;
+        penguin += 1;
     } else if (document.getElementById("Probably not").checked) {
-        Fish += 1;
+        Eagle += 1;
     } else if (document.getElementById("Head empty").checked) {
-        Plankton += 1;
-        Nudibranch += 1;
+        Barnicle += 1;
+        dumpling += 1;
     } else {
         // Existential Crisis
-        Human += 1;
+        Mutant += 1;
     }
 
     resetResult();
 
-    if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Fish) {
-        document.getElementById("FishResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Plankton) {
-        document.getElementById("PlanktonResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Human) {
-        document.getElementById("HumanResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Spider) {
-        document.getElementById("SpiderResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Nudibranch) {
-        document.getElementById("NudibranchResult").style.display = "block";
+    if (Math.max(Eagle, Barnicle, Mutant, penguin, dumpling) === Eagle) {
+        document.getElementById("EagleResult").style.display = "block";
+    } else if (Math.max(Eagle, Barnicle, Mutant, penguin, dumpling) === Barnicle) {
+        document.getElementById("Barnicalresult").style.display = "block";
+    } else if (Math.max(Eagle, Barnicle, Mutant, penguin, dumpling) === Mutant) {
+        document.getElementById("MutantResult").style.display = "block";
+    } else if (Math.max(Eagle, Barnicle, Mutant, penguin, dumpling) === penguin) {
+        document.getElementById("penguinResult").style.display = "block";
+    } else if (Math.max(Eagle, Barnicle, Mutant, penguin, dumpling) === dumpling) {
+        document.getElementById("dumplingresult").style.display = "block";
     }
 }
