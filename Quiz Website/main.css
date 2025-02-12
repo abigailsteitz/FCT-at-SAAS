@@ -22,10 +22,10 @@ button {
   border-radius: 5px;
 }
 
-#FishResult,
-#PlanktonResult,
-#HumanResult,
-#SpiderResult,
-#NudibranchResult {
+#BeachResult,
+#MountainResult,
+#RelaxResult,
+#TownResult,
+#CityResult {
   display: none;
 }
