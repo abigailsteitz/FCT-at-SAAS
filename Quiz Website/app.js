@@ -2,86 +2,98 @@
 'use strict';
 
 function resetResult() {
-    document.getElementById("FishResult").style.display = "none";
-    document.getElementById("PlanktonResult").style.display = "none";
-    document.getElementById("HumanResult").style.display = "none";
-    document.getElementById("SpiderResult").style.display = "none";
+    document.getElementById("BigHero6").style.display = "none";
+    document.getElementById("Moana").style.display = "none";
+    document.getElementById("FrozenII").style.display = "none";
+    document.getElementById("Tarzan").style.display = "none";
+    document.getElementById("ThePrincessandtheFrog").style.display = "none";
 }
 function seeResult() {
-    var Fish = 0;
-    var Plankton = 0;
-    var Nudibranch = 0;
-    var Human = 0;
-    var Spider = 0;
+    var BigHero6 = 0;
+    var Moana = 0;
+    var FrozenII = 0;
+    var Tarzan = 0;
+    var ThePrincessandtheFrog = 0;
 
-    if (document.getElementById("8Eyes").checked) {
-        Spider += 1;
-    } else if (document.getElementById("2Eyes").checked) {
-        Human += 1;
-        Fish += 1;
-        Nudibranch += 1;
+    if (document.getElementById("BeautyandtheBeast").checked) {
+        ThePrincessandtheFrog += 1;
+    } else if (document.getElementById("SleepingBeauty").checked) {
+        Tarzan += 1;
+        BigHero6 += 1;
+        FrozenII += 1;
     } else {
         // 1, 2, 3 or more depending on the species
-        Plankton += 1;
+        Moana += 1;
     }
 
-    if (document.getElementById("Walk").checked) {
-        Human += 1;
-        Spider += 1;
-        Nudibranch += 1;
-    } else if (document.getElementById("Swim").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
+    if (document.getElementById("Olaf").checked) {
+        Tarzan += 1;
+        ThePrincessandtheFrog += 1;
+        FrozenII += 1;
+    } else if (document.getElementById("Baymax").checked) {
+        BigHero6 += 1;
+        Moana += 1;
+        FrozenII += 1;
     } else {
         // Swim upside down
-        Nudibranch += 1;
+        FrozenII += 1;
     }
 
-    if (document.getElementById("Yes").checked) {
-        Human += 1;
-        Spider += 1;
-    } else if (document.getElementById("No").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
+    if (document.getElementById("Ariel").checked) {
+        Tarzan += 1;
+        ThePrincessandtheFrog += 1;
+    } else if (document.getElementById("SnowWhite").checked) {
+        BigHero6 += 1;
+        Moana += 1;
+        FrozenII += 1;
     }
 
-    if (document.getElementById("Fight").checked) {
-        Spider += 1;
-    } else if (document.getElementById("Run").checked) {
-        Fish += 1;
-        Plankton += 1;
-    } else if (document.getElementById("Secrete").checked) {
-        Nudibranch += 1;
+    if (document.getElementById("Pawpsicle").checked) {
+        ThePrincessandtheFrog += 1;
+    } else if (document.getElementById("Ratatouille").checked) {
+        BigHero6 += 1;
+        Moana += 1;
     } else {
         // Use Diplomacy
-        Human += 1;
+        Tarzan += 1;
+        FrozenII += 1;
     }
 
-    if (document.getElementById("Of course").checked) {
-        Spider += 1;
-    } else if (document.getElementById("Probably not").checked) {
-        Fish += 1;
-    } else if (document.getElementById("Head empty").checked) {
-        Plankton += 1;
-        Nudibranch += 1;
+    if (document.getElementById("LiShang").checked) {
+        ThePrincessandtheFrog += 1;
+    } else if (document.getElementById("Aladdin").checked) {
+        BigHero6 += 1;
+        Moana += 1;
+   
     } else {
         // Existential Crisis
-        Human += 1;
+        Tarzan += 1;
+        FrozenII += 1;
+    }
+
+    if (document.getElementById("DaisyDuck").checked) {
+        ThePrincessandtheFrog += 1;
+        Moana += 1;
+    } else if (document.getElementById("MinnieMouse").checked) {
+        BigHero6 += 1;
+        Tarzan += 1;
+   
+    } else {
+        // Existential Crisis
+        FrozenII += 1;
     }
 
     resetResult();
 
-    if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Fish) {
-        document.getElementById("FishResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Plankton) {
-        document.getElementById("PlanktonResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Human) {
-        document.getElementById("HumanResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Spider) {
-        document.getElementById("SpiderResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Nudibranch) {
-        document.getElementById("NudibranchResult").style.display = "block";
+    if (Math.max(BigHero6, Moana, Tarzan, ThePrincessandtheFrog, FrozenII) === BigHero6) {
+        document.getElementById("BigHero6").style.display = "block";
+    } else if (Math.max(BigHero6, Moana, Tarzan, ThePrincessandtheFrog, FrozenII) === Moana) {
+        document.getElementById("Moana").style.display = "block";
+    } else if (Math.max(BigHero6, Moana, Tarzan, ThePrincessandtheFrog, FrozenII) === Tarzan) {
+        document.getElementById("FrozenII").style.display = "block";
+    } else if (Math.max(BigHero6, Moana, Tarzan, ThePrincessandtheFrog, FrozenII) === ThePrincessandtheFrog) {
+        document.getElementById("Tarzan").style.display = "block";
+    } else if (Math.max(BigHero6, Moana, Tarzan, ThePrincessandtheFrog, FrozenII) === FrozenII) {
+        document.getElementById("ThePrincessandtheFrog").style.display = "block";
     }
 }
