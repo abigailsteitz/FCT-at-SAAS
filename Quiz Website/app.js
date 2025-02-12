@@ -2,11 +2,13 @@
 'use strict';
 
 function resetResult() {
-    document.getElementById("FishResult").style.display = "none";
-    document.getElementById("PlanktonResult").style.display = "none";
-    document.getElementById("HumanResult").style.display = "none";
-    document.getElementById("SpiderResult").style.display = "none";
+    document.getElementById("AdventureResult").style.display = "none";
+    document.getElementById("BookResult").style.display = "none";
+    document.getElementById("GamerResult").style.display = "none";
+    document.getElementById("BeachResult").style.display = "none";
+    document.getElementById("MusicResult").style.display = "none";
 }
+
 function seeResult() {
     var Fish = 0;
     var Plankton = 0;
@@ -14,74 +16,70 @@ function seeResult() {
     var Human = 0;
     var Spider = 0;
 
-    if (document.getElementById("8Eyes").checked) {
+    if (document.getElementById("Adventure").checked) {
         Spider += 1;
-    } else if (document.getElementById("2Eyes").checked) {
+    } else if (document.getElementById("Reading").checked) {
         Human += 1;
         Fish += 1;
         Nudibranch += 1;
     } else {
-        // 1, 2, 3 or more depending on the species
         Plankton += 1;
     }
 
-    if (document.getElementById("Walk").checked) {
+    if (document.getElementById("Beach").checked) {
         Human += 1;
         Spider += 1;
         Nudibranch += 1;
-    } else if (document.getElementById("Swim").checked) {
+    } else if (document.getElementById("Mountains").checked) {
         Fish += 1;
         Plankton += 1;
         Nudibranch += 1;
     } else {
-        // Swim upside down
         Nudibranch += 1;
     }
 
-    if (document.getElementById("Yes").checked) {
+    if (document.getElementById("Sweet").checked) {
         Human += 1;
         Spider += 1;
-    } else if (document.getElementById("No").checked) {
+    } else if (document.getElementById("Savory").checked) {
         Fish += 1;
         Plankton += 1;
         Nudibranch += 1;
     }
 
-    if (document.getElementById("Fight").checked) {
+    if (document.getElementById("Think").checked) {
         Spider += 1;
-    } else if (document.getElementById("Run").checked) {
+    } else if (document.getElementById("Ask").checked) {
         Fish += 1;
         Plankton += 1;
-    } else if (document.getElementById("Secrete").checked) {
+    } else if (document.getElementById("Ignore").checked) {
         Nudibranch += 1;
     } else {
-        // Use Diplomacy
         Human += 1;
     }
 
-    if (document.getElementById("Of course").checked) {
+    if (document.getElementById("Art").checked) {
         Spider += 1;
-    } else if (document.getElementById("Probably not").checked) {
+    } else if (document.getElementById("Music").checked) {
         Fish += 1;
-    } else if (document.getElementById("Head empty").checked) {
+    } else if (document.getElementById("Talking").checked) {
         Plankton += 1;
         Nudibranch += 1;
     } else {
-        // Existential Crisis
         Human += 1;
     }
 
     resetResult();
 
     if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Fish) {
-        document.getElementById("FishResult").style.display = "block";
+        document.getElementById("AdventureResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Plankton) {
-        document.getElementById("PlanktonResult").style.display = "block";
+        document.getElementById("BookResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Human) {
-        document.getElementById("HumanResult").style.display = "block";
+        document.getElementById("GamerResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Spider) {
-        document.getElementById("SpiderResult").style.display = "block";
+        document.getElementById("BeachResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Nudibranch) {
-        document.getElementById("NudibranchResult").style.display = "block";
+        document.getElementById("MusicResult").style.display = "block";
     }
 }
