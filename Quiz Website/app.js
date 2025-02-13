@@ -14,27 +14,27 @@ function seeResult() {
     var Human = 0;
     var Spider = 0;
 
-    if (document.getElementById("8Eyes").checked) {
+    if (document.getElementById("annoyed").checked) {
         Spider += 1;
-    } else if (document.getElementById("2Eyes").checked) {
+    } else if (document.getElementById("calm").checked) {
         Human += 1;
         Fish += 1;
         Nudibranch += 1;
     } else {
-        // 1, 2, 3 or more depending on the species
+        // happy
         Plankton += 1;
     }
 
-    if (document.getElementById("Walk").checked) {
+    if (document.getElementById("Fire").checked) {
         Human += 1;
         Spider += 1;
         Nudibranch += 1;
-    } else if (document.getElementById("Swim").checked) {
+    } else if (document.getElementById("Water").checked) {
         Fish += 1;
         Plankton += 1;
         Nudibranch += 1;
     } else {
-        // Swim upside down
+        // Light
         Nudibranch += 1;
     }
 
