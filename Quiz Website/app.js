@@ -14,7 +14,7 @@ function seeResult() {
     var Human = 0;
     var Spider = 0;
 
-    if (document.getElementById("BadId").checked) {
+    if (document.getElementById("8Eyes").checked) {
         Spider += 1;
     } else if (document.getElementById("2Eyes").checked) {
         Human += 1;
