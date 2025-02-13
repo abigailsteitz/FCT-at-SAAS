@@ -1,7 +1,7 @@
 <!--This head tag is not shown to the user. It is metadata about the page and read by browsers and search engines-->
 <head>
   <!--This is the title at the top of your browser tab. Search engines will also use this to display to users-->
-  <title>Quiz Website</title>
+  <title>Food Quiz</title>
   <!--This tag brings in the CSS you write to add style to your webpage-->
   <link rel="stylesheet" href="main.css" />
   <!--This tag brings in the JavaScript you write to add behavior to your webpage-->
@@ -10,72 +10,71 @@
 
 <!--Start of student website-->
 <body>
-  <h1>What animal is currently taking this quiz?</h1>
+  <h1>What food are you?</h1>
 
-  <h2>Question 1: How many eyes do you have?</h2>
-  <input type="radio" name="eyes" id="8Eyes">
-  <label></label><br>
-  <input type="radio" name="eyes" id="2Eyes">
-  <label>2</label><br>
-  <input type="radio" name="eyes" id="PlanktonEyes">
-  <label>1, 2, 3 or more depending on the species</label><br>
+  <h2>Question 1: How do you prefer your food?</h2>
+  <input type="radio" name="preference" id="Spicy">
+  <label>Spicy</label><br>
+  <input type="radio" name="preference" id="Sweet">
+  <label>Sweet</label><br>
+  <input type="radio" name="preference" id="Savory">
+  <label>Savory</label><br>
 
-  <h2>Question 2: How do you move?</h2>
-  <input type="radio" name="travel" id="Walk">
-  <label>Walk</label><br>
-  <input type="radio" name="travel" id="Swim">
-  <label>Swim</label><br>
-  <input type="radio" name="travel" id="SwimUpsideDown">
-  <label>Swim upside down</label><br>
+  <h2>Question 2: What's your favorite meal of the day?</h2>
+  <input type="radio" name="meal" id="Breakfast">
+  <label>Breakfast</label><br>
+  <input type="radio" name="meal" id="Lunch">
+  <label>Lunch</label><br>
+  <input type="radio" name="meal" id="Dinner">
+  <label>Dinner</label><br>
 
-  <h2>Question 3: Can you be drowned in water?</h2>
-  <input type="radio" name="ocean" id="Yes">
-  <label>Yes</label><br>
-  <input type="radio" name="ocean" id="No">
-  <label>No</label><br>
+  <h2>Question 3: How do you like your food cooked?</h2>
+  <input type="radio" name="cooked" id="Raw">
+  <label>Raw</label><br>
+  <input type="radio" name="cooked" id="Grilled">
+  <label>Grilled</label><br>
+  <input type="radio" name="cooked" id="Fried">
+  <label>Fried</label><br>
 
-  <h2>Question 4: How would escape from being chased?</h2>
-  <input type="radio" name="chase" id="Fight">
-  <label>Fight back</label><br>
-  <input type="radio" name="chase" id="Run">
-  <label>Run</label><br>
-  <input type="radio" name="chase" id="Secrete">
-  <label>Secret acid, ink, or slime</label><br>
-  <input type="radio" name="chase" id="Diplomacy">
-  <label>Use diplomacy</label><br>
+  <h2>Question 4: What's your favorite cuisine?</h2>
+  <input type="radio" name="cuisine" id="Italian">
+  <label>Italian</label><br>
+  <input type="radio" name="cuisine" id="Mexican">
+  <label>Mexican</label><br>
+  <input type="radio" name="cuisine" id="Japanese">
+  <label>Japanese</label><br>
+  <input type="radio" name="cuisine" id="Indian">
+  <label>Indian</label><br>
 
-  <h2>Question 5: Are you smart?</h2>
-  <input type="radio" name="int" id="Of course">
-  <label>Yo, I'm a web designer, of course</label><br>
-  <input type="radio" name="int" id="Probably not">
-  <label>Probably not</label><br>
-  <input type="radio" name="int" id="Head empty">
-  <label>Head empty</label><br>
-  <input type="radio" name="int" id="Existential Crisis">
-  <label>Define "smart". Define "you". Define "are".</label>
+  <h2>Question 5: How adventurous are you with food?</h2>
+  <input type="radio" name="adventure" id="Very">
+  <label>Very adventurous</label><br>
+  <input type="radio" name="adventure" id="Somewhat">
+  <label>Somewhat adventurous</label><br>
+  <input type="radio" name="adventure" id="NotAtAll">
+  <label>Not at all</label><br>
   <br>
   <br>
 
   <button onclick="seeResult()">See Result</button>
-  <div id="FishResult">
-    <h1>You're a Fish</h1>
-    <img src='Fish.jpg'>
+  <div id="SushiResult">
+    <h1>You like sushi</h1>
+    <img src='sushi.jpg'>
   </div>
-  <div id="PlanktonResult">
-    <h1>You're Plankton</h1>
-    <img src='Plankton.jpg'>
+  <div id="PizzaResult">
+    <h1>You like pizza</h1>
+    <img src='Pizza.jpg'>
   </div>
-  <div id="HumanResult">
-    <h1>You're a Human</h1>
-    <img src='Human.jpg'>
+  <div id="IceCreamResult">
+    <h1>You like ice cream</h1>
+    <img src='IceCream.jpg'>
   </div>
-  <div id="SpiderResult">
-    <h1>You're a Spider</h1>
-    <img src='Spider.jpg'>
-  </div>
-  <div id="NudibranchResult">
-    <h1>You're a Nudibranch (Sea Slug)</h1>
-    <img src='Nudibranch.jpg'>
+  <div id="SteakResult">
+    <h1>You like steak</h1>
+    <img src='Steak.jpg'>
+  <div id="CurryResult">
+    <h1>You like curry(Sea Slug)</h1>
+    <img src='curry.jpg'>
   </div>
 </body>
 <!--End of student website-->

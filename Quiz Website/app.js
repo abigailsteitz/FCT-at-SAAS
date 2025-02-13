@@ -1,87 +1,81 @@
-// Switch to strict mode to get more useful errors when you make mistakes.
 'use strict';
 
 function resetResult() {
-    document.getElementById("FishResult").style.display = "none";
-    document.getElementById("PlanktonResult").style.display = "none";
-    document.getElementById("HumanResult").style.display = "none";
-    document.getElementById("SpiderResult").style.display = "none";
+    document.getElementById("PizzaResult").style.display = "none";
+    document.getElementById("IceCreamResult").style.display = "none";
+    document.getElementById("SteakResult").style.display = "none";
+    document.getElementById("SushiResult").style.display = "none";
+    document.getElementById("CurryResult").style.display = "none";
 }
+
 function seeResult() {
-    var Fish = 0;
-    var Plankton = 0;
-    var Nudibranch = 0;
-    var Human = 0;
-    var Spider = 0;
+    var Pizza = 0;
+    var IceCream = 0;
+    var Steak = 0;
+    var Sushi = 0;
+    var Curry = 0;
 
-    if (document.getElementById("8Eyes").checked) {
-        Spider += 1;
-    } else if (document.getElementById("2Eyes").checked) {
-        Human += 1;
-        Fish += 1;
-        Nudibranch += 1;
-    } else {
-        // 1, 2, 3 or more depending on the species
-        Plankton += 1;
+    if (document.getElementById("Spicy").checked) {
+        Curry += 1;
+    } else if (document.getElementById("Sweet").checked) {
+        IceCream += 1;
+    } else if (document.getElementById("Savory").checked) {
+        Pizza += 1;
+        Steak += 1;
+        Sushi += 1;
     }
 
-    if (document.getElementById("Walk").checked) {
-        Human += 1;
-        Spider += 1;
-        Nudibranch += 1;
-    } else if (document.getElementById("Swim").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
-    } else {
-        // Swim upside down
-        Nudibranch += 1;
+    if (document.getElementById("Breakfast").checked) {
+        IceCream += 1;
+    } else if (document.getElementById("Lunch").checked) {
+        Pizza += 1;
+        Sushi += 1;
+    } else if (document.getElementById("Dinner").checked) {
+        Steak += 1;
+        Curry += 1;
     }
 
-    if (document.getElementById("Yes").checked) {
-        Human += 1;
-        Spider += 1;
-    } else if (document.getElementById("No").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
+    if (document.getElementById("Raw").checked) {
+        Sushi += 1;
+    } else if (document.getElementById("Grilled").checked) {
+        Steak += 1;
+    } else if (document.getElementById("Fried").checked) {
+        Pizza += 1;
     }
 
-    if (document.getElementById("Fight").checked) {
-        Spider += 1;
-    } else if (document.getElementById("Run").checked) {
-        Fish += 1;
-        Plankton += 1;
-    } else if (document.getElementById("Secrete").checked) {
-        Nudibranch += 1;
-    } else {
-        // Use Diplomacy
-        Human += 1;
+    if (document.getElementById("Italian").checked) {
+        Pizza += 1;
+    } else if (document.getElementById("Mexican").checked) {
+        Steak += 1;
+    } else if (document.getElementById("Japanese").checked) {
+        Sushi += 1;
+    } else if (document.getElementById("Indian").checked) {
+        Curry += 1;
     }
 
-    if (document.getElementById("Of course").checked) {
-        Spider += 1;
-    } else if (document.getElementById("Probably not").checked) {
-        Fish += 1;
-    } else if (document.getElementById("Head empty").checked) {
-        Plankton += 1;
-        Nudibranch += 1;
-    } else {
-        // Existential Crisis
-        Human += 1;
+    if (document.getElementById("Very").checked) {
+        Sushi += 1;
+        Curry += 1;
+    } else if (document.getElementById("Somewhat").checked) {
+        Pizza += 1;
+        Steak += 1;
+    } else if (document.getElementById("NotAtAll").checked) {
+        IceCream += 1;
     }
 
     resetResult();
 
-    if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Fish) {
-        document.getElementById("FishResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Plankton) {
-        document.getElementById("PlanktonResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Human) {
-        document.getElementById("HumanResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Spider) {
-        document.getElementById("SpiderResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Nudibranch) {
-        document.getElementById("NudibranchResult").style.display = "block";
+    var maxScore = Math.max(Pizza, IceCream, Steak, Sushi, Curry);
+
+    if (maxScore === Pizza) {
+        document.getElementById("PizzaResult").style.display = "block";
+    } else if (maxScore === IceCream) {
+        document.getElementById("IceCreamResult").style.display = "block";
+    } else if (maxScore === Steak) {
+        document.getElementById("SteakResult").style.display = "block";
+    } else if (maxScore === Sushi) {
+        document.getElementById("SushiResult").style.display = "block";
+    } else if (maxScore === Curry) {
+        document.getElementById("CurryResult").style.display = "block";
     }
 }
