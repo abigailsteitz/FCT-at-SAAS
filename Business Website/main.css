@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(34, 151, 152);
+  background-color: rgb(117, 117, 117);
   text-align: center;
 }
 
@@ -29,12 +29,12 @@ button {
   display: block;
 }
 
-#dogContent {
+#cityContent {
   font-size: 40px;
   display: none;
 }
 
-#catContent {
+#birkinContent {
   font-size: 40px;
   display: none;
 }

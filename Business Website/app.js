@@ -2,18 +2,18 @@
 'use strict';
 
 function secretMessage() {
-    alert("You found the secret message! Coupon code: #Pets4Ever")
+    alert("You found the secret message! Coupon code: #BuyaBag")
 }
-function displayDog() {
-    document.getElementById("dogContent").style.display = "block";
-    document.getElementById("catContent").style.display = "none";
+function citybag() {
+    document.getElementById("cityContent").style.display = "block";
+    document.getElementById("birkinContent").style.display = "none";
     document.getElementById("defaultContent").style.display = "none";
 }
-function displayCat() {
-    document.getElementById("dogContent").style.display = "none";
-    document.getElementById("catContent").style.display = "block";
+function birkin() {
+    document.getElementById("cityContent").style.display = "none";
+    document.getElementById("birkinContent").style.display = "block";
     document.getElementById("defaultContent").style.display = "none";
 }
-function pinkBackground() {
-    document.body.style.backgroundColor = "pink";
+function greenBackground() {
+    document.body.style.backgroundColor = "green";
 }
