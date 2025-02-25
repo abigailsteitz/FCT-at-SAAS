@@ -2,7 +2,7 @@
 'use strict';
 
 function secretMessage() {
-    alert("You found the secret message! Coupon code: #Pets4Ever")
+    alert("You found the secret message! There's no menu. Sorry!")
 }
 function displayDog() {
     document.getElementById("dogContent").style.display = "block";
@@ -14,6 +14,6 @@ function displayCat() {
     document.getElementById("catContent").style.display = "block";
     document.getElementById("defaultContent").style.display = "none";
 }
-function pinkBackground() {
-    document.body.style.backgroundColor = "pink";
+function purpleBackground() {
+    document.body.style.backgroundColor = "purple";
 }
