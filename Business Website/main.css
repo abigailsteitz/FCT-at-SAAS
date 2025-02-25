@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(34, 151, 152);
+  background-color: rgb(96, 190, 7);
   text-align: center;
 }
 
@@ -10,7 +10,7 @@ img {
 }
 
 button {
-  background-color: rgb(146, 0, 204);
+  background-color: rgb(37, 0, 204);
   color: rgb(0, 0, 0);
   font-size: 20px;
   margin: 5px;
@@ -18,7 +18,7 @@ button {
 }
 
 #redButton {
-  background-color: rgb(211, 150, 208);
+  background-color: rgb(154, 150, 211);
   color: rgb(0, 0, 0);
   font-size: 15px;
   margin: 5px;

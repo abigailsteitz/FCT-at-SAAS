@@ -2,18 +2,18 @@
 'use strict';
 
 function secretMessage() {
-    alert("You found the secret message! Coupon code: #Pets4Ever")
+    alert("cupon code = mUSic. you get -$.25 off")
 }
-function displayDog() {
-    document.getElementById("dogContent").style.display = "block";
-    document.getElementById("catContent").style.display = "none";
-    document.getElementById("defaultContent").style.display = "none";
+function displayXO() {
+    document.getElementById("xoContent").style.display = "block";
+    document.getElementById("eitherorContent").style.display = "none";
+    document.getElementById("elliottContent").style.display = "none";
 }
-function displayCat() {
-    document.getElementById("dogContent").style.display = "none";
-    document.getElementById("catContent").style.display = "block";
-    document.getElementById("defaultContent").style.display = "none";
+function displayeitheror() {
+    document.getElementById("xoContent").style.display = "none";
+    document.getElementById("eitherorContent").style.display = "block";
+    document.getElementById("elliottContent").style.display = "none";
 }
-function pinkBackground() {
-    document.body.style.backgroundColor = "pink";
+function redBackground() {
+    document.body.style.backgroundColor = "red";
 }
