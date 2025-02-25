@@ -2,86 +2,66 @@
 'use strict';
 
 function resetResult() {
-    document.getElementById("FishResult").style.display = "none";
-    document.getElementById("PlanktonResult").style.display = "none";
-    document.getElementById("HumanResult").style.display = "none";
-    document.getElementById("SpiderResult").style.display = "none";
+    document.getElementById("SnowWhiteResult").style.display = "none";
+    document.getElementById("RapunzelResult").style.display = "none";
+    document.getElementById("MoanaResult").style.display = "none";
 }
 function seeResult() {
-    var Fish = 0;
-    var Plankton = 0;
-    var Nudibranch = 0;
-    var Human = 0;
-    var Spider = 0;
+    var SnowWhite = 0;
+    var Rapunzel = 0;
+    var Moana = 0;
 
-    if (document.getElementById("8Eyes").checked) {
-        Spider += 1;
-    } else if (document.getElementById("2Eyes").checked) {
-        Human += 1;
-        Fish += 1;
-        Nudibranch += 1;
-    } else {
-        // 1, 2, 3 or more depending on the species
-        Plankton += 1;
+    if (document.getElementById("Apple").checked) {
+        SnowWhite += 1;
+    } else if (document.getElementById("Pear").checked) {
+        Rapunzel += 1;
+
+    } else if (document.getElementById("Coconut").checked) {
+        Moana += 1;
     }
 
-    if (document.getElementById("Walk").checked) {
-        Human += 1;
-        Spider += 1;
-        Nudibranch += 1;
-    } else if (document.getElementById("Swim").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
-    } else {
-        // Swim upside down
-        Nudibranch += 1;
+    if (document.getElementById("Yellow").checked) {
+        SnowWhite += 1;
+    } else if (document.getElementById("Purple").checked) {
+        Rapunzel += 1;
+
+    } else if (document.getElementById("Blue").checked) {
+        Moana += 1;
     }
 
-    if (document.getElementById("Yes").checked) {
-        Human += 1;
-        Spider += 1;
-    } else if (document.getElementById("No").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
+    if (document.getElementById("All of them!").checked) {
+        SnowWhite += 1;
+    } else if (document.getElementById("Chameleons").checked) {
+        Rapunzel += 1;
+
+    } else if (document.getElementById("Pigs").checked) {
+        Moana += 1;
     }
 
-    if (document.getElementById("Fight").checked) {
-        Spider += 1;
-    } else if (document.getElementById("Run").checked) {
-        Fish += 1;
-        Plankton += 1;
-    } else if (document.getElementById("Secrete").checked) {
-        Nudibranch += 1;
-    } else {
-        // Use Diplomacy
-        Human += 1;
+    if (document.getElementById("Coffin").checked) {
+        SnowWhite += 1;
+    } else if (document.getElementById("Tower").checked) {
+        Rapunzel += 1;
+    } else if (document.getElementById("Island").checked) {
+        Moana += 1;
     }
 
-    if (document.getElementById("Of course").checked) {
-        Spider += 1;
-    } else if (document.getElementById("Probably not").checked) {
-        Fish += 1;
-    } else if (document.getElementById("Head empty").checked) {
-        Plankton += 1;
-        Nudibranch += 1;
-    } else {
-        // Existential Crisis
-        Human += 1;
+    if (document.getElementById("Cleaning").checked) {
+        SnowWhite += 1;
+    } else if (document.getElementById("Climbing").checked) {
+        Rapunzel += 1;
+    } else if (document.getElementById("Swimming").checked) {
+        Moana += 1;
     }
 
+    
     resetResult();
 
-    if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Fish) {
-        document.getElementById("FishResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Plankton) {
-        document.getElementById("PlanktonResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Human) {
-        document.getElementById("HumanResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Spider) {
-        document.getElementById("SpiderResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Nudibranch) {
-        document.getElementById("NudibranchResult").style.display = "block";
+    if (Math.max(SnowWhite, Rapunzel, Moana) === SnowWhite) {
+        document.getElementById("SnowWhiteResult").style.display = "block";
+    } else if (Math.max(SnowWhite, Rapunzel, Moana) === Rapunzel) {
+        document.getElementById("RapunzelResult").style.display = "block";
+    } else if (Math.max(SnowWhite, Rapunzel, Moana) === Moana) {
+        document.getElementById("MoanaResult").style.display = "block";
     }
 }

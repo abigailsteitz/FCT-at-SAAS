@@ -22,10 +22,8 @@ button {
   border-radius: 5px;
 }
 
-#FishResult,
-#PlanktonResult,
-#HumanResult,
-#SpiderResult,
-#NudibranchResult {
+#SnowWhiteResult,
+#RapunzelResult,
+#MoanaResult{
   display: none;
 }
