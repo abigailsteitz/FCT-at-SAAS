@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(34, 151, 152);
+  background-color: rgb(230, 250, 250);
   text-align: center;
 }
 
@@ -10,7 +10,7 @@ img {
 }
 
 button {
-  background-color: rgb(146, 0, 204);
+  background-color: rgb(224, 179, 241);
   color: rgb(0, 0, 0);
   font-size: 20px;
   margin: 5px;
