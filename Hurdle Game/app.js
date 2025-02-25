@@ -84,6 +84,12 @@ function checkCollision() {
         to check whether the player and the hurdle are touching
         and set playing to false.
         */
+        if (playerRight > hurdleLeft && 
+            playerLeft < hurdleRight && 
+            playerBottom > hurdleTop && 
+            playerTop < hurdleBottom) {
+            playing = false;
+        }
     }
 }
 
