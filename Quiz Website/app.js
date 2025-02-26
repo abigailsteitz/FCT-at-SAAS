@@ -2,86 +2,90 @@
 'use strict';
 
 function resetResult() {
-    document.getElementById("FishResult").style.display = "none";
-    document.getElementById("PlanktonResult").style.display = "none";
-    document.getElementById("HumanResult").style.display = "none";
-    document.getElementById("SpiderResult").style.display = "none";
+    document.getElementById("RedResult").style.display = "none";
+    document.getElementById("YellowResult").style.display = "none";
+    document.getElementById("GreenResult").style.display = "none";
+    document.getElementById("BlueResult").style.display = "none";
+    document.getElementById("PinkResult").style.display = "none";
 }
 function seeResult() {
-    var Fish = 0;
-    var Plankton = 0;
-    var Nudibranch = 0;
-    var Human = 0;
-    var Spider = 0;
+    var Red = 0;
+    var Yellow = 0;
+    var Green = 0;
+    var Blue = 0;
+    var Pink = 0;
 
     if (document.getElementById("annoyed").checked) {
-        Spider += 1;
+        Red += 1;
     } else if (document.getElementById("calm").checked) {
-        Human += 1;
-        Fish += 1;
-        Nudibranch += 1;
+        Green += 1;
+        Blue += 1;
+        
     } else {
         // happy
-        Plankton += 1;
+        Yellow += 1;
+        Pink += 1;
+
     }
 
     if (document.getElementById("Fire").checked) {
-        Human += 1;
-        Spider += 1;
-        Nudibranch += 1;
+        Red += 1;
+        Pink += 1;
+        
     } else if (document.getElementById("Water").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
+        Blue += 1;
+        
     } else {
         // Light
-        Nudibranch += 1;
+        Yellow += 1;
     }
 
-    if (document.getElementById("Yes").checked) {
-        Human += 1;
-        Spider += 1;
-    } else if (document.getElementById("No").checked) {
-        Fish += 1;
-        Plankton += 1;
-        Nudibranch += 1;
+    if (document.getElementById("Warm").checked) {
+        Red += 1;
+        Yellow += 1;
+        Pink += 1;
+    } else if (document.getElementById("Cool").checked) {
+        Green += 1;
+        Blue += 1;
+        
     }
 
     if (document.getElementById("Fight").checked) {
-        Spider += 1;
+        Red += 1;
     } else if (document.getElementById("Run").checked) {
-        Fish += 1;
-        Plankton += 1;
-    } else if (document.getElementById("Secrete").checked) {
-        Nudibranch += 1;
-    } else {
+        Yellow += 1;
+        Pink += 1;
+    }  else {
         // Use Diplomacy
-        Human += 1;
+        Green += 1;
+        Blue += 1;
     }
 
-    if (document.getElementById("Of course").checked) {
-        Spider += 1;
-    } else if (document.getElementById("Probably not").checked) {
-        Fish += 1;
-    } else if (document.getElementById("Head empty").checked) {
-        Plankton += 1;
-        Nudibranch += 1;
+    if (document.getElementById("Chill").checked) {
+        Green += 1;
+        Blue += 1;
+    } else if (document.getElementById("Bubbly").checked) {
+        Pink += 1;
+    } else if (document.getElementById("Confrontational").checked) {
+        Red += 1;
+        
     } else {
-        // Existential Crisis
-        Human += 1;
+        // A ray of sunshine
+        Yellow += 1;
     }
 
     resetResult();
 
-    if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Fish) {
-        document.getElementById("FishResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Plankton) {
-        document.getElementById("PlanktonResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Human) {
-        document.getElementById("HumanResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Spider) {
-        document.getElementById("SpiderResult").style.display = "block";
-    } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Nudibranch) {
-        document.getElementById("NudibranchResult").style.display = "block";
+    if (Math.max(Red, Yellow, Green, Blue, Pink) === Red) {
+        document.getElementById("RedResult").style.display = "block";
+    } else if (Math.max(Red, Yellow, Green, Blue, Pink) === Yellow) {
+        document.getElementById("YellowResult").style.display = "block";
+    } else if (Math.max(Red, Yellow, Green, Blue, Pink) === Green) {
+        document.getElementById("GreenResult").style.display = "block";
+    } else if (Math.max(Red, Yellow, Green, Blue, Pink) === Blue) {
+        document.getElementById("BlueResult").style.display = "block";
+    } else if (Math.max(Red, Yellow, Green, Blue, Pink) === Pink) {
+        document.getElementById("PinkResult").style.display = "block";
     }
 }
+
