@@ -1,81 +1,85 @@
 <!--This head tag is not shown to the user. It is metadata about the page and read by browsers and search engines-->
 <head>
-  <!--This is the title at the top of your browser tab. Search engines will also use this to display to users-->
-  <title>Quiz Website</title>
-  <!--This tag brings in the CSS you write to add style to your webpage-->
+  <title>Animal Personality Quiz</title>
   <link rel="stylesheet" href="main.css" />
-  <!--This tag brings in the JavaScript you write to add behavior to your webpage-->
   <script src="app.js"></script>
 </head>
 
 <!--Start of student website-->
 <body>
-  <h1>What animal is currently taking this quiz?</h1>
+  <h1>Welcome to the Animal Personality Quiz!</h1>
 
-  <h2>Question 1: How many eyes do you have?</h2>
-  <input type="radio" name="eyes" id="8Eyes">
-  <label></label><br>
-  <input type="radio" name="eyes" id="2Eyes">
-  <label>2</label><br>
-  <input type="radio" name="eyes" id="PlanktonEyes">
-  <label>1, 2, 3 or more depending on the species</label><br>
+  <h2>Question 1: How do you prefer to spend your day?</h2>
+  <input type="radio" name="day" id="Relax">
+  <label>Relaxing at home</label><br>
+  <input type="radio" name="day" id="Adventure">
+  <label>Going on an adventure</label><br>
+  <input type="radio" name="day" id="Busy">
+  <label>Staying busy and productive</label><br>
 
-  <h2>Question 2: How do you move?</h2>
-  <input type="radio" name="travel" id="Walk">
-  <label>Walk</label><br>
+  <h2>Question 2: How do you feel about crowds?</h2>
+  <input type="radio" name="crowd" id="Shy">
+  <label>I prefer staying away from crowds</label><br>
+  <input type="radio" name="crowd" id="Okay">
+  <label>I’m okay with crowds</label><br>
+  <input type="radio" name="crowd" id="Love">
+  <label>I love being around people!</label><br>
+
+  <h2>Question 3: What's your preferred mode of travel?</h2>
+  <input type="radio" name="travel" id="Fly">
+  <label>Flying (I'm a bird at heart!)</label><br>
+  <input type="radio" name="travel" id="Run">
+  <label>Running, I like to be active!</label><br>
   <input type="radio" name="travel" id="Swim">
-  <label>Swim</label><br>
-  <input type="radio" name="travel" id="SwimUpsideDown">
-  <label>Swim upside down</label><br>
+  <label>Swimming, just go with the flow!</label><br>
 
-  <h2>Question 3: Can you be drowned in water?</h2>
-  <input type="radio" name="ocean" id="Yes">
-  <label>Yes</label><br>
-  <input type="radio" name="ocean" id="No">
-  <label>No</label><br>
+  <h2>Question 4: What's your idea of a good time?</h2>
+  <input type="radio" name="fun" id="Solo">
+  <label>Chilling alone and reflecting</label><br>
+  <input type="radio" name="fun" id="Friends">
+  <label>Hanging out with friends</label><br>
+  <input type="radio" name="fun" id="Active">
+  <label>Being active, moving around, having fun!</label><br>
 
-  <h2>Question 4: How would escape from being chased?</h2>
-  <input type="radio" name="chase" id="Fight">
-  <label>Fight back</label><br>
-  <input type="radio" name="chase" id="Run">
-  <label>Run</label><br>
-  <input type="radio" name="chase" id="Secrete">
-  <label>Secret acid, ink, or slime</label><br>
-  <input type="radio" name="chase" id="Diplomacy">
-  <label>Use diplomacy</label><br>
+  <h2>Question 5: How do you respond when faced with danger?</h2>
+  <input type="radio" name="danger" id="Fight">
+  <label>Fight, I’m ready to take on the world!</label><br>
+  <input type="radio" name="danger" id="Escape">
+  <label>Escape, I’ll find a way out!</label><br>
+  <input type="radio" name="danger" id="Hide">
+  <label>Hide, stay safe and wait it out!</label><br>
 
-  <h2>Question 5: Are you smart?</h2>
-  <input type="radio" name="int" id="Of course">
-  <label>Yo, I'm a web designer, of course</label><br>
-  <input type="radio" name="int" id="Probably not">
-  <label>Probably not</label><br>
-  <input type="radio" name="int" id="Head empty">
-  <label>Head empty</label><br>
-  <input type="radio" name="int" id="Existential Crisis">
-  <label>Define "smart". Define "you". Define "are".</label>
   <br>
-  <br>
-
   <button onclick="seeResult()">See Result</button>
-  <div id="FishResult">
-    <h1>You're a Fish</h1>
-    <img src='Fish.jpg'>
+
+  <div id="LionResult">
+    <h1>You're a Lion!</h1>
+    <img src="lion.webp" alt="Lion">
+    <p>You're strong, brave, and prefer leading the pack. You're not afraid of adventure!</p>
   </div>
-  <div id="PlanktonResult">
-    <h1>You're Plankton</h1>
-    <img src='Plankton.jpg'>
+  
+  <div id="RabbitResult">
+    <h1>You're a Rabbit!</h1>
+    <img src="rabbit.jpeg" alt="Rabbit">
+    <p>You're gentle, quiet, and enjoy your alone time. You avoid confrontation and prefer safety!</p>
   </div>
-  <div id="HumanResult">
-    <h1>You're a Human</h1>
-    <img src='Human.jpg'>
+
+  <div id="DolphinResult">
+    <h1>You're a Dolphin!</h1>
+    <img src="dolphine.jpg" alt="Dolphin">
+    <p>You're playful, social, and love being around others. You’re always up for a fun adventure!</p>
   </div>
-  <div id="SpiderResult">
-    <h1>You're a Spider</h1>
-    <img src='Spider.jpg'>
+
+  <div id="CatResult">
+    <h1>You're a Cat!</h1>
+    <img src="cat.jpg" alt="Cat">
+    <p>You’re independent, calm, and enjoy both alone time and being around people. You do things at your own pace!</p>
   </div>
-  <div id="NudibranchResult">
-    <h1>You're a Nudibranch (Sea Slug)</h1>
-    <img src='Nudibranch.jpg'>
+
+  <div id="BearResult">
+    <h1>You're a Bear!</h1>
+    <img src="bear.jpg" alt="Bear">
+    <p>You’re strong, protective, and enjoy peace and quiet. You value your personal space and will fight if necessary!</p>
   </div>
 </body>
 <!--End of student website-->
