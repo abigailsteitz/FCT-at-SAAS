@@ -1,0 +1,7 @@
+print("This is a Washington quiz")
+
+print("What is your name?)
+input()
+
+print("What is your name?)
+userName = imput()

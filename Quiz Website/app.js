@@ -14,14 +14,19 @@ function seeResult() {
     var Human = 0;
     var Spider = 0;
 
-    if (document.getElementById("8Eyes").checked) {
+    var question1 = document.querySelector('select[name="motivation"]').value;
+    var question2 = document.querySelector('select[name="eyes"]').value;
+    if (question1 == "personal_tragedy") {
         Spider += 1;
-    } else if (document.getElementById("2Eyes").checked) {
+    } else {
+        Plankton += 1;
+    }
+
+    if (question2 == "2Eyes") {
         Human += 1;
         Fish += 1;
         Nudibranch += 1;
     } else {
-        // 1, 2, 3 or more depending on the species
         Plankton += 1;
     }
 
@@ -74,14 +79,14 @@ function seeResult() {
     resetResult();
 
     if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Fish) {
-        document.getElementById("FishResult").style.display = "block";
+        document.getElementById("BatmanResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Plankton) {
-        document.getElementById("PlanktonResult").style.display = "block";
+        document.getElementById("SupermanResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Human) {
-        document.getElementById("HumanResult").style.display = "block";
+        document.getElementById("SpidermanResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Spider) {
-        document.getElementById("SpiderResult").style.display = "block";
+        document.getElementById("CaptianamericanResult").style.display = "block";
     } else if (Math.max(Fish, Plankton, Human, Spider, Nudibranch) === Nudibranch) {
-        document.getElementById("NudibranchResult").style.display = "block";
+        document.getElementById("CaptianamericanResult").style.display = "block";
     }
 }

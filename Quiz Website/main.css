@@ -22,10 +22,10 @@ button {
   border-radius: 5px;
 }
 
-#FishResult,
-#PlanktonResult,
-#HumanResult,
-#SpiderResult,
+#BatmanResult,
+#SupermanResult,
+#SpidermanResult,
+#CaptianamericanResult,
 #NudibranchResult {
   display: none;
 }

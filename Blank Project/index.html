@@ -1,17 +1,50 @@
-<!--This head tag is not shown to the user. It is metadata about the page and read by browsers and search engines-->
-<head>
-  <!--This is the title at the top of your browser tab. Search engines will also use this to display to users-->
-  <title>Poem Website</title>
+<!DOCTYPE html>
 
-  <!--This tag brings in the CSS you write to add style to your webpage-->
-  <link rel="stylesheet" href="main.css" />
+print("Star Wars Quiz")
 
-  <!--This tag brings in the JavaScript you write to add behavior to your webpage-->
-  <script src="app.js"></script>
-</head>
+score = 0 
 
-<body>
-  <!--Start of student website-->
-  
-  <!--End student website-->
-</body>
+print("What is your name?")
+input()
+
+print("Who is Luke Skywalker's father?")
+userAnswer = input()
+if userAnswer.lower() == "darth vader" or userAnswer.lower() == "anakin skywalker":
+  print("Correct!")
+  score += 1
+else:
+  print("Incorrect! The answer was Darth Vader.")
+
+print("What is the name of Han Solo's ship?")
+userAnswer = input()
+if userAnswer.lower() == "millennium falcon":
+  print("Correct!")
+  score += 1
+else:
+  print("Incorrect! The answer was Millennium Falcon.")
+
+print("Who trained Yoda?")
+userAnswer = input()
+if userAnswer.lower() == "qui-gon jinn":
+  print("Correct!")
+  score += 1
+else:
+  print("Incorrect! The answer was Qui-Gon Jinn.")
+
+print("What is the name of the Wookiee home world?")
+userAnswer = input()
+if userAnswer.lower() == "kashyyyk":
+  print("Correct!")
+  score += 1
+else:
+  print("Incorrect! The answer was Kashyyyk.")
+
+print("What species is Jabba the Hutt?")
+userAnswer = input()
+if userAnswer.lower() == "hutt":
+  print("Correct!")
+  score += 1
+else:
+  print("Incorrect! The answer was Hutt.")
+
+print("Your final score is {score} out of 5.")
