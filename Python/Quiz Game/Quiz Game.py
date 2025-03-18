@@ -51,4 +51,4 @@ else:
     print("BAD")
     
 
-print("You got " + str(score) + " out of fiveaug 9")
+print("You got " + str(score) + " out of five")
