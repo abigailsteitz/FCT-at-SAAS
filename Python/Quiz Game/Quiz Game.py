@@ -1,54 +1,158 @@
+print("hello world!")
 
-
-print ("Welcome to My Quiz About Ian")
-userAnswer = input("What is Ian's Birthday")
-print(userAnswer) 
-
-score = 0 
-# this is a conditional
-if userAnswer == "Aug 9" or userAnswer == "8/9" or userAnswer == "August 9th" or userAnswer == "aug 9" or userAnswer == "august 9" or userAnswer == "august 9th":
-  print("GOOD")
-  score = score + 1
-  print("You got " + str(score) + " out of five correct")
+print("Only 1 in 20 people can get 5/5 on this test about Flowers... Are you ready to begin?")
+print("  ")
+userAnswer = input("  ")
+if userAnswer == "No":
+  print(" ")
+  print(":(")
 else:
-    print("BAD")
-    
-userAnswer = input("How Tall is Ian?")
-print(userAnswer) 
-
-if userAnswer == "5'8" or userAnswer == "five eight" or userAnswer == "short":
-  print("GOOD")
-  score += 1
+  print(" ")
+  print("Okay lets go!")
   
-else:
-    print("BAD")
-    
-userAnswer = input("What Instrument Does Ian Play?")
-print(userAnswer) 
+print("please note that no capital letters will be needed to answer questions correctly")
+print("  ")
+print("lets get started:")
 
-if userAnswer == "Saxaphone" or userAnswer == "Tenor Saxophone" or userAnswer == "sax" or userAnswer == "Tenor Sax":
-  print("GOOD")
+score = 0
+
+print(" ")
+print("What type of flower do people commonly give their Significant Other?")
+print(" ")
+userAnswer = input("  ")
+
+if userAnswer == "roses":
+  print(" ")
+  print("✅ Correct! :)")
   score += 1
 else:
-    print("BAD")
-    
-userAnswer = input("What NESE is he?")
-print(userAnswer) 
+  print(" ")
+  print("❌ incorrect :(")
+  print("the correct answer was roses")  
+  
+print(" ")  
+print("What flower do people use to tell if they like butter or not?")
+print("  ")
+userAnswer = input("  ")
 
-if userAnswer == "Chinese":
-  print("GOOD")
+if userAnswer == "buttercups":
+  print(" ")
+  print("✅ Correct! :)")
   score += 1
 else:
-    print("BAD")
-    
-userAnswer = input("What is his Block 4?")
-print(userAnswer) 
+  print(" ")
+  print("❌incorrect :(")
+  print("the correct answer was buttercups") 
+  
+print(" ")
+print("What is the State flower of Washington?")
+print("  ")
+userAnswer = input("  ")
 
-if userAnswer == "Math" or userAnswer == "Precalculus":
-  print("GOOD")
+
+if userAnswer == "rhododendron":
+  print(" ")
+  print("✅ Correct! :)")
   score += 1
 else:
-    print("BAD")
-    
+  print(" ")
+  print("❌ incorrect :(")
+  ("the correct answer was rhododendron")
+  
+print("What flower is named for the greek goddess of the rainbow?")
+print(" ")
+print("A: Poppies")
+print("B: Daisies")
+print("C: Hydrangeas")
+print("D: Irises")
+print("  ")
+userAnswer = input(" ")
 
-print("You got " + str(score) + " out of fiveaug 9")
+
+if userAnswer == "irises":
+  print(" ")
+  print("✅ Correct! :)")
+  score += 1
+elif userAnswer == "d":
+  print(" ")
+  print("✅ Correct! :)")
+  score += 1
+elif userAnswer == "d: irises":
+  print(" ")
+  print("✅ Correct!")
+  score += 1
+elif userAnswer == "d, irises":
+  print(" ")
+  print("✅ Correct!")
+else:
+  print(" ")
+  print("❌ incorrect :(")
+  print("the correct answer was d, irises ")
+
+print(" ")
+print("What color Rose is often given as a sign of friendship?")
+print("  ")
+userAnswer = input("  ")
+
+
+if userAnswer == "yellow":
+  print(" ")
+  print("✅ Correct! :)")
+  score +=1 
+else:
+  print(" ")
+  print("❌ incorrect :(")
+  ("the correct answer was yellow")
+  
+
+print("  ")
+print("Would you like to answer a bonus challenge question?")
+print("please answer yes or no")
+print("  ")
+userAnswer = input("  ")
+if userAnswer == "no":
+  print(" ")
+  print("Ok, thanks for playing!")
+  print("you got " + str(score) + "/5 right!")
+  print(" ")
+  print(" ")
+  print("goodbye!")
+else:
+  print(" ")
+  print("ok here it is:")
+
+  print(" ")
+  print("In Holland, what flower used to be more valuable than gold?")
+  print(" ")
+  print("A: Daffodils")
+  print("B: Tulips")
+  print("C: Gladiolus")
+  print("D: Carnations")
+  print("  ")
+  userAnswer = input(" ")
+
+  if userAnswer == "tulips":
+    print(" ")
+    print("✅ Correct! :)")
+    score += 1
+  elif userAnswer == "b":
+    print(" ")
+    print("✅ Correct! :)")
+    score += 1
+  elif userAnswer == "b: tulips":
+    print(" ")
+    print("✅ Correct!")
+    score += 1
+  elif userAnswer == "b, tulips":
+    print(" ")
+    print("✅ Correct!")
+    score += 1
+  else:
+    print(" ")
+    print("❌ incorrect :(")
+    ("the correct answer was tulips")
+
+  print(" ")
+  print("Thank you so much for playing")
+  print("you got " + str(score) + "/6 right!")
+  print("goodbye!")
