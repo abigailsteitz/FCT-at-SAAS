@@ -1,54 +1,62 @@
+print("Hello World!")
+print("so like welcome to my epic 99% impossible quiz")
+
+score = 0
 
 
-print ("Welcome to My Quiz About Ian")
-userAnswer = input("What is Ian's Birthday")
-print(userAnswer) 
 
-score = 0 
-# this is a conditional
-if userAnswer == "Aug 9" or userAnswer == "8/9" or userAnswer == "August 9th" or userAnswer == "aug 9" or userAnswer == "august 9" or userAnswer == "august 9th":
-  print("GOOD")
+
+
+userAnswer = input("What's the capital of Florida?")
+print(userAnswer)
+if userAnswer == "Tallahassee":
+  print("true")
   score = score + 1
-  print("You got " + str(score) + " out of five correct")
+  print("you got " + str(score) + " out of 5 correct")
 else:
-    print("BAD")
-    
-userAnswer = input("How Tall is Ian?")
-print(userAnswer) 
-
-if userAnswer == "5'8" or userAnswer == "five eight" or userAnswer == "short":
-  print("GOOD")
-  score += 1
+  print("*EXTREMELY LOUD INCORRECT BUZZER*")
   
-else:
-    print("BAD")
-    
-userAnswer = input("What Instrument Does Ian Play?")
-print(userAnswer) 
+userAnswer = input("How many teeth does an Adult Giraffe have?")
+print(userAnswer)
+if userAnswer == "death" or userAnswer == "32":
+  print("true")
+  score = score + 1
+  print("you got " + str(score) + " out of 5 correct")
 
-if userAnswer == "Saxaphone" or userAnswer == "Tenor Saxophone" or userAnswer == "sax" or userAnswer == "Tenor Sax":
-  print("GOOD")
-  score += 1
-else:
-    print("BAD")
-    
-userAnswer = input("What NESE is he?")
-print(userAnswer) 
 
-if userAnswer == "Chinese":
-  print("GOOD")
-  score += 1
 else:
-    print("BAD")
-    
-userAnswer = input("What is his Block 4?")
-print(userAnswer) 
+  print("*EXTREMELY LOUD INCORRECT BUZZER*")
+  
+userAnswer = input("What would happen to you if your head exploded?")
+print(userAnswer)
+if userAnswer == "death" or userAnswer == "die" or userAnswer == "Die" or userAnswer == "Death":
+  print("true")
+  score = score + 1
+  print("you got " + str(score) + " out of 5 correct")
 
-if userAnswer == "Math" or userAnswer == "Precalculus":
-  print("GOOD")
-  score += 1
 else:
-    print("BAD")
-    
+  print("*EXTREMELY LOUD INCORRECT BUZZER*")
+  
+userAnswer = input("are you aware of what will happen on january 14, 2027 2:45am ")
+print(userAnswer)
+if userAnswer == "yes" or userAnswer == "Yes" or userAnswer == "No" or userAnswer == "no":
+  print("correct")
+  score = score + 1
+  print("you got " + str(score) + " out of 5 correct")
 
-print("You got " + str(score) + " out of fiveaug 9")
+else:
+  print("*EXTREMELY LOUD INCORRECT BUZZER*") 
+ 
+userAnswer = input("Out of how many stars would you rate this quiz? (use number)")
+print(userAnswer)
+if userAnswer == "5":
+  print("true!!")
+  score = score + 1
+  print("you got " + str(score) + " out of 5 correct")
+   
+else:
+  print("prepare for unforseen consequences.") 
+
+print("thank you for playing, please paypal me 40,000.00usd or we will sell your data")
+print("you got " + str(score) + " out of 5 correct")
+  
