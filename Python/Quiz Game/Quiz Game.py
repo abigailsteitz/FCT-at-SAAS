@@ -8,6 +8,8 @@ print("Hello World!")
 
 print("Welcome to my quiz abouy Lebron James?")
 
+score=0
+
 # Ask the user a question
 print("how old is Lebron James")
 
@@ -19,6 +21,7 @@ print(userAnswer)
 # This is called a conditional
 if userAnswer == "40":
   print("YAASSS")
+  score+= 1
 else:
   print("NOPE")
   
@@ -38,6 +41,7 @@ print(userAnswer)
 # This is called a conditional
 if userAnswer == "4":
   print("Kudos to you")
+  score+= 1
 else:
   print("Yikes buddy")
   
@@ -52,6 +56,7 @@ print(userAnswer)
 # This is called a conditional
 if userAnswer == "2003":
   print("Hooray")
+  score+= 1
 else:
   print("you should be ashamed really")
   
@@ -70,6 +75,7 @@ print(userAnswer)
 # This is called a conditional
 if userAnswer == "Ohio" or userAnswer == "ohio"  :
   print("exqusite")
+  score+= 1
 else:
   print("not even close")
   
@@ -87,6 +93,10 @@ print(userAnswer)
  
 if userAnswer == "25" :
   print("correct")
+  score+= 1
 else:
   print("definetly not")
+  
+print("You got " + str(score) + " correct")
+
   
