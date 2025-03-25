@@ -1,24 +1,24 @@
 import turtle
 
-Lebron = turtle.Turtle()
+Lucy = turtle.Turtle()
 
 for i in range(6):
-    Lebron.forward(100)
-    Lebron.right(60)
+    Lucy.forward(100)
+    Lucy.right(60)
 
-Lebron.penup()
-Lebron.goto(69,69)
-Lebron.pendown()
+Lucy.penup()
+Lucy.goto(69,69)
+Lucy.pendown()
 
 for i in range(8):
-    Lebron.forward(100)
-    Lebron.right(45)
+    Lucy.forward(100)
+    Lucy.right(45)
 
-Lebron.penup()
-Lebron.goto(-69,-69)
-Lebron.pendown()
+Lucy.penup()
+Lucy.goto(-69,-69)
+Lucy.pendown()
 
 radius = 100
-Lebron.circle(radius)
+Lucy.circle(radius)
 
 turtle.done()
