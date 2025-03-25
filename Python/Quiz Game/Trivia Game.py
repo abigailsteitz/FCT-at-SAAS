@@ -161,7 +161,7 @@ if score == 5:
 else:
   print("")
   print("")
-  print("You did amazing! You scored {} points!".format(score))
+  print("You did amazing! You scored {} points in all!".format(score))
   print("")
   print("If you want to try again just click on run!!")
   print("")
