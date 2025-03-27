@@ -60,5 +60,4 @@ for i in range(3):
     Lupa.right(120)
     Lupa.forward(100)
     Lupa.right(120)
-    
 turtle.done()
