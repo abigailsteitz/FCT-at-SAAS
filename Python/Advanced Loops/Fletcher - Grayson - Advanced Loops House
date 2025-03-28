@@ -1,0 +1,54 @@
+import turtle
+
+t = turtle.Turtle()
+t.color("green")
+t.speed(10)
+t.shape("turtle")
+t.width(4)
+
+# make a stair case
+t.penup()
+t.goto(-450, -450)
+t.pendown()
+for i in range(11):
+    t.forward(25)
+    t.left (90)
+    t.forward(25)
+    t.right (90)
+t.forward(350)
+for i in range(11):
+    t.forward(25)
+    t.right (90)
+    t.forward(25)
+    t.left (90)
+
+t.penup()
+t.goto(0, 0)
+t.pendown()
+t.pencolor("hot pink")
+
+# Draw a concentric square
+for banana in range(11):
+    for i in range(4):
+        t.forward(30*banana)
+        t.left(90)
+
+    t.penup()
+    t.goto(t.xcor() -15,t.ycor()-15)
+    t.pendown()
+
+t.penup()
+t.goto(0,250)
+t.pendown()
+t.pencolor("blue")
+# Draw a triange spiral
+for i in range(21):
+    t.forward(15*i)
+    t.left (120)  
+
+t.penup()
+t.goto(50, 50)
+t.pendown()
+
+
+turtle.done()
