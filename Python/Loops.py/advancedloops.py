@@ -1,66 +1,60 @@
 import turtle
 
-turtle = turtle.Turtle()
-turtle.color("green")
-turtle.speed(10)
-turtle.shape("turtle")
-turtle.width(4)
+Stevie = turtle.Turtle()
+Stevie.color("green")
+Stevie.speed(10)
+Stevie.shape("turtle")
+Stevie.width(4)
 
-def draw_concentric_squares(x, y, size, num, color):
-    """ Draws concentric squares starting from the center. """
-    turtle.penup()
-    turtle.goto(x - size // 2, y - size // 2)  # Move to starting position
-    turtle.pendown()
-    turtle.color(color)
+# move staircase
+Stevie.penup()
+Stevie.goto(90, -50)
+Stevie.pendown()
+
+# make a stair case
+for i in range(10):
+    Stevie.forward(25)
+    Stevie.right(90)
+    Stevie.forward(25)
+    Stevie.left(90)
+
+Stevie.penup()
+Stevie.goto(-90, -50)
+Stevie.pendown()
+
+Stevie.setheading(180)
+
+# make a stair case
+for i in range(10):
+    Stevie.forward(25)
+    Stevie.left(90)
+    Stevie.forward(25)
+    Stevie.right(90)
     
-    for i in range(num):
-        for _ in range(4):
-            turtle.forward(size)
-            turtle.left(90)
-        size -= size / num
-        turtle.penup()
-        turtle.forward(size / (2))
-        turtle.right(90)
-        turtle.forward(size / (2))
-        turtle.left(90)
-        turtle.pendown()
+Stevie.penup()
+Stevie.goto(0, 120)
+Stevie.pendown()
 
-def draw_concentric_triangles(x, y, size, num, color):
-    """ Draws concentric triangles. """
-    turtle.penup()
-    turtle.goto(x - size // 2, y)  # Move to starting position
-    turtle.pendown()
-    turtle.color(color)
+# Draw a square spiral
+for i in range(20):
+    Stevie.forward(10*i)
+    Stevie.right(120)  
 
-    for i in range(num):
-        for _ in range(3):
-            turtle.forward(size)
-            turtle.left(120)
-        size -= size / num
-        turtle.penup()
-        turtle.forward(size / 2)
-        turtle.right(120)
-        turtle.forward(size / 2)
-        turtle.left(120)
-        turtle.pendown()
+Stevie.penup()
+Stevie.goto(0, 0)
+Stevie.pendown()
 
-def draw_steps(x, y, step_size, steps, color):
-    """ Draws a stair-like pattern. """
-    turtle.penup()
-    turtle.goto(x, y)
-    turtle.pendown()
-    turtle.color(color)
 
-    for _ in range(steps):
-        turtle.forward(step_size)
-        turtle.left(90)
-        turtle.forward(step_size)
-        turtle.right(90)
+Stevie.setheading(0)
 
-    turtle.forward(step_size)
+# Draw a hexagonal concentric spiral
+for banana in range(10):
+    for i in range(4):
+        Stevie.forward(10*banana)
+        Stevie.left(90)
 
-    for _ in range(steps):
-        turtle.right(90)
-        turtle.forward(step_size)
-        turtle.left(90)
-        turtle.forward(step_size)
+    Stevie.penup()
+    Stevie.goto(Stevie.xcor() -5,Stevie.ycor()-5)
+    Stevie.pendown()
+
+turtle.done()
