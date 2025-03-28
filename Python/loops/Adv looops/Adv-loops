@@ -1,0 +1,51 @@
+import turtle
+
+tina = turtle.Turtle()
+tina.speed(10)
+tina.width(4)
+
+# Draw a hexagonal concentric spiral
+for banana in range(20):
+    for i in range(4):
+        tina.forward(10*banana)
+        tina.left(90)
+
+    tina.penup()
+    tina.goto(tina.xcor() -5,tina.ycor() -5)
+    tina.pendown()
+
+# Make a staircase beneath the square (green staircase, left side)
+tina.color("green")
+tina.penup()
+tina.goto(-300, -300)  # Start position for the staircase
+tina.setheading(0)  # Reset orientation
+tina.pendown()
+for i in range(5):  # Only draw 5 steps to align with the square
+    tina.forward(40)
+    tina.left(90)
+    tina.forward(40)
+    tina.right(90)
+
+# Make a staircase beneath the square (green staircase, right side)
+tina.penup()
+tina.goto(200, -300)  # Start position for the right staircase
+tina.setheading(90)  # Face upward
+tina.pendown()
+for i in range(5):  # Only draw 5 steps to align with the square
+    tina.forward(40)
+    tina.left(90)
+    tina.forward(40)
+    tina.right(90)
+
+# Draw a triangular spiral on top of the square (blue triangle)
+tina.color("blue")
+tina.penup()
+tina.goto(-100, 100)  # Move to the top-left corner of the square
+tina.setheading(0)  # Reset orientation
+tina.pendown()
+for i in range(20):  # Increase the number of iterations for tighter pattern
+    tina.forward(200 - 10 * i)  # Adjust the size to match the square's width
+    tina.left(120)
+
+
+turtle.done()
