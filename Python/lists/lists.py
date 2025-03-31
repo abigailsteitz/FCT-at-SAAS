@@ -27,6 +27,7 @@ print("Sum:")
 print(SumSoFar)
 
 LargestSoFar = data[0]
+
 for element in data:
      print(element)
      if element > LargestSoFar:
@@ -38,3 +39,10 @@ print(LargestSoFar)
 Average = SumSoFar / len(data)
 print("Average:")
 print(Average)
+
+median = 0
+if len(data) % 2 == 0:
+    median = (data[len(data)//2] + data[len(data)//2 - 1]) / 2
+
+print("Median:")
+print(median)
