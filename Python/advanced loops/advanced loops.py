@@ -11,17 +11,17 @@ tom.goto(-200,-200)
 tom.pendown()
 
 
-#stair up right
+#stair up going right
 for i in range (6):
     tom.left(90)
     tom.forward(25)
     tom.right(90)
     tom.forward(25)
 
-#platform
+#platform for shapes
 tom.forward(150)
 
-#stair down right
+#stair down going right
 for i in range (6):
     tom.forward(25)
     tom.right(90)
