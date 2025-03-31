@@ -61,7 +61,7 @@ radius = 1 * 3.14
 angle = 10
 increase = 1 * 3.14
 
-for i in range(30):
+for i in range(40):
     purr.circle(radius, angle)
     radius += increase
     angle += 1 * 3.14
