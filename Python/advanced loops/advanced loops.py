@@ -34,14 +34,14 @@ tom.goto(25,35)
 tom.pendown()
 tom.color("red")
 
-#hexagon
-for banana in range (10):
-    for i in range(6):
+#square
+for banana in range (17):
+    for i in range(4):
         tom.forward(10*banana)
-        tom.left(60)
+        tom.left(90)
 
     tom.penup()
-    tom.goto(tom.xcor() -5, tom.ycor() -9)
+    tom.goto(tom.xcor() -5, tom.ycor() -5)
     tom.pendown()
 
 
