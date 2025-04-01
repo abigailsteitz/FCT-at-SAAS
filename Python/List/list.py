@@ -34,8 +34,3 @@ print(allnumbsadded)
 average = allnumbsadded / len(data)
 print("the average is")
 print(average)
-
-#find the median which is the middle value between the highest and lowest number
-Median = (largestSoFar + smallestSoFar)/2
-print("the median is")
-print(Median)
