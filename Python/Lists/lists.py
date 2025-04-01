@@ -14,7 +14,7 @@ for element in data:
     print("evaluating", element)
     if element < smallestSoFar:
         smallestSoFar = element
-print(smallestSoFar)
+print("the smallest is", smallestSoFar)
 #find the sum 
 total = 0
 for element in data:
@@ -32,3 +32,4 @@ for element in data:
     print("evaluating", element)
     if element > largestSoFar:
         largestSoFar = element
+print("the largest number is", largestSoFar)
