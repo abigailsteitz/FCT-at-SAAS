@@ -1,0 +1,68 @@
+from turtle import *
+import colorsys
+
+speed(0)
+bgcolor('black')
+
+
+def leaf():
+    color('white')
+    fillcolor('green')
+    begin_fill()
+    circle(100, 90)
+    lt(90)
+    circle(100, 90)
+    end_fill()
+
+
+rt(90)
+color('white')
+fillcolor('green')
+begin_fill()
+fd(300)
+lt(90)
+fd(10)
+lt(90)
+fd(300)
+lt(90)
+fd(10)
+end_fill()
+
+lt(90)
+fd(300)
+rt(135)
+fd(50)
+leaf()
+rt(90)
+pensize(3)
+fd(50)
+lt(45)
+fd(10)
+lt(60)
+
+pensize(1)
+fd(80)
+rt(60)
+leaf()
+pensize(3)
+rt(30)
+fd(80)
+pensize(1)
+rt(150)
+fd(300)
+lt(60)
+
+h = 0.5
+for i in range(140):
+    c = colorsys.hsv_to_rgb(h, 1, 1)
+    h += 0.004
+    fillcolor(c)
+    begin_fill()
+    circle(150 - i, 90)
+    lt(20)
+    lt(90)
+    circle(150 - i, 90)
+    rt(80)
+    end_fill()
+
+done()
