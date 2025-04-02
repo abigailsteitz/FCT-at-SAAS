@@ -37,11 +37,7 @@ for element in data:
 
 print("average:" + str(sumSoFar / len(data)))  
 
-# find the median
-# Sort the data first
-data.sort()  # Sort the data in ascending order
 
-print("sorted data: " + str(data))
 
 
 
