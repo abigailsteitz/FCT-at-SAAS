@@ -39,14 +39,15 @@ Jeff.pendown()
 
 Jeff.pencolor("red")
 
-side_length = 20  # Initial side length
-increment = 10    # Amount to increase the side length each iteration
-
-for i in range(20):  # Number of iterations
-    Jeff.forward(side_length)
-    Jeff.right(90)  # Turn 90 degrees to form a square
-    side_length += increment 
-
+side_length = 20 # Initial side length
+increment = 10   # Amount to increase the side length each iteration
+for i in range(10):
+        for _ in range(4):
+            Jeff.forward((i * 10))
+            Jeff.right(90)
+        Jeff.penup()
+        Jeff.goto(Jeff.xcor() +4, Jeff.ycor() -3) # Move to the next square position
+        Jeff.pendown()
 
 Jeff.penup()
 Jeff.goto(-25, 275)
