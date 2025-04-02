@@ -1,3 +1,5 @@
+import math
+
 file = open("Python/Lists/Data.csv", "r")
 data = file.read().splitlines()
 
@@ -26,10 +28,11 @@ for element in data:
 print("The sum")
 print (sum)
 
+
+
 # find the average
-for element in data:
-    if sum / len(data):
-        average = element
+# Add up all nummbers, divide by the number of numbers
+average = sum / len(data)
 
 print("The average")
 print(average)
@@ -50,10 +53,18 @@ data.sort()
 # if element % 2 == 0:
 if len(data) % 2 == 0:
     # find middle two, add them together, divide by 2
-    print(" ")
-else:
-    # find the middle number
-
+    middleIndex1 = int(len(data) / 2)
+    middleIndex2 = int((len(data) / 2 )-1)
+    value1 = data[middleIndex1]
+    value2 = data[middleIndex2]
+    averageOfMiddle = (value1 + value2) / 2
 
     print("The median")
-    print(data)
+    print(averageOfMiddle)
+else:
+    # find the middle number
+    middleIndex = math.floor(len(data) / 2)
+    median = data[middleIndex]
+
+    print("The median")
+    print(median)
