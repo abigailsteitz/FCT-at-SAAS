@@ -6,7 +6,7 @@ bella.forward(100)
 
 # Draw a square
 for i in range(4):
-    bella.foward(100)
+    bella.forward(100)
     bella.right(90)
 
 bella.penup()
