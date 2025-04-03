@@ -1,0 +1,75 @@
+print("hello, im going to quiz you on serial killers")
+useranswer = input("whos the most wildly known serial killer who resigned to the seattle area")
+print(useranswer)
+score = 0
+
+if useranswer == "gary ridgeway" or useranswer == "the green river killer" or useranswer == "gary ridgeway?" or useranswer == "gary":
+  print("yes!")
+  score = score + 10
+
+else:
+  print("nope sry")
+
+useranswer = input("whos the serial canniabl?")
+print(useranswer)
+
+if useranswer == "jeffrey" or useranswer == "dahmer" or useranswer == "jeffery dahmer":
+  print("yep, yikes!")
+  score = score + 10
+
+else:
+  print("nope, but nice try")
+
+useranswer = input("who used the phrase/name btk?")
+print(useranswer)
+
+if useranswer == "denis" or useranswer == "denis rader" or useranswer == "rader":
+  print("yes!")
+  score = score +10
+
+else:
+  print("nope")
+
+useranswer = input("who is one of the most famose women serial killer ever?")
+print(useranswer)
+
+if useranswer == "Aileen wuornos" or useranswer == "aileen" or useranswer == "wuornos":
+  print("nice one!!")
+  score = score + 10
+
+else:
+  print("almost")
+
+useranswer = input("who is a serial killer who never killed anyonethe themself?")
+print(useranswer)
+
+if useranswer == "manson" or useranswer == "charles manson" or useranswer == "charles manson?":
+  print("nice one!")
+  score = score + 10
+
+else:
+  print("no maam ")
+
+useranswer = input("who is famouslty dubbed the clown killer?")
+print(useranswer)
+
+if useranswer == "john wayne gacy" or useranswer == "gacy" or useranswer == "john wayne":
+  print("good job!")
+  score = score +10
+
+else:
+  print("nada")
+
+useranswer = input("what is the name of the night stalker?")
+print(useranswer)
+
+if useranswer == "richered" or useranswer == "richered ramierez":
+  print("si!")
+  score = score + 10
+
+else:
+  print("nope")
+  
+print("good game!!")
+print("your score is:")
+print(score)

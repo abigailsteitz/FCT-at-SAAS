@@ -1,3 +1,4 @@
+
 #. Goal take their answer using the input() function, and tell them if they got the answer right or wrong.
 print ("hello world")
 
@@ -67,7 +68,5 @@ print( )
 print( )
 print( ) 
 print("i like penguins")
-  
-  
   
   
