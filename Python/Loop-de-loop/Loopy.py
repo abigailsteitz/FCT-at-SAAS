@@ -4,23 +4,23 @@ import turtle
 artist = turtle.Turtle()
 artist.speed(3)
 
-# Draw a triangle
+# Draw a pentagon
 artist.penup()
 artist.goto(-200, 100)  # Move to starting position
 artist.pendown()
 artist.color("blue")
-for _ in range(3):  # Loop for 3 sides
+for _ in range(5):  # Loop for 5 sides
     artist.forward(100)
-    artist.left(120)
+    artist.left(72)
 
-# Draw a square
+# Draw an octagon
 artist.penup()
 artist.goto(0, 100)  # Move to starting position
 artist.pendown()
 artist.color("green")
-for _ in range(4):  # Loop for 4 sides
+for _ in range(8):  # Loop for 8 sides
     artist.forward(100)
-    artist.left(90)
+    artist.left(45)
 
 # Draw a star
 artist.penup()
