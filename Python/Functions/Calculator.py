@@ -3,35 +3,85 @@
 
 print("Welcome to the calculator!")
 
-# TODO: Task 1, write a function that takes two numbers as parameters and returns their sum.
-# TODO: Task 2, same but subtraction
-# TODO: Task 3, same but multiplication
-# TODO: Task 4, same but division
+def add_numbers(num1, num2):
+    return float(num1) + float(num2) 
 
-playing = True
-while playing:
+
+# Function to subtract two numbers
+def subtract_numbers(num1, num2):
+    return float(num1) - float(num2) 
+
+# Function to multiply two numbers
+def multiply_numbers(num1, num2):
+    return float(num1) * float(num2) 
+
+# Function to divide two numbers
+def divide_numbers(num1, num2):
+    try:
+        num2 = float(num2)
+    except ValueError:
+        return "Invalid input! Please enter a valid number."
+    if num2 == 0:  # Check for division by zero
+        return "Cannot divide by zero!"
+    return float(num1) / float(num2)  
+
+while True:
     print("Please choose an operation:")
     print("a. Addition")
     print("b. Subtraction")
     print("c. Multiplication")
     print("d. Division")
     print("e. Exit")
-    userAnswer = input()
+    user_choice = input()
+    if user_choice == "a":
+        print("You chose addition!")
+        try:
+            print("Please enter the first number:")
+            firstNum = float(input())
+            print("Please enter the second number:")
+            secondNum = float(input())
+            print("The result is:")
+            print(add_numbers(firstNum, secondNum))
+        except ValueError:
+            print("Invalid input! Please enter valid numbers.")
+    
+    elif user_choice == "b":
+        print("You chose subtraction!")
+        try:
+            print("Please enter the first number:")
+            firstNum = float(input())
+            print("Please enter the second number:")
+            secondNum = float(input())
+            print("The result is:")
+            print(subtract_numbers(firstNum, secondNum))
+        except ValueError:
+            print("Invalid input! Please enter valid numbers.")
 
-    if userAnswer == "a":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "b":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "c":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "d":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "e":
+
+
+    elif user_choice == "c":
+        print("You chose multiplication!")
+        print("Please enter the first number:")
+        firstNum = float(input())
+        print("Please enter the second number:")
+        secondNum = float(input())
+        print("The result is:")
+        print(multiply_numbers(firstNum, secondNum))
+
+    elif user_choice == "d":
+        print("You chose division!")
+        print("Please enter the first number:")
+        firstNum = float(input())
+        print("Please enter the second number:")
+        secondNum = float(input())
+        print("The result is:")
+        print(divide_numbers(firstNum, secondNum))
+        
+    
+    elif user_choice == "e":
         print("Thanks for using the calculator!")
+        break
         playing = False
+
     else:
-        print(f"Invalid input: {userAnswer}. Please try again.")
+        print(f"Invalid choice. Please select a valid option.")

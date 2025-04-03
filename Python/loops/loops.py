@@ -16,6 +16,6 @@ jo.pendown()
 # Draw a triangle
 for i in range(3):
     jo.forward(100)
-    jo.right(20)
+    jo.right(120)
 
 turtle.done()
