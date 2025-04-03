@@ -16,6 +16,11 @@ for element in data:
         smallestsofar = element
 print("The smallest number is", element)
 
+largesttsofar = data[0]
+for element in data:
+    if element > largesttsofar:
+        largesttsofar = element
+print("The largest number is", largesttsofar)
 
 allnumsadded=0
 for element in data:
