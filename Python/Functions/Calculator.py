@@ -20,16 +20,33 @@ while playing:
 
     if userAnswer == "a":
         # Replace pass with getting user input and calling your function
-        pass
+        # Example:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        result = (num1 + num2)
+        print(f"The result is: {result}")
+        
     elif userAnswer == "b":
         # Replace pass with getting user input and calling your function
-        pass
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        result = (num1 - num2)
+        print(f"The result is: {result}")
+        
     elif userAnswer == "c":
         # Replace pass with getting user input and calling your function
-        pass
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        result = (num1 * num2)
+        print(f"The result is: {result}")
+        
     elif userAnswer == "d":
         # Replace pass with getting user input and calling your function
-        pass
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        result = (num1 / num2)
+        print(f"The result is: {result}")
+        
     elif userAnswer == "e":
         print("Thanks for using the calculator!")
         playing = False
