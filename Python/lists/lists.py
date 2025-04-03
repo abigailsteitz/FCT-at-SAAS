@@ -8,28 +8,35 @@ for i in range(len(data)):
 
 print(data)
 
+print(" ")
+
 smallestsofar = data[0]
 for element in data:
     if element < smallestsofar:
         smallestsofar = element
-print(smallestsofar)
+
+print("smallest so far = ", (smallestsofar))
 
 
 sumofdata = data[0]
 for element in data:
     sumofdata += element
 
-print(sumofdata)
+print("total = ", sumofdata)
 
 
 average = sumofdata / len(data)
-print(average)
+print("average = ", (average))
 
 bigsofar = data[0]
 for element in data:
     if element > bigsofar:
         bigsofar = element
-print(bigsofar)
+print("biggest so far = ", (bigsofar))
 
 median = ((bigsofar) + (smallestsofar)) / 2
-print(median)
+print("median = ", (median))
+
+print(" ")
+print(" ")
+print(" ")
