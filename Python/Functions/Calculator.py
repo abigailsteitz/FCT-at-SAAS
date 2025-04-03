@@ -20,16 +20,44 @@ while playing:
 
     if userAnswer == "a":
         # Replace pass with getting user input and calling your function
-        pass
+        userAnswer = input("Please enter two numbers separated by a space: ")
+        numbers = userAnswer.split()
+        num1 = float(numbers[0])
+        num2 = float(numbers[1])
+        add_numbers = lambda x, y: x + y
+        result = add_numbers(num1, num2)
+        print(f"The result of adding {num1} and {num2} is: {result}")
     elif userAnswer == "b":
         # Replace pass with getting user input and calling your function
-        pass
+        userAnswer = input("Please enter two numbers separated by a space: ")
+        numbers = userAnswer.split()    
+        num1 = float(numbers[0])
+        num2 = float(numbers[1])
+        subract_numbers = lambda x, y: x - y
+        result = subtract_numbers(num1, num2)
+        print(f"The result of subtracting {num1} from {num2} is: {result}")
     elif userAnswer == "c":
         # Replace pass with getting user input and calling your function
-        pass
+        userAnswer = input("Please enter two numbers separated by a space: ")
+        numbers = userAnswer.split()
+        num1 = float(numbers[0])
+        num2 = float(numbers[1])
+        multiply_numbers = lambda x, y: x * y
+        result = multiply_numbers(num1, num2)
+        print(f"The result of multiplying {num1} and {num2} is: {result}")
     elif userAnswer == "d":
         # Replace pass with getting user input and calling your function
-        pass
+        userAnswer = input("Please enter two numbers separated by a space: ")
+        numbers = userAnswer.split()
+        num1 = float(numbers[0])
+        num2 = float(numbers[1])
+        if num2 == 0:
+            print("Error: Division by zero is not allowed.")
+        else:
+            divide_numbers = lambda x, y: x / y
+            result = divide_numbers(num1, num2)
+            print(f"The result of dividing {num1} by {num2} is: {result}")
+
     elif userAnswer == "e":
         print("Thanks for using the calculator!")
         playing = False
