@@ -16,6 +16,14 @@ for element in data:
 print("The smallest number is:")
 print(smallestSoFar)
 
+# Find the largest
+largestSoFar = data[0]
+for element in data:
+    if element > largestSoFar:
+        largestSoFar = element
+print("The largest number is:")
+print(largestSoFar)
+
 # Find the sum
 allnumbersadded=0
 for element in data:
@@ -27,8 +35,3 @@ print(allnumbersadded)
 average = allnumbersadded / len(data)
 print("The average is:")
 print(average)
-
-# Find the median
-sortedData = sorted(data)
-print("The sorted data is:")
-print(sortedData)
