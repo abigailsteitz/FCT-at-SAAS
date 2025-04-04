@@ -3,6 +3,7 @@
 
 print("Welcome to the calculator!")
 
+
 # TODO: Task 1, write a function that takes two numbers as parameters and returns their sum.
 # TODO: Task 2, same but subtraction
 # TODO: Task 3, same but multiplication

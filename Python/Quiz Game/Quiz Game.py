@@ -96,4 +96,4 @@ print("Your score was " + str(score) + " out of 5 questions correct")
 if score < 3:
   print("You did not do very well.")
 else:
-  print("You did pretty well! Good job!")
+  print("You did pretty well! Good job!")       
