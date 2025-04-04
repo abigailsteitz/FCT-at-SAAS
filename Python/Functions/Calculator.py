@@ -3,10 +3,24 @@
 
 print("Welcome to the calculator!")
 
-# TODO: Task 1, write a function that takes two numbers as parameters and returns their sum.
-# TODO: Task 2, same but subtraction
-# TODO: Task 3, same but multiplication
-# TODO: Task 4, same but division
+# Task 1: Function for addition
+def add(a, b):
+    return a + b
+
+# Task 2: Function for subtraction
+def subtract(a, b):
+    return a - b
+
+# Task 3: Function for multiplication
+def multiply(a, b):
+    return a * b
+
+# Task 4: Function for division
+def divide(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Error: Division by zero is not allowed."
 
 playing = True
 while playing:
@@ -18,18 +32,18 @@ while playing:
     print("e. Exit")
     userAnswer = input()
 
-    if userAnswer == "a":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "b":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "c":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "d":
-        # Replace pass with getting user input and calling your function
-        pass
+    if userAnswer in ["a", "b", "c", "d"]:
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+
+        if userAnswer == "a":
+            print(f"The result is: {add(num1, num2)}")
+        elif userAnswer == "b":
+            print(f"The result is: {subtract(num1, num2)}")
+        elif userAnswer == "c":
+            print(f"The result is: {multiply(num1, num2)}")
+        elif userAnswer == "d":
+            print(f"The result is: {divide(num1, num2)}")
     elif userAnswer == "e":
         print("Thanks for using the calculator!")
         playing = False
