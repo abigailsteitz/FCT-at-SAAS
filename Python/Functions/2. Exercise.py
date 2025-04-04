@@ -25,7 +25,7 @@ print("b. Skirt")
 pantsOrSkirt = input()
 
 # Find price of the bottoms they chose
-bottomsCost = 0
+bottomsCost = 25.00
 if pantsOrSkirt == "a":
     bottomsCost = pantsPrice
 elif pantsOrSkirt == "b":
@@ -38,16 +38,12 @@ print("b. Tank Top")
 ShirtOrTank = input()
 
 # Find price of the bottoms they chose
-topsCost = 0
+topsCost = 20.00 or 15.00
 if ShirtOrTank == "a":
     topsCost = shirtPrice
 elif ShirtOrTank == "b":
     topsCost = tankTopPrice
 
-print("Thanks! Your total is:")
-# TODO: Task 1, run the file as is. What is the output?
-# TODO: Task 2, uncomment the following 2 lines. What is the output now?
-# The demonstration here is
-#  - that NOTHING happens until we call the function.
 total = add_numbers(bottomsCost, topsCost)
+print("Thanks! Your total is:")
 print(total)

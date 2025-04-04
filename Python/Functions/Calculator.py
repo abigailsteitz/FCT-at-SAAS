@@ -20,16 +20,35 @@ while playing:
 
     if userAnswer == "a":
         # Replace pass with getting user input and calling your function
-        pass
+        def add_numbers(a, b):
+            return a + b
+
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        print(f"The result is: {add_numbers(num1, num2)}")
     elif userAnswer == "b":
         # Replace pass with getting user input and calling your function
-        pass
+        def subtract_numbers(a, b):
+            return a - b
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        print(f"The result is: {subtract_numbers(num1, num2)}")
     elif userAnswer == "c":
         # Replace pass with getting user input and calling your function
-        pass
+        def multiply_numbers(a, b):
+            return a * b
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        print(f"The result is: {multiply_numbers(num1, num2)}")
     elif userAnswer == "d":
         # Replace pass with getting user input and calling your function
-        pass
+        def divide_numbers(a, b):
+            if b == 0:
+                return "Error: Division by zero is not allowed."
+            return a / b
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        print(f"The result is: {divide_numbers(num1, num2)}")
     elif userAnswer == "e":
         print("Thanks for using the calculator!")
         playing = False

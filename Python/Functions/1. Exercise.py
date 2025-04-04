@@ -17,11 +17,17 @@ def greet(name):
 # To follow the analogy, we are using the cookie cutter to cut a cookie.
 # When we CALL the function, we are cutting a cookie.
 # TODO: Task 1, replace 'name' with your name, and run the code.
-greet("Abigail")
+greet("Max")
 
 # TODO: Task 2, this variable 'names' is empty, give it a list of your friends' names.
-names = []
+names = ["Jane", "John", "Alice", "Bob"]  # Replace with your friends' names
 
 # TODO: Task 3, use a for loop to iterate over the list of names and call the greet function for each name.
+
+for name in names:
+    greet("Jane")
+    greet("John")
+    greet("Alice")
+    greet("Bob")
 
 # After Task 3, go to the next exercise file to learn about return values.
