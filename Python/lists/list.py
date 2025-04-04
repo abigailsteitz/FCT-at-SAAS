@@ -37,5 +37,5 @@ median = 0
 if len(data) % 2 == 0:
     median = (data[len(data)//2] + data[len(data)//2 - 1]) / 2
 else:
-    median = data[len(data)//2] 
-    
+    median = data[len(data)//2]     
+print("median " + str(median))
