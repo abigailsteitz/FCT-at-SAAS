@@ -1,13 +1,13 @@
 # First code in Python
 # Explanation
 print("")
-print("Welcome to The Trivia Game!!");
+print("Welcome to The Trivia Game!!")
 
 # Score set up
 score = 0
 
 # Start
-print("");
+print("")
 print("The goal is to answer questions correctly. Some questions are fill in the blanks and others are just trivia. If you get everything right you get a bonus question!")
 print("Please capitalize any answers that are names.")
 print("")
@@ -16,11 +16,11 @@ print("")
 
 # use conditional
 while True:
-  userAnswer = input();
+  userAnswer = input()
   if userAnswer.lower() == "ok":
 # can have multiple right answers if you write "or" then the function again
    print("")
-   print("Lets begin.");
+   print("Lets begin.")
    break
   else:
    print("")
