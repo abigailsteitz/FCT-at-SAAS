@@ -6,7 +6,9 @@ def add_numbers(a, b):
     # TODO: Task 3, this function should RETURN the value of a + b. Uncomment the line below to fix the code.
     # After that, you can start the graded assignment, go to Calculator.py
     # return a + b
-
+def add_numbers(a, b):
+    print("Adding numbers...")
+"return" a + b
 shirtPrice = 20.00
 tankTopPrice = 15.00
 pantsPrice = 25.00
