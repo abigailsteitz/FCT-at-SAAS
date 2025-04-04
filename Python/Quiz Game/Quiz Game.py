@@ -1,98 +1,88 @@
-# This file intentionally empty.
-# You should copy-paste your quiz game here!
-# Over-write this file in your own branch.
 print("Hello World!")
 print("Welcome to my quiz about pop culture")
 
-print("Q1: Who is the catch me outside girl?")
+# Start the score at 0
+score = 0
+
+# Question 1
+print("\nQ1: Who is the 'catch me outside' girl?")
 print("a) Bhad Bhabie")
 print("b) Alabama Barker")
 print("c) Woah Vicky")
 print("d) Lil Tay")
+answer = input("Your answer: ")
 
-# this is a variable that holds the user's input
-userAnswer = input()
-print(userAnswer)
+if answer.lower() == "a":
+    print("PERIODT 🔥")
+    score += 1000
+else:
+    print("WRONG 😩")
 
-# Tell the user if they got it correct
-# This is called a conditional
-if userAnswer == "a" or userAnswer == "A":
-  print("Period")
-elif userAnswer == "b":
-  print("Wrong quit now")
-elif userAnswer == "c":
-  print("You suck babes")
-elif userAnswer == "d":
-  print("Ewwwww")
+# Question 2
+print("\nQ2: Who said 'boyfriend I'm nervous'?")
+print("a) Charli D'Amelio")
+print("b) Addison Rae")
+print("c) Nessa Barrett")
+print("d) Dixie D'Amelio")
+answer = input("Your answer: ")
 
-print("Q2: Who said boyfriend im nervous")
-print("a) Charli damelio")
-print("b) Addison rae")
-print("c) Nessa barret")
-print("d) Dixe damelio")
+if answer.lower() == "b":
+    print("YASSS QUEEN 👑")
+    score += 1000
+else:
+    print("NOPE 💀")
 
-userAnswer = input()
-print(userAnswer)
-
-if userAnswer == "b" or userAnswer == "B":
-  print("Yass")
-elif userAnswer == "a":
-  print("deaduzz?")
-elif userAnswer == "c":
-  print("You suck babes")
-elif userAnswer == "d":
-  print("Ewwwww")
-  
-print("Q3: who created floptropica")
+# Question 3
+print("\nQ3: Who created Floptropica?")
 print("a) jifaei")
-print("b) nicki manaj")
+print("b) Nicki Minaj")
 print("c) what i do girl")
 print("d) Gavin")
+answer = input("Your answer: ")
 
-userAnswer = input()
-print(userAnswer)
+if answer.lower() == "a":
+    print("Correct! ICONIC ✨")
+    score += 1000
+else:
+    print("Try again boo 💅")
 
-if userAnswer == "a" or userAnswer == "A":
-  print("period")
-elif userAnswer == "b":
-  print("no dumby foo.")
-elif userAnswer == "c":
-  print("You suck babes")
-elif userAnswer == "d":
-  print("Ewwwww")
-  
-print("Q4: whos the most cancled on youtube")
-print("a) trisha paytas")
-print("b) tana mougeu")
-print("c) collenge ballinger")
-print("d) james charles")
+# Question 4
+print("\nQ4: Who's the most canceled on YouTube?")
+print("a) Trisha Paytas")
+print("b) Tana Mongeau")
+print("c) Colleen Ballinger")
+print("d) James Charles")
+answer = input("Your answer: ")
 
-userAnswer = input()
-print(userAnswer)
+if answer.lower() == "d":
+    print("You ATE 😤")
+    score += 1000
+else:
+    print("Not giving... ❌")
 
-if userAnswer == "d" or userAnswer == "D":
-  print("wow u so good")
-elif userAnswer == "a":
-  print("no shes uncancleable.")
-elif userAnswer == "c":
-  print("You suck babes")
-elif userAnswer == "b":
-  print("last")
+# Question 5
+print("\nQ5: What's the most used app?")
+print("a) Instagram")
+print("b) Snapchat")
+print("c) TikTok")
+print("d) Facebook")
+answer = input("Your answer: ")
 
-print("Q5: whats the most used app")
-print("a) instagram")
-print("b) snapchat")
-print("c) tiktok")
-print("d) facebook")
+if answer.lower() == "c":
+    print("Slayyyy 🕺")
+    score += 1000
+else:
+    print("Girl no 💔")
 
-userAnswer = input()
-print(userAnswer)
+# Final score
+print("\nYou scored", score, "points out of 5000!")
 
-if userAnswer == "c" or userAnswer == "C":
-  print("wow girl do ur works")
-elif userAnswer == "a":
-  print("no girl")
-elif userAnswer == "d":
-  print("are u 45")
-elif userAnswer == "b":
-  print("wow ur unstoppable....")
+# Optional flair
+if score == 5000:
+    print("YOU'RE A LEGEND 💖💯🔥")
+elif score >= 3000:
+    print("Not bad, girl 🌟")
+elif score > 0:
+    print("You tried and flopped 😬")
+else:
+    print(" Are you even chronic?? 🤡")
