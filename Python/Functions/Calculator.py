@@ -4,6 +4,9 @@
 print("Welcome to the calculator!")
 
 # TODO: Task 1, write a function that takes two numbers as parameters and returns their sum.
+def add_numbers(a, b):
+    print("Adding numbers...")
+    return a + b  # Task 3: Now the function returns the sum of a and b
 # TODO: Task 2, same but subtraction
 # TODO: Task 3, same but multiplication
 # TODO: Task 4, same but division
@@ -19,8 +22,16 @@ while playing:
     userAnswer = input()
 
     if userAnswer == "a":
-        # Replace pass with getting user input and calling your function
-        pass
+        #ask the user for two numbers
+        firstNumber = input("Please enter the first number: ")
+        secondNumber = input("Please enter the second number: ")
+        firstNumber = float(firstNumber)
+        secondNumber = float(secondNumber)
+
+        add_numbers(12,1)
+        #call the add_numbers function and print the result
+        print("hi!")
+    
     elif userAnswer == "b":
         # Replace pass with getting user input and calling your function
         pass
