@@ -4,9 +4,22 @@
 print("Welcome to the calculator!")
 
 # TODO: Task 1, write a function that takes two numbers as parameters and returns their sum.
+# Define the add_numbers function
+def add_numbers(a, b):
+    return a + b
 # TODO: Task 2, same but subtraction
+def subtract_numbers(a, b):
+    return a - b
 # TODO: Task 3, same but multiplication
+def multipfly_numbers(a, b):
+    return a * b
 # TODO: Task 4, same but division
+def divide_numbers(a, b):
+    if b == 0:
+        return "Error: Division by zero is not allowed."
+    else:
+        return a / b
+
 
 playing = True
 while playing:
@@ -19,18 +32,48 @@ while playing:
     userAnswer = input()
 
     if userAnswer == "a":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "b":
-        # Replace pass with getting user input and calling your function
-        pass
+        num1 = input("Enter the first number: ")
+        num2 = input("Enter the second number: ")
+        
+        
+        num1 = float(num1) 
+        num2 = float(num2)
+
+        result = add_numbers(num1, num2)
+        print('The result is: ', result)
+
+    if userAnswer == "b":
+        num1 = input("Enter the first number: ")
+        num2 = input("Enter the second number: ")
+        
+        num1 = float(num1) 
+        num2 = float(num2)
+
+        result = subtract_numbers(num1, num2)
+        print('The result is: ', result)
+
     elif userAnswer == "c":
-        # Replace pass with getting user input and calling your function
-        pass
+        num1 = input("Enter the first number: ")
+        num2 = input("Enter the second number: ")
+        
+        num1 = float(num1) 
+        num2 = float(num2)
+
+        result = multipfly_numbers(num1, num2)
+        print('The result is: ', result)
+
     elif userAnswer == "d":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "e":
+        num1 = input("Enter the first number: ")
+        num2 = input("Enter the second number: ")
+        
+        num1 = float(num1) 
+        num2 = float(num2)
+
+        result = divide_numbers(num1, num2)
+        print('The result is: ', result)
+
+
+        
         print("Thanks for using the calculator!")
         playing = False
     else:

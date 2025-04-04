@@ -39,4 +39,5 @@ print(sumSoFar)
 # Find the average looks similar
 # add all the numbers, divided by how many nums
 average = sumSoFar / len(data)
+# Average is 57.7
 print(average)

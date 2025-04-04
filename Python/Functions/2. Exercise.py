@@ -7,19 +7,19 @@ def add_numbers(a, b):
     # After that, you can start the graded assignment, go to Calculator.py
     # return a + b
 
-shirtPrice = 20.00
-tankTopPrice = 15.00
-pantsPrice = 25.00
-skirtPrice = 25.00
+shirtPrice = 35.00
+tankTopPrice = 30.00
+pantsPrice = 55.00
+skirtPrice = 50.00
 
-print("Welcome to the clothing store!")
+print("Welcome beloved customer")
 print(f"A shirt costs {shirtPrice}.")
 print(f"A tank top costs {tankTopPrice}.")
 print(f"Pants cost {pantsPrice}.")
 print(f"A skirt costs {skirtPrice}.")
 
 print("")
-print("Would you like pants or a skirt today?")
+print("what would want to buy pants or skirts?")
 print("a. Pants")
 print("b. Skirt")
 pantsOrSkirt = input()
@@ -38,7 +38,7 @@ print("b. Tank Top")
 ShirtOrTank = input()
 
 # Find price of the bottoms they chose
-topsCost = 0
+topsCost = 30.00
 if ShirtOrTank == "a":
     topsCost = shirtPrice
 elif ShirtOrTank == "b":
