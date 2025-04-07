@@ -3,14 +3,14 @@ import math
 
 def draw_spiral_triangles(t, center, size, levels, color, angle=0):
     # Draw a square spiral
+    t.setheading(180) # face west
+    t.penup()
+    t.goto(-0, 145) # x left right, y up down
+    t.pendown()
 
-     t.penup()
-     t.goto(80, 79)
-     t.pendown()
-
-     for i in range(20):    
-      t.forward(10*i)
-      t.right(120)  
+    for i in range(20):    
+        t.forward(10*i)
+        t.right(120)  
 
 def draw_expanding_squares(t, center, size, levels, color):
     """Draw expanding nested squares with the largest square determining the triangle base."""
@@ -28,7 +28,7 @@ def draw_expanding_squares(t, center, size, levels, color):
 def draw_steps(t, start_x, start_y, step_size, steps, color):
     """Draw step-like structure leading up to the bottom of the largest square."""
     t.penup()
-    t.goto(start_x, start_y)
+    t.goto(-140, -200)
     t.pendown()
     t.pencolor(color)
     for _ in range(steps):
