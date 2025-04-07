@@ -15,7 +15,7 @@ bella.pendown()
 
 # Draw a triangle
 for i in range(3):
-    bella.foward(100)
+    bella.forward(100)
     bella.right(120)
 
 turtle.done()

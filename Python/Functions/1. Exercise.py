@@ -10,18 +10,19 @@
 # This is a function DEFINITION. It uses the 'def' keyword.
 # It has a PARAMETER called 'name'.
 # The function prints a greeting message using the provided name.
-def greet(name):
-    print(f"Hello, {name}! Thanks for coming to my birthday party!")
+def greet(Erin):
+    print(f"Hello, {Erin}! Thanks for coming to my birthday party!")
 
 # This is a function CALL. It uses the function DEFINITION above.
 # To follow the analogy, we are using the cookie cutter to cut a cookie.
 # When we CALL the function, we are cutting a cookie.
 # TODO: Task 1, replace 'name' with your name, and run the code.
-greet("Abigail")
+greet("Elle")
 
 # TODO: Task 2, this variable 'names' is empty, give it a list of your friends' names.
-names = []
+names = ["Maddie", "laylah", "gracey"]
 
 # TODO: Task 3, use a for loop to iterate over the list of names and call the greet function for each name.
-
+for Erin in names:
+    greet(Erin)
 # After Task 3, go to the next exercise file to learn about return values.
