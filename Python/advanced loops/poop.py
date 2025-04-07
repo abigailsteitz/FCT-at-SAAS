@@ -1,46 +1,62 @@
 import turtle
+import math
 
-tina = turtle.Turtle()
-tina.speed(10)
+def draw_spiral_triangles(t, center, size, levels, color, angle=0):
+    # Draw a square spiral
 
-# Draw staircase
-tina.color("green")
-for i in range(10, 0, -1):
-    tina.forward(20)
-    tina.left(90)
-    tina.forward(20)
-    tina.right(90)
+     t.penup()
+     t.goto(80, 79)
+     t.pendown()
 
-# Move to square position
-tina.penup()
-tina.goto(-100, 0)
-tina.pendown()
+     for i in range(20):    
+      t.forward(10*i)
+      t.right(120)  
 
-# Draw square spiral
-tina.color("red")
-for i in range(10):
+def draw_expanding_squares(t, center, size, levels, color):
+    """Draw expanding nested squares with the largest square determining the triangle base."""
+    if levels == 0:
+        return
+    t.penup()
+    t.goto(center[0] - size / 2, center[1] - size / 2)
+    t.pendown()
+    t.pencolor(color)
     for _ in range(4):
-        tina.forward(20 * i)
-        tina.right(90)
+        t.forward(size)
+        t.left(90)
+    draw_expanding_squares(t, center, size * 1.3, levels - 1, color)
 
-    tina.penup()
-    tina.goto(tina.xcor()-9, tina.ycor()+9)
-    tina.pendown()
+def draw_steps(t, start_x, start_y, step_size, steps, color):
+    """Draw step-like structure leading up to the bottom of the largest square."""
+    t.penup()
+    t.goto(start_x, start_y)
+    t.pendown()
+    t.pencolor(color)
+    for _ in range(steps):
+        t.forward(step_size)
+        t.left(90)
+        t.forward(step_size)
+        t.right(90)
+    for _ in range(steps):
+        t.forward(step_size)
+        t.right(90)
+        t.forward(step_size)
+        t.left(90)
 
-# Move to triangle position
-tina.penup()
-tina.goto(-90, 200)
-tina.pendown()
+t = turtle.Turtle()
+t.speed(0)
 
-tina.penup()
-tina.goto(tinaXcor()-9, tina.ycor()+9)
-tina.pendown()
+# Define base sizes to scale
+initial_square_size = 50
+max_square_size = initial_square_size * (1.3 ** 6)  # Largest square size after recursion
+triangle_size = max_square_size  # Triangle base matches largest square width
+step_size = initial_square_size / 2
 
-# Draw triangle spiral
-tina.color("blue")
-for i in range(10, 0, -1):
-    for _ in range(3):
-        tina.forward(20 * i)
-        tina.right(120)
+# Adjust positions so the shapes touch properly
+square_center = (0, 0)
+square_top_y = square_center[1] + max_square_size / 2
+
+draw_steps(t, -max_square_size / 2, -max_square_size - step_size * 5, step_size, 5, 'green')
+draw_expanding_squares(t, square_center, initial_square_size, 6, 'red')
+draw_spiral_triangles(t, (0, square_top_y), triangle_size, 6, 'blue')
 
 turtle.done()

@@ -15,25 +15,26 @@ smallestSoFar = data [0]
 for element in data:
     if element < smallestSoFar:
         smallestSoFar = element
-        print(smallestSoFar)
+print("smallestSoFar")
+print(smallestSoFar)
 
 # find the sum
 allnumsadded=0
 for element in data:
     allnumsadded += element
-    print ("the sum is:")
-    print(allnumsadded)
+print ("the sum is:")
+print(allnumsadded)
 
 
 # find the largest 
 largestSoFar = data [0]
 for element in data:
-    if element < largestSoFar:
+    if element > largestSoFar:
         largestSoFar = element
 print("largestSoFar")
 print(largestSoFar)
 
-# find the largest
-avrege = data [0]
-for element in data:
-    
+ # the sum divided by how many numbers
+avrege = allnumsadded/(len(data))
+print("avregeSoFar")
+print(avrege)
