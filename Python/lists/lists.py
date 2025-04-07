@@ -34,3 +34,4 @@ print(medium)
 # find the average
 average = allnumsadded / len(data)
 print("the average is:")
+print(average)
