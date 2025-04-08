@@ -2,11 +2,24 @@
 # You will write 4 functions, one for each of the 4 basic operations: addition, subtraction, multiplication, and division.
 
 print("Welcome to the calculator!")
+def add_numbers(a, b):
+    print("Adding numbers...")
+    return a + b
 
-# TODO: Task 1, write a function that takes two numbers as parameters and returns their sum.
-# TODO: Task 2, same but subtraction
-# TODO: Task 3, same but multiplication
-# TODO: Task 4, same but division
+print("Welcome to the calculator!")
+def sub_numbers(a, b):
+    print("Subtracting numbers...")
+    return a - b
+
+print("Welcome to the calculator!")
+def mul_numbers(a, b):
+    print("Multiplying numbers...")
+    return a * b
+
+print("Welcome to the calculator!")
+def div_numbers(a, b):
+    print("Dividing numbers...")
+    return a / b
 
 playing = True
 while playing:
@@ -19,17 +32,45 @@ while playing:
     userAnswer = input()
 
     if userAnswer == "a":
-        # Replace pass with getting user input and calling your function
-        pass
+        
+        userAnswer = input("input number")
+        userAnswer = float(userAnswer)
+        userAnswer2 = input("input second number")
+        userAnswer2 = float(userAnswer2)
+        result = add_numbers(userAnswer, userAnswer2)
+        print(result)
+       
     elif userAnswer == "b":
-        # Replace pass with getting user input and calling your function
-        pass
+      
+        userAnswer = input("input number")
+        userAnswer = float(userAnswer)
+        userAnswer2 = input("input second number")
+        userAnswer2 = float(userAnswer2)
+        result = sub_numbers(userAnswer, userAnswer2)
+        print(result)
+
     elif userAnswer == "c":
-        # Replace pass with getting user input and calling your function
-        pass
+        
+        userAnswer = input("input number")
+        userAnswer = float(userAnswer)
+        userAnswer2 = input("input second number")
+        userAnswer2 = float(userAnswer2)
+        result = mul_numbers(userAnswer, userAnswer2)
+        print(result)
+
     elif userAnswer == "d":
-        # Replace pass with getting user input and calling your function
-        pass
+        
+        userAnswer = input("input number")
+        userAnswer = float(userAnswer)
+        userAnswer2 = input("input second number")
+        userAnswer2 = float(userAnswer2)
+        result = div_numbers(userAnswer, userAnswer2)
+        print(result)
+    
+ 
+    
+      
+
     elif userAnswer == "e":
         print("Thanks for using the calculator!")
         playing = False
