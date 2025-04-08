@@ -79,7 +79,7 @@ print("\nYou scored", score, "points out of 5000!")
 
 # Optional flair
 if score == 5000:
-    print("YOU'RE A LEGEND 💖💯🔥")
+    print("YOU ATE 💖💯🔥")
 elif score >= 3000:
     print("Not bad, girl 🌟")
 elif score > 0:
