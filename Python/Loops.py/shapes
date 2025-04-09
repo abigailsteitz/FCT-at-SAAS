@@ -7,62 +7,42 @@ def draw_staircase(steps, step_size):
         turtle.forward(step_size)
         turtle.right(90)
 
-def draw_square_spiral(turns, step_size):
-    for i in range(turns):
-        turtle.forward(step_size + i * 5)
-        turtle.left(90)
+def draw_squares(turns, step_size):
+    # Draw a hexagonal concentric
+    for banana in range(6):
+        for i in range(4):
+            turtle.forward(15*banana)
+            turtle.left(90)
+
+        turtle.penup()
+        turtle.goto(turtle.xcor() -5,turtle.ycor() -6)
+        turtle.pendown()
 
 def draw_triangle_spiral(turns, step_size):
     for i in range(turns):
         turtle.forward(step_size + i * 5)
         turtle.left(120)
+    
+turtle.speed(0)
+    
+# Draw staircase
+turtle.penup()
+turtle.goto(-200, 0)
+turtle.pendown()
+draw_staircase(10, 30)
 
-def main():
-    turtle.speed(0)
-    
-    # Draw staircase
-    turtle.penup()
-    turtle.goto(-200, 0)
-    turtle.pendown()
-    draw_staircase(10, 30)
-    
-    # Draw square spiral
-    turtle.penup()
-    turtle.goto(100, 0)
-    turtle.pendown()
-    draw_square_spiral(30, 10)
-    
-    # Draw triangle spiral
-    turtle.penup()
-    turtle.goto(200, -200)
-    turtle.pendown()
-    draw_triangle_spiral(30, 10)
-    
-def draw_shrinking_squares(initial_size, decrement):
-    size = initial_size
-    while size > 1:
-        for _ in range(4):
-            turtle.forward(size)
-            turtle.right(90)
-        size -= decrement
-        turtle.penup()
-        turtle.forward(decrement / 2)
-        turtle.right(90)
-        turtle.forward(decrement / 2)
-        turtle.left(90)
-        turtle.pendown()
+# Draw square spiral
+turtle.penup()
+turtle.goto(100, 0)
+turtle.pendown()
+draw_squares(30, 10)
 
-def main():
-    turtle.speed(0)
+# Draw triangle spiral
+turtle.penup()
+turtle.goto(200, -200)
+turtle.pendown()
+draw_triangle_spiral(30, 10)
     
-    # Draw shrinking squares
-    turtle.penup()
-    turtle.goto(-50, 50)
-    turtle.pendown()
-    draw_shrinking_squares(200, 5)
-    
-    turtle.done()
+turtle.done()
 
-if __name__ == "__main__":
-    main()
 

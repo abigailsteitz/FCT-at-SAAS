@@ -29,3 +29,11 @@ for element in data:
     if element > largestSoFar:
         largestSoFar = element
 print("largest:" + str(largestSoFar))
+
+
+# The average is the sum of the numbers divided by the amount of numbers 
+
+average = sumSOFar / len(data)
+print("average: " + str(average))
+
+
