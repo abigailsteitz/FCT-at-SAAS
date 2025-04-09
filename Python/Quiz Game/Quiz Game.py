@@ -52,3 +52,6 @@ print (userAnswer)
 if userAnswer == "sleep" or userAnswer == "play":
   print("yesss")
   score = score + 10000
+
+print("score is")
+print(score)
