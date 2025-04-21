@@ -38,14 +38,22 @@ tina.penup()
 tina.goto(0, 80)
 tina.pendown()
 
-# Draw a square spiral
-for i in range(20):
-    tina.forward(10*i)
-    tina.right(90)  
+# Draw a hexagonal concentric spiral
+for banana in range(10):
+    for i in range(4):
+        tina.forward(20*banana)
+        tina.right(90)  
+    tina.penup()
+    tina.goto(tina.xcor() +10,tina.ycor()-10)
+    tina.pendown()
 
 tina.penup()
 tina.goto(10, 227)
 tina.pendown()
+
+
+
+
 
 
 # Draw a triangle spiral
