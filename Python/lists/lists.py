@@ -1,43 +1,29 @@
-file = open('Python/Lists/data.csv','r')
+file = open('Python/lists/data.csv', 'r')
 data = file.read().splitlines()
 
 print(data)
-
+ 
+# make every value a floating point number (decimal)
 for i in range(len(data)):
   data[i] = float(data[i])
-  
-print(data)
 
-# Find the smallest
-smallestSoFar = data[0]
+# Find the largest
+largestSoFar = data[0]
 for i in range(len(data)):
-  if data[i] < smallestSoFar:
-    smallestSoFar = data[i]
+  if data[i] > largestSoFar:
+    largestSoFar = data[i]
     
-print("Smallest")
-print(smallestSoFar)
+print("Largest: " + str(largestSoFar))
 
 # The largest looks similar
-# Find the smallest
-biggestSoFar = data[0]
-for i in range(len(data)):
-  if data[i] > biggestSoFar:
-    biggestSoFar = data[i]
-    
-
-print("biggest")
-print(biggestSoFar)
 
 # Find the sum
 sumSoFar = 0
-for element in data:
-  sumSoFar += element 
+for i in range(len(data)):
+  sumSoFar += data[i]
   
-print("Sum")
-print(sumSoFar)
+print("Sum: " + str(sumSoFar))
 
 # Find the average looks similar
-# add all the numbers, divided by how many nums
 average = sumSoFar / len(data)
-# Average is 57.7
-print(average)
+print("Average: " + str(average))
