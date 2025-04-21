@@ -7,13 +7,13 @@ print(data)
 for i in range(len(data)):
   data[i] = float(data[i])
 
-# Find the smallest
-smallestSoFar = data[0]
+# Find the largest
+largestSoFar = data[0]
 for i in range(len(data)):
-  if data[i] < smallestSoFar:
-    smallestSoFar = data[i]
+  if data[i] > largestSoFar:
+    largestSoFar = data[i]
     
-print("Smallest: " + str(smallestSoFar))
+print("Largest: " + str(largestSoFar))
 
 # The largest looks similar
 
@@ -25,3 +25,5 @@ for i in range(len(data)):
 print("Sum: " + str(sumSoFar))
 
 # Find the average looks similar
+average = sumSoFar / len(data)
+print("Average: " + str(average))
