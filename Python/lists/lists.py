@@ -15,7 +15,19 @@ for element in data:
     if element < smallestsofar:
         smallestsofar = element
 
+print("the smallest number is:")
 print(smallestsofar)
+
+#find the biggest
+biggestsofar = data[0]
+for element in data:
+    if element > biggestsofar:
+        biggestsofar = element
+
+print("the biggest number is:")
+print(biggestsofar)
+
+
 #find the sum
 allnumsadded=0
 for element in data:
