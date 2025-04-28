@@ -35,4 +35,4 @@ print(allnumsadded)
 # An average is the sum of all the numbers divided by how many numbers there are
 average = allnumsadded / (len(data))
 print("The average is:")
-print(allnumsadded/ (len(data)))
+print(average)
