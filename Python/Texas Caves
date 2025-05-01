@@ -1,0 +1,315 @@
+import time
+import random
+import sys
+
+# Dictionary for player stats
+player_stats = {
+    "health": 100,
+    "energy": 100,
+    "fabulous_level": 0
+}
+
+# List for inventory
+inventory = []
+
+# Function to display player status
+def show_status():
+    print("\n" + "="*50)
+    print("PLAYER STATUS:")
+    for stat, value in player_stats.items():
+        print(f"{stat.upper()}: {value}")
+    
+    print("\nINVENTORY:")
+    if inventory:
+        for item in inventory:
+            print(f"- {item}")
+    else:
+        print("Empty")
+    print("="*50 + "\n")
+
+# Function for slow text printing
+def slow_print(text, delay=0.03):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+# Function to get valid input
+def get_input(prompt, valid_options):
+    while True:
+        user_input = input(prompt).lower().strip()
+        if user_input in valid_options:
+            return user_input
+        slow_print("Invalid choice. Please try again.")
+
+# Introduction
+def intro():
+    slow_print("\n" + "*"*70)
+    slow_print("*  WELCOME TO THE TEXAS CAVE ADVENTURE!  *".center(70))
+    slow_print("*"*70 + "\n")
+    slow_print("You find yourself standing at the entrance of the mysterious Texas caves.")
+    slow_print("Strange rumors surround these caverns. What lies within?")
+    slow_print("Your adventure begins now...\n")
+    
+    time.sleep(1)
+    
+    choice = get_input("Do you want to enter the cave? (yes/no): ", ["yes", "no"])
+    
+    if choice == "yes":
+        slow_print("You bravely step into the darkness of the cave...")
+        meet_les()
+    else:
+        slow_print("As you hesitate, someone behind you becomes impatient...")
+        slow_print("\"No time for second thoughts!\" they yell, shoving you forward.")
+        slow_print("You stumble and fall into the cave entrance!")
+        player_stats["health"] -= 10
+        slow_print(f"You lose 10 health points from the fall. Ouch!")
+        recover_from_shove()
+
+def meet_les():
+    slow_print("\nAs you venture deeper into the cave, the light from the entrance fades.")
+    slow_print("A beam of light suddenly catches your eye!")
+    slow_print("You approach cautiously and discover another explorer.")
+    slow_print("\"Hey there! I'm Les. Good to see another soul down here.\"")
+    
+    inventory.append("Flashlight")
+    slow_print("\nLes gives you a flashlight. It's added to your inventory!")
+    show_status()
+    
+    slow_print("\nLes suggests teaming up to explore the caves together.")
+    choice = get_input("Do you want to team up with Les? (yes/no): ", ["yes", "no"])
+    
+    if choice == "yes":
+        slow_print("\"Great! Let's explore together,\" Les says with a smile.")
+        inventory.append("Map fragment")
+        slow_print("Les shares a partial map of the caves. It's added to your inventory!")
+    else:
+        slow_print("\"That's cool. I understand wanting to explore solo.\"")
+        slow_print("Les still stays nearby, just in case.")
+    
+    meet_twinkiana()
+
+def recover_from_shove():
+    slow_print("\nAs you recover from the unexpected entrance, you dust yourself off.")
+    slow_print("Your eyes adjust to the darkness, and you notice something shiny.")
+    slow_print("You reach down and discover... a Twinkie?")
+    slow_print("No, wait. That's not just a Twinkie. It's... TWINKIANA!")
+    
+    inventory.append("Glow stick")
+    slow_print("\nYou found a glow stick near Twinkiana! It's added to your inventory.")
+    show_status()
+    
+    meet_twinkiana()
+
+def meet_twinkiana():
+    slow_print("\nSuddenly, a flamboyant figure emerges from the shadows!")
+    slow_print("\"HELLO DARLING! I'm Twinkiana, queen of the underground!\"")
+    slow_print("Twinkiana is decked out in a glittering outfit that somehow catches light")
+    slow_print("even in the darkness of the cave.")
+    
+    slow_print("\nYou notice Twinkiana is armed to the teeth with guns and... flamethrowers?")
+    slow_print("\"Don't worry about these,\" Twinkiana says, patting a flamethrower.")
+    slow_print("\"They're just for decoration... mostly.\"")
+    
+    inventory.append("Fabulous scarf")
+    slow_print("\nTwinkiana gives you a fabulous scarf. It's added to your inventory!")
+    player_stats["fabulous_level"] += 20
+    slow_print(f"Your fabulous level increases by 20!")
+    show_status()
+    
+    slow_print("\n\"Come on,\" Twinkiana says. \"Let's explore together!\"")
+    slow_print("You continue deeper into the cave with your new companions.")
+    
+    straight_bat_encounter()
+
+def straight_bat_encounter():
+    slow_print("\nAs you're walking through the twisting passages, you hear a strange sound.")
+    slow_print("\"EEEEEEEEEEEEEEK!\"")
+    slow_print("Suddenly, you realize you are surrounded by... straight bats!")
+    slow_print("These are no ordinary bats. They're wearing tiny khaki pants and polo shirts.")
+    slow_print("\"Oh no,\" whispers Les. \"Straight bats are the most boring predators in the cave.\"")
+    slow_print("\"They'll bore us to death with stories about their stock portfolios!\"")
+    
+    choice = get_input("\nDo you use guns or run? (guns/run): ", ["guns", "run"])
+    
+    if choice == "guns":
+        slow_print("\nYou reach for the guns Twinkiana has been carrying...")
+        slow_print("But there's a problem! There are no bullets!")
+        slow_print("\"Oops,\" says Twinkiana. \"I forgot to mention they're just for show.\"")
+        slow_print("\"RUN FOR IT!\" Les shouts.")
+        run_from_bats()
+    else:
+        run_from_bats()
+
+def run_from_bats():
+    slow_print("\nYou and your companions dash through the cave tunnels!")
+    slow_print("The straight bats pursue, calling out, \"Wait! Let me tell you about my lawn care routine!\"")
+    player_stats["energy"] -= 20
+    slow_print(f"You lost 20 energy from running!")
+    
+    slow_print("\nAfter running for what feels like forever, you duck into a narrow passage.")
+    slow_print("The straight bats are too wide in the shoulders to follow (must be those polo shirts).")
+    slow_print("You've escaped... for now.")
+    
+    mysterious_room()
+
+def mysterious_room():
+    slow_print("\nCatching your breath, you realize you've stumbled into a mysterious room.")
+    slow_print("The walls are covered in ancient cave paintings depicting dance battles.")
+    slow_print("In the center of the room stands an enormous figure.")
+    
+    slow_print("\nThe figure turns around slowly. It's a massive person wearing")
+    slow_print("cargo shorts, a 'No Fear' t-shirt, and white New Balance sneakers.")
+    
+    slow_print("\n\"I AM THE STRAIGHT GOD,\" booms a voice that shakes the cave.")
+    slow_print("\"YOU HAVE ENTERED MY DOMAIN. PREPARE TO BE... INCREDIBLY MUNDANE!\"")
+    
+    choice = get_input("\nHow do you respond? Be furious or be fretful? (furious/fretful): ", ["furious", "fretful"])
+    
+    if choice == "furious":
+        confront_straight_god()
+    else:
+        be_fretful()
+
+def be_fretful():
+    slow_print("\nYou begin to tremble with fear, backing away slowly.")
+    slow_print("\"YOUR FEAR MAKES ME STRONGER,\" bellows the Straight God.")
+    
+    slow_print("\nLes looks at you with disappointment.")
+    slow_print("\"I thought you had more pizzazz than that,\" whispers Twinkiana.")
+    
+    slow_print("\nAs your companions back away, the Straight God approaches.")
+    slow_print("\"TIME FOR YOU TO JOIN MY COLLECTION OF BORING ARTIFACTS,\" it says.")
+    slow_print("Les and Twinkiana leave you behind as the Straight God turns you into")
+    slow_print("a beige throw pillow from a furniture chain store.")
+    
+    slow_print("\n*** YOU DIED OF BORINGNESS ***")
+    play_again()
+
+def confront_straight_god():
+    slow_print("\nAnger bubbles up inside you. How dare this generic deity threaten your fabulousness!")
+    slow_print("You step forward, eyes blazing with rainbow fury.")
+    
+    slow_print("\n\"YOUR ANGER IS... CONFUSING,\" says the Straight God.")
+    slow_print("\"I USUALLY JUST GET IMMEDIATE COMPLIANCE OR AWKWARD SMALL TALK.\"")
+    
+    slow_print("\nThe Straight God can sense your defiance and doesn't like it.")
+    slow_print("\"FEEL THE POWER OF MY GROUNDBREAKING JUMP!\" it bellows.")
+    
+    slow_print("\nThe Straight God leaps into the air and comes crashing down!")
+    slow_print("The entire cave shakes violently! Stalactites fall from the ceiling!")
+    
+    player_stats["health"] -= 30
+    slow_print(f"\nYou lose 30 health from the earthquake attack!")
+    show_status()
+    
+    slow_print("\nDespite the powerful attack, you're still standing.")
+    slow_print("Les and Twinkiana look at you with newfound respect.")
+    
+    fight_back_choice()
+
+def fight_back_choice():
+    choice = get_input("\nDo you want to fight back against the Straight God? (yes/no): ", ["yes", "no"])
+    
+    if choice == "yes":
+        vogue_battle()
+    else:
+        slow_print("\n\"I... I can't do this,\" you stammer, backing away.")
+        slow_print("The Straight God laughs, a sound like a corporate team-building exercise.")
+        slow_print("\"WEAK. AS I EXPECTED,\" it says, charging forward.")
+        
+        slow_print("\n*** YOU ARE FINISHED ***")
+        slow_print("The Straight God turns you into a plain white tube sock.")
+        play_again()
+
+def vogue_battle():
+    slow_print("\nSomething awakens inside you. A rhythm. A beat. The spirit of VOGUE.")
+    slow_print("You strike a pose, hand on hip, other hand framing your face.")
+    
+    slow_print("\n\"What are you doing?\" asks the Straight God, confused.")
+    
+    slow_print("\nYou begin to dance, your movements sharp, precise, and FABULOUS.")
+    slow_print("Les and Twinkiana gasp, then begin to snap their fingers in rhythm.")
+    
+    player_stats["fabulous_level"] += 50
+    slow_print(f"\nYour fabulous level increases by 50!")
+    show_status()
+    
+    slow_print("\nThe Straight God steps back, shielding its eyes.")
+    slow_print("\"THIS LEVEL OF SELF-EXPRESSION IS BURNING MY RETINAS!\" it cries.")
+    
+    slow_print("\nYou dip, you spin, you SERVE. Your stunning aura grows with each move!")
+    slow_print("The cave begins to glow with your fabulousness.")
+    
+    slow_print("\nWith one final DEATH DROP, you send a shockwave of queer energy")
+    slow_print("that knocks the Straight God off its feet!")
+    
+    slow_print("\n\"IMPOSSIBLE!\" it screams, melting into a puddle of beige goo.")
+    slow_print("\"I'M MELTING! MELTING! OH, WHAT A BLAND WORLD!\"")
+    
+    slow_print("\nVictory! The Straight God is defeated!")
+    inventory.append("Trophy: Essence of Fabulousness")
+    player_stats["fabulous_level"] += 100
+    show_status()
+    
+    queer_bar_ending()
+
+def queer_bar_ending():
+    slow_print("\nWith the Straight God defeated, the cave begins to transform.")
+    slow_print("The walls sparkle with rainbow crystals never seen before.")
+    slow_print("At the end of the passage, you spot a hot pink sparkly door.")
+    
+    slow_print("\n\"The legendary exit!\" gasps Twinkiana. \"I've heard rumors, but never believed...\"")
+    slow_print("Les pushes forward excitedly. \"Let's check it out!\"")
+    
+    slow_print("\nAs you approach, the door swings open on its own, revealing...")
+    slow_print("A FABULOUS QUEER BAR!")
+    
+    slow_print("\nMusic pumps from inside. Lights flash. People are dancing and celebrating.")
+    slow_print("\"We did it!\" cheers Les, pulling you and Twinkiana inside.")
+    
+    slow_print("\nYou party until 5:00 AM, dancing, laughing, and celebrating your victory.")
+    slow_print("Drinks are on the house - you're the heroes who defeated the Straight God!")
+    
+    slow_print("\nWhen you finally wake up the next day, you feel thoroughly beat.")
+    slow_print("But it was all worth it for the adventure of a lifetime.")
+    
+    slow_print("\n*** CONGRATULATIONS! YOU WON! ***")
+    slow_print("You've completed the Texas Cave Adventure with flying colors... RAINBOW colors!")
+    
+    show_final_stats()
+
+def show_final_stats():
+    slow_print("\n" + "="*50)
+    slow_print("FINAL STATS:".center(50))
+    for stat, value in player_stats.items():
+        slow_print(f"{stat.upper()}: {value}".center(50))
+    
+    slow_print("\nFINAL INVENTORY:".center(50))
+    for item in inventory:
+        slow_print(f"- {item}".center(50))
+    slow_print("="*50 + "\n")
+    
+    play_again()
+
+def play_again():
+    choice = get_input("\nDo you want to play again? (yes/no): ", ["yes", "no"])
+    
+    if choice == "yes":
+        # Reset player stats and inventory
+        player_stats["health"] = 100
+        player_stats["energy"] = 100
+        player_stats["fabulous_level"] = 0
+        inventory.clear()
+        
+        slow_print("\nResetting game...")
+        time.sleep(1)
+        intro()
+    else:
+        slow_print("\nThank you for playing Texas Cave Adventure! See you next time!")
+        sys.exit()
+
+# Start the game
+if __name__ == "__main__":
+    intro()
