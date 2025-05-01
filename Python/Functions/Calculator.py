@@ -4,9 +4,21 @@
 print("Welcome to the calculator!")
 
 # TODO: Task 1, write a function that takes two numbers as parameters and returns their sum.
+def add_numbers(a, b):
+    print("Adding numbers...")
+    return a + b
 # TODO: Task 2, same but subtraction
+def subtract_numbers(a, b):
+    print("Subtracting numbers...")
+    return a - b
 # TODO: Task 3, same but multiplication
+def multipy_numbers(a, b):
+    print("Multiplying numbers...")
+    return a * b
 # TODO: Task 4, same but division
+def divide_numbers(a, b):
+    print("Dividing numbers...")
+    return a / b
 
 playing = True
 while playing:
@@ -23,28 +35,28 @@ while playing:
         # Example:
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
-        result = (num1 + num2)
+        result = add_numbers(num1, num2)  # Call the addition function
         print(f"The result is: {result}")
         
     elif userAnswer == "b":
         # Replace pass with getting user input and calling your function
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
-        result = (num1 - num2)
+        result = subtract_numbers(num1, num2)  # Call the subtraction function
         print(f"The result is: {result}")
         
     elif userAnswer == "c":
         # Replace pass with getting user input and calling your function
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
-        result = (num1 * num2)
+        result = multipy_numbers(num1, num2)  # Call the multiplication function
         print(f"The result is: {result}")
         
     elif userAnswer == "d":
         # Replace pass with getting user input and calling your function
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
-        result = (num1 / num2)
+        result = divide_numbers(num1, num2) # Call the division function
         print(f"The result is: {result}")
         
     elif userAnswer == "e":
