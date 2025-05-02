@@ -1,37 +1,52 @@
-# Here you will write a simple text based calculator.
-# You will write 4 functions, one for each of the 4 basic operations: addition, subtraction, multiplication, and division.
+# Interactive Text-Based Calculator
 
-print("Welcome to the calculator!")
+print("Welcome to the Interactive Calculator!")
 
-# TODO: Task 1, write a function that takes two numbers as parameters and returns their sum.
-# TODO: Task 2, same but subtraction
-# TODO: Task 3, same but multiplication
-# TODO: Task 4, same but division
+# Define functions for basic operations
+def add(x, y):
+    return x + y
 
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return "Error! Division by zero."
+    else:
+        return x / y
+
+# Main loop for the calculator
 playing = True
 while playing:
-    print("Please choose an operation:")
+    print("\nPlease choose an operation:")
     print("a. Addition")
     print("b. Subtraction")
     print("c. Multiplication")
     print("d. Division")
     print("e. Exit")
-    userAnswer = input()
+    userAnswer = input("Enter your choice: ").strip().lower()
 
-    if userAnswer == "a":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "b":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "c":
-        # Replace pass with getting user input and calling your function
-        pass
-    elif userAnswer == "d":
-        # Replace pass with getting user input and calling your function
-        pass
+    if userAnswer in ["a", "b", "c", "d"]:
+        try:
+            x = float(input("Enter the first number: "))
+            y = float(input("Enter the second number: "))
+        except ValueError:
+            print("Invalid input! Please enter numeric values.")
+            continue
+
+        if userAnswer == "a":
+            print(f"The result is: {add(x, y)}")
+        elif userAnswer == "b":
+            print(f"The result is: {subtract(x, y)}")
+        elif userAnswer == "c":
+            print(f"The result is: {multiply(x, y)}")
+        elif userAnswer == "d":
+            print(f"The result is: {divide(x, y)}")
     elif userAnswer == "e":
-        print("Thanks for using the calculator!")
+        print("Thanks for using the calculator! Goodbye!")
         playing = False
     else:
         print(f"Invalid input: {userAnswer}. Please try again.")
