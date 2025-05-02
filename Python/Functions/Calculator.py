@@ -21,6 +21,7 @@ joke_pairs = [
     ("Did you know deer can jump higher than the average house?", "It's because of their strong hind legs and the fact that the average house can't jump."),
     ("Why did the math teacher break up with the calculator?", "Because she felt like she was just a number!"),
     ("Why did the math teacher go to the beach?", "Because she wanted to work on her tan-gent!"),   
+    ("Why was the calculator arested?", "Because its story didn't add up!"),
 ]
 
 def add_numbers(a, b):
