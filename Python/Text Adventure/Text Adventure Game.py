@@ -93,7 +93,7 @@ if secondAnswer == "3" or secondAnswer.lower() == "fight":
         while True:
             if userAnswerthree == "1" or userAnswerthree.lower() == "steal":
                 print("")
-                print("You dig through the attackers pockets and find a veriety of wepons not just the knife.")
+                print("You dig through the attackers pockets and find a variety of weapons not just the knife.")
                 print("You distribute the wepons to you classmates.")
                 print("You and your classmates discuss and deside to train with the wepons and becom a gang for justace and fight back agenst other attackers.")
                 print("Your lives will be changed forever.")
@@ -114,7 +114,7 @@ if secondAnswer == "3" or secondAnswer.lower() == "fight":
                 break
             else :
                 print("")
-                print("That was not one of the opptions. ")
+                print("That was not one of the options. ")
                 print("Your options are...")
                 print("")
                 print("1. Steal.")
@@ -254,47 +254,47 @@ if secondAnswer == "1" or secondAnswer.lower() == "freeze":
         print("Is this really a satisfactory ending for you?")
         print("Try your luck on another go.")
 
-        if character == "Fish":  
+    if character == "Fish":  
+        while True:
             userAnswerfive = input()
-            while True:
-                if userAnswerfive == "1" or userAnswerfive.lower() == "give":
-                    print("")
-                    print("You shakily hand over your test to the attacker when you thought the teacher was looking away.")
-                    print("The attacker grins at you and say that they are now best friends, and he will always protect you.")
-                    print("You decide to try and change them for good now that you are friends.")
-                    print("")
-                    print("Three months later you take your new best friend out to dinner, without them killing anyone.")
-                    print("This is progress.")
-                    print("")
-                    print("This is one happy ending, but how many can you find?")
-                    print("Try again to find out.")
-                    print("")
-                    break
-                elif userAnswerfive == "2" or userAnswerfive.lower() == "refuse":
-                    print("")
-                    print("You glare at them and say that you will not cheat for them.")
-                    print("You watch as their face slowly crumples into anger and feel a sinking feeling in your gut.")
-                    print("You hastaly apoligize but it is not enough.")
-                    print("They stab you in the back with the knife and as you lie on the ground you see the attacker and your would-be friend staring back at you.")
-                    print("As your vision starts to fade you see the tears running down the attackers face and the sadness in their eyes.")
-                    print("The last thing you see in the attacker slowly turn around, head bowed and walk away.")
-                    print("")
-                    print("You died.")
-                    print("")
-                    print("Not only have they died you have broken their heart. I wonder if they will ever be able to trust again.")
-                    print("")
-                    print("Try again and find a better ending for everyone.")
-                    print("")
-                    break
-                else:
-                    print("")
-                    print("That was not one of the opptions. ")
-                    print("Your options are...")
-                    print("")
-                    print("1. Give.")
-                    print("2. Refuse.")
-                    print("")
-                    userAnswerfive = input()
+            if userAnswerfive == "1" or userAnswerfive.lower() == "give":
+                print("")
+                print("You shakily hand over your test to the attacker when you thought the teacher was looking away.")
+                print("The attacker grins at you and say that they are now best friends, and he will always protect you.")
+                print("You decide to try and change them for good now that you are friends.")
+                print("")
+                print("Three months later you take your new best friend out to dinner, without them killing anyone.")
+                print("This is progress.")
+                print("")
+                print("This is one happy ending, but how many can you find?")
+                print("Try again to find out.")
+                print("")
+                break
+            elif userAnswerfive == "2" or userAnswerfive.lower() == "refuse":
+                print("")
+                print("You glare at them and say that you will not cheat for them.")
+                print("You watch as their face slowly crumples into anger and feel a sinking feeling in your gut.")
+                print("You hastily apologize but it is not enough.")
+                print("They stab you in the back with the knife and as you lie on the ground you see the attacker and your would-be friend staring back at you.")
+                print("As your vision starts to fade you see the tears running down the attackers face and the sadness in their eyes.")
+                print("The last thing you see in the attacker slowly turn around, head bowed and walk away.")
+                print("")
+                print("You died.")
+                print("")
+                print("Not only have they died you have broken their heart. I wonder if they will ever be able to trust again.")
+                print("")
+                print("Try again and attempt find a better ending for everyone.")
+                print("")
+                break
+            else:
+                print("")
+                print("That was not one of the options. ")
+                print("Your options are...")
+                print("")
+                print("1. Give.")
+                print("2. Refuse.")
+                print("")
+                userAnswerfive = input()
 
 
 
@@ -311,5 +311,5 @@ elif userAnswer == "2" or userAnswer.lower() == "skip":
     print("You back up to get away from the people running in your direction, going into an empty classroom.")
     print("see your classmates running past the window of the empty classroom.")
     print("Realizing that these are your classmates, you realize something must have happened and so you open the door ad")
-    skipUserAnswer = input()
+    skipUserAnswerOne = input()
     
