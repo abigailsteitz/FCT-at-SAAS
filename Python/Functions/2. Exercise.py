@@ -3,9 +3,7 @@
 # Here is an example of a function that adds two numbers and returns the result:
 def add_numbers(a, b):
     print("Adding numbers...")
-    # TODO: Task 3, this function should RETURN the value of a + b. Uncomment the line below to fix the code.
-    # After that, you can start the graded assignment, go to Calculator.py
-    # return a + b
+    return a + b
 
 shirtPrice = 20.00
 tankTopPrice = 15.00
@@ -49,5 +47,5 @@ print("Thanks! Your total is:")
 # TODO: Task 2, uncomment the following 2 lines. What is the output now?
 # The demonstration here is
 #  - that NOTHING happens until we call the function.
-#total = add_numbers(bottomsCost, topsCost)
-#print(total)
+total = add_numbers(bottomsCost, topsCost)
+print(total)
