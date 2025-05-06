@@ -36,10 +36,42 @@ if useranswer in ["lie and say your going to the bathroom", "a"]:
     print("steve said 'thats not the right way to class kiddo! let me help you get to class' ")
     print("steve takes you to the high school and you are now separated from daves hot chicken by the gym")
       
+    print("do you go through the gym or go around it?")
+    print("(a) go through the gym")
+    print("(b) go around the gym")
+    
+    if useranswer in ["go through the gym", "a"]:
+      print("you go through the gym and see a group of kids playing basketball, you try to sneak past them but they see you and start chasing you!")
+      print("you run out of the gym and out of saas! congrats! you made it out of saas! but be aware of security guards and teachers!")
+      print("you are now at the vanderbilt corner but you bump into katherine ezzo")
+
+      print("ezzo said 'hey! your supposed to be in class! where are you going?'")
+      print("(a) say nothing and run away")
+      print("(b) say your going to get daves hot chicken")
+
+      if useranswer in ["say nothing and run away", "a"]:
+        print("you avoided ezzo and she is calling the security guards!")
+        print("you are now marked as a missing student and the security guards are looking for you!")
+
+        print("you walk into daves hot chicken, do you get in line to order? or do you go back to saas and get in trouble?")
+        print("(a) get in line to order")
+        print("(b) go back to saas and get in trouble")
+
+        if useranswer in ["get in line to order", "a"]:
+          print("you get in line to order and the cashier said 'hey! you are not supposed to be here! go back to saas!'")
+          print("the security guards come in and take you back to saas")
+          print("you are now in trouble and have to go to the office")
+
+          print("you lose! now your more hungry than ever!")
+
+
   if useranswer in ["tell the truth and tell him you are going to get daves hot chicken", "b"]:
       print("steve said 'You could've done that during Lunch kiddo go back to class' ")
       print("steve takes you back to your class and you are back to where you started") 
 
+      print("now your stuck in class and you have to wait for the bell to ring! mission failed")
+      
+      useranswer = input()
 
 if useranswer in ["just ask abigail", "b"]:
   print("Abigail said'No problem! just don't get caught!'  ")
@@ -84,3 +116,5 @@ if useranswer in ["just ask abigail", "b"]:
     if useranswer in ["say nothing and run away", "b"]:
       print("you avoided the homeless person and are now at daves hot chicken")
       print("you walk into daves hot chicken and there is nobody there! you are the only one in the restaurant")
+
+      answer = input()
