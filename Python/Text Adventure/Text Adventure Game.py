@@ -1,84 +1,8 @@
-# A very dangourous day at school
 
-character = 0
-print("")
-print("Welcome to school!")
-print("")
-print("You go to the School of High Level Math or the students call it SHELM, located in the North West area of the world.")
-print("The school belives in math, lockers with no locks, and no late penlties.")
-print("")
-print("The progress you make relies on your character and the results of your choices.")
-print("")
-print("Choose your character.")
-print("")
-print("1. Lily: Lily is charasmatic and strong yet quite clumsy. Lily is reckless and can play soccer. She also hates math.")
-print("2. Fish: Fish has an interesting point of view and can make friends with anyone. Fish is chaotic. Also fish is better")
-print("3. Elsa: Calm, collected, and smart, but also very quiet. She is quick on her feet, but has weak arms because she is always reading.")
-print("")
 
-# Character Choice
-firstuserAnswer = input()
-if firstuserAnswer == "1" or firstuserAnswer.lower() == "Lily":
-    print("")
-    print("You are now Lily. You chose... poorly")
-    character = "Lily"
-    print("")  
-elif firstuserAnswer == "2" or firstuserAnswer.lower() == "Fish":
-    print("")
-    print("You are now Fish. You chose... wisly")
-    character = "Fish"
-    print("")
-elif firstuserAnswer == "3" or firstuserAnswer.lower() == "Elsa":
-    print("")
-    print("You are now Elsa. Yay!")
-    character = "Elsa"
-    print("")
-else: 
-    print("")
-    print("That is not one of the characters. you will now recieve a random character.")
-    print("")
-    import random
-    character = random.choice(["Lily", "Fish", "Elsa"])
-    print("You are now " + character + ". Good luck!")
-    print("")
+def fight(character):
 
-# Choice one
-print("You are midway through spring trimester, and it is another day at school like any other.")
-print("On your way to class you remember that you have a math test today.")
-print("You get a chill and get a bad feeling about something.")
-print("")
-print("You can either go to class and take your math test or skip class and miss it.")
-print("")
-print("What do you want to do?")
-print("")
-print("1. Go")
-print("2. Skip")
-print("")
-
-# Go to class.
-userAnswer = input()
-if userAnswer == "1" or userAnswer.lower() == "go":
-    print("")
-    print("You decide to go to class. You walk into the classroom and sit down, ready to take the test.")
-    print("The bell rings and almost imidiatly a stanger slowly enters the room. You can see they are holding a long jagged knife.")
-    print("The fear is real.")
-    print("")
-    print("You have three options to try and make it out alive.")
-    print("You can fight back by throwing the closest chair you can find, flee out the first floor window oppisit the door,")
-    print("or you can freeze and stand there in fear.")
-    print("")
-    print("What do you do?")
-    print("")
-    print("1. Freeze.")
-    print("2. Flight.")
-    print("3. Fight.")
-    print("")
-secondAnswer = input()
-
-# Fight
-if secondAnswer == "3" or secondAnswer.lower() == "fight":
-
-    if character == "ELsa":
+    if character == "Elsa":
         print("")
         print("You try to lift up the chair and throw it, but you lack the strength to do any damage.")
         print("The attacker dives for you and stabs you with the knife. ")
@@ -104,60 +28,58 @@ if secondAnswer == "3" or secondAnswer.lower() == "fight":
         print("Do you wish to die a hero?")
         print("")
 
-        if character == "Lily":
-            print("")
-            print("You throw the chair at the approhing person as hard as you can.")
-            print("The chair strikes them in the head, causing them to pass out, before they managed to hurt anyone.")
-            print("Breathing heavaly you look around at your classmates. They are looking at you in admiring shock.")
-            print("You are now the silently allected leader of the class.")
-            print("")
-            print("Now it is your job to figure out what to do next.")
-            print("")
-            print("You can either steal the attackers stuff or call athorities.")
-            print("")
-            print("1. Steal")
-            print("2. Call")
-            print("")
-            userAnswerthree = input()
+    if character == "Lily":
+        print("")
+        print("You throw the chair at the approhing person as hard as you can.")
+        print("The chair strikes them in the head, causing them to pass out, before they managed to hurt anyone.")
+        print("Breathing heavaly you look around at your classmates. They are looking at you in admiring shock.")
+        print("You are now the silently allected leader of the class.")
+        print("")
+        print("Now it is your job to figure out what to do next.")
+        print("")
+        print("You can either steal the attackers stuff or call athorities.")
+        print("")
+        print("1. Steal")
+        print("2. Call")
+        print("")
+        userAnswerthree = input()
 
-            while True:
-                if userAnswerthree == "1" or userAnswerthree.lower() == "steal":
-                    print("")
-                    print("You dig through the attackers pockets and find a variety of weapons not just the knife.")
-                    print("You distribute the wepons to you classmates.")
-                    print("You and your classmates discuss and deside to train with the wepons and becom a gang for justace and fight back agenst other attackers.")
-                    print("Your lives will be changed forever.")
-                    print("")
-                    print("If you do not like this ending feel free to try again.")
-                    print("")
-                    break
-                elif userAnswerthree == "2" or userAnswerthree.lower() == "call":
-                    print("")
-                    print("You call the authorities and they arive shortly")
-                    print("They thank you, and request that you continue on with your day as usual.")
-                    print("Your teacher arrives and inministers the math test. You realize you don't understand anything on it.")
-                    print("")
-                    print("Dispite the heroics of the day you still fail your math test. Things really are just like they were before.")
-                    print("")
-                    print("If failing math tests are not your ideal happy ending then try again. Good luck!")
-                    print("")
-                    break
-                else :
-                    print("")
-                    print("That was not one of the options. ")
-                    print("Your options are...")
-                    print("")
-                    print("1. Steal.")
-                    print("2. Call.")
-                    print("")
-                    userAnswerthree = input()
+        while True:
+            if userAnswerthree == "1" or userAnswerthree.lower() == "steal":
+                print("")
+                print("You dig through the attackers pockets and find a variety of weapons not just the knife.")
+                print("You distribute the wepons to all your classmates, exept Griffen.")
+                print("You and your classmates discuss and deside to train with the wepons and becom a gang for justace and fight back agenst other attackers.")
+                print("Your lives will be changed forever.")
+                print("")
+                print("If you do not like this ending feel free to try again.")
+                print("")
+                break
+            elif userAnswerthree == "2" or userAnswerthree.lower() == "call":
+                print("")
+                print("You call the authorities and they arive shortly")
+                print("They thank you, and request that you continue on with your day as usual.")
+                print("Your teacher arrives and inministers the math test. You realize you don't understand anything on it.")
+                print("")
+                print("Dispite the heroics of the day you still fail your math test. Things really are just like they were before.")
+                print("")
+                print("If failing math tests are not your ideal happy ending then try again. Good luck!")
+                print("")
+                break
+            else :
+                print("")
+                print("That was not one of the options. ")
+                print("Your options are...")
+                print("")
+                print("1. Steal.")
+                print("2. Call.")
+                print("")
 
-# Flight
-if secondAnswer == "2" or secondAnswer.lower() == "flight":
+def flight(character):
     if character == "Lily":
         print("")
         print("You wildly stand and run to the other side of the classroom trying to get out.")
-        print("Unforchinitly in the panick you trip over a backpack and fall on your face.")
+        print("Unfortunately in the panic you trip over a backpack and fall on your face.")
         print("Your nose hurts like fire. Blood and tears run down your face. The fear and pain causes you to black  out.")
         print("")
         print("Hours later you wake to find yourself in a hospital bed with a permintly twisted nose and a broken arm.")
@@ -231,8 +153,7 @@ if secondAnswer == "2" or secondAnswer.lower() == "flight":
         print("You should try again. That was just sad.")
         print("")
 
-# Freeze
-if secondAnswer == "1" or secondAnswer.lower() == "freeze":
+def freeze(character):
     if character == "Lily":
         print("")
         print("Terror overcomes you and you freeze in place.")
@@ -319,16 +240,368 @@ if secondAnswer == "1" or secondAnswer.lower() == "freeze":
                 print("2. Refuse.")
                 print("")
                 userAnswerfive = input()
+
+def join(character):
+    if character == "Lily":
+            print("")
+            print("Still trying to understand what is going on you keep questioning your friends as you run.")
+            print("Studdenly you realize that you and your friends have been seperated from the group.")
+            print("You are your friends keep running until you reach the exit.")
+            print("In front of you is a person covered in blood, bodies surrounding them, holdning a knife and grinning crazily at you.")
+            print("")
+            print("safe to say you did not make it out.")
+            print("")
+            print("Want to try again?")
+            print("Peace of advice for you. Do not get distracted when running from a killer.")
+            print("")
+
+    if character == "Elsa":
+        print("")
+        print("You turn to run with the rest of the class, when you hear a thump in front you.")
+        print("You slow down and try to peer over your classmate's heads when you hear someone shout 'The attacker is coming!'")
+        print("This news causes a panic to try and go the otherway and you fall in the chaos. ")
+        print("From under the feet of screeming students you reach the conclusion that you are doomed.")
+        print("You go limp and let the heavy feet of others knock you out.")
+        print("")
+        print("You wake up at home with a nasty headache and bruses on every part of you.")
+        print("You must not have been found, and even if you were, you looked dead enough not to be bothered with.")
+        print("")
+        print("Want to make it out healthy?")
+        print("Next try is your game.")
+        print("")
+
+    if character == "Fish":
+        print("")
+        print("You decide to join your franticly running classmates.")
+        print("You run in the middle of the group and try to keep up with the rest of the class.")
+        print("That is, until someone at the front yells 'The attacker is coming!'")
+        print("You look ip and see a peron holding a knife and covered in blood ruuning towards your group with murder in their eyes.")
+        print("The group panics and starts to run in all directions.")
+        print("")
+        print("You can continue with the group, or stuff yourself into a nearby locker.")
+        print("")
+        print("1. Group.")
+        print("2. Locker.")
+        print("")
+        FishUltimateChose = input()
+
+        while True:
+            if FishUltimateChose == "1" or FishUltimateChose.lower() == "group":
+                print("")
+                print("You run as fast as you can with the group in the general opisit direction of the attacker.")
+                print("Eventialy your legs tire, sweat runs down your face, your breath comes in ragged gasps, and your back screems almost as loud as the voices behind you.")
+                print("One of your classmates runs into as you slow and flailing at the unexpecting contact, they push you away.")
+                print("You fall and hit your head agenst a wall and another classmate steps on you befor long, causing your ancle to twist at an odd angle.")
+                print("Trying to continue causes you to fall again and scream in pain.")
+                print("With no other options and the hall now empty you try to crawl after your classmates.")
+                print("Despite your efforts you can not go very far.")
+                print("The attacker finds yo crawling their and kicks you into the wall before stabbing you in the side.")
+                print("")
+                print("Somehow you survive, but you lose a lot of blood and can't walk on your leg after the incedant.")
+                print("")
+                print("You have a long impossible road to recovery ahead of you.")
+                print("If you would like to skip the recovery prosses, try again.")
+                print("")
+                break
+            elif FishUltimateChose == "2" or FishUltimateChose.lower() == "locker":
+                print("")
+                print("In the confusion you run to the nearest locker and put the things you find inside the next locker.")
+                print("You stand as straight as you can and step inside.")
+                print("You shut the door and watch out the slit as your friends and classmates bleed out and die.")
+                print("The attcker when finished with his massacur runs after the escapees.")
+                print("Your legs lock up and you start to shake.")
+                print("You eventialy step outside the locker and stare at the body directly infront of you.")
+                print("You realize they are a quiet girl in class and also that despite the blood around her she is still breathing.")
+                print("On closer examination, she was never stabed just knocked about.")
+                print("You grab her unconsious body and drag her to the exit that was farthest from where the attacker went.")
+                print("You make it out side and hide in a bush where you find a couple of other students who say they made it out the window.")
+                print("")
+                print("All of you make it home alive.")
+                print("Can you save any more of your classmates?")
+                print("Try it.")
+                print("")
+                break
+            else:
+                print("")
+                print("That was not one of the options. ")
+                print("Your options are...")
+                print("")
+                print("1. Group.")
+                print("2. Locker.")
+                print("")
+                FishUltimateChose = input()
+
+def lead(character):
+    if character == "Lily":
+        print("You think everyone would have a better chance of escaping the school if you lead.")
+        print("You speed up and find the person at the front of the group.")
+        print("Overtaking them you make a sharp turn in order to lead the group to an emergency exit that will sound alarms if opened.")
+        print("You hope it is in a location the attacker will not be aware of.")
+        print("Sudenly the class starts to slow and sounds of confusion come from them.")
+        print("A couple of students come over and ask why we are taking a different route.")
+        print("Time is at the essence and none of them have time for this.")
+        print("")
+        print("You can reasure them with 'Trust me for real,' or you can tell them to 'Shut up and follow me.'")
+        print("")
+        print("1. Trust.")
+        print("2. Shut up.")
+        print("")
+        TalkUserAnswer = input()
+        while True:
+            if TalkUserAnswer == "1" or TalkUserAnswer.lower() == "trust":
+                print("")
+                print("You tell them to 'Trust me for real.'")
+                print("In their fear and confusion seem to really want that, and they have known you for years.")
+                print("They help you gather up the rest of the students and you all start to run again.")
+                print("You make it to the emergency exit and open the door.")
+                print("The alarm goes off and a feeling of relif fills the scared students.")
+                print("You have done it!")
+                print("")
+                print("Your classmates now treat you like a savior and you even earn a school reward during graduation.")
+                print("Whats better then that?")
+                print("Why don't you find out?")
+                print("")
+                break
+            elif TalkUserAnswer == "2" or TalkUserAnswer.lower() == "shut up":
+                print("")
+                print("You tell them to 'Shut up and follow me.'")
+                print("You don't normally talk like this and the roughness seems to rattle your scared, emotionaly weak classmates.")
+                print("They say nothing but as you run you nodice that groups of them are breaking off and run in different directions.")
+                print("You don't know what to do, but keep running.")
+                print("At the door you find that you are only one of 7 students that stayed in the group.")
+                print("Even though you make it out safe you can't stop thinking about the students who left espessialy after you learn that only 16 students survived out of 50")
+                print("You are now a school hero, but you feel like a coward.")
+                print("")
+                print("Is this how you want to be remembered?")
+                print("If it isn't, keep trying.")
+                print("")
+                break
+            else:
+                print("")
+                print("That was not one of the options. ")
+                print("Your options are to say...")
+                print("")
+                print("1. Trust.")
+                print("2. Shut up.")
+                print("")
+                TalkUserAnswer = input()
+
+    if character == "Fish":
+        print("")
+        print("You don't feel like a leader but you also feel like the only one who can do it.")
+        print("As you try to speak up to the crowd you realize you are not alone in this feeling, because everyone is talking at once.")
+        print("You try to be heard but no one is in the mood to listen.")
+        print("In your frustration you start screeming.")
+        print("The people around you panic at the sudden noise and also start to scream.")
+        print("Before you can calm everyone again a person covered in blood appears around a bend in the hall.")
+        print("Feeling responsible for being found you confront the stranger.")
+        print("As you get closer you see the knife they are holding in their left hand.")
+        print("Suddering you try to stand but your legs can no longer hold you.")
+        print("'What do you want?' you ask in a tremboling squeek from the floor.")
+        print("The attacker looks down at you before saying in a deep voise, 'Nothing anymore.'")
+        print("Dread fills you compleatly")
+        print("")
+        print("You have died! Congrats!")
+        print("")
+        print("Maybe try serviving next time? Good luck!")
+        print("")
+
+    if character == "Elsa":
+        print("")
+        print("You don't trust any of your panicking classmates to lead.")
+        print("You take a deep breath and start finding a fermiliar face.")
+        print("Once you find one you run over and ask them to get everyones attention.")
+        print("Your friend is in shock and does not say anything.")
+        print("You try to shake them out of it but they are not responding.")
+        print("You find another acuatence named Griffen, but no luck with them either.")
+        print("Giving up, you just drag the closest people to you and start running down the hall.")
+        print("You hide the people you grabbed inside a teacher lounge.")
+        print("You then go back to the group and grap a couple more this time shooving them into empty lockers.")
+        print("On your fith try you find the group slotered with a person standing in the middle if it all smiling.")
+        print("Fear engulf you as the attacker slowly walks towerds you and rases the knife.")
+        print("You try to run but that just causes you to trip and fall.")
+        print("The knife finds its prey.")
+        print("")
+        print("You die, but you saved 12 people and some that saw what you were doing and hide by example.")
+        print("You may die a hero but don't you want to live as one too?")
+        print("")
+        print("Give it a try.")
     
+def solo(character):
+
+    if character == "lily":
+        print("")
+        print("You pound through the halls, panting heavaly.")
+        print("Being alone in the school with a killer was terrifying.")
+        print("Rounding a bend you run into another student.")
+        print("Screaming you run blindly the other way, until you turn another bend and find a bloody body.")
+        print("Screaming again you turn right into the cold hand of person.")
+        print("")
+        print("The last thing you see is their eyes staring into you as the knife burries into your throat.")
+        print("")
+        print("Brutal. Try again, but quieter this time.")
+        print("")
+
+    if character == "Fish":
+        print("")
+        print("Spliting from the group you try for the kitchen and the staff door they contain.")
+        print("As you run your breath is shallow and your sight starts to narrow to the laces on your shoes.")
+        print("You miss the turn and stumble-fall down a stairway.")
+        print("You scream as a snap in your ankle causes your pain to turn your vision red")
+        print("From the ground you see one of your friends, Griffen, hiding under a table.")
+        print("Their scared eyes meet yours and they becken for you to hide with them.")
+        print("You try and fail. They scramble over and suport you as the two of you strumble to a hiding place.")
+        print("Before you reach it panic grip you as seemingly in slow motion a knife starts to parude from Griffens forhead.")
+        print("Blood is all you see as the knife turns on you.")
+        print("")
+        print("You and griffen have died.")
+        print("")
+        print("Way to drag your friend into it. Wow. Next time don't do that. So that means try again.")
+        print("")
+
+    if character == "Elsa":
+        print("The others will just slow you down.")
+        print("Running down the halls you try to think of a viable escape rout.")
+        print("You consitered so many, you seem to have taken steps for many of them.")
+        print("You are now in the middle school wing and have no idea where you are.")
+        print("")
+        print("You can either continue trying to escape or hide in the girls bathroom")
+        print("")
+        print("1. Continue.")
+        print("2. Hide.")
+        print("")
+        elsaSoloRun = input()
+        while True:
+            if elsaSoloRun == "1" or elsaSoloRun.lower() == "continue":
+                print("")
+                print("You run, not even sure of which side of the school you are on.")
+                print("When you finaly realize where you are you are standing in a puddle of your own blood mixed with at least five others in the caffiteria.")
+                print("")
+                print("Have you ever heard of staying put when lost? That lesson would have served you well.")
+                print("")
+                print("Panic is not the answer. Try again and use this knollage.")
+                print("")
+                break
+            elif elsaSoloRun == "2" or elsaSoloRun.lower() == "hide":
+                print("")
+                print("You run into the girl's middle school bathroom and notice a group of huddling twelve-year-olds.")
+                print("Sighing you show them how to sit on the toilets and lock the stall doors so it looks like no one is there.")
+                print("Two hours later a rescue team enters the bathroom and the the terrified twelve-year-olds revield themselfs.")
+                print("")
+                print("You have made it home from school alive! With a new group of admirers! Terific!")
+                print("")
+                print("If you dislike middle schoolers, play again with diffrent choises. Good luck!")
+                print("")
+                break
+            else:
+                print("")
+                print("That was not one of the options. ")
+                print("Your options are...")
+                print("")
+                print("1. Continue.")
+                print("2. Hide.")
+                print("")
+                elsaSoloRun = input()
+
+
+# A very dangourous day at school
+
+character = 0
+print("")
+print("Welcome to school!")
+print("")
+print("You go to the School of High Level Math or the students call it SHELM, located in the North West area of the world.")
+print("The school belives in math, lockers with no locks, and no late penlties.")
+print("")
+print("The progress you make relies on your character and the results of your choices.")
+print("")
+print("Choose your character.")
+print("")
+print("1. Lily: Lily is charasmatic and strong yet quite clumsy. Lily is reckless and can play soccer. She also hates math.")
+print("2. Fish: Fish has an interesting point of view and can make friends with anyone. Fish is chaotic. Also fish is better")
+print("3. Elsa: Calm, collected, and smart, but also very quiet. She is quick on her feet, but has weak arms because she is always reading.")
+print("")
+
+# Character Choice
+firstuserAnswer = input()
+if firstuserAnswer == "1" or firstuserAnswer.lower() == "Lily":
+    print("")
+    print("You are now Lily. You chose... poorly")
+    character = "Lily"
+    print("")  
+elif firstuserAnswer == "2" or firstuserAnswer.lower() == "Fish":
+    print("")
+    print("You are now Fish. You chose... wisly")
+    character = "Fish"
+    print("")
+elif firstuserAnswer == "3" or firstuserAnswer.lower() == "Elsa":
+    print("")
+    print("You are now Elsa. Yay!")
+    character = "Elsa"
+    print("")
+else: 
+    print("")
+    print("That is not one of the characters. you will now recieve a random character.")
+    print("")
+    import random
+    character = random.choice(["Lily", "Fish", "Elsa"])
+    print("You are now " + character + ". Good luck!")
+    print("")
+
+# Choice one
+print("You are midway through spring trimester, and it is another day at school like any other.")
+print("On your way to class you remember that you have a math test today.")
+print("You get a chill and get a bad feeling about something.")
+print("")
+print("You can either go to class and take your math test or skip class and miss it.")
+print("")
+print("What do you want to do?")
+print("")
+print("1. Go")
+print("2. Skip")
+print("")
+
+# Go to class.
+userAnswer = input()
+if userAnswer == "1" or userAnswer.lower() == "go":
+    print("")
+    print("You decide to go to class. You walk into the classroom and sit down, ready to take the test.")
+    print("The bell rings and almost imidiatly a stanger slowly enters the room. You can see they are holding a long jagged knife.")
+    print("The fear is real.")
+    print("")
+    print("You have three options to try and make it out alive.")
+    print("You can fight back by throwing the closest chair you can find, flee out the first floor window oppisit the door,")
+    print("or you can freeze and stand there in fear.")
+    print("")
+    print("What do you do?")
+    print("")
+    print("1. Freeze.")
+    print("2. Flight.")
+    print("3. Fight.")
+    print("")
+    secondAnswer = input()
+
+    # Fight
+    if secondAnswer == "3" or secondAnswer.lower() == "fight":
+        fight(character)
+
+    # Flight
+    if secondAnswer == "2" or secondAnswer.lower() == "flight":
+        flight(character)
+
+    # Freeze
+    if secondAnswer == "1" or secondAnswer.lower() == "freeze":
+        freeze(character)
+
 # Skip class
 elif userAnswer == "2" or userAnswer.lower() == "skip":
     print("")
     print("You decide to keep walking down the hall, straight past your math classroom.")
     print("You feel a little guilty as you walk to a quieter part of the school, heading towards the storage room, When the bell for first piriod rings.")
-    print("Suddenly, you hear footsteps and yelling down the hall. Like, a lot of them. Coming your way towards you.")
-    print("You back up to get out of the away of the people running in your direction, pressing yourself agenst the wall.")
+    print("Suddenly, you hear footsteps and yelling down the hall. Like, a lot of them. Coming towards you.")
+    print("You back up to get out of the away of the people running your way, pressing yourself agenst the wall.")
     print("You realize the people running are your classmates.")
-    print("Not sure what to do you grab on to one of your friends and ask them 'what's up.'")
+    print("Not sure what to do, you grab on to one of your friends and ask them 'what's up.'")
     print("They tell you about a stranger with a knife in the classroom.")
     print("")
     print("You come up with four options of what to do next.")
@@ -342,91 +615,38 @@ elif userAnswer == "2" or userAnswer.lower() == "skip":
 
     skipUserAnswerOne = input()
     if skipUserAnswerOne == "1" or skipUserAnswerOne.lower() == "join":
-        if character == "Lily":
-            print("")
-            print("Still trying to understand what is going on you keep questioning your friends as you run.")
-            print("Studdenly you realize that you and your friends have been seperated from the group.")
-            print("You are your friends keep running until you reach the exit.")
-            print("In front of you is a person covered in blood, bodies surrounding them, holdning a knife and grinning crazily at you.")
-            print("")
-            print("safe to say you did not make it out.")
-            print("")
-            print("Want to try again?")
-            print("Peace of advice for you. Do not get distracted when running from a killer.")
-            print("")
+        join(character)
 
-        if character == "Elsa":
-            print("")
-            print("You turn to run with the rest of the class, when you hear a thump in front you.")
-            print("You slow down and try to peer over your classmate's heads when you hear someone shout 'The attacker is coming!'")
-            print("This news causes a panic to try and go the otherway and you fall in the chaos. ")
-            print("From under the feet of screeming students you reach the conclusion that you are doomed.")
-            print("You go limp and let the heavy feet of others knock you out.")
-            print("")
-            print("You wake up at home with a nasty headache and bruses on every part of you.")
-            print("You must not have been found, and even if you were, you looked dead enough not to be bothered with.")
-            print("")
-            print("Want to make it out healthy?")
-            print("Next try is your game.")
-            print("")
+    if skipUserAnswerOne == "2" or skipUserAnswerOne.lower() == "lead":
+        lead(character)
 
-        if character == "Fish":
-            print("")
-            print("You decide to join your franticly running classmates.")
-            print("You run in the middle of the group and try to keep up with the rest of the class.")
-            print("That is, until someone at the front yells 'The attacker is coming!'")
-            print("You look ip and see a peron holding a knife and covered in blood ruuning towards your group with murder in their eyes.")
-            print("The group panics and starts to run in all directions.")
-            print("")
-            print("You can continue with the group, or stuff yourself into a nearby locker.")
-            print("")
-            print("1. Group.")
-            print("2. Locker.")
-            print("")
-            FishUltimateChose = input()
+    if skipUserAnswerOne == "3" or skipUserAnswerOne.lower() == "solo":
+        solo(character)
 
-            while True:
-                if FishUltimateChose == "1" or FishUltimateChose.lower() == "group":
-                    print("")
-                    print("You run as fast as you can with the group in the general opisit direction of the attacker.")
-                    print("Eventialy your legs tire, sweat runs down your face, your breath comes in ragged gasps, and your back screems almost as loud as the voices behind you.")
-                    print("One of your classmates runs into as you slow and flailing at the unexpecting contact, they push you away.")
-                    print("You fall and hit your head agenst a wall and another classmate steps on you befor long, causing your ancle to twist at an odd angle.")
-                    print("Trying to continue causes you to fall again and scream in pain.")
-                    print("With no other options and the hall now empty you try to crawl after your classmates.")
-                    print("Despite your efforts you can not go very far.")
-                    print("The attacker finds yo crawling their and kicks you into the wall before stabbing you in the side.")
-                    print("")
-                    print("Somehow you survive, but you lose a lot of blood and can't walk on your leg after the incedant.")
-                    print("")
-                    print("You have a long impossible road to recovery ahead of you.")
-                    print("If you would like to skip the recovery prosses, try again.")
-                    print("")
-                    break
-                elif FishUltimateChose == "2" or FishUltimateChose.lower() == "locker":
-                    print("")
-                    print("In the confusion you run to the nearest locker and put the things you find inside the next locker.")
-                    print("You stand as straight as you can and step inside.")
-                    print("You shut the door and watch out the slit as your friends and classmates bleed out and die.")
-                    print("The attcker when finished with his massacur runs after the escapees.")
-                    print("Your legs lock up and you start to shake.")
-                    print("You eventialy step outside the locker and stare at the body directly infront of you.")
-                    print("You realize they are a quiet girl in class and also that despite the blood around her she is still breathing.")
-                    print("On closer examination, she was never stabed just knocked about.")
-                    print("You grab her unconsious body and drag her to the exit that was farthest from where the attacker went.")
-                    print("You make it out side and hide in a bush where you find a couple of other students who say they made it out the window.")
-                    print("")
-                    print("All of you make it home alive.")
-                    print("Can you save any more of your classmates?")
-                    print("Try it.")
-                    print("")
-                    break
-                else:
-                    print("")
-                    print("That was not one of the options. ")
-                    print("Your options are...")
-                    print("")
-                    print("1. Group.")
-                    print("2. Locker.")
-                    print("")
-                    FishUltimateChose = input()
+    if skipUserAnswerOne == "4" or skipUserAnswerOne.lower() == "class":
+        print("")
+        print("You make your way to your classroom despite the warnings from your classmates.")
+        print("You are sure they must be playing a practical joke on you.")
+        print("When you arrive you find blood seeping from the door.")
+        print("Despite that you open the door and yawn to show how at ease you are.")
+        print("On the other side of the door lays bodies and more blood and a person standing among in all.")
+        print("This is real.")
+        print("The person walks towards you and flicks their knife to remove the blood.")
+        print("They run toward you and sink the knife into your left sholder then your right.")
+        print("Your thigh is next.")
+        print("You are dropped on the ground and bleed out.")
+        print("")
+        print("You have died.")
+        print("")
+        print("Try again, just this time don't be so stupid.")
+        print("")
+
+else:
+    print("")
+    print("That was not one of the options. ")
+    print("Your options are...")
+    print("")
+    print("1. Go.")
+    print("2. Skip.")
+    print("")
+    userAnswer = input()
