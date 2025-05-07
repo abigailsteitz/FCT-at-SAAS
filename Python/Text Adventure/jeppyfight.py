@@ -118,7 +118,7 @@ print("As you rount the corner, you see the beast. it is a ginourmous jellyfish,
 print("The Jeppyfish is angry! get ready to fight!:")
 
 playerscore = 100
-jeppyscore = 100
+jeppyscore=100
 
 while playerscore > 0 and jeppyscore > 0:
     print("Your current health:", playerscore)
