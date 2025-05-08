@@ -5,12 +5,12 @@ def add_numbers(a, b):
     print("Adding numbers...")
     # TODO: Task 3, this function should RETURN the value of a + b. Uncomment the line below to fix the code.
     # After that, you can start the graded assignment, go to Calculator.py
-    # return a + b
+    return a + b
 
-shirtPrice = 20.00
-tankTopPrice = 15.00
-pantsPrice = 25.00
-skirtPrice = 25.00
+shirtPrice = 5.00
+tankTopPrice = 8.00
+pantsPrice = 19.00
+skirtPrice = 10.00
 
 print("Welcome to the clothing store!")
 print(f"A shirt costs {shirtPrice}.")
@@ -18,10 +18,10 @@ print(f"A tank top costs {tankTopPrice}.")
 print(f"Pants cost {pantsPrice}.")
 print(f"A skirt costs {skirtPrice}.")
 
-print("")
-print("Would you like pants or a skirt today?")
+print("Hello customer")
+print("Would you like pants or a shirt today?")
 print("a. Pants")
-print("b. Skirt")
+print("b. shirt")
 pantsOrSkirt = input()
 
 # Find price of the bottoms they chose
