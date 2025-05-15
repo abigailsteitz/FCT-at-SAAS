@@ -1,69 +1,60 @@
 print("Welcome to Pig Farm")
 
-print("Would you like ) to buy some pigs? yes or no?")
-typeOfMarker = input()
+score = 0 
 
-if typeOfMarker == "no":
-  print("you lose")
-  
-  kick = input()
-  
-  if kick == "yes":
-    print("your great")
-    
-    print("Buy food?")
-    kick = input()
-    
-    if kick == "yes":
-      print("pigs are nourished")
-    else:
-      print("your ppigs die")
-  else:
-    print("I have no clue")
-elif typeOfMarker == "yes":
-  print("your great")
+print("would you like to buy some pigs? yes or no?")
+doyouwanttobuypigs = input()
 
-  print("do you want to buy food?")
-  kick = input()
-
-  if kick == "yes":  
-    print("your pigs are nourished")
-
-  
-  if kick == "no":
-   print("your pigs die")
-
-  print("do you want to have a girl and a boy pig?")
-  kick = input()
-
-  if kick == "yes":  
-    print("YAY more pigs")
-  
-  
-  if kick == "no":
-   print("no more pigs")
-
-
-  print("do you want to buy more fence?")
-  kick = input()
-
-  if kick == "yes":  
-    print("YAY thrive")
-
-  
-  if kick == "no":
-   print("your pigs escapey")
-
-
-  print("do you want to sell half of your pigs?")
-  kick = input()
-
-  if kick == "yes":  
-    print("you get money and win!")
-    kick = input()
-  
-  
-  if kick == "no":
-   print("you go bancrupt and lose")
+if doyouwanttobuypigs == "no":
+    print("you lose")
+    score = 0
 else:
-  print("Not understood " + typeOfMarker)
+    print("you're great!")
+    print("nice job!")
+    score += 1 
+
+    print("buy food for your pigs? yes or no?")
+    doyouwanttobuyfood = input()
+
+    if doyouwanttobuyfood == "no":
+        print("your pigs starved and died!")
+    else:
+        print("your pigs are nourished!")
+        score += 1  
+
+    print("do you want to buy a girl and boy pig? yes or no?")
+    girlandboy = input()
+
+    if girlandboy == "yes":
+        print("YAY! More pigs!")
+        print("nice job!")
+        score += 1 
+    else:
+        print("no more pigs.")
+    
+    print("do you want to buy more fence? yes or no?")
+    fencewant = input()
+import random
+
+fences = random.randint(1, 5) 
+print(f"You have received {fences} fences!")
+
+if fencewant == "yes":
+        print("YAY! Your pigs thrive!")
+        print("nice job!")
+        score += 1  
+else:
+        print("your pigs escaped!")
+    
+
+print("do you want to sell half of your pigs? yes or no?")
+sellpigs = input()
+
+if sellpigs == "yes":
+        print("you get money and win!")
+        score += 1  
+else:
+        print("you went bankrupt and lost.")
+
+print("the end.")
+print(f"you got {score} out of 5.")
