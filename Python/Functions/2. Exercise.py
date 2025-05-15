@@ -46,6 +46,9 @@ elif ShirtOrTank == "b":
 
 print("Thanks! Your total is:")
 # TODO: Task 1, run the file as is. What is the output?
+
+#clothing prices + what do we want
+
 # TODO: Task 2, uncomment the following 2 lines. What is the output now?
 # The demonstration here is
 #  - that NOTHING happens until we call the function.

@@ -1,0 +1,43 @@
+/* === File: main.css === */
+/* === File: style.css === */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f1ee;
+    color: #333;
+  }
+  
+  header, footer {
+    background: #3e2723;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  nav a {
+    margin: 0 1em;
+    color: #ffcc80;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 2em;
+    text-align: center;
+  }
+  
+  .gallery img, .gallery video {
+    width: 200px;
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .employees div {
+    margin: 1em auto;
+    padding: 1em;
+    background: #fff8e1;
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
