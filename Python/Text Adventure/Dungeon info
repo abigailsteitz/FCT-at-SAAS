@@ -1,0 +1,264 @@
+#Skip to content
+Banner
+Scroll for Initiative
+A Complete Guide to the 13 Damage Types in D&D: Part One
+Posted on 19 August 2023By Scroll
+
+Content warning: these posts mention bodily harm in some detail.
+
+Have you ever wanted to dive deep into the different damage types in D&D? If so, this post is for you. The aim is to help DMs (and players!) understand what damage means in D&D and how best to describe it. You might also find it useful for other games, which may have their own damage types or ways of describing injury.
+
+There are 13 damage types in 5e: acid, bludgeoning, cold, fire, force, lightning, necrotic, piercing, poison, psychic, radiant, slashing, and thunder. Some had different names in previous editions. ‘Thunder’ damage was ‘sonic’ in 3rd edition, for example, and ‘lightning’ damage was ‘electricity’. 5e doesn’t have ‘negative energy’ damage, or positive energy for that matter, but the same territory is covered by necrotic and radiant damage. I think the majority of these changes happened in 4th edition.
+
+In this three-part article, I want to think a bit more deeply about the different damage types: where they come from, how they hurt you, and what they might look like at different levels of play. As such, I feel it’s fair to warn you that there may be occasional descriptions of bodily injury, which I will try not to dwell on.
+
+A note on hit points
+Before I go on, if we’re going to look at damage types, we really should remind ourselves about hit points – the way the game tracks damage.
+
+Hit points are an abstraction. Always have been. As far as I can tell, the concept was created (or at least coined) by Dave Arneson, one of the game’s co-creators. It’s worth reading verbatim what 5e says about hit points:
+
+Hit points represent a combination of physical and mental durability, the will to live, and luck. Creatures with more hit points are more difficult to kill. Those with fewer hit points are more fragile.
+
+In other words, hit points aren’t only about physical damage: they also take into account emotional or psychological strength and the role of fate or fortune. This is perhaps particularly important with some of the more ‘magical’ damage types like psychic damage and necrotic damage, which might attack your mind or spirit rather than your body (although they can do that, too). According to the Player’s Handbook, when your current hit point total is half or more of your hit point maximum, you typically show no signs of injury (PH 197). 
+
+Onto the damage types. I’m grouping these into three broad categories, each of which will be its own separate post:
+
+Weapon damage (bludgeoning, piercing, slashing)
+Elemental damage (acid, cold, lightning, poison, thunder)
+Magical damage (force, necrotic, psychic, radiant)
+I’m not looking at conditions like being stunned or exhausted – that’s a whole other post, albeit a related one. I suppose I’m focusing on injuries: physical damage primarily, with an occasional reference to psychological harm.
+
+Let’s have a look.
+
+Weapon damage
+Although the following damage types are not exclusively inflicted by physical weapons, this is their main source, and categorizing them in this way helps to distinguish them from other natural and magical forces.
+
+
+🔨 Bludgeoning damage
+‘Blunt force attacks – hammers, falling, constriction, and the like – deal bludgeoning damage.’
+
+Also known as: crushing damage, blunt-force trauma
+
+Common sources: clubs, flails, maces, hammers, staves, sling bullets, unarmed strikes; falling distances of 10 feet or more; stomping damage, slam attacks, constricting snakes or tentacles, hurled rocks, monsters’ tails, wings, or hooves. Some spells deal bludgeoning damage, but rarely exclusively. Most deal bludgeoning damage and damage of another type (eg, meteor swarm, which deals bludgeoning and fire damage, or ice storm, which deals bludgeoning damage and ice damage).
+
+Vulnerable: skeletons, and curiously, ice mephits.
+
+Resistant: swarms, treants. (Note: I’m not going to include creatures that are resistant or immune to non-magical damage like fiends, celestials, incorporeal undead etc, because that’s a long list.)
+
+Immune: none (although, see my note above).
+
+How does it cause harm? In essence, bludgeoning damage happens when an object of significant mass hits a target with force, transferring the energy of the impact to the target’s body. This could bruise soft tissue (eg, a black eye), fracture bones (or break them), damage internal organs (damage to the lungs or trachea could kill in minutes, and ruptured intestines could lead to sepsis), or result in concussion, which happens when cerebrospinal fluid fails to protect the brain. Although it is not impossible for bludgeoning damage to break the skin, but it’s more likely to cause internal bleeding, which can be rapid and hard to control, especially if there is direct damage to soft organs or major blood supplies (eg, around the pelvis).
+
+What does it feel like? To some extent, it depends on the nature of the injury: what caused it and where it’s felt.
+
+A bludgeoning weapon like a mace or hammer can cause intense sharp pain at the point of impact followed by aching or throbbing.
+Swollen or bruised tissue can feel tender, and moving a bruised limb can be uncomfortable or stiff.
+Internal bleeding can cause weakness or dizziness in addition to the feeling of tender tissue or the sharp pain at point of impact. If internal bleeding occurs in the lungs or chest, it could lead to shortness of breath or difficulty breathing.
+If a bone is broken, the pain can be extremely intense and sharp, potentially with a grinding or shifting sensation if the broken bone is misaligned.
+Bludgeoning damage could also cause nerve damage: numbness, tingling, loss of sensation, or some other discomfort.
+If a bludgeoning weapon were to cause concussion, this might cause headache, blurred vision or double vision (or ‘seeing stars’), dizziness, nausea, ringing in the ears. It’s less well known, but concussion can also cause cognitive and emotional trauma: disorientation, confusion, slurred speech, attention issues, coordination difficulties or difficulty balancing, amnesia, and mood changes (including depression, lethargy, and irritability).
+Examples: the scale below comes from chapter 8 of the Dungeon Master’s Guide (‘improvised damage’). Some of the descriptions are copied verbatim; the rest are my own invention or taken from elsewhere in the game (eg, the Monster Manual). I’ve also included the average damage for each dice roll for easy comparison.
+
+5 (1d10): being hit by a falling bookcase or a thug’s mace
+11 (2d10): a blow from an ogre’s club or centaur’s hooves, or perhaps a tree branch
+22 (4d10): being hit by falling rubble or stomped on by an elephant
+55 (10d10): falling off the Arc de Triomphe, Nelson’s Column, or the Leaning Tower of Pisa, or getting crushed by compacting walls
+99 (18d10): being hit by a crashing falling fortress
+132 (24d10): being crushed in the jaws of a godlike creature or moon-size monster
+
+🔪 Piercing damage
+‘Puncturing and impaling attacks, including spears and monsters’ bites, deal piercing damage.’
+
+Also known as: stabbing damage
+
+Common sources: spears, arrows, darts, crossbow bolts, light blades, morningstars, war picks; firearms like shotguns and muskets; needles, spikes; bites, horns, some claw attacks; spells that simulate these things like thorn whip and spike growth.
+
+Vulnerable: none.
+
+Resistant: swarms, treants, flameskulls.
+
+Immune: none.
+
+How does it cause harm? As a piercing weapon passes through tissue, it slows down, transferring kinetic energy to the injury area. (Energy transfer is pretty much how all weapons cause harm, come to think of it.) The velocity of the weapon is arguably more important in determining how much damage is done than the mass of the weapon, hence why light blades are ‘finesse’ weapons in 5e. While the weapon’s point might only be applied to a small area, it can cause deep wounds, which in turn can cause bleeding and shock. Internal bleeding is just as much of a problem here as with bludgeoning weapons; a stab wound might not bleed out particularly effusively, but if internal organs are ruptured, you’re in trouble. Of course, if an artery is pierced, bleeding out becomes a much bigger problem.  
+
+What does it feel like? The sensation of being pierced can be sharp and sudden – so sudden that the body might not immediately register the injury, especially if an adrenaline rush temporarily dulls the pain. People often describe an intense heat or a burning sensation which might then throb or sting. If you lose sufficient blood, you can go into shock: your skin turns pale, cold, and clammy, your heart speeds up, you feel dizzy or confused, and you might feel sick or thirsty. There is also the emotional impact of realizing you are injured. People tend to panic – understandably – and feel a frightening sense of vulnerability.
+
+On a curious note: your brain tends to focus on the worst wound, so if you have been pierced by, say, three arrows, the worst injury might block out the pain of the other two. You might not even register you have been wounded multiple times.
+
+Examples:
+
+5 (1d10): a gnoll’s spear or a goblin’s arrow
+11 (2d10): a gladiator’s spear or the bite of a sabre-toothed tiger
+22 (4d10): a roper’s bite, or the locusts of an insect plague spell
+55 (10d10): being hit by a barrage of arrows
+99 (18d10): a critical hit from the fangs of a massive serpentine deity
+132 (24d10): the gnashing, razor-sharp maw of a colossal cosmic entity
+
+⚔️ Slashing damage
+‘Swords, axes, and monsters’ claws deal slashing damage.’
+
+Also known as: cutting damage
+
+Common sources: blades, axes, whips, and spells that simulate these (eg, blade barrier and cloud of daggers); monster claws and talons.
+
+Vulnerable: none.
+
+Resistant: swarms.
+
+Immune: ochre jellies and black puddings (both oozes). Curiously, this applies even to magic weapons.
+
+How does it cause harm? In physics terms, cutting someone with a slashing weapon involves compression and shearing – ie, pushing and slicing. A cut can be a shallow graze or a deep wound. Beyond that, it causes injuries in much the same way as piercing damage does: through tearing, internal damage, blood loss, and shock.    
+
+What does it feel like? Not unlike a piercing wound – ie, your brain might not immediately register it if the wound was very sharp, but it can then lead to a burning sensation. The effect of blood loss is the same.
+
+Examples:
+
+5 (1d10): a typical wound from a sword
+11 (2d10): a wyvern’s claws or a wound from a greatsword wielded by an experienced soldier
+22 (4d10): the claws of a massive monster like a dragon or the tarrasque
+55 (10d10): being hit by whirling steel blades; a flurry of blows from Drizzt Do’Urden       
+99 (18d10): enormous spinning saw blades that obliterate everything in their path
+132 (24d10): death by a thousand cuts?!
+Check out my Patreon for Part 2!
+
+If you like what I do, please support me on Patreon or buy my products on DriveThru RPG. You can follow me on Facebook at scrollforinitiative, Bluesky @scrollforinit, Twitter @scrollforinit, and Instagram @scrollforinitiative. And if you want to make my day, you can buy me a coffee here.
+
+Posted in DM advice, player tipsTagged Critical Hits, D&D Damage Types, Damage Descriptions, Damage Types Analysis, description, Dungeon Master Advice, Dungeon Master Tips, evocative descriptions, game mechanics, Injury Descriptions, player tips, Traps and Hazards5 Comments
+Post navigation
+7 ways to hack your creativityA Complete Guide to the 13 Damage Types in D&D: Part Three
+5 thoughts on “A Complete Guide to the 13 Damage Types in D&D: Part One”
+Roger Hall says:
+23 August 2023 at 11.51 am
+Great blog thank you.
+Missing fire from the elemental damage types.
+
+Reply
+admin says:
+23 August 2023 at 10.52 am
+Thanks! It’s on my patreon 🙂
+
+Reply
+y2meta says:
+2 January 2025 at 9.56 pm
+Great breakdown of the damage types! I especially found the explanations on bludgeoning and piercing damage helpful, as they can sometimes be confusing in gameplay. Looking forward to Part Two!
+
+Reply
+Scroll says:
+3 January 2025 at 7.51 am
+Thanks! Part 2 is on my Patreon 🙂
+
+Reply
+tc lottery login says:
+17 February 2025 at 10.46 pm
+This guide is so helpful! I love how you’ve broken down the different damage types in D&D—it really clarifies things for players new and old. The section on how to use scrolls for initiative was particularly insightful. Can’t wait to see Part Two!
+
+Reply
+Leave a Reply
+Your email address will not be published. Required fields are marked *
+
+Comment * 
+
+Name * 
+
+Email * 
+
+Website 
+
+ Save my name, email, and website in this browser for the next time I comment.
+
+ Yes, add me to your mailing list
+
+ Notify me of follow-up comments by email.
+
+ Notify me of new posts by email.
+
+
+Recent Posts
+Amazing advice from the 3rd edition DMG
+Almost great: The Wild Beyond the Witchlight (a review)
+Tired D&D clichés: which ones need to go?
+Encounter balance in 2024: better or worse?
+Cookbooking Witchlight: better information architecture in action
+Search
+Search
+Recent Comments
+Scroll on A simple checklist for writing awesome adventures
+Jeffrey Bostic on A simple checklist for writing awesome adventures
+Jeffrey Bostic on Cookbooking Witchlight: better information architecture in action
+apostatively on The Complete Guide to D&D’s Musical Instruments
+tc lottery login on A Complete Guide to the 13 Damage Types in D&D: Part One
+
+Archives
+April 2025
+March 2025
+January 2025
+December 2024
+October 2024
+September 2024
+August 2024
+July 2024
+June 2024
+May 2024
+April 2024
+March 2024
+February 2024
+January 2024
+December 2023
+November 2023
+October 2023
+September 2023
+August 2023
+July 2023
+June 2023
+May 2023
+April 2023
+March 2023
+February 2023
+January 2023
+December 2022
+November 2022
+October 2022
+September 2022
+August 2022
+July 2022
+June 2022
+May 2022
+April 2022
+March 2022
+February 2022
+January 2022
+December 2021
+November 2021
+October 2021
+September 2021
+August 2021
+July 2021
+June 2021
+May 2021
+April 2021
+March 2021
+February 2021
+January 2021
+December 2020
+November 2020
+October 2020
+September 2020
+August 2020
+July 2020
+June 2020
+Categories
+adventures
+campaign settings
+D&D history
+debates
+DM advice
+game systems
+General
+mini painting
+monsters
+player tips
+products
+Uncategorized
+Uncategorized
+world building
+Proudly powered by WordPress | Theme: Edin by WordPress.com.
