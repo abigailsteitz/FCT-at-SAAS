@@ -10,8 +10,16 @@ if "player" not in globals():
         "damage": 5,
         "defense": 0,
         "dexterity": 12,  # Default dexterity for initiative rolls
-        "skills": []  # Skills will be populated based on class
+        "skills": [],  # Skills will be populated based on class
+        "player_gold": 50,
+        "score": 50,  # Ensure score is initialized to the same value as player_gold
+        "keys": 0  # Track the number of keys the player has
     }
+
+# Update player_gold and score to always reference the same value
+def update_gold_and_score(amount):
+    player["player_gold"] += amount
+    player["score"] = player["player_gold"]
 
 def rest(current_health, base_health):
     if current_health < base_health:
@@ -22,14 +30,11 @@ def rest(current_health, base_health):
         print("You are already at full health!")
     return current_health
 
-
-
 if "base_health" not in globals():
     base_health = player["max_health"]
 
-
-if "player_gold" not in globals():
-    player_gold = 50
+def player_gold():
+    pass
 
 # Ensure skill_uses is initialized
 if "skill_uses" not in globals():
@@ -37,7 +42,7 @@ if "skill_uses" not in globals():
         "Power Strike": 3,
         "Shield Block": 3,
         "Quick Stab": 3,
-        "Fireball": 3,
+        "Fireball": 2,
         "Arcane Shield": 3,
         "Backstab": 3,
         "Evasion": 3,
@@ -64,8 +69,6 @@ if "damage_types" not in globals():
         "Elemental": ["Fireball", "Lightning Bolt"],
         "Magical": ["Necrotic Touch", "Psychic Blast"]
     }
-
-
 
 # Ensure roll_initiative function is defined
 if "roll_initiative" not in globals():
@@ -138,6 +141,8 @@ class_skills = {
     "d": ["Heal", "Divine Smite"],
     "e": ["Inspire", "Song of Rest"]
 }
+
+#### WARRIORS
 def Power_Strike(attacker, defender):
     """
     Executes a Power Strike attack, dealing extra damage.
@@ -146,15 +151,17 @@ def Power_Strike(attacker, defender):
     defender["health"] -= damage
     print(f"{attacker['name']} uses Power Strike! Deals {damage} damage to {defender['name']}.")
     return damage
-# Define a function for Shield Block, which reduces damage taken while still allowing a counterattack
+
+# Fix Shield_Block function
 def Shield_Block(attacker, defender):
     """
     Executes a Shield Block, reducing damage taken from the next attack.
     """
     print(f"{attacker['name']} braces with their shield!")
-    defender["damage"] = max(0, defender["damage"] - 2)  # Reduce damage by 2 for the next attack
-    return defender["damage"]
+    attacker["defense"] += 2  # Temporarily increase defense
+    print(f"{attacker['name']}'s defense increases by 2 for the next attack.")
 
+#### MAGES
 # Define a function for Fireball, which deals area damage to multiple enemies
 def Fireball(attacker, enemies):
     """
@@ -175,6 +182,27 @@ def Arcane_Shield(attacker):
     attacker["damage"] = max(0, attacker["damage"] - 2)  # Reduce damage by 2 for the next two turns
     return attacker["damage"]
 
+#### ROGUES
+# Define a function for Backstab, which deals extra damage if the target is surprised
+def Backstab(attacker, defender):
+    """
+    Executes a Backstab attack, guarenteeing a hit and dealing extra damage.
+    """
+    damage = calculate_damage(attacker, "melee", critical=False) + 5  # Extra damage for Backstab
+    defender["health"] -= damage
+    print(f"{attacker['name']} performs a Backstab! Deals {damage} damage to {defender['name']}.")
+    return damage
+
+# Define a function for Evasion, which allows the rogue to dodge an attack and counterattack
+def Evasion(attacker, defender):
+    """
+    Executes an Evasion, allowing the rogue to dodge an attack and counterattack.
+    """
+    print(f"{attacker['name']} evades the attack!")
+    damage = calculate_damage(attacker, "melee", critical=False)  # Normal damage for counterattack
+    defender["health"] -= damage
+    print(f"{attacker['name']} counterattacks! Deals {damage} damage to {defender['name']}.")
+    return damage
 
 def make_attack_roll(attacker, defender, attack_type):
     """
@@ -206,20 +234,12 @@ def get_damage_type(weapon_or_skill):
             return damage_type
     return "Unknown"
 
-# Define starting gold and shop items
-player_gold = 50
-shop_items = {
-    "healing potion": {"price": 50, "description": "Restores 10 HP."},
-    "armor": {"price": 100, "description": "Increases defense by 2."},
-    "weapon": {"price": 150, "description": "Upgrades your weapon to deal +2 damage."}
-}
-
 # Define a function to display the shop and handle purchases
 def visit_shop(player_gold):
     print("Welcome to the shop! Here are the items available for purchase:")
     for item, details in shop_items.items():
         print(f"- {item.title()} (Price: {details['price']} gold): {details['description']}")
-    print(f"You have {player_gold} gold.")
+    print(f"You have {player['player_gold']} gold.")  # Use player["player_gold"] directly
     
     while True:
         print("What would you like to buy? (type 'leave' to exit the shop)")
@@ -229,72 +249,152 @@ def visit_shop(player_gold):
             break
         elif item_choice in shop_items:
             item_price = shop_items[item_choice]["price"]
-            if player_gold >= item_price:
-                player_gold -= item_price
-                print(f"You bought a {item_choice} for {item_price} gold. You now have {player_gold} gold.")
+            if player["player_gold"] >= item_price:  # Use player["player_gold"]
+                update_gold_and_score(-item_price)
+                print(f"You bought a {item_choice} for {item_price} gold. You now have {player['player_gold']} gold.")
                 # Add item effects here if needed
                 if item_choice == "healing potion":
                     print("You store the healing potion in your inventory.")
                 elif item_choice == "armor":
-                    print("Your defense has increased!")
+                    player["defense"] += 2
+                    print("Your defense has increased by 2!")
                 elif item_choice == "weapon":
-                    print("Your weapon has been upgraded!")
+                    player["damage"] += 2
+                    print("Your weapon has been upgraded! Damage increased by 2.")
             else:
                 print("You don't have enough gold to buy that item.")
         else:
             print("Invalid choice. Please select an item from the shop.")
-    return player_gold
+        print(f"Current gold: {player['player_gold']}")  # Display player's gold after each action
 
-# Add score and keys to the player structure
-player["score"] = 0
-player["keys"] = 0
+# Add more diverse scenarios
+def generate_scenario():
+    scenarios = [
+        {"description": "You find a treasure chest!", "action": "find_gold"},
+        {"description": "You encounter a locked door.", "action": "locked_door"},
+        {"description": "A goblin ambushes you!", "action": "goblin_fight"},
+        {"description": "You find a healing fountain.", "action": "heal_fountain"},
+        {"description": "You trigger a trap!", "action": "trap"},
+        {"description": "You meet a wandering merchant.", "action": "merchant"},
+        {"description": "You find a mysterious puzzle on the wall.", "action": "puzzle"},
+        {"description": "A friendly NPC offers you a quest.", "action": "npc_quest"}
+    ]
+    return random.choice(scenarios)
 
-# Function to explore a dungeon room
+# Handle traps
+def handle_trap():
+    trap_damage = random.randint(5, 15)
+    player["health"] -= trap_damage
+    print(f"A trap is triggered! You take {trap_damage} damage. Your health is now {player['health']}.")
+
+# Handle merchant interaction
+def handle_merchant():
+    print("A wandering merchant offers you rare items.")
+    rare_items = {
+        "enchanted ring": {"price": 200, "description": "Increases dexterity by 2."},
+        "magic scroll": {"price": 150, "description": "Teaches you a new skill."}
+    }
+    for item, details in rare_items.items():
+        print(f"- {item.title()} (Price: {details['price']} gold): {details['description']}")
+    print(f"You have {player['player_gold']} gold.")
+    choice = input("Would you like to buy something? (yes/no): ").lower()
+    if choice == "yes":
+        item_choice = input("Enter the name of the item: ").lower()
+        if item_choice in rare_items:
+            item_price = rare_items[item_choice]["price"]
+            if player["player_gold"] >= item_price:
+                update_gold_and_score(-item_price)
+                print(f"You bought a {item_choice}. You now have {player['player_gold']} gold.")
+                if item_choice == "enchanted ring":
+                    player["dexterity"] += 2
+                    print("Your dexterity has increased by 2!")
+                elif item_choice == "magic scroll":
+                    new_skill = random.choice(list(skill_uses.keys()))
+                    player["skills"].append(new_skill)
+                    print(f"You learned a new skill: {new_skill}!")
+            else:
+                print("You don't have enough gold.")
+        else:
+            print("Invalid choice.")
+    else:
+        print("You decide not to buy anything.")
+
+# Handle puzzles
+def handle_puzzle():
+    print("You encounter a mysterious puzzle on the wall.")
+    print("Solve the riddle to proceed:")
+    riddle = "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?"
+    answer = input("Your answer: ").lower()
+    if answer == "echo":
+        print("Correct! The puzzle unlocks a hidden compartment with 50 gold.")
+        update_gold_and_score(50)
+    else:
+        print("Incorrect! The puzzle remains unsolved.")
+
+# Handle NPC quests
+def handle_npc_quest():
+    print("A friendly NPC approaches you and offers a quest.")
+    quest = {
+        "description": "Retrieve the lost amulet from the goblin cave.",
+        "reward": {"gold": 100, "item": "amulet of protection"}
+    }
+    print(f"Quest: {quest['description']}")
+    accept = input("Do you accept the quest? (yes/no): ").lower()
+    if accept == "yes":
+        print("You accepted the quest!")
+        # Simulate quest completion
+        print("You venture into the goblin cave and retrieve the amulet.")
+        update_gold_and_score(quest["reward"]["gold"])
+        print(f"You earned {quest['reward']['gold']} gold and received the {quest['reward']['item']}!")
+        player["defense"] += 2
+        print("Your defense has increased by 2!")
+    else:
+        print("You declined the quest.")
+
+# Update explore_room to handle new scenarios
 def explore_room():
     print("\nYou enter a dark room in the dungeon.")
-    room_events = [
-        "You find a treasure chest!",
-        "You encounter a locked door.",
-        "A goblin ambushes you!",
-        "You find a healing fountain.",
-        "The room is empty, but eerie noises surround you."
-    ]
-    event = random.choice(room_events)
-    print(event)
+    scenario = generate_scenario()
+    print(scenario["description"])
 
-    if event == "You find a treasure chest!":
+    if scenario["action"] == "find_gold":
         gold_found = random.randint(10, 50)
-        player["score"] += gold_found
-        print(f"You open the chest and find {gold_found} gold! Your score is now {player['score']}.")
-    elif event == "You encounter a locked door.":
+        update_gold_and_score(gold_found)
+        print(f"You open the chest and find {gold_found} gold! You have {player['player_gold']} gold now.")
+    elif scenario["action"] == "locked_door":
         if player["keys"] > 0:
             print("You use a key to unlock the door and proceed.")
             player["keys"] -= 1
         else:
             print("The door is locked. You need a key to open it.")
-    elif event == "A goblin ambushes you!":
+    elif scenario["action"] == "goblin_fight":
         tutorial_goblin_fight(player, skill_uses)
         print("After defeating the goblin, you find a key!")
         player["keys"] += 1
-    elif event == "You find a healing fountain.":
+    elif scenario["action"] == "heal_fountain":
         heal_amount = random.randint(5, 15)
         player["health"] = min(player["health"] + heal_amount, player["max_health"])
         print(f"You drink from the fountain and heal {heal_amount} health. Your health is now {player['health']}.")
-    elif event == "The room is empty, but eerie noises surround you.":
-        print("You feel uneasy but nothing happens.")
+    elif scenario["action"] == "trap":
+        handle_trap()
+    elif scenario["action"] == "merchant":
+        handle_merchant()
+    elif scenario["action"] == "puzzle":
+        handle_puzzle()
+    elif scenario["action"] == "npc_quest":
+        handle_npc_quest()
 
-
+# Function to explore a dungeon room
 def tutorial_goblin_fight(player, skill_uses):
     print("\nAs you explore, you hear a scream nearby!")
     print("You rush to the scene and see a villager being attacked by a goblin!")
     print("This is a tutorial fight to teach you how combat works.")
 
-
     goblin = {
         "name": "Goblin",
         "health": 15,
         "damage": 3,
-        "armor_class": 12,
+        "armor_class": 6,
         "dexterity": 12,
         "attacks": [
             {"damage": 3, "type": "Slashing", "description": "The goblin slashes at you with its claws!"},
@@ -319,7 +419,7 @@ def tutorial_goblin_fight(player, skill_uses):
             if turn == "player":
                 print(f"\nYour turn! Your health: {player['health']}, Goblin's health: {goblin['health']}")
                 print("Choose your action:")
-                print("1. Attack")
+                print("1. Basic Attack")
                 print("2. Defend")
                 print("3. Use Skill")
                 print("4. Run")
@@ -351,39 +451,26 @@ def tutorial_goblin_fight(player, skill_uses):
                     print("You brace yourself for the goblin's attack, reducing incoming damage!")
 
                 elif action == "3":  # Use Skill
-                    print("You use a skill to gain an advantage!")
+                    print("Choose a skill to use:")
+                    # Filter skills based on the player's class and remaining uses
                     available_skills = [skill for skill in class_skills[player["class"]] if skill_uses[skill] > 0]
                     if not available_skills:
-                        print("You have no skill uses left!")
+                        print("You have no skills available to use!")
                         continue
-
-                    for i, skill in enumerate(available_skills, 1):
-                        print(f"{i}. {skill} (Uses left: {skill_uses[skill]})")
-                    skill_choice = input("Enter the number of your skill: ")
-
-                    try:
-                        skill_index = int(skill_choice) - 1
-                        selected_skill = available_skills[skill_index]
-                        skill_uses[selected_skill] -= 1
-                        print(f"You use {selected_skill}!")
-
-                        if selected_skill == "Power Strike":
-                            attack_type = "melee"
-                            attack_result = make_attack_roll(player, goblin, attack_type)
-                            if attack_result in ["hit", "critical"]:
-                                damage = calculate_damage(player, attack_type, critical=(attack_result == "critical")) + 3
-                                goblin["health"] -= damage
-                                print(f"You deal {damage} damage with Power Strike!")
-                        elif selected_skill == "Heal":
-                            heal_amount = 10
-                            player["health"] = min(player["health"] + heal_amount, player["max_health"])
-                            print(f"You heal yourself for {heal_amount} health. Current health: {player['health']}.")
-                    except (ValueError, IndexError):
-                        print("Invalid skill choice. You waste your turn!")
+                    # Display available skills
+                    for skill in available_skills:
+                        print(f"{skill} (Uses left: {skill_uses[skill]})")
+                    skill_choice = input("Enter the name of the skill: ").strip()
+                    if skill_choice in available_skills:
+                        skill_uses[skill_choice] -= 1
+                        # Execute the selected skill
+                        execute_skill(skill_choice, player, goblin, [goblin])
+                    else:
+                        print("Invalid skill choice. Please choose a valid skill.")
 
                 elif action == "4":  # Run
                     print("You attempt to flee!")
-                    if random.randint(1, 20) > 10:
+                    if random.randint(1, 20) > 5:
                         print("You successfully escape!")
                         return
                     else:
@@ -394,7 +481,7 @@ def tutorial_goblin_fight(player, skill_uses):
 
                 if goblin["health"] <= 0:
                     print("You defeated the goblin and saved the villager!")
-                    player["score"] += 10  # Add score for defeating the goblin
+                    update_gold_and_score(10)  # Add score for defeating the goblin
                     return
 
             elif turn == "goblin":
@@ -409,6 +496,35 @@ def tutorial_goblin_fight(player, skill_uses):
                     exit()
 
         round_number += 1
+
+# Improve skill execution logic
+def execute_skill(skill_name, attacker, defender=None, enemies=None):
+    if skill_name == "Power Strike":
+        Power_Strike(attacker, defender)
+    elif skill_name == "Shield Block":
+        Shield_Block(attacker, defender)
+    elif skill_name == "Fireball":
+        Fireball(attacker, enemies)
+    elif skill_name == "Arcane Shield":
+        Arcane_Shield(attacker)
+    elif skill_name == "Backstab":
+        Backstab(attacker, defender)
+    elif skill_name == "Evasion":
+        Evasion(attacker, defender)
+    elif skill_name == "Heal":
+        heal_amount = random.randint(5, 15)
+        attacker["health"] = min(attacker["health"] + heal_amount, attacker["max_health"])
+        print(f"You heal {heal_amount} health. Your health is now {attacker['health']}.")
+    elif skill_name == "Divine Smite":
+        damage = calculate_damage(attacker, "magical", critical=False) + 5
+        defender["health"] -= damage
+        print(f"You deal {damage} radiant damage to {defender['name']}!")
+    elif skill_name == "Inspire":
+        print("You inspire your allies!")
+    elif skill_name == "Song of Rest":
+        print("You play a soothing melody, restoring some health.")
+    else:
+        print("Invalid skill.")
 
 # Game starts here
 print("Welcome to the Dungeon Explorer!")
@@ -476,12 +592,17 @@ if choice in class_bonuses:
     weapon = selected_class["Weapon"]
     base_damage = selected_class["Base Damage"]
     base_health = selected_class["Base Health"]
-    print(f"You chose {weapon} class! Your stats have been updated: {stats}")
+    player["class"] = choice  # Ensure the player's class is updated
+    player["skills"] = class_skills[choice]  # Assign skills based on class
+    print(f"You chose the {weapon} class! Your stats have been updated: {stats}")
 
     damage = calculate_base_damage(weapon, stats)  # Use the primary stat for the weapon
-    damage_type = get_damage_type(weapon) 
+    damage_type = get_damage_type(weapon)
     health = calculate_health(base_health, stats["Constitution"])  # Base health scales with Constitution
 
+    player["health"] = health
+    player["max_health"] = health
+    player["damage"] = damage
     print(f"Your weapon is a {weapon}. It deals {damage} {damage_type} damage.")
     print(f"Your total health is {health}.")
 else:
@@ -513,7 +634,7 @@ while True:
     if choice == "explore":
         explore_room()
     elif choice == "shop":
-        player_gold = visit_shop(player_gold)
+        visit_shop(player["player_gold"])  # Pass player["player_gold"]
     elif choice == "gather":
         print("You gather information from the adventurers in the tavern.")
         print("They warn you about traps and monsters in the dungeon.")
@@ -530,7 +651,4 @@ while True:
         print(f"Thank you for playing! Your final score is {player['score']}.")
         break
     else:
-        print("Invalid choice. Please choose 'explore', 'shop', 'gather', 'rest', or 'quit'.")
-
-
-
+        print("Invalid choice. Please choose again.")
