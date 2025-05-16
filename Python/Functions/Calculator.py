@@ -1,5 +1,5 @@
-# Interactive Calculator Program. #I used some AI but let me explain everything to you. THe program displays a meny with options for additon, subtraction, multicplication, and division. Then the User will input the letter to tell the code which one it wants to use. Then based on the uswrs answer the program acts on the selected opperation. The program will keep running until the user selects the exit option. The program checks for invalid inputs and dispolays error messaging if this is the case with the equation.
-
+# Interactive Calculator Program. #I used some AI for the things I did not know but I used most code from the first template. But let me explain everything to you. THe program displays a meny with options for additon, subtraction, multicplication, and division. Then the User will input the letter to tell the code which one it wants to use. Then based on the uswrs answer the program acts on the selected opperation. The program will keep running until the user selects the exit option. The program checks for invalid inputs and dispolays error messaging if this is the case with the equation.
+a
 
 def add(a, b):
     return a + b
