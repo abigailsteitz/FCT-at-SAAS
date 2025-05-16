@@ -1,1 +1,57 @@
 /* Your CSS goes in this file */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #ffc0cb; /* Changed background to pink */
+    text-align: center;
+    padding: 1em 0;
+}
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 1em 0;
+}
+nav {
+    background-color: #333;
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+}
+main {
+    padding: 2em;
+}
+section {
+    margin-bottom: 2em;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+}
+.shop-options {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.shop-options div {
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 30%;
+}
+.shop-options img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 8px;
+}
