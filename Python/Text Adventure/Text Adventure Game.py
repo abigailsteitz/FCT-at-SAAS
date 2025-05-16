@@ -265,7 +265,7 @@ def join(character):
         print("You turn to run with the rest of the class, when you hear a thump in front of you.")
         print("You slow down and try to peer over your classmate's heads when you hear someone shout 'The attacker is coming!'")
         print("This news causes a panic to try and go the otherway and you fall in the chaos.")
-        print("From under the feet of screeming students you reach the conclusion that you are doomed.")
+        print("From under the feet of screaming students you reach the conclusion that you are doomed.")
         print("You go limp and let the heavy feet of others knock you out.")
         print("")
         print("You wake up at home with a nasty headache and bruses on every part of you.")
@@ -471,6 +471,7 @@ def solo(character):
         quit()
 
     if character == "Elsa":
+        print("")
         print("The others will just slow you down.")
         print("Running down the halls you try to think of a viable escape route.")
         print("You consided so many diffrent directions, you seem to have gotten turned around.")
@@ -528,7 +529,7 @@ print("")
 print("Choose your character.")
 print("")
 print("1. Lily: Lily is charasmatic and strong yet quite clumsy. Lily is reckless and can play soccer. She also hates math.")
-print("2. Fish: Fish has an interesting point of view and can make friends with anyone. Fish is chaotic, has a weak back, fish is also better.")
+print("2. Fish: Fish has an interesting point of view and can make friends with anyone. Fish is chaotic, and has a weak back.")
 print("3. Elsa: Elsa is calm, collected, and smart, but also very quiet. She is quick on her feet, but is sorta weak.")
 print("")
 
@@ -536,12 +537,12 @@ print("")
 firstuserAnswer = input()
 if firstuserAnswer == "1" or firstuserAnswer.lower() == "lily":
     print("")
-    print("You are now Lily. You chose... poorly")
+    print("You are now Lily. Woo hoo!")
     character = "Lily"
     print("")  
 elif firstuserAnswer == "2" or firstuserAnswer.lower() == "fish":
     print("")
-    print("You are now Fish. You chose... wisly")
+    print("You are now Fish. You chose... wisly.")
     character = "Fish"
     print("")
 elif firstuserAnswer == "3" or firstuserAnswer.lower() == "elsa":
