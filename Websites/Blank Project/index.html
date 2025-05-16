@@ -1,17 +1,79 @@
-<!--This head tag is not shown to the user. It is metadata about the page and read by browsers and search engines-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!--This is the title at the top of your browser tab. Search engines will also use this to display to users-->
-  <title>Poem Website</title>
-
-  <!--This tag brings in the CSS you write to add style to your webpage-->
-  <link rel="stylesheet" href="main.css" />
-
-  <!--This tag brings in the JavaScript you write to add behavior to your webpage-->
-  <script src="app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pets Unlimited</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="app.js" defer></script>
 </head>
-
 <body>
-  <!--Start of student website-->
-  
-  <!--End student website-->
+  <header>
+    <h1>Welcome to Pets Unlimited!</h1>
+    <p>Your one-stop shop for adopting your next best friend.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="products.html">Our Products</a></li>
+      <li><a href="employees.html">Meet Our Team</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p>At Pets Unlimited, we specialize in connecting people with their perfect furry companions. Whether you're looking for a loyal dog or a curious cat we have the perfect pet for you!</p>
+    <p>Click the links above to explore our products or meet the amazing team that makes it all possible.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pets Unlimited. All rights reserved.</p>
+  </footer>
 </body>
+</html>
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }

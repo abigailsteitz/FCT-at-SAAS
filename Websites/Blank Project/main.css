@@ -1,1 +1,40 @@
-/* Your CSS goes in this file */
+body {
+  background-color: rgb(34, 151, 152);
+  text-align: center;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+  margin-top: 15px;
+}
+
+button {
+  background-color: rgb(146, 0, 204);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  margin: 5px;
+  padding: 15px 30px;
+}
+
+#redButton {
+  background-color: rgb(211, 150, 208);
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  margin: 5px;
+}
+
+#defaultContent {
+  font-size: 40px;
+  display: block;
+}
+
+#dogContent {
+  font-size: 40px;
+  display: none;
+}
+
+#catContent {
+  font-size: 40px;
+  display: none;
+}
