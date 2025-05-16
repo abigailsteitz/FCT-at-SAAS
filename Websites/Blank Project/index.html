@@ -1,17 +1,61 @@
-<!--This head tag is not shown to the user. It is metadata about the page and read by browsers and search engines-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!--This is the title at the top of your browser tab. Search engines will also use this to display to users-->
-  <title>Poem Website</title>
-
-  <!--This tag brings in the CSS you write to add style to your webpage-->
-  <link rel="stylesheet" href="main.css" />
-
-  <!--This tag brings in the JavaScript you write to add behavior to your webpage-->
-  <script src="app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shopnshop</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="app.js" defer></script>
 </head>
-
 <body>
-  <!--Start of student website-->
-  
-  <!--End student website-->
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h1>shopnshop</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./bydee.html">shop</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h2>Welcome to Our Clothing Store</h2>
+    <p>Discover the latest trends in fashion.</p>
+    <a href="#shop" class="btn">Shop Now</a>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop" class="shop">
+    <h2>best sellers</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://static.zara.net/assets/public/e55f/9655/bc2b4b00990d/af9376d0d1b0/07200020250-p/07200020250-p.jpg?ts=1747149251631&w=1902" alt="Product 1" width="420" height="600"
+      <div>
+        <h3>Heather top</h3>
+      </div>
+        <p>$29.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://static.zara.net/assets/public/e3e2/b126/f190414ab749/cd8ed7b2d254/00085345250-a1/00085345250-a1.jpg?ts=1746546451650&w=1126" alt="Product 2"width="420" height="600">
+        <div>
+        <h3>poka dot tube top</h3>
+        </div>
+        <p>$39.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Clothing Store. All rights reserved.</p>
+  </footer>
 </body>
+</html>
