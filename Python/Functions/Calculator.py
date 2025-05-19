@@ -14,9 +14,11 @@ def subtract_numbers(a, b):
 # TODO: Task 3, same but multiplication
 def multiply_numbers(a, b):
     print("Multiplying numbers...")
+    return a * b
 # TODO: Task 4, same but division
 def divide_numbers(a, b):
     print("Dividing numbers...")
+    return a / b
 
 playing = True
 while playing:

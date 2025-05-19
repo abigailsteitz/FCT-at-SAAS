@@ -1,0 +1,28 @@
+print("You're currently 100 meters under the sea, in which sea is unknown to you. You've been selected for a secret government mission to find and infultrate Atlantis. Yes, it's existence has been confirmed and only your team can find it. Alongside you is your crew, consisting of 3 others. Their names are Jerad, who's in the blue suit; Lucy, who's in the red suit; and Phillip, who's in the green suit. You are in the yellow suit.")
+print("As you all head down deeper, you notice a strage-looking piece of seaweed that is floating closer you Jerad. Upon closer inspection, you realize that it's no piece of seaweed, but rather an electric eel. Right before you call out, the eel wraps itself around Jerad's neck. He begins to flail and he tries to pull it off of him, but instead the eel shocks him suit and Jerad goes still.")
+userAnswer = input("Do you decide to a) run, or b) speak?")
+print(userAnswer)
+if userAnswer == "a" or "A":
+  print("You try to swim away. You yank on your line to the boat, but it's of no use. Suddenly, dozens of eels appear from the depths of the sea. 6 eels swarm you while you watch as your crew is smothered. The last you feel are the shocks, after which you and your crew slowly float through the sea.")
+  print("Your mission has failed. Maybe another group will return to finish what you started.")
+else:
+  print("They prepared you that sea life from Atlantis have the ability you speak, hopefully that applies to this eel.")
+  print("You try to speak, but the eel speaks first.")
+  print("The eel says: 'Your friend isn't dead, yet. Who are you, and why are you hear?'")
+  userAnswer = input("Do you tell the eel a) the truth or b) that you're surfers from Austrailia?")
+  print(userAnswer)
+  if userAnswer == "a" or "A":
+  print("You tell the eel the truth about your mission. Suddenly, dozens of eels appear and overtake you and your crew. The last thing you feel are the shocks, after which you and your crew slowly float through the sea.")
+  print("Your mission has failed. Maybe another group will return to finish what you started.")
+else:
+  print("You say: 'We're surfers from Austrailia. We were offered a unique experience to see what the sea is really like. We didn't mean to mess with ya mate.'")
+  print("The eel seems a little a little skeptical, but decides to let it go. 'Alright, if that's what you want. But we won't just let anybody beyond this point. We need offerings of some kind.' The eel looks at Jerad, who's just beginning to move.")
+  Print("'If you want to continue, you give your friend over to us.'")
+  userAnswer = input("Do you a) give Jerad to the eel or b) refuse to give up your friend?")
+  print(userAnswer)
+if userAnswer == "b" or "B":
+    print("You refuse to give up your friend. The eel turns you all away. You all head back up to the boat feeling defeated and failing your mission.")")
+    print("Your mission has failed. Maybe another group will return to finish what you started.")
+else:
+  print("You decide to give up Jerad. Just as he pulls himself up dozens of eels swarm him and drag him down into the deapths of the sea. Before you can say anything, dozens of more eels wrap around you and your crew's arms and legs, disconnecting you from your boat line, and dragging you into the sea.")
+  print("")
