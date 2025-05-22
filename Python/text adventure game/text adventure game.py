@@ -6,9 +6,37 @@ print("b) Knight")
 print("c) Hunter")
 print("d) Merchant")
 print("e) Peasant")
+print("f) Random!!")
 useranswer1 = input()
 print(useranswer1)
 print(" ")
+
+if useranswer1 == "f" :
+    print("Congrats! You're going to get a radom character! Let's see what you get...")
+    import random
+    characters = ["Witch", "Knight", "Hunter", "Merchant", "Peasant"]
+    random_character = random.choice(characters)
+    print("You got a " + random_character + "! Let's see what your health bar starts at...")
+
+    match random_character:
+        case "Witch":
+            score = 200
+        case "Knight":
+            score = 150
+        case "Hunter":
+            score = 150
+        case "Merchant":
+            score = 150
+        case "Peasant":
+            score = 50
+
+    print(f"(your health is at: {score} out of 200)")
+    print("Which setting do you want to start in?")
+    print("a) The Swamp")
+    print("b) The Village")
+    print("c) The Royal Grounds")
+    useranswer2 = input()
+    print(useranswer2)  
 
 if useranswer1 == "a" :
     print("Great choice!! You've chosen to be a Witch, the most powerful player! Your health bar starts full! Here's your next choice...")
