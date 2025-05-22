@@ -28,7 +28,7 @@ nav a :hover {
 }
 
 .product, .employee {
-    background-color : #1b3e82;
+    background-color : #1c1c1c;
     border-radius : 10px;
     padding : 20px;
     width : 30%;
@@ -36,6 +36,6 @@ nav a :hover {
 }
 
 .product img, .employee img {
-    width : 100px;
+    width : 100%;
     border-radius : 8px;
 }
