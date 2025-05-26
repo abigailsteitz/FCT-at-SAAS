@@ -47,6 +47,40 @@
         <div class="product-desc">
             Bring a touch of nature indoors with these green timberline candles. Perfect for creating a cozy, relaxing atmosphere in any room.
         </div>
+        <button id="addToCartBtn" style="
+            display: block;
+            margin: 36px auto 0 auto;
+            background: #abbd90;
+            color: #7b5e3b;
+            border: 2px solid #7b5e3b;
+            border-radius: 8px;
+            padding: 14px 36px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        ">Add to Cart</button>
     </div>
+    <script>
+        document.getElementById('addToCartBtn').onclick = function() {
+            const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            const productId = 'green-timberline-candles';
+            const price = 12.99;
+            let found = false;
+            for (let item of cart) {
+                if (item.id === productId) {
+                    item.qty += 1;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                cart.push({ id: productId, name: "Green Timberline Candles", price: price, qty: 1 });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Added to cart!');
+        };
+    </script>
 </body>
 </html>
