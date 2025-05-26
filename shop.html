@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop | Driftwood Home Decor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #abbd90;
+            color: #3a3a3a;
+            margin: 0;
+            padding: 32px 0;
+        }
+        .top-nav {
+            width: 100%;
+            background: #dfd8cb;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            position: relative;
+            z-index: 100;
+        }
+        .nav-content {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            height: 90px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            margin-right: 32px;
+        }
+        .nav-logo img {
+            height: 54px;
+            width: auto;
+            border-radius: 8px;
+            display: block;
+        }
+        .nav-logo-text {
+            font-size: 2em;
+            font-weight: 600;
+            color: #7b5e3b;
+            margin-left: 12px;
+            letter-spacing: 1px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            margin-left: -96px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #7b5e3b;
+            font-weight: 500;
+            font-size: 1.3em;
+            transition: color 0.2s;
+            padding: 8px 0;
+        }
+        .nav-links a:hover {
+            color: #3a3a3a;
+        }
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0;
+        }
+        .beige-box {
+            background: #dfd8cb;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+            padding: 36px 0;
+            max-width: 860px;
+            width: 98%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            color: #7b5e3b;
+            margin-bottom: 18px;
+        }
+        .shop-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        .shop-item {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 24px 18px;
+            width: 220px;
+            text-align: center;
+        }
+        .shop-item img {
+            width: 100%;
+            max-width: 160px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .shop-item-title {
+            font-weight: 600;
+            color: #7b5e3b;
+            margin-bottom: 6px;
+        }
+        .shop-item-price {
+            color: #3a3a3a;
+            font-size: 1.1em;
+            margin-bottom: 0;
+        }
+        .parallax-side {
+            position: fixed;
+            top: 90px;
+            bottom: 0;
+            width: 220px;
+            z-index: 1;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 32px;
+        }
+        .parallax-side.left {
+            left: 0;
+        }
+        .parallax-side.right {
+            right: 0;
+        }
+        .parallax-side img {
+            width: 340px;
+            height: 340px;
+            object-fit: cover;
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            background: none;
+            pointer-events: none;
+            user-select: none;
+            display: block;
+        }
+        @media (max-width: 1200px) {
+    .parallax-side {
+        display: none !important;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="parallax-side left" id="parallaxLeft">
+        <a href="https://fancyhouse-design.com/wp-content/uploads/2024/08/A-natural-restroom-with-earthy-brown-floors-and-mint-green-accents-bringing-the-outdoors-in-for-a-fresh-feel.jpg" target="_blank" rel="noopener">
+            <img src="https://fancyhouse-design.com/wp-content/uploads/2024/08/A-natural-restroom-with-earthy-brown-floors-and-mint-green-accents-bringing-the-outdoors-in-for-a-fresh-feel.jpg" alt="">
+        </a>
+        <a href="https://images.squarespace-cdn.com/content/v1/632a24e3029c6064f748b988/e820b6d4-8129-43be-9ad1-fca8320bd949/FU_LAMBRA_SAGEGREEN_RM.jpg" target="_blank" rel="noopener">
+            <img src="https://images.squarespace-cdn.com/content/v1/632a24e3029c6064f748b988/e820b6d4-8129-43be-9ad1-fca8320bd949/FU_LAMBRA_SAGEGREEN_RM.jpg" alt="">
+        </a>
+        <a href="https://cdn.shopify.com/s/files/1/0604/6833/0665/files/Aesthetic_Bathroom_7.jpg?v=1679362742" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0604/6833/0665/files/Aesthetic_Bathroom_7.jpg?v=1679362742" alt="">
+        </a>
+        <a href="https://www.bhg.com/thmb/LdMiespUBWF8UMAt8XIzkWiYms4=/2666x0/filters:no_upscale():strip_icc()/Powder-room-medicine-cabinet-CD_51517_CMtVo9SZazXBk4oaScIyrd-ffbfb2b22cb343679da7c3ae71cbfdc4.jpg" target="_blank" rel="noopener">
+            <img src="https://www.bhg.com/thmb/LdMiespUBWF8UMAt8XIzkWiYms4=/2666x0/filters:no_upscale():strip_icc()/Powder-room-medicine-cabinet-CD_51517_CMtVo9SZazXBk4oaScIyrd-ffbfb2b22cb343679da7c3ae71cbfdc4.jpg" alt="">
+        </a>
+        <a href="https://www.marthastewart.com/thmb/KCu9FU965sRT6hGhEOJCFJjVMI4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/small-bathroom-ideas-getty-1023-b0876eaa0e6c47daa134b61f56218e8a.jpg" target="_blank" rel="noopener">
+            <img src="https://www.marthastewart.com/thmb/KCu9FU965sRT6hGhEOJCFJjVMI4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/small-bathroom-ideas-getty-1023-b0876eaa0e6c47daa134b61f56218e8a.jpg" alt="">
+        </a>
+        <a href="https://fancyhouse-design.com/wp-content/uploads/2024/08/A-rustic-bathroom-designed-with-burnt-tone-wood-finishes-and-olive-green-details-evoking-a-connection-to-nature.jpg" target="_blank" rel="noopener">
+            <img src="https://fancyhouse-design.com/wp-content/uploads/2024/08/A-rustic-bathroom-designed-with-burnt-tone-wood-finishes-and-olive-green-details-evoking-a-connection-to-nature.jpg" alt="">
+        </a>
+         <a href="https://m.media-amazon.com/images/I/81fQ7ANRlGL._AC_UF350,350_QL80_.jpg" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/81fQ7ANRlGL._AC_UF350,350_QL80_.jpg" alt="">
+        </a>
+         <a href="https://img.kwcdn.com/product/open/64dc051dfdab41a7ad309eebfd2e0a3b-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" target="_blank" rel="noopener">
+            <img src="https://img.kwcdn.com/product/open/64dc051dfdab41a7ad309eebfd2e0a3b-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="">
+        </a>
+        <a href="https://dezigndistrict.com/media/wysiwyg/ELKA-TALL-BOOK-SHELF-LIFESTYLE-1.jpg" target="_blank" rel="noopener">
+            <img src="https://dezigndistrict.com/media/wysiwyg/ELKA-TALL-BOOK-SHELF-LIFESTYLE-1.jpg" alt="">
+        </a>
+        <a href="https://m.media-amazon.com/images/I/81fQ7ANRlGL._AC_UF350,350_QL80_.jpg" target="_blank" rel="noopener"></a>
+            <img src="https://m.media-amazon.com/images/I/81fQ7ANRlGL._AC_UF350,350_QL80_.jpg" alt="">
+        </a>
+    </div>
+    <div class="parallax-side right" id="parallaxRight">
+        <a href="https://hips.hearstapps.com/hmg-prod/images/green-living-rooms-michelle-1669649077.jpeg?crop=1xw:0.9999xh;center,top&resize=980:*" target="_blank" rel="noopener">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/green-living-rooms-michelle-1669649077.jpeg?crop=1xw:0.9999xh;center,top&resize=980:*" alt="">
+        </a>
+        <a href="https://hips.hearstapps.com/hmg-prod/images/edc040121grattan-004-1615410194.jpg?crop=1xw:1xh;center,top&resize=980:*" target="_blank" rel="noopener">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/edc040121grattan-004-1615410194.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="">
+        </a>
+        <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHyrqI_Sa1i64Z-aiMtoqgoogrBiHoifkrjHFSI0_hyphenhypheni1GXQ5IgsQ3Ml6iLO4Ses2Wv1AWXd3B43MvGRLxfB8O26ZdszOA_JvDWrKPyDfV6YkgcLdVVS9z8lWJRz19-2F3Ts7dk2G_IclcEaR2iz8ZPSp_VNtJUz1vuqwXbY7D_hcKtRgf-vlQEG2sxVY/s16000-rw/green%20office%20bookcases%20wood%20desk.jpg" target="_blank" rel="noopener">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHyrqI_Sa1i64Z-aiMtoqgoogrBiHoifkrjHFSI0_hyphenhypheni1GXQ5IgsQ3Ml6iLO4Ses2Wv1AWXd3B43MvGRLxfB8O26ZdszOA_JvDWrKPyDfV6YkgcLdVVS9z8lWJRz19-2F3Ts7dk2G_IclcEaR2iz8ZPSp_VNtJUz1vuqwXbY7D_hcKtRgf-vlQEG2sxVY/s16000-rw/green%20office%20bookcases%20wood%20desk.jpg" alt="">
+        </a>
+        <a href="https://images.stockcake.com/public/a/b/d/abd82f56-1ada-4010-bf49-11c36614b92d_large/minimalist-shelf-decor-stockcake.jpg" target="_blank" rel="noopener">
+            <img src="https://images.stockcake.com/public/a/b/d/abd82f56-1ada-4010-bf49-11c36614b92d_large/minimalist-shelf-decor-stockcake.jpg" alt="">
+        </a>
+        <a href="https://images.stockcake.com/public/1/7/d/17d6a536-2b79-4292-85a6-39a0806aa93e_large/minimalist-shelf-decor-stockcake.jpg" target="_blank" rel="noopener">
+            <img src="https://images.stockcake.com/public/1/7/d/17d6a536-2b79-4292-85a6-39a0806aa93e_large/minimalist-shelf-decor-stockcake.jpg" alt="">
+        </a>
+        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZQ5Gf42E9yv-A6zwYiSqm6vAJb9VCGJ5Ug&s" target="_blank" rel="noopener">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZQ5Gf42E9yv-A6zwYiSqm6vAJb9VCGJ5Ug&s" alt="">
+        </a>
+        <a href="https://cdn.shopify.com/s/files/1/0604/6833/0665/files/aesthetic-bathroom_62.jpg?v=1682302414" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0604/6833/0665/files/aesthetic-bathroom_62.jpg?v=1682302414" alt="">
+        </a>
+        <a href="https://i0.wp.com/www.thefunsizedlife.com/wp-content/uploads/2024/04/91_Small-Home_160-1.jpg?resize=681%2C1024&ssl=1" target="_blank" rel="noopener">
+            <img src="https://i0.wp.com/www.thefunsizedlife.com/wp-content/uploads/2024/04/91_Small-Home_160-1.jpg?resize=681%2C1024&ssl=1" alt="">
+        </a>
+        <a href="https://edwardgeorgelondon.com/wp-content/uploads/2024/12/Master-bedrooms-sage-green-accent-wall-textured-bedding-minimalist-decor-sage-green-room-ideas-683x1024.webp" target="_blank" rel="noopener">
+            <img src="https://edwardgeorgelondon.com/wp-content/uploads/2024/12/Master-bedrooms-sage-green-accent-wall-textured-bedding-minimalist-decor-sage-green-room-ideas-683x1024.webp" alt="">
+        </a>
+        <a href="https://blog.canadianloghomes.com/wp-content/uploads/2022/05/sage-green-kitchen-cabinets-1.jpg" target="_blank" rel="noopener">
+            <img src=https://blog.canadianloghomes.com/wp-content/uploads/2022/05/sage-green-kitchen-cabinets-1.jpg" alt="">
+        </a>
+    </div>
+    <nav class="top-nav">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
+                </a>
+                <a href="Websites/randomproject.html" style="text-decoration:none;">
+                    <span class="nav-logo-text">Driftwood</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="Websites/randomproject.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="beige-box">
+            <h1>Shop</h1>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <img src="https://m.media-amazon.com/images/I/71pr1F0VWRL._AC_UF894,1000_QL80_.jpg" alt="Tree Bookshelf"/>
+                    <br/>
+                    <a class="shop-item-title" href="tree-bookshelf.html">Tree Bookshelf</a>
+                    <div class="shop-item-price">$65.99</div>
+                </div>
+                <div class="shop-item">
+                    <img src="https://cdn-images.article.com/products/SKU23589/2890x1500/image149309.jpg?w=320&q=80&fit=max" alt="Throw Pillow"/>
+                    <br/>
+                    <a class="shop-item-title" href="throw-pillow.html">Throw Pillow</a>
+                    <div class="shop-item-price">$19.99</div>
+                </div>
+                <div class="shop-item">
+                    <img src="https://cdn.shoplightspeed.com/shops/628145/files/40851698/hyoola-green-timberline-wood-pillar-candle-2-sizes.jpg" alt="Green Timberline Candles"/>
+                    <br/>
+                    <a class="shop-item-title" href="green-timberline-candles.html">Green Timberline Candles</a>
+                    <div class="shop-item-price">$12.99</div>
+                </div>
+                <div class="shop-item">
+                    <img src="https://i.etsystatic.com/13498126/r/il/f51e55/5960004560/il_570xN.5960004560_ogkm.jpg" alt="Linen Avocado Lamp"/>
+                    <br/>
+                    <a class="shop-item-title" href="linen-avocado-lamp.html">Linen Avocado Lamp</a>
+                    <div class="shop-item-price">$39.99</div>
+                </div>
+                <div class="shop-item">
+                    <img src="https://m.media-amazon.com/images/I/81kYqwqRK5L.jpg" alt="Bamboo Comforters"/>
+                    <br/>
+                    <a class="shop-item-title" href="bamboo-comforters.html">Bamboo Comforters</a>
+                    <div class="shop-item-price">$49.99</div>
+                </div>
+                <div class="shop-item">
+                    <img src="https://m.media-amazon.com/images/I/61MbbXesUxL._AC_UF1000,1000_QL80_.jpg" alt="Bosmarlin Ceramic Coffee Mug Set of 4"/>
+                    <br/>
+                    <a class="shop-item-title" href="bosmarlin-ceramic-coffee-mug-set.html">Bosmarlin Ceramic Coffee Mug Set of 4</a>
+                    <div class="shop-item-price">$29.99</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

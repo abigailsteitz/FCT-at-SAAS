@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart | Driftwood Home Decor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #abbd90; color: #3a3a3a; margin: 0; padding: 32px 0; }
+        .top-nav { width: 100%; background: #dfd8cb; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: center; min-height: 90px; }
+        .nav-content { width: 100%; max-width: 1100px; display: flex; align-items: center; justify-content: space-between; padding: 0 32px; height: 90px; }
+        .nav-logo { display: flex; align-items: center; margin-right: 32px; }
+        .nav-logo img { height: 54px; width: auto; border-radius: 8px; display: block; }
+        .nav-logo-text { font-size: 2em; font-weight: 600; color: #7b5e3b; margin-left: 12px; letter-spacing: 1px; font-family: 'Segoe UI', Arial, sans-serif; text-decoration: none; }
+        .nav-links { display: flex; gap: 28px; }
+        .nav-links a { text-decoration: none; color: #7b5e3b; font-weight: 500; font-size: 1.3em; transition: color 0.2s; padding: 8px 0; }
+        .nav-links a:hover { color: #3a3a3a; }
+        .container { max-width: 700px; margin: 60px auto; background: #dfd8cb; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.09); padding: 36px 32px; }
+        h1 { font-size: 2.2em; color: #7b5e3b; margin-bottom: 24px; text-align: center; }
+        .cart-empty { text-align: center; font-size: 1.2em; color: #666; margin-top: 40px; }
+        /* Placeholder for cart items */
+        .cart-items { margin-bottom: 32px; }
+        .checkout-btn {
+            display: block;
+            margin: 0 auto;
+            background: #abbd90; /* match page background */
+            color: #7b5e3b;
+            border: 2px solid #7b5e3b; /* 2px brown outline */
+            border-radius: 8px;
+            padding: 14px 36px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .checkout-btn:hover { background: #d1c3a3; }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <a href="Websites/randomproject.html">
+                    <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
+                </a>
+                <a href="Websites/randomproject.html" style="text-decoration:none;">
+                    <span class="nav-logo-text">Driftwood</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="Websites/randomproject.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Your Cart</h1>
+        <div class="cart-items" id="cartItems"></div>
+        <div id="cartTotal" style="text-align:center;font-size:1.2em;font-weight:600;margin-bottom:24px;"></div>
+        <button class="checkout-btn" id="checkoutBtn" disabled>Checkout</button>
+        <button class="checkout-btn" id="emptyCartBtn" style="margin-top:18px;">Empty Cart</button>
+    </div>
+    <script>
+        // Cart rendering and total calculation
+        function renderCart() {
+            const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            const cartItemsDiv = document.getElementById('cartItems');
+            const cartTotalDiv = document.getElementById('cartTotal');
+            let total = 0;
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<div class="cart-empty">Your cart is empty.</div>';
+                cartTotalDiv.textContent = '';
+                document.getElementById('checkoutBtn').disabled = true;
+                return;
+            }
+            let html = '<ul style="list-style:none;padding:0;">';
+            for (let item of cart) {
+                html += `<li style="margin-bottom:18px;">
+                    <span style="font-weight:600;">${item.name}</span> &times; ${item.qty}
+                    <span style="float:right;">$${(item.price * item.qty).toFixed(2)}</span>
+                </li>`;
+                total += item.price * item.qty;
+            }
+            html += '</ul>';
+            cartItemsDiv.innerHTML = html;
+            cartTotalDiv.textContent = 'Total: $' + total.toFixed(2);
+            document.getElementById('checkoutBtn').disabled = false;
+        }
+        document.getElementById('emptyCartBtn').onclick = function() {
+            localStorage.removeItem('cart');
+            renderCart();
+        };
+        document.getElementById('checkoutBtn').onclick = function() {
+            if (!this.disabled) {
+                window.location.href = 'checkout.html';
+            }
+        };
+        window.onload = renderCart;
+    </script>
+</body>
+</html>

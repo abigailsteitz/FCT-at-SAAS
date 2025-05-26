@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driftwood Home Decor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #abbd90; /* lighter, yellower green */
+            color: #3a3a3a;
+            margin: 0;
+            padding: 32px 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .top-nav {
+            width: 100%;
+            background: #dfd8cb;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            min-height: 90px; /* increased height */
+            position: relative;
+            z-index: 100;
+            margin-top: 0; /* remove margin for green strip */
+        }
+        .nav-content {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            height: 90px; /* match nav height */
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            margin-right: 32px;
+        }
+        .nav-logo img {
+            height: 54px; /* make logo bigger */
+            width: auto;
+            border-radius: 8px;
+            display: block;
+        }
+        .nav-logo-text {
+            font-size: 2em; /* bigger text */
+            font-weight: 600;
+            color: #7b5e3b;
+            margin-left: 12px;
+            letter-spacing: 1px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #7b5e3b;
+            font-weight: 500;
+            font-size: 1.3em; /* bigger links */
+            transition: color 0.2s;
+            padding: 8px 0;
+        }
+        .nav-links a:hover {
+            color: #3a3a3a;
+        }
+        .nav-search {
+            display: flex;
+            align-items: center;
+        }
+        .nav-search input[type="text"] {
+            padding: 7px 12px;
+            border-radius: 20px;
+            border: 1px solid #d1c3a3;
+            font-size: 1em;
+            outline: none;
+            background: #fff;
+            color: #7b5e3b;
+            transition: border 0.2s;
+        }
+        .nav-search input[type="text"]:focus {
+            border: 1.5px solid #7b5e3b;
+        }
+        .nav-search button {
+            background: #e0d8c3;
+            border: none;
+            color: #7b5e3b;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            margin-left: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1em;
+            transition: background 0.2s;
+            padding: 0;
+        }
+        .nav-search button:hover {
+            background: #d1c3a3;
+        }
+        .nav-search .search-icon {
+            width: 18px;
+            height: 18px;
+            display: block;
+            /* Remove if using inline SVG */
+        }
+        /* Magnifying glass icon using SVG */
+        .nav-search .search-svg {
+            width: 18px;
+            height: 18px;
+            display: block;
+        }
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+        }
+        .beige-box {
+            background: #dfd8cb;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+            padding: 36px 0;
+            max-width: 860px;
+            width: 98%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .white-box {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 40px 32px;
+            width: 90%;
+            max-width: 700px;
+            margin-bottom: 32px;
+        }
+        h1 {
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            color: #7b5e3b;
+            margin-bottom: 18px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin-top: 0;
+        }
+        .slideshow-container {
+            width: 90%;
+            max-width: 700px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 24px 0 24px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .slide-img {
+            width: 90%;
+            max-height: 340px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .arrow-btn {
+            background: #e0d8c3;
+            border: none;
+            color: #7b5e3b;
+            font-size: 2em;
+            padding: 6px 18px;
+            margin: 0 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .arrow-btn:hover {
+            background: #d1c3a3;
+        }
+        .arrow-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .employee-list {
+            margin-top: 36px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 32px 32px 18px 32px;
+            width: 90%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .employee-list-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #7b5e3b;
+            margin-bottom: 22px;
+            letter-spacing: 1px;
+        }
+        .employee-card {
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 0 0 22px 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        .employee-card:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .employee-card img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+            margin-bottom: 10px;
+        }
+        .employee-card .employee-name {
+            font-weight: 600;
+            color: #7b5e3b;
+            font-size: 1.1em;
+            margin-bottom: 2px;
+        }
+        .employee-card .employee-role {
+            font-size: 0.98em;
+            color: #3a3a3a;
+            margin-bottom: 0;
+        }
+        .employee-card .employee-desc {
+            font-size: 0.97em;
+            color: #666;
+            margin: 6px 0 0 0;
+        }
+        /* Parallax image strip styles */
+        .parallax-strip {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 170px;
+            z-index: 1;
+            pointer-events: none;
+            overflow: hidden;
+            background: transparent;
+            display: flex;
+            align-items: center;
+        }
+        .parallax-images {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            will-change: transform;
+        }
+        .parallax-images img {
+            height: 130px;
+            width: auto;
+            margin: 0 22px;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            object-fit: cover;
+            pointer-events: none;
+            user-select: none;
+            background: none;
+        }
+        /* Parallax vertical image columns */
+        .parallax-side {
+            position: fixed;
+            top: 90px; /* start below nav bar */
+            bottom: 0;
+            width: 220px;
+            z-index: 1;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 32px;
+        }
+        .parallax-side.left {
+            left: 0;
+        }
+        .parallax-side.right {
+            right: 0;
+        }
+        .parallax-side img {
+            width: 340px; /* 200px * 1.7 = 340px */
+            height: 340px;
+            object-fit: cover;
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            background: none;
+            pointer-events: none;
+            user-select: none;
+            display: block;
+        }
+        /* Ensure main content is above parallax */
+        .main-content {
+            position: relative;
+            z-index: 2;
+        }
+        @media (max-width: 1200px) {
+            .parallax-side {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax-side left" id="parallaxLeft">
+        <a href="https://fancyhouse-design.com/wp-content/uploads/2024/08/A-natural-restroom-with-earthy-brown-floors-and-mint-green-accents-bringing-the-outdoors-in-for-a-fresh-feel.jpg" target="_blank" rel="noopener">
+            <img src="https://fancyhouse-design.com/wp-content/uploads/2024/08/A-natural-restroom-with-earthy-brown-floors-and-mint-green-accents-bringing-the-outdoors-in-for-a-fresh-feel.jpg" alt="">
+        </a>
+        <a href="https://images.squarespace-cdn.com/content/v1/632a24e3029c6064f748b988/e820b6d4-8129-43be-9ad1-fca8320bd949/FU_LAMBRA_SAGEGREEN_RM.jpg" target="_blank" rel="noopener">
+            <img src="https://images.squarespace-cdn.com/content/v1/632a24e3029c6064f748b988/e820b6d4-8129-43be-9ad1-fca8320bd949/FU_LAMBRA_SAGEGREEN_RM.jpg" alt="">
+        </a>
+        <a href="https://cdn.shopify.com/s/files/1/0604/6833/0665/files/Aesthetic_Bathroom_7.jpg?v=1679362742" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0604/6833/0665/files/Aesthetic_Bathroom_7.jpg?v=1679362742" alt="">
+        </a>
+        <a href="https://www.bhg.com/thmb/LdMiespUBWF8UMAt8XIzkWiYms4=/2666x0/filters:no_upscale():strip_icc()/Powder-room-medicine-cabinet-CD_51517_CMtVo9SZazXBk4oaScIyrd-ffbfb2b22cb343679da7c3ae71cbfdc4.jpg" target="_blank" rel="noopener">
+            <img src="https://www.bhg.com/thmb/LdMiespUBWF8UMAt8XIzkWiYms4=/2666x0/filters:no_upscale():strip_icc()/Powder-room-medicine-cabinet-CD_51517_CMtVo9SZazXBk4oaScIyrd-ffbfb2b22cb343679da7c3ae71cbfdc4.jpg" alt="">
+        </a>
+        <a href="https://www.marthastewart.com/thmb/KCu9FU965sRT6hGhEOJCFJjVMI4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/small-bathroom-ideas-getty-1023-b0876eaa0e6c47daa134b61f56218e8a.jpg" target="_blank" rel="noopener">
+            <img src="https://www.marthastewart.com/thmb/KCu9FU965sRT6hGhEOJCFJjVMI4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/small-bathroom-ideas-getty-1023-b0876eaa0e6c47daa134b61f56218e8a.jpg" alt="">
+        </a>
+        <a href="https://fancyhouse-design.com/wp-content/uploads/2024/08/A-rustic-bathroom-designed-with-burnt-tone-wood-finishes-and-olive-green-details-evoking-a-connection-to-nature.jpg" target="_blank" rel="noopener">
+            <img src="https://fancyhouse-design.com/wp-content/uploads/2024/08/A-rustic-bathroom-designed-with-burnt-tone-wood-finishes-and-olive-green-details-evoking-a-connection-to-nature.jpg" alt="">
+        </a>
+         <a href="https://m.media-amazon.com/images/I/81fQ7ANRlGL._AC_UF350,350_QL80_.jpg" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/81fQ7ANRlGL._AC_UF350,350_QL80_.jpg" alt="">
+        </a>
+         <a href="https://img.kwcdn.com/product/open/64dc051dfdab41a7ad309eebfd2e0a3b-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" target="_blank" rel="noopener">
+            <img src="https://img.kwcdn.com/product/open/64dc051dfdab41a7ad309eebfd2e0a3b-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="">
+        </a>
+        <a href="https://dezigndistrict.com/media/wysiwyg/ELKA-TALL-BOOK-SHELF-LIFESTYLE-1.jpg" target="_blank" rel="noopener">
+            <img src="https://dezigndistrict.com/media/wysiwyg/ELKA-TALL-BOOK-SHELF-LIFESTYLE-1.jpg" alt="">
+        </a>
+        <a href="https://m.media-amazon.com/images/I/81fQ7ANRlGL._AC_UF350,350_QL80_.jpg" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/81fQ7ANRlGL._AC_UF350,350_QL80_.jpg" alt="">
+        </a>
+    </div>
+    <div class="parallax-side right" id="parallaxRight">
+        <a href="https://hips.hearstapps.com/hmg-prod/images/green-living-rooms-michelle-1669649077.jpeg?crop=1xw:0.9999xh;center,top&resize=980:*" target="_blank" rel="noopener">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/green-living-rooms-michelle-1669649077.jpeg?crop=1xw:0.9999xh;center,top&resize=980:*" alt="">
+        </a>
+        <a href="https://hips.hearstapps.com/hmg-prod/images/edc040121grattan-004-1615410194.jpg?crop=1xw:1xh;center,top&resize=980:*" target="_blank" rel="noopener">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/edc040121grattan-004-1615410194.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="">
+        </a>
+        <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHyrqI_Sa1i64Z-aiMtoqgoogrBiHoifkrjHFSI0_hyphenhypheni1GXQ5IgsQ3Ml6iLO4Ses2Wv1AWXd3B43MvGRLxfB8O26ZdszOA_JvDWrKPyDfV6YkgcLdVVS9z8lWJRz19-2F3Ts7dk2G_IclcEaR2iz8ZPSp_VNtJUz1vuqwXbY7D_hcKtRgf-vlQEG2sxVY/s16000-rw/green%20office%20bookcases%20wood%20desk.jpg" target="_blank" rel="noopener">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHyrqI_Sa1i64Z-aiMtoqgoogrBiHoifkrjHFSI0_hyphenhypheni1GXQ5IgsQ3Ml6iLO4Ses2Wv1AWXd3B43MvGRLxfB8O26ZdszOA_JvDWrKPyDfV6YkgcLdVVS9z8lWJRz19-2F3Ts7dk2G_IclcEaR2iz8ZPSp_VNtJUz1vuqwXbY7D_hcKtRgf-vlQEG2sxVY/s16000-rw/green%20office%20bookcases%20wood%20desk.jpg" alt="">
+        </a>
+        <a href="https://images.stockcake.com/public/a/b/d/abd82f56-1ada-4010-bf49-11c36614b92d_large/minimalist-shelf-decor-stockcake.jpg" target="_blank" rel="noopener">
+            <img src="https://images.stockcake.com/public/a/b/d/abd82f56-1ada-4010-bf49-11c36614b92d_large/minimalist-shelf-decor-stockcake.jpg" alt="">
+        </a>
+        <a href="https://images.stockcake.com/public/1/7/d/17d6a536-2b79-4292-85a6-39a0806aa93e_large/minimalist-shelf-decor-stockcake.jpg" target="_blank" rel="noopener">
+            <img src="https://images.stockcake.com/public/1/7/d/17d6a536-2b79-4292-85a6-39a0806aa93e_large/minimalist-shelf-decor-stockcake.jpg" alt="">
+        </a>
+        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZQ5Gf42E9yv-A6zwYiSqm6vAJb9VCGJ5Ug&s" target="_blank" rel="noopener">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZQ5Gf42E9yv-A6zwYiSqm6vAJb9VCGJ5Ug&s" alt="">
+        </a>
+        <a href="https://cdn.shopify.com/s/files/1/0604/6833/0665/files/aesthetic-bathroom_62.jpg?v=1682302414" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0604/6833/0665/files/aesthetic-bathroom_62.jpg?v=1682302414" alt="">
+        </a>
+            <img src="https://i0.wp.com/www.thefunsizedlife.com/wp-content/uploads/2024/04/91_Small-Home_160-1.jpg?resize=681%2C1024&ssl=1" alt="">
+        </a>
+        <a href="https://edwardgeorgelondon.com/wp-content/uploads/2024/12/Master-bedrooms-sage-green-accent-wall-textured-bedding-minimalist-decor-sage-green-room-ideas-683x1024.webp" target="_blank" rel="noopener">
+            <img src="https://edwardgeorgelondon.com/wp-content/uploads/2024/12/Master-bedrooms-sage-green-accent-wall-textured-bedding-minimalist-decor-sage-green-room-ideas-683x1024.webp" alt="">
+        </a>
+        <a href="https://blog.canadianloghomes.com/wp-content/uploads/2022/05/sage-green-kitchen-cabinets-1.jpg" target="_blank" rel="noopener">
+            <img src=https://blog.canadianloghomes.com/wp-content/uploads/2022/05/sage-green-kitchen-cabinets-1.jpg" alt="">
+        </a>
+    </div>
+    <div class="main-content">
+        <nav class="top-nav">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <a href="randomproject.html">
+                        <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
+                    </a>
+                    <span class="nav-logo-text">Driftwood</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="../shop.html">Shop</a>
+                    <a href="../contact.html">Contact</a>
+                    <a href="../cart.html">Cart</a>
+                </div>
+                <form class="nav-search" onsubmit="event.preventDefault(); alert('Search: ' + this.query.value);">
+                    <input type="text" name="query" placeholder="Search..." aria-label="Search"/>
+                    <button type="submit" aria-label="Search">
+                        <svg class="search-svg" viewBox="0 0 20 20" fill="none">
+                            <circle cx="9" cy="9" r="7" stroke="#7b5e3b" stroke-width="2"/>
+                            <line x1="14.2" y1="14.2" x2="18" y2="18" stroke="#7b5e3b" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="beige-box">
+                <div class="white-box">
+                    <h1>Driftwood Home Decor</h1>
+                    <p>
+                        Driftwood Home Decor is a curated home and lifestyle brand offering timeless, nature-inspired pieces that bring warmth, calm, and character into every space. From earthy ceramics to soft textiles and handcrafted decor, Driftwood blends organic materials with minimalist design — helping you create a home that feels as beautiful as it is grounded.
+                    </p>
+                </div>
+                <div class="slideshow-container">
+                    <img id="slideshow-img" class="slide-img" src="https://i0.wp.com/stewartlighting.com/wp-content/uploads/2022/02/shutterstock_1483369076.jpg?fit=1000%2C667&ssl=1" alt="Driftwood Decor Photo"/>
+                    <div class="arrow-controls">
+                        <button class="arrow-btn" onclick="prevSlide()" aria-label="Previous">&#8592;</button>
+                        <button class="arrow-btn" onclick="nextSlide()" aria-label="Next">&#8594;</button>
+                    </div>
+                </div>
+                <!-- Employee cards start -->
+                <div class="employee-list">
+                    <div class="employee-list-title">Our Team</div>
+                    <div class="employee-card">
+                        <img src="https://thumbs.dreamstime.com/b/beautiful-girl-dreadlocks-young-woman-hairdress-against-summer-nature-41323139.jpg" alt="Jade"/>
+                        <div class="employee-name">Jade</div>
+                        <div class="employee-role">Lead Stylist</div>
+                        <div class="employee-desc">Creates unique, nature-inspired looks and guides our design vision.</div>
+                    </div>
+                    <div class="employee-card">
+                        <img src="https://media.istockphoto.com/id/854442338/photo/looks-like-another-bright-and-successful-day.jpg?s=612x612&w=0&k=20&c=Ni1-ATPFgNku9JXy3TGK1tLTnA7vJWyTXYfSsAIItXk=" alt="James"/>
+                        <div class="employee-name">James</div>
+                        <div class="employee-role">Customer Experience</div>
+                        <div class="employee-desc">Ensures every guest feels welcome and helps with all inquiries.</div>
+                    </div>
+                    <div class="employee-card">
+                        <img src="https://media.istockphoto.com/id/1321204080/photo/smiling-plus-size-woman-using-her-smartphone-while-walking-home-from-the-marketplace-carrying.jpg?s=612x612&w=0&k=20&c=mcdOsoYEPC_Gmd_g_Wi7aRNzu-uw9Kq3yd8FZinZMcM=" alt="Maya"/>
+                        <div class="employee-name">Maya</div>
+                        <div class="employee-role">Shop Manager</div>
+                        <div class="employee-desc">Keeps the shop running smoothly and manages daily operations.</div>
+                    </div>
+                    <div class="employee-card">
+                        <img src="https://media.istockphoto.com/id/2205370986/photo/beautiful-flower-shop-owner.jpg?s=612x612&w=0&k=20&c=WjqEO3DhxbiKA_ZPAjqfGAcmRYbVyw4Rn6Ww6ehm_LU=" alt="Lila"/>
+                        <div class="employee-name">Lila</div>
+                        <div class="employee-role">Florist & Decorator</div>
+                        <div class="employee-desc">Arranges flowers and decor to bring warmth and beauty to every space.</div>
+                    </div>
+                    <div class="employee-card">
+                        <img src="https://thumbs.dreamstime.com/b/male-musician-working-nature-young-creative-man-wearing-eyeglasses-sitting-green-grass-outdoors-making-some-notes-196499837.jpg" alt="Eli"/>
+                        <div class="employee-name">Eli</div>
+                        <div class="employee-role">Creative Director</div>
+                        <div class="employee-desc">Leads branding and creative projects, ensuring a cohesive style.</div>
+                    </div>
+                </div>
+                <!-- Employee cards end -->
+            </div>
+        </div>
+    </div>
+    <script>
+        const images = [
+            "https://i0.wp.com/stewartlighting.com/wp-content/uploads/2022/02/shutterstock_1483369076.jpg?fit=1000%2C667&ssl=1",
+            "https://i.pinimg.com/736x/81/cd/bb/81cdbb810a24359e2e2806cbe8ebb57c.jpg",
+            "https://www.thespruce.com/thmb/5yz1IGN5zBsRDsCWzl7NSEzxEK8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/loafhome-e56f050c9e43484cbe190ce3ab1ca3d3.jpg",
+            "https://www.bhg.com/thmb/jaD28JajtQv9FoMAnbHWyM0UGFw=/4000x0/filters:no_upscale():strip_icc()/Livingroom-Capture-One-Session13717-CiF-_0XRK7VA0sclpsCm2P-27fbe3d5f41d4cb49d047e345db4d00a.jpg"
+        ];
+        let current = 0;
+        function showSlide(idx) {
+            const img = document.getElementById('slideshow-img');
+            current = (idx + images.length) % images.length;
+            img.src = images[current];
+        }
+        function prevSlide() {
+            showSlide(current - 1);
+        }
+        function nextSlide() {
+            showSlide(current + 1);
+        }
+
+        // Parallax scroll effect for image strip
+        window.addEventListener('scroll', function() {
+            const parallax = document.getElementById('parallaxImages');
+            // Move at 2x scroll speed (adjust as needed)
+            parallax.style.transform = `translateX(${-window.scrollY * 2}px)`;
+        });
+
+        // Parallax scroll effect for vertical side images
+        window.addEventListener('scroll', function() {
+            const scrollY = window.scrollY;
+            // Scroll both sides in the same direction (up)
+            document.getElementById('parallaxLeft').style.transform = `translateY(${-scrollY * 2}px)`;
+            document.getElementById('parallaxRight').style.transform = `translateY(${-scrollY * 2}px)`;
+        });
+    </script>
+</body>
+</html>
