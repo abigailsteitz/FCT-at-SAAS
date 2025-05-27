@@ -3,8 +3,6 @@
 # Here is an example of a function that adds two numbers and returns the result:
 def add_numbers(a, b):
     print("Adding numbers...")
-    # TODO: Task 3, this function should RETURN the value of a + b. Uncomment the line below to fix the code.
-    # After that, you can start the graded assignment, go to Calculator.py
     return a + b
 
 shirtPrice = 5.00
