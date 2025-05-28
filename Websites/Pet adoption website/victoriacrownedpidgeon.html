@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Victoria Crowned Pigeon - Unique Pets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="main.css" />
+  <style>
+    body {
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+      margin: 0;
+      padding: 0;
+      color: #222;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(91, 134, 229, 0.15);
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      letter-spacing: 2px;
+    }
+    header h1 {
+      font-size: 2.4em;
+      margin: 0;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 8px #0002;
+      animation: pop 1s;
+    }
+    @keyframes pop {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    nav a {
+      color: #fff;
+      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 14px 32px;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(255, 81, 47, 0.12);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      margin: 30px 0 20px 0;
+    }
+    nav a:hover {
+      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+      color: #fff;
+      transform: scale(1.08) rotate(-2deg);
+      border: 2px solid #fff;
+      box-shadow: 0 6px 24px rgba(54, 209, 196, 0.18);
+    }
+    #vcp-content {
+      max-width: 750px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(255, 81, 47, 0.10);
+      padding: 40px 36px;
+      text-align: center;
+      border: 3px dashed #ff512f;
+      animation: fadein 1.2s;
+    }
+    @keyframes fadein {
+      0% { opacity: 0; transform: translateY(30px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    h1 {
+      color: #36d1c4;
+      font-size: 2.2em;
+      margin-bottom: 0.2em;
+    }
+    h2, h3 {
+      color: #ff512f;
+      margin-top: 1.2em;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    }
+    ul {
+      text-align: left;
+      margin: 0 auto 1em auto;
+      max-width: 500px;
+      font-size: 1.08em;
+      line-height: 1.7;
+    }
+    img {
+      width: 350px;
+      max-width: 90vw;
+      border-radius: 18px;
+      margin: 30px auto 0 auto;
+      display: block;
+      box-shadow: 0 4px 24px rgba(54, 209, 196, 0.12);
+      border: 3px solid #36d1c4;
+    }
+    @media (max-width: 700px) {
+      #vcp-content {
+        padding: 18px 8px;
+      }
+      nav a {
+        padding: 12px 10vw;
+        font-size: 1em;
+      }
+      header {
+        padding: 24px 0 10px 0;
+      }
+      img {
+        width: 98vw;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;400&display=swap" rel="stylesheet">
+</head>
+<body id="vcp">
+  <header>
+    <h1>Victoria Crowned Pigeon</h1>
+  </header>
+  <nav>
+    <a href="./index.html">Home</a>
+  </nav>
+  <div id="vcp-content">
+    <h2>Overview</h2>
+    <ul>
+      <li>Scientific Name: Goura victoria</li>
+      <li>Native Habitat: Lowland and swamp forests of northern New Guinea and nearby islands</li>
+      <li>Conservation Status: Near Threatened (due to habitat loss and hunting for feathers and meat)</li>
+    </ul>
+    <h3>Habitat and Housing</h3>
+    <ul>
+      <li>Tropical rainforests and mangrove swamps</li>
+      <li>Prefer dense, shaded, humid environments</li>
+      <li>Minimum enclosure: 10 ft x 10 ft x 8 ft</li>
+      <li>Space to walk</li>
+    </ul>
+    <h3>Temperament</h3>
+    <ul>
+      <li>Generally calm, gentle, and social</li>
+      <li>Intelligent and observant</li>
+      <li>Can become agitated or stressed in noisy or chaotic environments</li>
+    </ul>
+    <h3>Diet</h3>
+    <ul>
+      <li>Mixed grains</li>
+      <li>Fresh fruits (papaya, figs, grapes)</li>
+      <li>Protein sources (mealworms occasionally)</li>
+      <li>Clean water at all times</li>
+    </ul>
+    <img src="https://www.thesprucepets.com/thmb/wD_DNcvKwKAp5etCnSNZoAleAeo=/3865x0/filters:no_upscale():strip_icc()/close-up-of-a-beautiful-victoria-crowned-pigeon--goura-cristata--828667640-5af673af04d1cf003666d872.jpg" alt="Victoria Crowned Pigeon" />
+  </div>
+</body>
+</html>
