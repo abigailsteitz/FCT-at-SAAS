@@ -1,1 +1,20 @@
-/* Your CSS goes in this file */
+/* Light pink background and dark pink text */
+body {
+  background-color: #ffe6f0 !important; /* Light pink */
+  color: #b30059 !important; /* Dark pink */
+}
+
+/* Apply to other common containers for consistent coloring */
+* {
+  background-color: transparent !important;
+  color: #b30059 !important;
+}
+
+a {
+  color: #cc0066 !important;
+}
+
+header, footer, nav, main, section, div {
+  background-color: #ffe6f0 !important;
+  color: #b30059 !important;
+}
