@@ -1,15 +1,15 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif, comic;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: #ff00ff;
+  color: #001ea5;
 }
 
 nav {
-  background-color: #333;
-  color: #fff;
+  background-color: #8ace00;
+  color: #ffffff;
   padding: 1rem;
   text-align: center;
 }
@@ -25,14 +25,14 @@ nav a:hover {
 }
 
 h1, h2 {
-  color: #444;
+  color: hsl(189, 100%, 50%);
 }
 
 .container {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  background: #fff;
+  background: #acb25c;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -67,20 +67,20 @@ table {
 }
 
 table th, table td {
-  border: 1px solid #ddd;
+  border: 1px solid #a28989;
   padding: 8px;
   text-align: center;
 }
 
 table th {
-  background-color: #f4f4f9;
+  background-color: #8989ff;
   font-weight: bold;
 }
 
 .testimonial {
   margin: 20px 0;
   padding: 15px;
-  background-color: #f9f9f9;
+  background-color: #ff0000;
   border-left: 5px solid #333;
   font-style: italic;
 }
