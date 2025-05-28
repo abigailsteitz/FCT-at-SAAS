@@ -1,0 +1,31 @@
+body {
+  background-color: purple;
+  color: pink;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0 10%;
+}
+
+h1, h2, h3, h4, li, p, a {
+  color: pink;
+}
+
+a {
+  text-decoration: underline;
+}
+
+ul {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1em;
+  border-radius: 8px;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
