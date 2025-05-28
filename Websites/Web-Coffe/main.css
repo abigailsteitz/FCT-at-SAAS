@@ -41,3 +41,88 @@ body {
     max-width: 300px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
+
+  
+  /* Light Theme (default) */
+  body {
+    background: #f4f1ee;
+    color: #3e2723;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  header, footer {
+    background: #6d4c41;
+    color: #fff8e1;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav a {
+    color: #a1887f;
+    transition: color 0.3s;
+  }
+
+  main {
+    background: #fff8e1;
+    color: #3e2723;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .gallery img, .gallery video {
+    background: #fff;
+    border: 2px solid #a1887f;
+  }
+
+  .employees div {
+    background: #fff8e1;
+    color: #3e2723;
+  }
+
+  /* Dark Theme */
+  body.dark-theme {
+    background: #2d221b;
+    color: #ffe0b2;
+  }
+
+  body.dark-theme header,
+  body.dark-theme footer {
+    background: #3e2723;
+    color: #ffe0b2;
+  }
+
+  body.dark-theme nav a {
+    color: #ffcc80;
+  }
+
+  body.dark-theme main {
+    background: #3e2723;
+    color: #ffe0b2;
+  }
+
+  body.dark-theme .gallery img,
+  body.dark-theme .gallery video {
+    background: #4e342e;
+    border: 2px solid #a1887f;
+  }
+
+  body.dark-theme .employees div {
+    background: #4e342e;
+    color: #ffe0b2;
+  }
+
+  .theme-switcher {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border: none;
+    background: #a1887f;
+    color: #3e2723;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  body.dark-theme .theme-switcher {
+    background: #3e2723;
+    color: #ffcc80;
+  }
