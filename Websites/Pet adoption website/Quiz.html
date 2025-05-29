@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pet Match Quiz - Unique Pets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="main.css" />
+  <style>
+    body {
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+      margin: 0;
+      padding: 0;
+      color: #222;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(91, 134, 229, 0.15);
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      letter-spacing: 2px;
+    }
+    header h1 {
+      font-size: 2.4em;
+      margin: 0;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 8px #0002;
+      animation: pop 1s;
+    }
+    @keyframes pop {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    nav a {
+      color: #fff;
+      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 14px 32px;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(255, 81, 47, 0.12);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      margin: 30px 0 20px 0;
+    }
+    nav a:hover {
+      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+      color: #fff;
+      transform: scale(1.08) rotate(-2deg);
+      border: 2px solid #fff;
+      box-shadow: 0 6px 24px rgba(54, 209, 196, 0.18);
+    }
+    #quiz-content {
+      max-width: 750px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(255, 81, 47, 0.10);
+      padding: 40px 36px;
+      text-align: center;
+      border: 3px dashed #ff512f;
+      animation: fadein 1.2s;
+    }
+    @keyframes fadein {
+      0% { opacity: 0; transform: translateY(30px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    h1 {
+      color: #36d1c4;
+      font-size: 2.2em;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      color: #ff512f;
+      margin-top: 1.2em;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    }
+    .result {
+      font-size: 1.3em;
+      margin-top: 30px;
+      color: #36d1c4;
+      font-weight: bold;
+    }
+    .result a {
+      color: #fff;
+      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+      padding: 10px 24px;
+      border-radius: 20px;
+      text-decoration: none;
+      margin-left: 10px;
+      transition: background 0.2s;
+    }
+    .result a:hover {
+      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+    }
+    label {
+      display: block;
+      margin: 18px 0 8px 0;
+      font-size: 1.1em;
+      color: #222;
+    }
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+    button {
+      margin-top: 30px;
+      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 14px 36px;
+      font-size: 1.1em;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 16px rgba(255, 81, 47, 0.12);
+    }
+    button:hover {
+      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+      transform: scale(1.05);
+    }
+    @media (max-width: 700px) {
+      #quiz-content {
+        padding: 18px 8px;
+      }
+      nav a {
+        padding: 12px 10vw;
+        font-size: 1em;
+      }
+      header {
+        padding: 24px 0 10px 0;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Pet Match Quiz</h1>
+  </header>
+  <nav>
+    <a href="./index.html">Home</a>
+  </nav>
+  <div id="quiz-content">
+    <h2>Are you having trouble deciding which pet is the best fit? Take this quiz to help you decide!</h2>
+    <form id="petQuiz">
+      <label>Do you enjoy exercise / do you exercise often?</label>
+      <input type="radio" name="q1" value="yes" required> Yes
+      <input type="radio" name="q1" value="no"> No
+
+      <label>Do you have lots of space for a pet?</label>
+      <input type="radio" name="q2" value="yes" required> Yes
+      <input type="radio" name="q2" value="no"> No
+
+      <label>Would you want your own space away from a pet?</label>
+      <input type="radio" name="q3" value="yes" required> Yes
+      <input type="radio" name="q3" value="no"> No
+
+      <label>Do you live in a warm place?</label>
+      <input type="radio" name="q4" value="yes" required> Yes
+      <input type="radio" name="q4" value="no"> No
+
+      <label>Finally, do you prefer mammals to reptiles?</label>
+      <input type="radio" name="q5" value="yes" required> Yes
+      <input type="radio" name="q5" value="no"> No
+
+      <br>
+      <button type="submit">Reveal My Perfect Pet!</button>
+    </form>
+    <div class="result" id="quizResult"></div>
+  </div>
+  <script>
+    document.getElementById('petQuiz').onsubmit = function(event) {
+      event.preventDefault();
+      let score = 0;
+      const form = event.target;
+      if(form.q1.value === "yes") score++;
+      if(form.q2.value === "yes") score++;
+      if(form.q3.value === "no") score++;
+      if(form.q4.value === "no") score++;
+      if(form.q5.value === "yes") score++;
+
+      let resultDiv = document.getElementById('quizResult');
+      if(score >= 4) {
+        resultDiv.innerHTML = 'You should adopt a Tibetan Mastiff! <a href="tibetanmastiff.html">Click here for more information</a>';
+      } else if(score >= 2) {
+        resultDiv.innerHTML = 'You should adopt a Victoria Crowned Pigeon! <a href="victoriacrownedpidgeon.html">Click here for more information</a>';
+      } else {
+        resultDiv.innerHTML = 'You should adopt a Chameleon! <a href="chameleon.html">Click here for more information</a>';
+      }
+    }
+  </script>
+</body>
+</html>
