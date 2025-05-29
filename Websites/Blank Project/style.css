@@ -1,0 +1,26 @@
+body {
+  color: rgb(180, 173, 173);
+	background-color: rgb(0, 0, 0);
+}
+
+.card {
+    padding: 15px;
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+
+    img {
+        width: 150px;
+        height: 175px;
+        overflow-y: hidden;
+        
+    }
+
+    p {
+        white-space: normal;
+        word-wrap: break-word;
+        margin: 8px 0;
+    }
+}
