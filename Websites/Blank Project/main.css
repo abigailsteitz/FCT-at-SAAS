@@ -1,1 +1,30 @@
 /* Your CSS goes in this file */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+body {
+    color: blue;
+    background-color: lightgray;
+}
+
+img {
+    max-width: 150px;
+    height: auto;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
