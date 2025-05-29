@@ -1,1 +1,12 @@
 /* Your CSS goes in this file */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b4009c;
+    color: #00ee5b;
+    margin: 0;
+    padding: 20px;
+}
+img {
+    max-width: 321px;
+    height: 482px;
+}
