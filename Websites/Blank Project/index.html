@@ -1,9 +1,28 @@
 <!--This head tag is not shown to the user. It is metadata about the page and read by browsers and search engines-->
 <head>
   <!--This is the title at the top of your browser tab. Search engines will also use this to display to users-->
-  <title>Soccer Jersey Website</title>
+  <title style="color: rgb(205, 8, 8);">Soccer Jersey Website</title>
 
   <!--This tag brings in the CSS you write to add style to your webpage-->
+  <style>
+    body {
+      color: rgb(205, 8, 8);
+      background: rgb(32, 58, 43);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    main, footer, header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
   <link rel="stylesheet" href="main.css" />
 
   <!--This tag brings in the JavaScript you write to add behavior to your webpage-->
@@ -11,13 +30,17 @@
 </head>
 <body>
   <!--Start of student website-->
-  <header>
-    <h1>Soccer Jerseys</h1>
-    <p>Explore the world of soccer jerseys from different teams and eras!</p>
+  <header style="background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%); padding: 32px 0 24px 0; text-align: center; border-radius: 0 0 18px 18px; box-shadow: 0 4px 16px rgba(30,60,114,0.2);">
+    <h1 style="color: #fff; font-size: 2.8rem; letter-spacing: 2px; margin-bottom: 10px; text-shadow: 2px 2px 8px #222;">Soccer Jerseys</h1>
+    <p style="color: #f8f8f8; font-size: 1.2rem; margin-bottom: 18px;">Explore the world of soccer jerseys from different teams and eras!</p>
     <nav>
-      <a href="Aboutme.html">The Best Shirts To Buy</a>
+      <a href="Aboutme.html" style="background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%); color: #fff; padding: 12px 36px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.15rem; box-shadow: 0 4px 16px rgba(221,36,118,0.18); letter-spacing: 1px; transition: background 0.3s, transform 0.2s; display: inline-block; margin: 0 8px;"
+         onmouseover="this.style.transform='scale(1.06)'; this.style.background='linear-gradient(90deg, #dd2476 0%, #ff512f 100%)';"
+         onmouseout="this.style.transform='scale(1)'; this.style.background='linear-gradient(90deg, #ff512f 0%, #dd2476 100%)';">
+        The Best Shirts To Buy
+      </a>
     </nav>
-  </header> 
+  </header>
 <header>
   <h1>Our Employees</h1>
   <p>Check Out Our Devoted Employees!</p>
