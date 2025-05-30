@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KeyFix Product Quiz</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./quiz.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./products.html">Products</a>
+    <a href="./employees.html">Our Team</a>
+    <a href="./quiz.html">Product Quiz</a>
+  </nav>
+  <div class="container">
+    <h1>Which KeyFix Product Is Right For You?</h1>
+    <form id="keyfixQuiz">
+      <h2>1. How often do you eat at your laptop?</h2>
+      <input type="radio" name="q1" value="basic" id="q1a"><label for="q1a">Never</label><br>
+      <input type="radio" name="q1" value="pro" id="q1b"><label for="q1b">Sometimes</label><br>
+      <input type="radio" name="q1" value="deluxe" id="q1c"><label for="q1c">Every meal is a laptop meal</label><br>
+
+      <h2>2. How many keys are currently sticky?</h2>
+      <input type="radio" name="q2" value="basic" id="q2a"><label for="q2a">Just one</label><br>
+      <input type="radio" name="q2" value="pro" id="q2b"><label for="q2b">A few</label><br>
+      <input type="radio" name="q2" value="deluxe" id="q2c"><label for="q2c">My keyboard is a disaster zone</label><br>
+
+      <h2>3. What’s your cleaning style?</h2>
+      <input type="radio" name="q3" value="basic" id="q3a"><label for="q3a">Quick and simple</label><br>
+      <input type="radio" name="q3" value="pro" id="q3b"><label for="q3b">I like gadgets</label><br>
+      <input type="radio" name="q3" value="deluxe" id="q3c"><label for="q3c">I want the best of the best</label><br>
+
+      <h2>4. How much do you travel with your laptop?</h2>
+      <select name="q4" id="q4">
+        <option value="basic">Never leaves my desk</option>
+        <option value="pro">Sometimes</option>
+        <option value="deluxe">It’s basically my roommate</option>
+      </select><br><br>
+
+      <h2>5. Pick a bonus feature:</h2>
+      <input type="checkbox" name="bonus" value="case" id="bonus1"><label for="bonus1">Carrying Case</label><br>
+      <input type="checkbox" name="bonus" value="brush" id="bonus2"><label for="bonus2">Cleaning Brush</label><br>
+      <input type="checkbox" name="bonus" value="color" id="bonus3"><label for="bonus3">Cool Colors</label><br>
+
+      <br>
+      <button type="button" onclick="getQuizResult()">See My Product!</button>
+    </form>
+    <div id="quizResult" class="hidden"></div>
+    <div id="confetti" class="hidden">🎉🎉🎉</div>
+  </div>
+</body>
+</html>
