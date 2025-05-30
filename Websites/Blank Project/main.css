@@ -1,1 +1,15 @@
-/* Your CSS goes in this file */
+/* Custom Theme */
+body {
+    color: rgb(205, 240, 208);
+      background-color: rgb(51, 40, 148);
+  }
+  
+  .medium-image {
+    width: 250px;
+    height: 225px;
+    overflow: hidden;
+  }
+
+#Frank {
+    display: inline-block;
+}
