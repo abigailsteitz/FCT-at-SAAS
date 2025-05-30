@@ -9,31 +9,39 @@
   <style>
     body {
       font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+      background: linear-gradient(120deg, #fceabb 0%, #f8b500 100%);
       margin: 0;
       padding: 0;
-      color: #222;
+      color: #3a2c1a;
       min-height: 100vh;
+      position: relative;
     }
 
     header {
-      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+      background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
       color: #fff;
-      padding: 40px 0 20px 0;
+      padding: 48px 0 24px 0;
       text-align: center;
-      box-shadow: 0 4px 24px rgba(91, 134, 229, 0.15);
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
+      box-shadow: 0 4px 24px rgba(255, 179, 71, 0.15);
+      border-bottom-left-radius: 60px 40px;
+      border-bottom-right-radius: 60px 40px;
       letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
     }
 
     header h1 {
-      font-size: 2.8em;
+      font-size: 3em;
       margin: 0;
       font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-      letter-spacing: 3px;
-      text-shadow: 2px 2px 8px #0002;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 12px #ffb34755;
       animation: pop 1s;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     @keyframes pop {
@@ -48,50 +56,98 @@
       }
     }
 
+    /* Cute paw print accent */
+    header::after {
+      content: "🐾";
+      font-size: 3em;
+      position: absolute;
+      right: 40px;
+      top: 30px;
+      opacity: 0.25;
+      transform: rotate(-15deg);
+      pointer-events: none;
+    }
+    header::before {
+      content: "🐾";
+      font-size: 2.2em;
+      position: absolute;
+      left: 40px;
+      top: 60px;
+      opacity: 0.18;
+      transform: rotate(10deg);
+      pointer-events: none;
+    }
+
     nav ul {
       display: flex;
       justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; /* Allow items to wrap on small screens */
       list-style: none;
       padding: 0;
-      margin: 30px 0 0 0;
+      margin: 36px 0 0 0;
       background: none;
-      gap: 30px;
+      gap: 32px;
+    }
+
+    nav ul li {
+      margin: 0; /* Remove default margin */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     nav ul li a {
       color: #fff;
-      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+      background: linear-gradient(90deg, #ff6e7f 0%, #bfe9ff 100%);
       text-decoration: none;
       font-weight: bold;
-      padding: 14px 32px;
-      border-radius: 30px;
-      box-shadow: 0 4px 16px rgba(255, 81, 47, 0.12);
+      padding: 16px 36px;
+      border-radius: 40px;
+      box-shadow: 0 4px 16px rgba(255, 110, 127, 0.10);
       transition: background 0.2s, color 0.2s, transform 0.2s;
-      font-size: 1.2em;
-      letter-spacing: 1px;
-      border: 2px solid transparent;
+      font-size: 1.25em;
+      letter-spacing: 1.5px;
+      border: 2px solid #fff3;
       position: relative;
       overflow: hidden;
+      outline: none;
+      display: inline-block;
+      text-align: center;
+      min-width: 200px; /* Ensures buttons are wide enough and uniform */
     }
 
-    nav ul li a:hover {
-      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+    nav ul li a:hover, nav ul li a:focus {
+      background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
       color: #fff;
       transform: scale(1.08) rotate(-2deg);
-      border: 2px solid #fff;
-      box-shadow: 0 6px 24px rgba(54, 209, 196, 0.18);
+      border: 2px solid #ffb347;
+      box-shadow: 0 6px 24px rgba(255, 179, 71, 0.18);
+      text-shadow: 0 2px 8px #fff7;
     }
 
     #about-unique-pets {
-      max-width: 750px;
-      margin: 50px auto;
-      background: #fff;
-      border-radius: 24px;
-      box-shadow: 0 8px 32px rgba(255, 81, 47, 0.10);
-      padding: 40px 36px;
+      max-width: 800px;
+      margin: 60px auto 0 auto;
+      background: #fffbe9;
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(255, 179, 71, 0.13);
+      padding: 48px 40px;
       text-align: center;
-      border: 3px dashed #ff512f;
+      border: 4px dashed #ffb347;
       animation: fadein 1.2s;
+      position: relative;
+    }
+
+    #about-unique-pets::after {
+      content: "🐶 🦎 🕊️";
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+      opacity: 0.22;
+      pointer-events: none;
     }
 
     @keyframes fadein {
@@ -107,42 +163,76 @@
     }
 
     h3 {
-      color: #ff512f;
+      color: #ff6e7f;
       margin-top: 0;
-      font-size: 2em;
+      font-size: 2.1em;
       font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     em {
-      color: #5b86e5;
+      color: #ff512f;
       font-style: normal;
       font-weight: bold;
-      background: #f9d42333;
-      padding: 2px 8px;
-      border-radius: 8px;
+      background: #fff0e1;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 1.08em;
+      display: inline-block;
+      margin-top: 18px;
     }
 
     p {
-      font-size: 1.15em;
-      line-height: 1.7;
+      font-size: 1.18em;
+      line-height: 1.8;
+      margin-bottom: 18px;
+      color: #3a2c1a;
     }
 
-    @media (max-width: 700px) {
-      #about-unique-pets {
-        padding: 18px 8px;
-      }
+    /* Decorative floating paw prints */
+    .paw {
+      position: absolute;
+      font-size: 2.5em;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .paw.p1 { top: 80px; left: 10vw; transform: rotate(-10deg);}
+    .paw.p2 { top: 400px; right: 12vw; transform: rotate(8deg);}
+    .paw.p3 { bottom: 80px; left: 18vw; transform: rotate(-7deg);}
+    .paw.p4 { bottom: 60px; right: 8vw; transform: rotate(12deg);}
+    .paw.p5 { top: 60vh; left: 50vw; transform: rotate(-4deg);}
 
+    @media (max-width: 900px) {
+      #about-unique-pets {
+        padding: 24px 8px;
+      }
       nav ul {
         flex-direction: column;
-        gap: 12px;
+        gap: 20px;
+        align-items: center;
       }
-
-      nav ul li {
-        margin: 0;
+      nav ul li a {
+        min-width: 160px;
+        width: 80vw;
+        max-width: 350px;
+        font-size: 1.1em;
+        padding: 14px 0;
       }
-
-      header {
-        padding: 24px 0 10px 0;
+    }
+    @media (max-width: 600px) {
+      nav ul li a {
+        min-width: 120px;
+        width: 90vw;
+        font-size: 1em;
+        padding: 12px 0;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+      #about-unique-pets {
+        padding: 14px 4vw;
       }
     }
   </style>
@@ -165,12 +255,18 @@
   <div id="about-unique-pets">
     <h3>About Unique Pets</h3>
     <p>
-      Are you sick of normal pets, or are you looking for your new favorite animal? On this cite, we detail what it would be like to adopt three unique animals. We reccomend looking at all three before deciding. If you still can't decide, try out our quiz to help uncover your perfect pet!
+      Are you sick of normal pets, or are you looking for your new favorite animal? On this cite, we detail what it would be like to adopt three unique animals. We recomend looking at all three before deciding. If you still can't decide, try out our quiz to help uncover your perfect pet!
     </p>
     <p>
       <em>(All adoptions will require a screening beforehand to ensure the animals will be taken care of)</em>
     </p>
   </div>
+  <!-- Decorative floating paw prints -->
+  <span class="paw p1">🐾</span>
+  <span class="paw p2">🐾</span>
+  <span class="paw p3">🐾</span>
+  <span class="paw p4">🐾</span>
+  <span class="paw p5">🐾</span>
 </body>
 
 </html>

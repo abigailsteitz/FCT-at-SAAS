@@ -8,137 +8,265 @@
   <style>
     body {
       font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+      background: url('https://images.takeshape.io/86ce9525-f5f2-4e97-81ba-54e8ce933da7/dev/4d50abdc-4cb9-478d-9646-6481e1b83c6f/337%20Mississippi%20lowland%20forests%20-%20JamesDeMers.jpg?auto=compress%2Cformat&h=630&w=1200') no-repeat center center fixed;
+      background-size: cover;
       margin: 0;
       padding: 0;
-      color: #222;
+      color: #3a2c1a;
       min-height: 100vh;
+      position: relative;
+    }
+    body * {
+      box-sizing: border-box;
+    }
+    /* Add a semi-transparent overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.7);
+      z-index: 0;
+      pointer-events: none;
+    }
+    header, nav, #pet-content {
+      position: relative;
+      z-index: 1;
     }
     header {
-      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+      background: linear-gradient(90deg, #ffb347cc 0%, #ffcc33cc 100%);
       color: #fff;
-      padding: 40px 0 20px 0;
+      padding: 48px 0 24px 0;
       text-align: center;
-      box-shadow: 0 4px 24px rgba(91, 134, 229, 0.15);
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
+      box-shadow: 0 4px 24px rgba(255, 179, 71, 0.15);
+      border-bottom-left-radius: 60px 40px;
+      border-bottom-right-radius: 60px 40px;
       letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      margin: 0 auto;
     }
     header h1 {
-      font-size: 2.4em;
-      margin: 0;
+      font-size: 2.5em;
+      margin: 0 auto;
       font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-      letter-spacing: 3px;
-      text-shadow: 2px 2px 8px #0002;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 12px #ffb34755;
       animation: pop 1s;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      max-width: 100vw;
+      word-break: break-word;
     }
     @keyframes pop {
       0% { transform: scale(0.8); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
     }
-    nav a {
+    header::after {
+      content: "🕊️";
+      font-size: 2.5em;
+      position: absolute;
+      right: 40px;
+      top: 30px;
+      opacity: 0.18;
+      transform: rotate(-15deg);
+      pointer-events: none;
+    }
+    header::before {
+      content: "🕊️";
+      font-size: 2em;
+      position: absolute;
+      left: 40px;
+      top: 60px;
+      opacity: 0.13;
+      transform: rotate(10deg);
+      pointer-events: none;
+    }
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 36px 0 0 0;
+      background: none;
+      gap: 24px;
+      width: 100%;
+    }
+    nav ul li {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    nav ul li a {
       color: #fff;
-      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+      background: linear-gradient(90deg, #ff6e7f 0%, #bfe9ff 100%);
       text-decoration: none;
       font-weight: bold;
-      padding: 14px 32px;
-      border-radius: 30px;
-      box-shadow: 0 4px 16px rgba(255, 81, 47, 0.12);
+      padding: 16px 36px;
+      border-radius: 40px;
+      box-shadow: 0 4px 16px rgba(255, 110, 127, 0.10);
       transition: background 0.2s, color 0.2s, transform 0.2s;
-      font-size: 1.1em;
-      letter-spacing: 1px;
-      border: 2px solid transparent;
+      font-size: 1.15em;
+      letter-spacing: 1.5px;
+      border: 2px solid #fff3;
       position: relative;
       overflow: hidden;
-      display: inline-block;
-      margin: 30px 0 20px 0;
+      outline: none;
+      display: block;
+      text-align: center;
+      min-width: 200px;
+      max-width: 90vw;
+      margin: 0 auto;
     }
-    nav a:hover {
-      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+    /* Make all nav buttons except the first (Home) smaller */
+    nav ul li:not(:first-child) a {
+      font-size: 0.95em;
+      padding: 10px 24px;
+      min-width: 140px;
+      max-width: 70vw;
+    }
+    nav ul li a:hover, nav ul li a:focus {
+      background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
       color: #fff;
       transform: scale(1.08) rotate(-2deg);
-      border: 2px solid #fff;
-      box-shadow: 0 6px 24px rgba(54, 209, 196, 0.18);
+      border: 2px solid #ffb347;
+      box-shadow: 0 6px 24px rgba(255, 179, 71, 0.18);
+      text-shadow: 0 2px 8px #fff7;
     }
-    #vcp-content {
-      max-width: 750px;
-      margin: 50px auto;
-      background: #fff;
-      border-radius: 24px;
-      box-shadow: 0 8px 32px rgba(255, 81, 47, 0.10);
-      padding: 40px 36px;
+    #pet-content {
+      max-width: 800px;
+      margin: 60px auto 0 auto;
+      background: #fffbe9cc;
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(255, 179, 71, 0.13);
+      padding: 48px 40px;
       text-align: center;
-      border: 3px dashed #ff512f;
+      border: 4px dashed #ffb347;
       animation: fadein 1.2s;
+      position: relative;
+    }
+    #pet-content img {
+      width: 340px;
+      max-width: 90vw;
+      border-radius: 22px;
+      margin: 30px auto 18px auto;
+      display: block;
+      box-shadow: 0 4px 24px rgba(54, 209, 196, 0.12);
+      border: 3px solid #36d1c4;
     }
     @keyframes fadein {
       0% { opacity: 0; transform: translateY(30px);}
       100% { opacity: 1; transform: translateY(0);}
     }
-    h1 {
-      color: #36d1c4;
-      font-size: 2.2em;
-      margin-bottom: 0.2em;
-    }
     h2, h3 {
-      color: #ff512f;
+      color: #ff6e7f;
       margin-top: 1.2em;
       font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      font-weight: 700;
+      text-align: center;
+      width: 100%;
+      word-break: break-word;
     }
-    ul {
+    ul, ol {
       text-align: left;
       margin: 0 auto 1em auto;
       max-width: 500px;
       font-size: 1.08em;
       line-height: 1.7;
     }
-    img {
-      width: 350px;
-      max-width: 90vw;
-      border-radius: 18px;
-      margin: 30px auto 0 auto;
-      display: block;
-      box-shadow: 0 4px 24px rgba(54, 209, 196, 0.12);
-      border: 3px solid #36d1c4;
+    p {
+      font-size: 1.18em;
+      line-height: 1.8;
+      margin-bottom: 18px;
+      color: #3a2c1a;
+      text-align: center;
+      width: 100%;
+      word-break: break-word;
     }
-    @media (max-width: 700px) {
-      #vcp-content {
-        padding: 18px 8px;
+    @media (max-width: 900px) {
+      #pet-content {
+        padding: 24px 8px;
       }
-      nav a {
-        padding: 12px 10vw;
-        font-size: 1em;
+      nav ul li a {
+        min-width: 160px;
+        width: 80vw;
+        max-width: 350px;
+        font-size: 1.1em;
+        padding: 14px 0;
       }
-      header {
-        padding: 24px 0 10px 0;
+      nav ul li:not(:first-child) a {
+        font-size: 0.95em;
+        padding: 10px 0;
+        min-width: 120px;
+        width: 70vw;
+        max-width: 250px;
       }
-      img {
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      #pet-content {
+        padding: 14px 4vw;
+      }
+      #pet-content img {
         width: 98vw;
+      }
+      nav ul li a {
+        min-width: 120px;
+        width: 90vw;
+        font-size: 1em;
+        padding: 12px 0;
+      }
+      nav ul li:not(:first-child) a {
+        font-size: 0.9em;
+        padding: 8px 0;
+        min-width: 90px;
+        width: 70vw;
+        max-width: 180px;
       }
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;400&display=swap" rel="stylesheet">
 </head>
-<body id="vcp">
+<body>
   <header>
     <h1>Victoria Crowned Pigeon</h1>
   </header>
   <nav>
-    <a href="./index.html">Home</a>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./chameleon.html">Chameleons</a></li>
+      <li><a href="./tibetanmastiff.html">Tibetan Mastiff</a></li>
+      <li><a href="./Quiz.html">Take the Pet Quiz!</a></li>
+    </ul>
   </nav>
-  <div id="vcp-content">
-    <h2>Overview</h2>
+  <div id="pet-content">
+    <img src="https://www.thesprucepets.com/thmb/wD_DNcvKwKAp5etCnSNZoAleAeo=/3865x0/filters:no_upscale():strip_icc()/close-up-of-a-beautiful-victoria-crowned-pigeon--goura-cristata--828667640-5af673af04d1cf003666d872.jpg" alt="Victoria Crowned Pigeon" />
+
+    <h2>Quick Facts</h2>
     <ul>
       <li>Scientific Name: Goura victoria</li>
       <li>Native Habitat: Lowland and swamp forests of northern New Guinea and nearby islands</li>
-      <li>Conservation Status: Near Threatened (due to habitat loss and hunting for feathers and meat)</li>
+      <li>Conservation Status: Near Threatened</li>
+      <li>Lifespan: 15–25 years</li>
     </ul>
     <h3>Habitat and Housing</h3>
     <ul>
       <li>Tropical rainforests and mangrove swamps</li>
       <li>Prefer dense, shaded, humid environments</li>
       <li>Minimum enclosure: 10 ft x 10 ft x 8 ft</li>
-      <li>Space to walk</li>
+      <li>Space to walk and explore</li>
     </ul>
     <h3>Temperament</h3>
     <ul>
@@ -153,7 +281,6 @@
       <li>Protein sources (mealworms occasionally)</li>
       <li>Clean water at all times</li>
     </ul>
-    <img src="https://www.thesprucepets.com/thmb/wD_DNcvKwKAp5etCnSNZoAleAeo=/3865x0/filters:no_upscale():strip_icc()/close-up-of-a-beautiful-victoria-crowned-pigeon--goura-cristata--828667640-5af673af04d1cf003666d872.jpg" alt="Victoria Crowned Pigeon" />
   </div>
 </body>
 </html>
