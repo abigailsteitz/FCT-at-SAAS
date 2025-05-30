@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gen Z vs Gen Alpha Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2d2d50;
+      color: #f0e6ff;
+      padding: 20px;
+    }
+
+    img {
+      width: 50%;
+      border: 10px double white;
+    }
+
+    h1 {
+      text-shadow: 2px 2px #7a7ac9;
+      font-family: 'Franklin Gothic Medium';
+    }
+
+    button {
+      background-color: #444;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 15px;
+    }
+
+    #GenZResult,
+    #GenAlphaResult,
+    #errorMessage {
+      display: none;
+      margin-top: 20px;
+    }
+
+    #errorMessage {
+      color: pink;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Are You More Like Gen Z or Gen Alpha?</h1>
+
+  <h2>1. What was your favorite show growing up?</h2>
+  <input type="radio" name="show" id="iCarly">
+  <label for="iCarly">iCarly</label><br>
+  <input type="radio" name="show" id="PeppaPig">
+  <label for="PeppaPig">Peppa Pig</label><br>
+  <input type="radio" name="show" id="Cocomelon">
+  <label for="Cocomelon">Cocomelon</label><br>
+
+  <h2>2. What is your favorite app?</h2>
+  <input type="radio" name="app" id="Instagram">
+  <label for="Instagram">Instagram</label><br>
+  <input type="radio" name="app" id="TikTok">
+  <label for="TikTok">TikTok</label><br>
+  <input type="radio" name="app" id="Roblox">
+  <label for="Roblox">Roblox</label><br>
+
+  <h2>3. What do you do in your free time?</h2>
+  <input type="radio" name="freeTime" id="Scroll">
+  <label for="Scroll">Scroll</label><br>
+  <input type="radio" name="freeTime" id="Gaming">
+  <label for="Gaming">Gaming</label><br>
+  <input type="radio" name="freeTime" id="MakeEdits">
+  <label for="MakeEdits">Make aesthetic edits</label><br>
+
+  <h2>4. What's your favorite slang?</h2>
+  <input type="radio" name="slang" id="Slay">
+  <label for="Slay">Slay</label><br>
+  <input type="radio" name="slang" id="Rizz">
+  <label for="Rizz">Rizz</label><br>
+  <input type="radio" name="slang" id="Bet">
+  <label for="Bet">Bet</label><br>
+
+  <h2>5. What is your style?</h2>
+  <input type="radio" name="style" id="Y2K">
+  <label for="Y2K">Y2K Aesthetic</label><br>
+  <input type="radio" name="style" id="Oversized">
+  <label for="Oversized">Oversized hoodies & Crocs</label><br>
+  <input type="radio" name="style" id="CozyCore">
+  <label for="CozyCore">Cozy-core with headphones</label><br>
+
+  <br><button onclick="seeResult()">See Result</button>
+
+  <div id="errorMessage">
+    <h3>Please answer all the questions!</h3>
+  </div>
+
+  <div id="GenZResult">
+    <h1>You’re more like Gen Z!</h1>
+    <img src="GenZ.jpg" alt="Gen Z">
+  </div>
+
+  <div id="GenAlphaResult">
+    <h1>You’re more like Gen Alpha!</h1>
+    <img src="GenAlpha.jpg" alt="Gen Alpha">
+  </div>
+
+  <script>
+    'use strict';
+
+    function resetResult() {
+      document.getElementById("GenZResult").style.display = "none";
+      document.getElementById("GenAlphaResult").style.display = "none";
+      document.getElementById("errorMessage").style.display = "none";
+    }
+
+    function allAnswered() {
+      const groups = ["show", "app", "freeTime", "slang", "style"];
+      for (let group of groups) {
+        const options = document.getElementsByName(group);
+        let oneChecked = false;
+        for (let option of options) {
+          if (option.checked) {
+            oneChecked = true;
+            break;
+          }
+        }
+        if (!oneChecked) return false;
+      }
+      return true;
+    }
+
+    function seeResult() {
+      resetResult();
+
+      if (!allAnswered()) {
+        document.getElementById("errorMessage").style.display = "block";
+        return;
+      }
+
+      let genZScore = 0;
+      let genAlphaScore = 0;
+
+      // Scoring
+      if (document.getElementById("iCarly").checked) genZScore++;
+      if (document.getElementById("PeppaPig").checked) genZScore++;
+      if (document.getElementById("Cocomelon").checked) genAlphaScore++;
+
+      if (document.getElementById("Instagram").checked) genZScore++;
+      if (document.getElementById("TikTok").checked) {
+        genZScore++;
+        genAlphaScore++;
+      }
+      if (document.getElementById("Roblox").checked) genAlphaScore++;
+
+      if (document.getElementById("Scroll").checked) genZScore++;
+      if (document.getElementById("Gaming").checked) genAlphaScore++;
+      if (document.getElementById("MakeEdits").checked) genAlphaScore++;
+
+      if (document.getElementById("Slay").checked) genZScore++;
+      if (document.getElementById("Rizz").checked) genAlphaScore++;
+      if (document.getElementById("Bet").checked) genZScore++;
+
+      if (document.getElementById("Y2K").checked) genZScore++;
+      if (document.getElementById("Oversized").checked) genAlphaScore++;
+      if (document.getElementById("CozyCore").checked) genAlphaScore++;
+
+      // Show result
+      if (genZScore >= genAlphaScore) {
+        document.getElementById("GenZResult").style.display = "block";
+      } else {
+        document.getElementById("GenAlphaResult").style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
