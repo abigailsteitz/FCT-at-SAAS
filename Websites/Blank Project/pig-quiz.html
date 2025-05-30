@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Big of a Pig Are You?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>How Big of a Pig Are You?</h1>
+  <form id="quiz-form">
+    <div class="question">
+      <p>1. What's your favorite kind of food?</p>
+      <label><input type="radio" name="q1" value="piggy" /> Anything greasy</label><br />
+      <label><input type="radio" name="q1" value="clean" /> Salad and water</label>
+    </div>
+
+    <div class="question">
+      <p>2. How do you eat chips?</p>
+      <label><input type="radio" name="q2" value="piggy" /> Whole bag at once</label><br />
+      <label><input type="radio" name="q2" value="clean" /> Small bowl only</label>
+    </div>
+
+    <div class="question">
+      <p>3. How do you keep your room?</p>
+      <label><input type="radio" name="q3" value="piggy" /> Disaster zone</label><br />
+      <label><input type="radio" name="q3" value="clean" /> Sparkling clean</label>
+    </div>
+
+    <div class="question">
+      <p>4. What’s your idea of a good weekend?</p>
+      <label><input type="radio" name="q4" value="piggy" /> Couch, snacks, and zero movement</label><br />
+      <label><input type="radio" name="q4" value="clean" /> Cleaning, hiking, and eating healthy</label>
+    </div>
+
+    <div class="question">
+      <p>5. How do you feel about mud?</p>
+      <label><input type="radio" name="q5" value="piggy" /> Love rolling in it</label><br />
+      <label><input type="radio" name="q5" value="clean" /> I avoid it at all costs</label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="result" style="display:none;"></div>
+  <div id="home-button" style="display:none; margin-top: 20px;">
+    <a href="index.html"><button>Go Back to Home Page</button></a>
+  </div>
+
+  <script>
+    document.getElementById("quiz-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = document.getElementById("quiz-form");
+      const formData = new FormData(form);
+      let piggyScore = 0;
+
+      for (const [key, value] of formData.entries()) {
+        if (value === "piggy") {
+          piggyScore++;
+        }
+      }
+
+      const resultDiv = document.getElementById("result");
+      resultDiv.style.display = "block";
+
+      if (piggyScore === 5) {
+        resultDiv.innerHTML = "<h2>um maybe lay off the chips... and go outside, ur like 650lb</h2>";
+      } else if (piggyScore >= 3) {
+        resultDiv.innerHTML = "<h2>You are a TRUE pig! approx 400 pounds.</h2>";
+      } else if (piggyScore === 2) {
+        resultDiv.innerHTML = "<h2>id say youre about 300 pounds on a good day. nice.</h2>";
+      } else if (piggyScore === 1) {
+        resultDiv.innerHTML = "<h2>u an average pig, like 200lb</h2>";
+      } else {
+        resultDiv.innerHTML = "<h2>ur a little pig. about 2 pounds</h2>";
+      }
+
+      document.getElementById("home-button").style.display = "block";
+    });
+  </script>
+</body>
+</html>

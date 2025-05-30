@@ -2,18 +2,21 @@
 body {
   background-color: #ffe6f0 !important; /* Light pink */
   color: #b30059 !important; /* Dark pink */
+  font-family: Arial, sans-serif;
 }
 
-/* Apply to other common containers for consistent coloring */
+/* Transparent backgrounds and dark pink text by default */
 * {
   background-color: transparent !important;
   color: #b30059 !important;
 }
 
+/* Link color */
 a {
   color: #cc0066 !important;
 }
 
+/* Consistent styling for common layout elements */
 header, footer, nav, main, section, div {
   background-color: #ffe6f0 !important;
   color: #b30059 !important;
