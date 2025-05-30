@@ -1,3 +1,9 @@
+<header>
+  <img src="images/logo.png" alt="Chill Beans Coffee Logo" class="brand-logo" />
+ 
+  ...
+</header>
+
 <!--This head tag is not shown to the user. It is metadata about the page and read by browsers and search engines-->
 <head>
   <!--This is the title at the top of your browser tab. Search engines will also use this to display to users-->
@@ -11,7 +17,7 @@
 </head>
 <body>
 <button class="theme-switcher" id="themeSwitcher">Switch to Dark Theme</button>
-<script src="script.js"></script>
+<script src="app.js"></script>
   <header>
     <h1>Chill Beans Coffee</h1>
     <nav>
@@ -28,6 +34,47 @@
   <footer>
     <p>&copy; 2025 Chill Beans Coffee</p>
   </footer>
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 
+
+<!-- Coffee Quiz Section -->
+<section id="coffee-quiz">
+  <h2>Find Your Perfect Coffee!</h2>
+  <form id="quizForm">
+    <p>How do you like your coffee strength?</p>
+    <label><input type="radio" name="strength" value="strong" required> Strong</label>
+    <label><input type="radio" name="strength" value="medium"> Medium</label>
+    <label><input type="radio" name="strength" value="mild"> Mild</label>
+    <span id="sass-strength" class="sass"></span>
+
+    <p>Do you prefer your coffee hot or cold?</p>
+    <label><input type="radio" name="temp" value="hot" required> Hot</label>
+    <label><input type="radio" name="temp" value="cold"> Cold</label>
+    <span id="sass-temp" class="sass"></span>
+
+    <p>How many cups do you drink per day? <span id="sass-cups" class="sass"></span></p>
+    <input type="range" name="cups" id="cups" min="1" max="10" value="2" />
+    <span id="cups-value">2</span>
+
+    <p>Pick your favorite flavor:</p>
+    <select name="flavor" id="flavor" required>
+      <option value="">--Choose--</option>
+      <option value="vanilla">Vanilla</option>
+      <option value="caramel">Caramel</option>
+      <option value="mocha">Mocha</option>
+      <option value="hazelnut">Hazelnut</option>
+      <option value="none">Just coffee, thanks</option>
+    </select>
+    <span id="sass-flavor" class="sass"></span>
+
+    <p>Do you like milk in your coffee?</p>
+    <label><input type="checkbox" name="milk" id="milk"> Yes, make it creamy!</label>
+    <span id="sass-milk" class="sass"></span>
+
+    <br><br>
+    <button type="submit">Get My Coffee!</button>
+  </form>
+  <div id="quizResult" style="margin-top:1em;font-weight:bold;"></div>
+  <canvas id="confetti" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;"></canvas>
+</section>

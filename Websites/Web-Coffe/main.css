@@ -126,3 +126,171 @@ body {
     background: #3e2723;
     color: #ffcc80;
   }
+#coffee-quiz {
+  background: #fff8e1;
+  border-radius: 10px;
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+#coffee-quiz h2 {
+  margin-top: 0;
+}
+#coffee-quiz label {
+  margin-right: 1em;
+}
+#coffee-quiz button {
+  margin-top: 1em;
+  padding: 0.5em 1.5em;
+  background: #6d4c41;
+  color: #fff8e1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}#coffee-quiz .sass {
+  color: #b71c1c;
+  font-size: 0.95em;
+  margin-left: 0.5em;
+  font-style: italic;
+  transition: color 0.3s;
+}
+#coffee-quiz input[type="range"] {
+  width: 100px;
+  vertical-align: middle;
+}
+#coffee-quiz select {
+  margin-left: 0.5em;
+}
+#confetti {
+  pointer-events: none;
+}
+/* Add this to your main.css */
+
+/* Default (light theme) */
+#coffee-quiz {
+  background: #fff8e1;
+  color: #3e2723;
+  border-radius: 10px;
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Dark theme styles */
+body.dark-theme #coffee-quiz {
+  background: #3e2723;
+  color: #fff8e1;
+}
+
+body.dark-theme #coffee-quiz label,
+body.dark-theme #coffee-quiz p,
+body.dark-theme #coffee-quiz h2,
+body.dark-theme #coffee-quiz select,
+body.dark-theme #coffee-quiz span,
+body.dark-theme #coffee-quiz input {
+  color: #fff8e1;
+}
+/* Make dropdowns readable in dark theme */
+body.dark-theme select,
+body.dark-theme option {
+  background: #3e2723;
+  color: #fff8e1;
+  border: 1px solid #fff8e1;
+}
+.employee-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+  border: 3px solid #a1887f;
+}
+
+.brand-logo {
+  width: 100px;
+  display: block;
+  margin: 0 auto 1em auto;
+}
+
+.products {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product {
+  background: #fff8e1;
+  border-radius: 10px;
+  padding: 1em;
+  width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.product img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5em;
+}
+.cart {
+  margin-top: 2em;
+  background: #f4f1ee;
+  border-radius: 10px;
+  padding: 1em;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  margin: 2em 0;
+}
+.product {
+  background: #f7e9d2;
+  border-radius: 12px;
+  padding: 1.5em 1em;
+  width: 220px;
+  box-shadow: 0 4px 16px rgba(61, 39, 24, 0.08);
+  text-align: center;
+  border: 2px solid #d7b899;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.product:hover {
+  box-shadow: 0 8px 24px rgba(61, 39, 24, 0.18);
+  border: 2px solid #a1887f;
+}
+.product img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5em;
+  background: #fff;
+}
+.product h3 {
+  margin: 0.5em 0 0.2em 0;
+  color: #6d4c41;
+}
+.product p {
+  color: #8d6748;
+  margin: 0.2em 0 0.8em 0;
+}
+.product select, .product button {
+  margin-top: 0.5em;
+}
+.product button {
+  background: #6d4c41;
+  color: #fff8e1;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.product button:hover {
+  background: #a1887f;
+}
+
