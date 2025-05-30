@@ -4,332 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driftwood Home Decor</title>
+    <link rel="stylesheet" href="../style.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #abbd90; /* lighter, yellower green */
-            color: #3a3a3a;
-            margin: 0;
-            padding: 32px 0;
-            position: relative;
-            overflow-x: hidden;
-        }
-        .top-nav {
-            width: 100%;
-            background: #dfd8cb;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            min-height: 90px; /* increased height */
-            position: relative;
-            z-index: 100;
-            margin-top: 0; /* remove margin for green strip */
-        }
-        .nav-content {
-            width: 100%;
-            max-width: 1100px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 32px;
-            height: 90px; /* match nav height */
-        }
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            margin-right: 32px;
-        }
-        .nav-logo img {
-            height: 54px; /* make logo bigger */
-            width: auto;
-            border-radius: 8px;
-            display: block;
-        }
-        .nav-logo-text {
-            font-size: 2em; /* bigger text */
-            font-weight: 600;
-            color: #7b5e3b;
-            margin-left: 12px;
-            letter-spacing: 1px;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-        .nav-links {
-            display: flex;
-            gap: 28px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: #7b5e3b;
-            font-weight: 500;
-            font-size: 1.3em; /* bigger links */
-            transition: color 0.2s;
-            padding: 8px 0;
-        }
-        .nav-links a:hover {
-            color: #3a3a3a;
-        }
-        .nav-search {
-            display: flex;
-            align-items: center;
-        }
-        .nav-search input[type="text"] {
-            padding: 7px 12px;
+        .theme-switcher-btn {
+            /* Remove position:fixed, now in nav */
+            background: #7b5e3b;
+            color: #fff;
+            border: none;
             border-radius: 20px;
-            border: 1px solid #d1c3a3;
+            padding: 10px 22px;
             font-size: 1em;
-            outline: none;
-            background: #fff;
-            color: #7b5e3b;
-            transition: border 0.2s;
-        }
-        .nav-search input[type="text"]:focus {
-            border: 1.5px solid #7b5e3b;
-        }
-        .nav-search button {
-            background: #e0d8c3;
-            border: none;
-            color: #7b5e3b;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            margin-left: 8px;
+            font-weight: 600;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1em;
-            transition: background 0.2s;
-            padding: 0;
-        }
-        .nav-search button:hover {
-            background: #d1c3a3;
-        }
-        .nav-search .search-icon {
-            width: 18px;
-            height: 18px;
-            display: block;
-            /* Remove if using inline SVG */
-        }
-        /* Magnifying glass icon using SVG */
-        .nav-search .search-svg {
-            width: 18px;
-            height: 18px;
-            display: block;
-        }
-        .container {
-            max-width: 900px;
-            margin: 60px auto;
-            background: none;
-            border-radius: 0;
-            box-shadow: none;
-            padding: 0;
-        }
-        .beige-box {
-            background: #dfd8cb;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0,0,0,0.09);
-            padding: 36px 0;
-            max-width: 860px;
-            width: 98%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .white-box {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-            padding: 40px 32px;
-            width: 90%;
-            max-width: 700px;
-            margin-bottom: 32px;
-        }
-        h1 {
-            font-size: 2.5em;
-            letter-spacing: 2px;
-            color: #7b5e3b;
-            margin-bottom: 18px;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.7;
-            margin-top: 0;
-        }
-        .slideshow-container {
-            width: 90%;
-            max-width: 700px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-            padding: 24px 0 24px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .slide-img {
-            width: 90%;
-            max-height: 340px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 12px;
-        }
-        .arrow-btn {
-            background: #e0d8c3;
-            border: none;
-            color: #7b5e3b;
-            font-size: 2em;
-            padding: 6px 18px;
-            margin: 0 16px;
-            border-radius: 50%;
-            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
             transition: background 0.2s;
         }
-        .arrow-btn:hover {
-            background: #d1c3a3;
+        .theme-switcher-btn:hover {
+            background: #5d472a;
         }
-        .arrow-controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        body.dusty-blue {
+            background: #b2c7d9 !important;
         }
-        .employee-list {
-            margin-top: 36px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-            padding: 32px 32px 18px 32px;
-            width: 90%;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        body.dusty-blue .top-nav,
+        body.dusty-blue .beige-box,
+        body.dusty-blue .product-box,
+        body.dusty-blue .container,
+        body.dusty-blue footer {
+            background: #e3eaf1 !important;
         }
-        .employee-list-title {
-            font-size: 1.4em;
-            font-weight: 600;
-            color: #7b5e3b;
-            margin-bottom: 22px;
-            letter-spacing: 1px;
+        body.dusty-blue .nav-logo-text,
+        body.dusty-blue .nav-links a,
+        body.dusty-blue .employee-list-title,
+        body.dusty-blue h1,
+        body.dusty-blue h2,
+        body.dusty-blue .faq-question,
+        body.dusty-blue .back-link,
+        body.dusty-blue .product-title,
+        body.dusty-blue .product-box h1 {
+            color: #3a5a6b !important;
         }
-        .employee-card {
-            background: none;
-            border-radius: 0;
-            box-shadow: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding: 0 0 22px 0;
-            text-align: center;
-            border-bottom: 1px solid #eee;
+        body.dusty-blue .nav-links a:hover,
+        body.dusty-blue .nav-links a.active {
+            color: #1d2e3a !important;
         }
-        .employee-card:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
+        body.dusty-blue .add-cart-btn,
+        body.dusty-blue form button[type="submit"] {
+            background: #3a5a6b !important;
         }
-        .employee-card img {
-            width: 90px;
-            height: 90px;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 1px 6px rgba(0,0,0,0.10);
-            margin-bottom: 10px;
-        }
-        .employee-card .employee-name {
-            font-weight: 600;
-            color: #7b5e3b;
-            font-size: 1.1em;
-            margin-bottom: 2px;
-        }
-        .employee-card .employee-role {
-            font-size: 0.98em;
-            color: #3a3a3a;
-            margin-bottom: 0;
-        }
-        .employee-card .employee-desc {
-            font-size: 0.97em;
-            color: #666;
-            margin: 6px 0 0 0;
-        }
-        /* Parallax image strip styles */
-        .parallax-strip {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 170px;
-            z-index: 1;
-            pointer-events: none;
-            overflow: hidden;
-            background: transparent;
-            display: flex;
-            align-items: center;
-        }
-        .parallax-images {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            will-change: transform;
-        }
-        .parallax-images img {
-            height: 130px;
-            width: auto;
-            margin: 0 22px;
-            border: none;
-            border-radius: 0;
-            box-shadow: none;
-            object-fit: cover;
-            pointer-events: none;
-            user-select: none;
-            background: none;
-        }
-        /* Parallax vertical image columns */
-        .parallax-side {
-            position: fixed;
-            top: 90px; /* start below nav bar */
-            bottom: 0;
-            width: 220px;
-            z-index: 1;
-            pointer-events: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 32px;
-        }
-        .parallax-side.left {
-            left: 0;
-        }
-        .parallax-side.right {
-            right: 0;
-        }
-        .parallax-side img {
-            width: 340px; /* 200px * 1.7 = 340px */
-            height: 340px;
-            object-fit: cover;
-            margin: 0;
-            border: none;
-            border-radius: 0;
-            box-shadow: none;
-            background: none;
-            pointer-events: none;
-            user-select: none;
-            display: block;
-        }
-        /* Ensure main content is above parallax */
-        .main-content {
-            position: relative;
-            z-index: 2;
-        }
-        @media (max-width: 1200px) {
-            .parallax-side {
-                display: none !important;
-            }
+        body.dusty-blue .add-cart-btn:hover,
+        body.dusty-blue form button[type="submit"]:hover {
+            background: #274052 !important;
         }
     </style>
 </head>
@@ -399,7 +123,29 @@
     </div>
     <div class="main-content">
         <nav class="top-nav">
-            <div class="nav-content">
+            <div class="nav-content" style="display: flex; align-items: center;">
+                <!-- Newsletter button start -->
+                <div style="margin-right: 28px;">
+                    <button 
+                        style="
+                            background: #7b5e3b;
+                            color: #fff;
+                            border: none;
+                            border-radius: 24px;
+                            padding: 10px 24px;
+                            font-size: 1em;
+                            font-weight: 600;
+                            cursor: pointer;
+                            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+                            transition: background 0.2s;
+                            letter-spacing: 1px;
+                        "
+                        onclick="alert('Subscribe to our monthly newsletter coming soon!')"
+                    >
+                        Sign up for our newsletter
+                    </button>
+                </div>
+                <!-- Newsletter button end -->
                 <div class="nav-logo">
                     <a href="randomproject.html">
                         <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
@@ -409,71 +155,105 @@
                 <div class="nav-links">
                     <a href="#">Home</a>
                     <a href="../shop.html">Shop</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
                     <a href="../contact.html">Contact</a>
                     <a href="../cart.html">Cart</a>
                 </div>
-                <form class="nav-search" onsubmit="event.preventDefault(); alert('Search: ' + this.query.value);">
-                    <input type="text" name="query" placeholder="Search..." aria-label="Search"/>
-                    <button type="submit" aria-label="Search">
-                        <svg class="search-svg" viewBox="0 0 20 20" fill="none">
-                            <circle cx="9" cy="9" r="7" stroke="#7b5e3b" stroke-width="2"/>
-                            <line x1="14.2" y1="14.2" x2="18" y2="18" stroke="#7b5e3b" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                </form>
+                <!-- Theme switcher moved here -->
+                <button class="theme-switcher-btn" onclick="toggleTheme()" style="margin-left:24px;">Switch Theme</button>
+                <!-- Hamburger menu button -->
+                <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- Spacer to push search bar to far right -->
+                <div style="flex:1 1 auto;"></div>
+                <!-- Search bar removed -->
             </div>
         </nav>
+        <!-- Mobile nav overlay -->
+        <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+            <div class="mobile-nav-links">
+                <a href="#" onclick="closeMobileNav()">Home</a>
+                <a href="../shop.html" onclick="closeMobileNav()">Shop</a>
+                <a href="about.html" onclick="closeMobileNav()">About</a>
+                <a href="faq.html" onclick="closeMobileNav()">FAQ</a>
+                <a href="../contact.html" onclick="closeMobileNav()">Contact</a>
+                <a href="../cart.html" onclick="closeMobileNav()">Cart</a>
+            </div>
+            <!-- Mobile nav search removed -->
+        </div>
         <div class="container">
-            <div class="beige-box">
-                <div class="white-box">
-                    <h1>Driftwood Home Decor</h1>
-                    <p>
-                        Driftwood Home Decor is a curated home and lifestyle brand offering timeless, nature-inspired pieces that bring warmth, calm, and character into every space. From earthy ceramics to soft textiles and handcrafted decor, Driftwood blends organic materials with minimalist design — helping you create a home that feels as beautiful as it is grounded.
-                    </p>
-                </div>
-                <div class="slideshow-container">
+            <div class="white-box">
+                <h1>Driftwood Home Decor</h1>
+                <p>
+                    Driftwood Home Decor is a curated home and lifestyle brand offering timeless, nature-inspired pieces that bring warmth, calm, and character into every space. From earthy ceramics to soft textiles and handcrafted decor, Driftwood blends organic materials with minimalist design — helping you create a home that feels as beautiful as it is grounded.
+                </p>
+            </div>
+            <!-- Centered slideshow start -->
+            <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 32px 0;">
+                <div class="slideshow-container" style="margin: 0 auto;">
                     <img id="slideshow-img" class="slide-img" src="https://i0.wp.com/stewartlighting.com/wp-content/uploads/2022/02/shutterstock_1483369076.jpg?fit=1000%2C667&ssl=1" alt="Driftwood Decor Photo"/>
                     <div class="arrow-controls">
                         <button class="arrow-btn" onclick="prevSlide()" aria-label="Previous">&#8592;</button>
                         <button class="arrow-btn" onclick="nextSlide()" aria-label="Next">&#8594;</button>
                     </div>
                 </div>
-                <!-- Employee cards start -->
-                <div class="employee-list">
-                    <div class="employee-list-title">Our Team</div>
-                    <div class="employee-card">
-                        <img src="https://thumbs.dreamstime.com/b/beautiful-girl-dreadlocks-young-woman-hairdress-against-summer-nature-41323139.jpg" alt="Jade"/>
-                        <div class="employee-name">Jade</div>
-                        <div class="employee-role">Lead Stylist</div>
-                        <div class="employee-desc">Creates unique, nature-inspired looks and guides our design vision.</div>
-                    </div>
-                    <div class="employee-card">
-                        <img src="https://media.istockphoto.com/id/854442338/photo/looks-like-another-bright-and-successful-day.jpg?s=612x612&w=0&k=20&c=Ni1-ATPFgNku9JXy3TGK1tLTnA7vJWyTXYfSsAIItXk=" alt="James"/>
-                        <div class="employee-name">James</div>
-                        <div class="employee-role">Customer Experience</div>
-                        <div class="employee-desc">Ensures every guest feels welcome and helps with all inquiries.</div>
-                    </div>
-                    <div class="employee-card">
-                        <img src="https://media.istockphoto.com/id/1321204080/photo/smiling-plus-size-woman-using-her-smartphone-while-walking-home-from-the-marketplace-carrying.jpg?s=612x612&w=0&k=20&c=mcdOsoYEPC_Gmd_g_Wi7aRNzu-uw9Kq3yd8FZinZMcM=" alt="Maya"/>
-                        <div class="employee-name">Maya</div>
-                        <div class="employee-role">Shop Manager</div>
-                        <div class="employee-desc">Keeps the shop running smoothly and manages daily operations.</div>
-                    </div>
-                    <div class="employee-card">
-                        <img src="https://media.istockphoto.com/id/2205370986/photo/beautiful-flower-shop-owner.jpg?s=612x612&w=0&k=20&c=WjqEO3DhxbiKA_ZPAjqfGAcmRYbVyw4Rn6Ww6ehm_LU=" alt="Lila"/>
-                        <div class="employee-name">Lila</div>
-                        <div class="employee-role">Florist & Decorator</div>
-                        <div class="employee-desc">Arranges flowers and decor to bring warmth and beauty to every space.</div>
-                    </div>
-                    <div class="employee-card">
-                        <img src="https://thumbs.dreamstime.com/b/male-musician-working-nature-young-creative-man-wearing-eyeglasses-sitting-green-grass-outdoors-making-some-notes-196499837.jpg" alt="Eli"/>
-                        <div class="employee-name">Eli</div>
-                        <div class="employee-role">Creative Director</div>
-                        <div class="employee-desc">Leads branding and creative projects, ensuring a cohesive style.</div>
-                    </div>
-                </div>
-                <!-- Employee cards end -->
             </div>
+            <!-- Centered slideshow end -->
+            <div style="display: flex; justify-content: center; margin-bottom: 32px;">
+                <a href="newpage.html">
+                    <button style="
+                        background: #7b5e3b;
+                        color: #fff;
+                        border: none;
+                        border-radius: 20px;
+                        padding: 12px 28px;
+                        font-size: 1.1em;
+                        font-weight: 600;
+                        cursor: pointer;
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+                        transition: background 0.2s;
+                    ">Take the Personality Quiz</button>
+                </a>
+            </div>
+            <!-- Employee cards start -->
+            <div class="employee-list">
+                <div class="employee-list-title">Our Team</div>
+                <div class="employee-card">
+                    <img src="https://thumbs.dreamstime.com/b/beautiful-girl-dreadlocks-young-woman-hairdress-against-summer-nature-41323139.jpg" alt="Jade"/>
+                    <div class="employee-name">Jade</div>
+                    <div class="employee-role">Lead Stylist</div>
+                    <div class="employee-desc">Creates unique, nature-inspired looks and guides our design vision.</div>
+                </div>
+                <div class="employee-card">
+                    <img src="https://media.istockphoto.com/id/854442338/photo/looks-like-another-bright-and-successful-day.jpg?s=612x612&w=0&k=20&c=Ni1-ATPFgNku9JXy3TGK1tLTnA7vJWyTXYfSsAIItXk=" alt="James"/>
+                    <div class="employee-name">James</div>
+                    <div class="employee-role">Customer Experience</div>
+                    <div class="employee-desc">Ensures every guest feels welcome and helps with all inquiries.</div>
+                </div>
+                <div class="employee-card">
+                    <img src="https://media.istockphoto.com/id/1321204080/photo/smiling-plus-size-woman-using-her-smartphone-while-walking-home-from-the-marketplace-carrying.jpg?s=612x612&w=0&k=20&c=mcdOsoYEPC_Gmd_g_Wi7aRNzu-uw9Kq3yd8FZinZMcM=" alt="Maya"/>
+                    <div class="employee-name">Maya</div>
+                    <div class="employee-role">Shop Manager</div>
+                    <div class="employee-desc">Keeps the shop running smoothly and manages daily operations.</div>
+                </div>
+                <div class="employee-card">
+                    <img src="https://media.istockphoto.com/id/2205370986/photo/beautiful-flower-shop-owner.jpg?s=612x612&w=0&k=20&c=WjqEO3DhxbiKA_ZPAjqfGAcmRYbVyw4Rn6Ww6ehm_LU=" alt="Lila"/>
+                    <div class="employee-name">Lila</div>
+                    <div class="employee-role">Florist & Decorator</div>
+                    <div class="employee-desc">Arranges flowers and decor to bring warmth and beauty to every space.</div>
+                </div>
+                <div class="employee-card">
+                    <img src="https://thumbs.dreamstime.com/b/male-musician-working-nature-young-creative-man-wearing-eyeglasses-sitting-green-grass-outdoors-making-some-notes-196499837.jpg" alt="Eli"/>
+                    <div class="employee-name">Eli</div>
+                    <div class="employee-role">Creative Director</div>
+                    <div class="employee-desc">Leads branding and creative projects, ensuring a cohesive style.</div>
+                </div>
+            </div>
+            <!-- Employee cards end -->
         </div>
     </div>
     <script>
@@ -496,6 +276,35 @@
             showSlide(current + 1);
         }
 
+        // Touch swipe support for slideshow
+        (function() {
+            let startX = 0;
+            let endX = 0;
+            const img = document.getElementById('slideshow-img');
+            img.addEventListener('touchstart', function(e) {
+                if (e.touches.length === 1) {
+                    startX = e.touches[0].clientX;
+                }
+            });
+            img.addEventListener('touchmove', function(e) {
+                if (e.touches.length === 1) {
+                    endX = e.touches[0].clientX;
+                }
+            });
+            img.addEventListener('touchend', function() {
+                const diff = endX - startX;
+                if (Math.abs(diff) > 40) { // threshold for swipe
+                    if (diff < 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                }
+                startX = 0;
+                endX = 0;
+            });
+        })();
+
         // Parallax scroll effect for image strip
         window.addEventListener('scroll', function() {
             const parallax = document.getElementById('parallaxImages');
@@ -510,6 +319,33 @@
             document.getElementById('parallaxLeft').style.transform = `translateY(${-scrollY * 2}px)`;
             document.getElementById('parallaxRight').style.transform = `translateY(${-scrollY * 2}px)`;
         });
+
+        // Theme persistence across pages
+        function applyTheme() {
+            if (localStorage.getItem('theme') === 'dusty-blue') {
+                document.body.classList.add('dusty-blue');
+            } else {
+                document.body.classList.remove('dusty-blue');
+            }
+        }
+        function toggleTheme() {
+            if (document.body.classList.contains('dusty-blue')) {
+                document.body.classList.remove('dusty-blue');
+                localStorage.setItem('theme', 'default');
+            } else {
+                document.body.classList.add('dusty-blue');
+                localStorage.setItem('theme', 'dusty-blue');
+            }
+        }
+        // Apply theme on page load
+        applyTheme();
     </script>
+    <footer style="width:100%;background:#dfd8cb;color:#7b5e3b;text-align:center;padding:28px 0 18px 0;font-size:1.1em;letter-spacing:0.5px;position:relative;z-index:2;margin-top:48px;">
+        <div>
+            Contact us: <a href="mailto:hello@driftwooddecor.com" style="color:#7b5e3b;text-decoration:underline;">hello@driftwooddecor.com</a>
+            <br>
+            &copy; 2024 Driftwood Home Decor
+        </div>
+    </footer>
 </body>
 </html>

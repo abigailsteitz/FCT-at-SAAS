@@ -4,22 +4,7 @@
     <meta charset="UTF-8">
     <title>Green Timberline Candles | Driftwood Home Decor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background: #abbd90; color: #3a3a3a; margin: 0; padding: 32px 0; }
-        .top-nav { width: 100%; background: #dfd8cb; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: center; min-height: 90px; }
-        .nav-content { width: 100%; max-width: 1100px; display: flex; align-items: center; justify-content: space-between; padding: 0 32px; height: 90px; }
-        .nav-logo { display: flex; align-items: center; margin-right: 32px; }
-        .nav-logo img { height: 54px; width: auto; border-radius: 8px; display: block; }
-        .nav-logo-text { font-size: 2em; font-weight: 600; color: #7b5e3b; margin-left: 12px; letter-spacing: 1px; font-family: 'Segoe UI', Arial, sans-serif; text-decoration: none; }
-        .nav-links { display: flex; gap: 28px; }
-        .nav-links a { text-decoration: none; color: #7b5e3b; font-weight: 500; font-size: 1.3em; transition: color 0.2s; padding: 8px 0; }
-        .nav-links a:hover { color: #3a3a3a; }
-        .container { max-width: 700px; margin: 60px auto; background: #dfd8cb; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.09); padding: 36px 32px; }
-        .product-img { width: 100%; max-width: 340px; height: auto; border-radius: 12px; display: block; margin: 0 auto 24px auto; }
-        .product-title { font-size: 2em; color: #7b5e3b; font-weight: 600; margin-bottom: 12px; text-align: center; }
-        .product-price { color: #3a3a3a; font-size: 1.3em; font-weight: 500; text-align: center; margin-bottom: 18px; }
-        .product-desc { font-size: 1.1em; line-height: 1.6; text-align: center; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="top-nav">
@@ -47,40 +32,46 @@
         <div class="product-desc">
             Bring a touch of nature indoors with these green timberline candles. Perfect for creating a cozy, relaxing atmosphere in any room.
         </div>
-        <button id="addToCartBtn" style="
-            display: block;
-            margin: 36px auto 0 auto;
-            background: #abbd90;
-            color: #7b5e3b;
-            border: 2px solid #7b5e3b;
-            border-radius: 8px;
-            padding: 14px 36px;
-            font-size: 1.1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-        ">Add to Cart</button>
+        <div style="text-align:center;">
+            <form id="addToCartForm" style="margin-bottom:18px;display:inline-block;">
+                <button type="submit" style="
+                    background:#7b5e3b;
+                    color:#fff;
+                    border:none;
+                    border-radius:24px;
+                    padding:12px 32px;
+                    font-size:1.1em;
+                    font-weight:600;
+                    cursor:pointer;
+                ">
+                    Add to Cart
+                </button>
+            </form>
+            <div>
+                <a href="shop.html" style="color:#7b5e3b;text-decoration:underline;font-size:1em;display:inline-block;margin-top:8px;">&larr; Back to Store</a>
+            </div>
+        </div>
     </div>
     <script>
-        document.getElementById('addToCartBtn').onclick = function() {
-            const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-            const productId = 'green-timberline-candles';
-            const price = 12.99;
-            let found = false;
-            for (let item of cart) {
-                if (item.id === productId) {
-                    item.qty += 1;
-                    found = true;
-                    break;
-                }
+    document.getElementById('addToCartForm').onsubmit = function(e) {
+        e.preventDefault();
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        const productId = 'green-timberline-candles';
+        const price = 12.99;
+        let found = false;
+        for (let item of cart) {
+            if (item.id === productId) {
+                item.qty += 1;
+                found = true;
+                break;
             }
-            if (!found) {
-                cart.push({ id: productId, name: "Green Timberline Candles", price: price, qty: 1 });
-            }
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert('Added to cart!');
-        };
+        }
+        if (!found) {
+            cart.push({ id: productId, name: "Green Timberline Candles", price: price, qty: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Added to cart!');
+    };
     </script>
 </body>
 </html>
