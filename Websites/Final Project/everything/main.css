@@ -23,7 +23,7 @@ button {
 }
 
 #quiz-result {
-  color: #112244 !important; /* dark navy blue */
+  color: #112244; /* dark navy blue */
   font-weight: bold;
   margin-top: 2em;
   display: none;

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Personality Quiz</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h1>What political party do you align with?</h1>
+    <form id="personality-quiz">
+      <h2>Question 1: How should taxes be handled?</h2>
+      <input type="radio" name="taxes" value="conservative" id="LowerTaxes" required>
+      <label for="LowerTaxes">Lower taxes across the board</label><br>
+      <input type="radio" name="taxes" value="liberal" id="RaiseTaxesOnRich">
+      <label for="RaiseTaxesOnRich">Raise taxes on the wealthy</label><br>
+      <input type="radio" name="taxes" value="moderate" id="BalancedApproach">
+      <label for="BalancedApproach">Balanced approach depending on situation</label><br>
+
+      <h2>Question 2: What is your stance on healthcare?</h2>
+      <input type="radio" name="healthcare" value="conservative" id="Private" required>
+      <label for="Private">Prefer private healthcare system</label><br>
+      <input type="radio" name="healthcare" value="moderate" id="PublicOption">
+      <label for="PublicOption">Public healthcare options should be available</label><br>
+      <input type="radio" name="healthcare" value="liberal" id="MedicareForAll">
+      <label for="MedicareForAll">Universal healthcare is a right</label><br>
+
+      <h2>Question 3: What should be done about climate change?</h2>
+      <input type="radio" name="climate" value="conservative" id="MarketSolutions" required>
+      <label for="MarketSolutions">Encourage innovation and market solutions</label><br>
+      <input type="radio" name="climate" value="liberal" id="GovAction">
+      <label for="GovAction">Government must lead aggressive action</label><br>
+
+      <h2>Question 4: How do you view gun control?</h2>
+      <input type="radio" name="guns" value="conservative" id="Protect2A" required>
+      <label for="Protect2A">Protect Second Amendment rights</label><br>
+      <input type="radio" name="guns" value="liberal" id="StricterLaws">
+      <label for="StricterLaws">We need stricter gun laws</label><br>
+      <input type="radio" name="guns" value="moderate" id="BackgroundChecks">
+      <label for="BackgroundChecks">Support universal background checks</label><br>
+
+      <h2>Question 5: What best describes your social values?</h2>
+      <input type="radio" name="values" value="conservative" id="Traditional" required>
+      <label for="Traditional">Traditional values are important</label><br>
+      <input type="radio" name="values" value="liberal" id="Progressive">
+      <label for="Progressive">We must prioritize equality and inclusion</label><br>
+      <input type="radio" name="values" value="moderate" id="Moderate">
+      <label for="Moderate">Somewhere in the middle</label><br>
+
+      <h2>Question 6: What is your stance on women's healthcare and abortion rights?</h2>
+      <input type="radio" name="abortion" value="conservative" id="ProLife" required>
+      <label for="ProLife">Pro-life: Abortion should be restricted</label><br>
+      <input type="radio" name="abortion" value="liberal" id="ProChoice">
+      <label for="ProChoice">Pro-choice: Women should have the right to choose</label><br>
+      <input type="radio" name="abortion" value="moderate" id="StateDecision">
+      <label for="StateDecision">States should decide</label><br>
+
+     <h2>Question 7: What’s your stance on immigration?</h2>
+     <input type="radio" name="immigration" value="conservative" id="BorderWall" required>
+      <label for="BorderWall">Build the wall. Deport them all.</label><br>
+      <input type="radio" name="immigration" value="liberal" id="Pathway">
+      <label for="Pathway">Provide a pathway to citizenship</label><br>
+      <input type="radio" name="immigration" value="moderate" id="BalancedApproach">
+      <label for="BalancedApproach">Secure the border *and* reform the system</label><br>
+
+
+
+      <br>
+      <button type="submit">See Result</button>
+    </form>
+
+    <div id="quiz-result" style="display:none; color:pink; font-weight:bold; margin-top:2em;"></div>
+
+    <div style="margin-top:2em;">
+      <a href="index.html">← Back to Home</a>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
