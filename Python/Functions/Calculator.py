@@ -1,16 +1,26 @@
-# Here you will write a simple text based calculator.
-# You will write 4 functions, one for each of the 4 basic operations: addition, subtraction, multiplication, and division.
-
 print("Welcome to the calculator!")
 
-# TODO: Task 1, write a function that takes two numbers as parameters and returns their sum.
-# TODO: Task 2, same but subtraction
-# TODO: Task 3, same but multiplication
-# TODO: Task 4, same but division
+# Task 1: Addition
+def add(x, y):
+    return x + y
+
+# Task 2: Subtraction
+def subtract(x, y):
+    return x - y
+
+# Task 3: Multiplication
+def multiply(x, y):
+    return x * y
+
+# Task 4: Division
+def divide(x, y):
+    if y == 0:
+        return "Error: Division by zero."
+    return x / y
 
 playing = True
 while playing:
-    print("Please choose an operation:")
+    print("\nPlease choose an operation:")
     print("a. Addition")
     print("b. Subtraction")
     print("c. Multiplication")
@@ -19,19 +29,29 @@ while playing:
     userAnswer = input()
 
     if userAnswer == "a":
-        # Replace pass with getting user input and calling your function
-        pass
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        print("Result:", add(num1, num2))
+
     elif userAnswer == "b":
-        # Replace pass with getting user input and calling your function
-        pass
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        print("Result:", subtract(num1, num2))
+
     elif userAnswer == "c":
-        # Replace pass with getting user input and calling your function
-        pass
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        print("Result:", multiply(num1, num2))
+
     elif userAnswer == "d":
-        # Replace pass with getting user input and calling your function
-        pass
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        print("Result:", divide(num1, num2))
+
     elif userAnswer == "e":
         print("Thanks for using the calculator!")
         playing = False
+
     else:
         print(f"Invalid input: {userAnswer}. Please try again.")
+        
