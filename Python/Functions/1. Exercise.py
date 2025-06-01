@@ -10,8 +10,8 @@
 # This is a function DEFINITION. It uses the 'def' keyword.
 # It has a PARAMETER called 'name'.
 # The function prints a greeting message using the provided name.
-def greet(name):
-    print(f"Hello, {name}! Thanks for coming to my birthday party!")
+def greet(Lily):
+    print(f"Hello, {Lily}! Thanks for coming to my birthday party!")
 
 # This is a function CALL. It uses the function DEFINITION above.
 # To follow the analogy, we are using the cookie cutter to cut a cookie.
