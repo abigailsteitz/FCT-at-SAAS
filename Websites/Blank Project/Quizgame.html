@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>What basketball player are you?</title>
+    <style>
+        /* Quiz Game Fun Styles */
+        body {
+            font-family: 'Montserrat', 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+            color: #222;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 8px #ff9800, 0 0 2px #222;
+            margin-top: 1.5em;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.95);
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 2em 2em 1em 2em;
+            border-radius: 18px;
+            box-shadow: 0 6px 24px rgba(255, 152, 0, 0.15);
+            font-size: 1.1em;
+        }
+
+        h2 {
+            color: #ff4e50;
+            font-family: 'Montserrat', 'Comic Sans MS', cursive, sans-serif;
+            margin-top: 1.5em;
+        }
+
+        input[type="radio"] {
+            accent-color: #ff9800;
+            margin-right: 0.5em;
+        }
+
+        button {
+            background: #ff9800;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 0.7em 2em;
+            font-size: 1.1em;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 1em;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 2px 8px rgba(255, 78, 80, 0.12);
+        }
+
+        button:hover {
+            background: #ff4e50;
+            transform: scale(1.05);
+        }
+
+        #result {
+            background: #fffbe7;
+            border: 2px solid #ff9800;
+            border-radius: 18px;
+            max-width: 500px;
+            margin: 2em auto;
+            padding: 1.5em;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(255, 152, 0, 0.13);
+        }
+
+        #result h2 {
+            color: #ff4e50;
+            margin-bottom: 1em;
+        }
+
+        #result img {
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+            margin-top: 1em;
+            max-width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>What basketball player are you?</h1>
+
+    <form id="quizForm">
+        <h2>Question 1: How tall are you?</h2>
+        <input type="radio" name="height" value="short"> Short (5'0" - 5'6")<br>
+        <input type="radio" name="height" value="average"> Average (5'7" - 6'0")<br>
+        <input type="radio" name="height" value="tall"> Tall (6'1" - 6'6")<br>
+        <input type="radio" name="height" value="very_tall"> Very Tall (6'7" and above)<br>
+
+        <h2>Question 2: What position are you?</h2>
+        <input type="radio" name="position" value="point_guard"> Point Guard<br>
+        <input type="radio" name="position" value="shooting_guard"> Shooting Guard<br>
+        <input type="radio" name="position" value="small_forward"> Small Forward<br>
+        <input type="radio" name="position" value="power_forward"> Power Forward<br>
+        <input type="radio" name="position" value="center"> Center<br>
+
+        <h2>Question 3: What is your playing style?</h2>
+        <input type="radio" name="style" value="aggressive"> Aggressive<br>
+        <input type="radio" name="style" value="defensive"> Defensive<br>
+        <input type="radio" name="style" value="playmaker"> Playmaker<br>
+        <input type="radio" name="style" value="shooter"> Shooter<br>
+
+        <h2>Question 4: How many championships do you have?</h2>
+        <input type="radio" name="championships" value="0"> 0<br>
+        <input type="radio" name="championships" value="1"> 1<br>
+        <input type="radio" name="championships" value="2"> 2<br>
+        <input type="radio" name="championships" value="3"> 3 and above<br>
+
+        <h2>Question 5: How do you present yourself?</h2>
+        <input type="radio" name="presentation" value="confident"> Confident<br>
+        <input type="radio" name="presentation" value="humble"> Humble<br>
+        <input type="radio" name="presentation" value="funny"> Funny<br>
+        <input type="radio" name="presentation" value="serious"> Serious<br>
+
+        <br>
+        <button type="button" onclick="seeResult()">See Result</button>
+    </form>
+
+    <div id="result" style="margin-top: 20px;"></div>
+
+    <script>
+        function seeResult() {
+            const form = document.forms['quizForm'];
+            const height = form['height'].value;
+            const position = form['position'].value;
+            const style = form['style'].value;
+            const championships = form['championships'].value;
+            const presentation = form['presentation'].value;
+
+            if (!height || !position || !style || !championships || !presentation) {
+                alert("Please answer all questions.");
+                return;
+            }
+
+            let resultText = '';
+            let imageUrl = '';
+
+            // Tall, Shooting Guard, Aggressive, 3+, Serious
+            if (height === "tall" && position === "shooting_guard" && style === "aggressive" && championships === "3" && presentation === "serious") {
+                resultText = "You are Kobe Bryant!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/9/96/Kobe_Bryant_8.jpg";
+            }
+            // Tall, Shooting Guard, Shooter, 3+, Confident
+            else if (height === "tall" && position === "shooting_guard" && style === "shooter" && championships === "3" && presentation === "confident") {
+                resultText = "You are Michael Jordan!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/a/ae/Michael_Jordan_in_2014.jpg";
+            }
+            // Average, Point Guard, Shooter, 3+, Humble
+            else if (height === "average" && position === "point_guard" && style === "shooter" && championships === "3" && presentation === "humble") {
+                resultText = "You are Steph Curry!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/8/89/Stephen_Curry_Shooting_%28cropped%29.jpg";
+            }
+            // Very Tall, Center, Defensive, 0, Humble
+            else if (height === "very_tall" && position === "center" && style === "defensive" && championships === "0" && presentation === "humble") {
+                resultText = "You are Victor Wembanyama!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/6/6d/Victor_Wembanyama.jpg";
+            }
+            // Tall, Point Guard, Aggressive, 0, Confident
+            else if (height === "tall" && position === "point_guard" && style === "aggressive" && championships === "0" && presentation === "confident") {
+                resultText = "You are Russell Westbrook!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/f/f2/Russell_Westbrook_Oct_2014.jpg";
+            }
+            // Average, Point Guard, Playmaker, 0, Funny
+            else if (height === "average" && position === "point_guard" && style === "playmaker" && championships === "0" && presentation === "funny") {
+                resultText = "You are Chris Paul!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/4/49/Chris_Paul_2019.jpg";
+            }
+            // Very Tall, Center, Defensive, 3+, Serious
+            else if (height === "very_tall" && position === "center" && style === "defensive" && championships === "3" && presentation === "serious") {
+                resultText = "You are Shaquille O'Neal!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/6/6f/Shaquille_O%27Neal_2011.jpg";
+            }
+            // Tall, Small Forward, Playmaker, 3+, Confident
+            else if (height === "tall" && position === "small_forward" && style === "playmaker" && championships === "3" && presentation === "confident") {
+                resultText = "You are Larry Bird!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/6/6f/Larrybird.jpg";
+            }
+            // Tall, Small Forward, Aggressive, 3+, Confident
+            else if (height === "tall" && position === "small_forward" && style === "aggressive" && championships === "3" && presentation === "confident") {
+                resultText = "You are LeBron James!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/2/2e/LeBron_James_Lakers.jpg";
+            }
+            // Tall, Power Forward, Defensive, 3+, Humble
+            else if (height === "tall" && position === "power_forward" && style === "defensive" && championships === "3" && presentation === "humble") {
+                resultText = "You are Tim Duncan!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/5b/Tim_Duncan_2011.jpg";
+            }
+            // Very Tall, Center, Playmaker, 3+, Funny
+            else if (height === "very_tall" && position === "center" && style === "playmaker" && championships === "3" && presentation === "funny") {
+                resultText = "You are Nikola Jokic!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/5d/Nikola_Jokić_2022.jpg";
+            }
+            // Tall, Power Forward, Shooter, 3+, Humble
+            else if (height === "tall" && position === "power_forward" && style === "shooter" && championships === "3" && presentation === "humble") {
+                resultText = "You are Dirk Nowitzki!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/2/2c/Dirk_Nowitzki_FC_Bayern_Muenchen_Basketball_2019_%28cropped%29.jpg";
+            }
+            // Tall, Small Forward, Shooter, 0, Confident
+            else if (height === "tall" && position === "small_forward" && style === "shooter" && championships === "0" && presentation === "confident") {
+                resultText = "You are Kevin Durant!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/5d/Kevin_Durant_2019.jpg";
+            }
+            // Short, Point Guard, Playmaker, 0, Confident
+            else if (height === "short" && position === "point_guard" && style === "playmaker" && championships === "0" && presentation === "confident") {
+                resultText = "You are Muggsy Bogues!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/7/7e/Muggsy_Bogues_2015.jpg";
+            }
+            // Very Tall, Center, Defensive, 3+, Confident
+            else if (height === "very_tall" && position === "center" && style === "defensive" && championships === "3" && presentation === "confident") {
+                resultText = "You are Kareem Abdul-Jabbar!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/8/80/Kareem_Abdul-Jabbar_May_2014.jpg";
+            }
+            // Average, Shooting Guard, Shooter, 1, Confident
+            else if (height === "average" && position === "shooting_guard" && style === "shooter" && championships === "1" && presentation === "confident") {
+                resultText = "You are Ray Allen!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/5d/Ray_Allen_2016.jpg";
+            }
+            // Tall, Center, Defensive, 2, Serious
+            else if (height === "tall" && position === "center" && style === "defensive" && championships === "2" && presentation === "serious") {
+                resultText = "You are Hakeem Olajuwon!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/6/6b/Hakeem_Olajuwon_2016.jpg";
+            }
+            // Tall, Power Forward, Aggressive, 1, Confident
+            else if (height === "tall" && position === "power_forward" && style === "aggressive" && championships === "1" && presentation === "confident") {
+                resultText = "You are Giannis Antetokounmpo!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3e/Giannis_Antetokounmpo_2022.jpg";
+            }
+            // Short, Point Guard, Aggressive, 0, Funny
+            else if (height === "short" && position === "point_guard" && style === "aggressive" && championships === "0" && presentation === "funny") {
+                resultText = "You are Nate Robinson!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/2/2e/Nate_Robinson_2011.jpg";
+            }
+            // Average, Shooting Guard, Defensive, 0, Humble
+            else if (height === "average" && position === "shooting_guard" && style === "defensive" && championships === "0" && presentation === "humble") {
+                resultText = "You are Tony Allen!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/6/6e/Tony_Allen_2013.jpg";
+            }
+            // Tall, Center, Playmaker, 1, Funny
+            else if (height === "tall" && position === "center" && style === "playmaker" && championships === "1" && presentation === "funny") {
+                resultText = "You are Joel Embiid!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/0/0e/Joel_Embiid_2022.jpg";
+            }
+            // Tall, Power Forward, Shooter, 0, Confident
+            else if (height === "tall" && position === "power_forward" && style === "shooter" && championships === "0" && presentation === "confident") {
+                resultText = "You are Karl-Anthony Towns!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/2/2e/Karl-Anthony_Towns_2019.jpg";
+            }
+            // Average, Point Guard, Aggressive, 1, Serious
+            else if (height === "average" && position === "point_guard" && style === "aggressive" && championships === "1" && presentation === "serious") {
+                resultText = "You are Derrick Rose!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/5d/Derrick_Rose_2019.jpg";
+            }
+            // Tall, Small Forward, Playmaker, 0, Humble
+            else if (height === "tall" && position === "small_forward" && style === "playmaker" && championships === "0" && presentation === "humble") {
+                resultText = "You are Scottie Pippen!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/7/7e/Scottie_Pippen_2016.jpg";
+            }
+            // Very Tall, Center, Aggressive, 3+, Serious
+            else if (height === "very_tall" && position === "center" && style === "aggressive" && championships === "3" && presentation === "serious") {
+                resultText = "You are Wilt Chamberlain!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/2/25/Wilt_Chamberlain_1967.jpg";
+            }
+            // Tall, Shooting Guard, Playmaker, 0, Funny
+            else if (height === "tall" && position === "shooting_guard" && style === "playmaker" && championships === "0" && presentation === "funny") {
+                resultText = "You are Manu Ginóbili!";
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/5e/Manu_Ginobili_2018.jpg";
+            }
+            // Default fallback (random famous player)
+            else {
+                const fallbackPlayers = [
+                    {
+                        name: "Allen Iverson",
+                        img: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Allen_Iverson_2017.jpg"
+                    },
+                    {
+                        name: "Dwyane Wade",
+                        img: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Dwyane_Wade_2019.jpg"
+                    },
+                    {
+                        name: "Paul George",
+                        img: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Paul_George_2018.jpg"
+                    },
+                    {
+                        name: "Jimmy Butler",
+                        img: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Jimmy_Butler_2022.jpg"
+                    },
+                    {
+                        name: "Klay Thompson",
+                        img: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Klay_Thompson_2016.jpg"
+                    }
+                ];
+                const pick = fallbackPlayers[Math.floor(Math.random() * fallbackPlayers.length)];
+                resultText = `You are ${pick.name}!`;
+                imageUrl = pick.img;
+            }
+
+            document.getElementById('result').innerHTML = `
+                <h2>${resultText}</h2>
+                <img src="${imageUrl}" alt="${resultText}" width="300">
+            `;
+        }
+    </script>
+</body>
+
+</html>
