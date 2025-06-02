@@ -1,0 +1,23 @@
+body{
+background: rgb(255, 254, 212);
+text-align: center;
+}
+
+.medium-image {
+    height: 400px;
+}
+
+a:hover{
+    color: rgb(255, 137, 245);
+  }
+
+
+.link {
+    color: rgb(255, 179, 117);
+    font-size: 20px;
+}
+  
+.title {
+    font-size: 40px;
+    font-weight: bold;
+  }
