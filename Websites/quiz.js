@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <img src="${res.img}" alt="${res.title}" style="max-width:180px;border-radius:10px;">
                 </a>
                 <br>
-                <a href="${res.link}" target="_blank">
+                <a href="${res.link}">
                     <button type="button">See Product</button>
                 </a>
             `;
