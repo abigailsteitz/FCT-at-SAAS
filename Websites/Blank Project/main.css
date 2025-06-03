@@ -1,8 +1,5 @@
 /* Your CSS goes in this file */
 body {
-    color: rgb(213, 142, 189);
-    background-image: url('https://antdisplay.com/pub/media/wysiwyg/store_design/ff651c166071075.6411f9d64fff9.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  color: rgb(213, 142, 189);
+  background-color: rgb(167, 184, 204);
 }

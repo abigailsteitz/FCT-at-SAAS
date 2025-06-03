@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plant+Pet Personality Quiz</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <h1>What's your plant+pet personality?</h1>
+  <form id="quizForm">
+    <ol>
+      <li>
+        Do you prefer indoors or outdoors?<br>
+        <input type="radio" name="q1" value="plant">Indoors<br>
+        <input type="radio" name="q1" value="pet">Outdoors
+      </li>
+      <li>
+        Are you more calm or energetic?<br>
+        <input type="radio" name="q2" value="plant">Calm<br>
+        <input type="radio" name="q2" value="pet">Energetic
+      </li>
+      <li>
+        Do you like routine or surprises?<br>
+        <input type="radio" name="q3" value="plant">Routine<br>
+        <input type="radio" name="q3" value="pet">Surprises
+      </li>
+      <li>
+        Do you enjoy quiet or noise?<br>
+        <input type="radio" name="q4" value="plant">Quiet<br>
+        <input type="radio" name="q4" value="pet">Noise
+      </li>
+      <li>
+        Do you prefer green or furry?<br>
+        <input type="radio" name="q5" value="plant">Green<br>
+        <input type="radio" name="q5" value="pet">Furry
+      </li>
+    </ol>
+    <button type="button" onclick="checkQuiz()">Get My Result!</button>
+  </form>
+  <p id="quizResult"></p>
+  <a href="index.html">Back to homepage</a>
+  <script>
+    function checkQuiz() {
+      let plant = 0, pet = 0;
+      for (let i = 1; i <= 5; i++) {
+        let answer = document.querySelector('input[name="q'+i+'"]:checked');
+        if (answer) {
+          if (answer.value === "plant") plant++;
+          else pet++;
+        }
+      }
+    let result = "";
+    let img = "";
+    if (plant > pet) {
+      result = "You are a Plant Person! 🌱";
+      img = '<br><img src="https://i.pinimg.com/736x/39/07/29/390729c1d5c1e94839220be881fc8b6c.jpg">';
+    }
+    else if (pet > plant) {
+      result = "You are a Pet Person! 🐾";
+      img = '<br><img src="https://i.pinimg.com/736x/11/37/3f/11373fb2ce5cd5e983f33afc74a88c40.jpg" alt="Pet Person" style="width:120px">';
+    }
+    else {
+      result = "You are a Plant+Pet Person! 🌱🐾";
+      img = '<br><img src="https://i.pinimg.com/736x/ba/e9/bb/bae9bb4d6e2f3ac2476e7f1e6b15a786.jpg" alt="Plant and Pet Person" style="width:120px">';
+    }
+    document.getElementById("quizResult").innerHTML = result + img;
+}
+  </script>
+</body>
+</html>
