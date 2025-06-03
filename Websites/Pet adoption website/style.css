@@ -34,3 +34,6 @@ body#vcp {
     background-position: center;
     background-repeat: no-repeat;
 }
+ul {
+    list-style-type: none;
+}

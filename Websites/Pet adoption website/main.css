@@ -89,3 +89,480 @@ body#vcp {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+body {
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #fceabb 0%, #f8b500 100%);
+      margin: 0;
+      padding: 0;
+      color: #3a2c1a;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+      color: #fff;
+      padding: 48px 0 24px 0;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(255, 179, 71, 0.15);
+      border-bottom-left-radius: 60px 40px;
+      border-bottom-right-radius: 60px 40px;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 12px #ffb34755;
+      animation: pop 1s;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Cute paw print accent */
+    header::after {
+      content: "🐾";
+      font-size: 3em;
+      position: absolute;
+      right: 40px;
+      top: 30px;
+      opacity: 0.25;
+      transform: rotate(-15deg);
+      pointer-events: none;
+    }
+    header::before {
+      content: "🐾";
+      font-size: 2.2em;
+      position: absolute;
+      left: 40px;
+      top: 60px;
+      opacity: 0.18;
+      transform: rotate(10deg);
+      pointer-events: none;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; /* Allow items to wrap on small screens */
+      list-style: none;
+      padding: 0;
+      margin: 36px 0 0 0;
+      background: none;
+      gap: 32px;
+    }
+
+    nav ul li {
+      margin: 0; /* Remove default margin */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    nav ul li a {
+      color: #fff;
+      background: linear-gradient(90deg, #ff6e7f 0%, #bfe9ff 100%);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 16px 36px;
+      border-radius: 40px;
+      box-shadow: 0 4px 16px rgba(255, 110, 127, 0.10);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      font-size: 1.25em;
+      letter-spacing: 1.5px;
+      border: 2px solid #fff3;
+      position: relative;
+      overflow: hidden;
+      outline: none;
+      display: inline-block;
+      text-align: center;
+      min-width: 200px; /* Ensures buttons are wide enough and uniform */
+    }
+
+    nav ul li a:hover, nav ul li a:focus {
+      background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+      color: #fff;
+      transform: scale(1.08) rotate(-2deg);
+      border: 2px solid #ffb347;
+      box-shadow: 0 6px 24px rgba(255, 179, 71, 0.18);
+      text-shadow: 0 2px 8px #fff7;
+    }
+
+    #about-unique-pets {
+      max-width: 800px;
+      margin: 60px auto 0 auto;
+      background: #fffbe9;
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(255, 179, 71, 0.13);
+      padding: 48px 40px;
+      text-align: center;
+      border: 4px dashed #ffb347;
+      animation: fadein 1.2s;
+      position: relative;
+    }
+
+    #about-unique-pets::after {
+      content: "🐶 🦎 🕊️";
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+
+    @keyframes fadein {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h3 {
+      color: #ff6e7f;
+      margin-top: 0;
+      font-size: 2.1em;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    em {
+      color: #ff512f;
+      font-style: normal;
+      font-weight: bold;
+      background: #fff0e1;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 1.08em;
+      display: inline-block;
+      margin-top: 18px;
+    }
+
+    p {
+      font-size: 1.18em;
+      line-height: 1.8;
+      margin-bottom: 18px;
+      color: #3a2c1a;
+    }
+
+    /* Decorative floating paw prints */
+    .paw {
+      position: absolute;
+      font-size: 2.5em;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .paw.p1 { top: 80px; left: 10vw; transform: rotate(-10deg);}
+    .paw.p2 { top: 400px; right: 12vw; transform: rotate(8deg);}
+    .paw.p3 { bottom: 80px; left: 18vw; transform: rotate(-7deg);}
+    .paw.p4 { bottom: 60px; right: 8vw; transform: rotate(12deg);}
+    .paw.p5 { top: 60vh; left: 50vw; transform: rotate(-4deg);}
+
+    @media (max-width: 900px) {
+      #about-unique-pets {
+        padding: 24px 8px;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+      nav ul li a {
+        min-width: 160px;
+        width: 80vw;
+        max-width: 350px;
+        font-size: 1.1em;
+        padding: 14px 0;
+      }
+    }
+    @media (max-width: 600px) {
+      nav ul li a {
+        min-width: 120px;
+        width: 90vw;
+        font-size: 1em;
+        padding: 12px 0;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+      #about-unique-pets {
+        padding: 14px 4vw;
+      }
+    }
+
+        #pet-content {
+      max-width: 800px;
+      margin: 60px auto 0 auto;
+      background: #fffbe9cc;
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(255, 179, 71, 0.13);
+      padding: 48px 40px;
+      text-align: center;
+      border: 4px dashed #ffb347;
+      animation: fadein 1.2s;
+      position: relative;
+    }
+    #pet-content img {
+      width: 340px;
+      max-width: 90vw;
+      border-radius: 22px;
+      margin: 30px auto 18px auto;
+      display: block;
+      box-shadow: 0 4px 24px rgba(54, 209, 196, 0.12);
+      border: 3px solid #36d1c4;
+    }
+  
+    @media (max-width: 900px) {
+      #pet-content {
+        padding: 24px 8px;
+      }
+      nav ul li a {
+        min-width: 160px;
+        width: 80vw;
+        max-width: 350px;
+        font-size: 1.1em;
+        padding: 14px 0;
+      }
+      nav ul li:not(:first-child) a {
+        font-size: 0.95em;
+        padding: 10px 0;
+        min-width: 120px;
+        width: 70vw;
+        max-width: 250px;
+      }
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      #pet-content {
+        padding: 14px 4vw;
+      }
+      #pet-content img {
+        width: 98vw;
+      }
+      nav ul li a {
+        min-width: 120px;
+        width: 90vw;
+        font-size: 1em;
+        padding: 12px 0;
+      }
+      nav ul li:not(:first-child) a {
+        font-size: 0.9em;
+        padding: 8px 0;
+        min-width: 90px;
+        width: 70vw;
+        max-width: 180px;
+      }
+    }
+    body {
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #fceabb 0%, #f8b500 100%);
+      margin: 0;
+      padding: 0;
+      color: #3a2c1a;
+      min-height: 100vh;
+      position: relative;
+    }
+    header {
+      background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+      color: #fff;
+      padding: 48px 0 24px 0;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(255, 179, 71, 0.15);
+      border-bottom-left-radius: 60px 40px;
+      border-bottom-right-radius: 60px 40px;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 12px #ffb34755;
+      animation: pop 1s;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    @keyframes pop {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    header::after {
+      content: "❓";
+      font-size: 2.5em;
+      position: absolute;
+      right: 40px;
+      top: 30px;
+      opacity: 0.18;
+      transform: rotate(-15deg);
+      pointer-events: none;
+    }
+    header::before {
+      content: "🐾";
+      font-size: 2em;
+      position: absolute;
+      left: 40px;
+      top: 60px;
+      opacity: 0.13;
+      transform: rotate(10deg);
+      pointer-events: none;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 36px 0 0 0;
+      background: none;
+      gap: 32px;
+    }
+    nav ul li a {
+      color: #fff;
+      background: linear-gradient(90deg, #ff6e7f 0%, #bfe9ff 100%);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 16px 36px;
+      border-radius: 40px;
+      box-shadow: 0 4px 16px rgba(255, 110, 127, 0.10);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      font-size: 1.15em;
+      letter-spacing: 1.5px;
+      border: 2px solid #fff3;
+      position: relative;
+      overflow: hidden;
+      outline: none;
+    }
+    nav ul li a:hover, nav ul li a:focus {
+      background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+      color: #fff;
+      transform: scale(1.08) rotate(-2deg);
+      border: 2px solid #ffb347;
+      box-shadow: 0 6px 24px rgba(255, 179, 71, 0.18);
+      text-shadow: 0 2px 8px #fff7;
+    }
+    #quiz-content {
+      max-width: 800px;
+      margin: 60px auto 0 auto;
+      background: #fffbe9;
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(255, 179, 71, 0.13);
+      padding: 48px 40px;
+      text-align: center;
+      border: 4px dashed #ffb347;
+      animation: fadein 1.2s;
+      position: relative;
+    }
+    @keyframes fadein {
+      0% { opacity: 0; transform: translateY(30px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    h2 {
+      color: #ff6e7f;
+      margin-top: 1.2em;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      font-weight: 700;
+    }
+    .result {
+      font-size: 1.3em;
+      margin-top: 30px;
+      color: #36d1c4;
+      font-weight: bold;
+    }
+    .result a {
+      color: #fff;
+      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+      padding: 10px 24px;
+      border-radius: 20px;
+      text-decoration: none;
+      margin-left: 10px;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .result a:hover {
+      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+    }
+    label {
+      display: block;
+      margin: 18px 0 8px 0;
+      font-size: 1.1em;
+      color: #222;
+    }
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+    button {
+      margin-top: 30px;
+      background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 14px 36px;
+      font-size: 1.1em;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 16px rgba(255, 81, 47, 0.12);
+    }
+    button:hover {
+      background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+      transform: scale(1.05);
+    }
+    @media (max-width: 900px) {
+      #quiz-content {
+        padding: 24px 8px;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 16px;
+      }
+      nav ul li {
+        margin: 0;
+      }
+      header {
+        padding: 28px 0 10px 0;
+      }
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      #quiz-content {
+        padding: 14px 4vw;
+      }
+    }
