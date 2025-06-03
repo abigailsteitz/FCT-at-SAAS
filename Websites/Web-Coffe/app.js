@@ -171,3 +171,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+fetch('coffee-quiz.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('quiz-container').innerHTML = html;
+    if (typeof setupCoffeeQuiz === 'function') setupCoffeeQuiz();
+  });
