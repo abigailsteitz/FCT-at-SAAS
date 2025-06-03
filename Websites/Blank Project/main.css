@@ -1,1 +1,83 @@
-/* Your CSS goes in this file */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #fff0f5, #ffe4ec);
+    color: #4d0039;
+    padding: 40px;
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 192, 203, 0.4);
+    padding: 36px;
+  }
+  
+  /* Headings */
+  h1, h2 {
+    color: #c71585;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+  }
+  
+  button:hover {
+    background-color: #ff4da6;
+  }
+  
+  /* Inputs */
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffc0cb;
+    border-radius: 10px;
+    margin: 14px 0;
+    font-size: 1rem;
+    background-color: #fff0f5;
+  }
+  
+  /* Quiz result */
+  .result {
+    background-color: #ffe4ec;
+    border-left: 6px solid #ff69b4;
+    padding: 18px;
+    margin-top: 26px;
+    border-radius: 10px;
+    display: none; /* Hidden until shown */
+    color: #800040;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .result.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
