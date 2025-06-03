@@ -1,27 +1,55 @@
-/* General Page Styling */
+/* Fonts */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: linear-gradient(to bottom right, #aee7ff, #ffffff);
   margin: 0;
   padding: 20px;
   color: #034f84;
 }
 
-/* Headings */
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0077be;
+}
+
+/* Accent highlight */
+.highlight {
+  color: #ff6f61; /* coral/orange accent */
+  font-weight: bold;
+}
+
+/* Buttons (if you have any) */
+button, input[type="submit"] {
+  background: linear-gradient(45deg, #0288d1, #26c6da);
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background: linear-gradient(45deg, #26c6da, #0288d1);
+}
+
+/* Add subtle box-shadow to fish cards or result cards */
+.result-card, .fish-card {
+  box-shadow: 0 8px 20px rgba(38, 198, 218, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  background-color: #e0f7fa;
+}
+
 h1 {
   text-align: center;
   font-size: 2.5em;
   color: #0077be;
   margin-bottom: 10px;
 }
-
-h2 {
-  color: #005b96;
-  margin-top: 30px;
-  text-align: center;
-}
-
-/* Paragraphs */
 p {
   font-size: 1.1em;
   line-height: 1.6;
@@ -29,8 +57,28 @@ p {
   margin: 0 auto 20px auto;
   text-align: center;
 }
-
-/* Images */
+nav {
+  margin: 30px auto;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+nav a {
+  text-decoration: none;
+  color: #0288d1;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+nav a:hover {
+  color: #01579b;
+  text-decoration: underline;
+}
 img {
   display: block;
   margin: 10px auto 20px auto;
@@ -38,49 +86,116 @@ img {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
+form div {
+  background-color: #e0f7fa;
+  border: 2px solid #0288d1;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/* Navigation */
-nav {
+form label {
+  display: block;
+  margin: 8px 0;
+  font-size: 1.05em;
+}
+
+button {
+  background-color: #0288d1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background-color: #01579b;
+}
+
+#result img {
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: 20px auto;
+  display: block;
+}
+.result-card {
+  background-color: #e1f5fe;
+  border: 3px solid #0288d1;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
   margin: 30px auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+.result-img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-nav li {
-  display: inline-block;
-  margin: 0 15px;
+.result-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
-nav a {
-  text-decoration: none;
-  color: #0288d1;
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.highlight {
+  color: #0077be;
   font-weight: bold;
-  font-size: 1.1em;
+}
+#bubble-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0; /* behind content */
 }
 
-nav a:hover {
-  color: #01579b;
-  text-decoration: underline;
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation-name: rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-/* Back link */
-a {
-  color: #034f84;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-  font-weight: bold; 
-}
-
-a:hover {
-  text-decoration: underline;
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1);
+    opacity: 0;
+  }
 }

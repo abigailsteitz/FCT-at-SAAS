@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="main.css">
+  <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 
   <meta charset="UTF-8">
   <title>Meet the Team – FinFriends</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
+  <div id="bubble-container"></div>
+
   <h1>The FinFriends Team</h1>
   <p>Meet the people who care for our aquatic friends and help you find the perfect match!</p>
 
@@ -20,5 +24,29 @@
   <p>Coral matches each fish to the right human. She’s got a sixth sense for fishy friendships.</p>
 
   <p><a href="index.html">← Back to Home</a></p>
+  <script>
+  // Create bubbles dynamically
+  const bubbleContainer = document.getElementById('bubble-container');
+
+  function createBubble() {
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+    const size = Math.random() * 30 + 10 + 'px';
+    bubble.style.width = size;
+    bubble.style.height = size;
+    bubble.style.left = Math.random() * 100 + 'vw';
+    bubble.style.animationDuration = (Math.random() * 8 + 5) + 's';
+    bubbleContainer.appendChild(bubble);
+
+    // Remove bubble after animation to prevent DOM overload
+    bubble.addEventListener('animationend', () => {
+      bubble.remove();
+    });
+  }
+
+  // Create a bubble every 300ms
+  setInterval(createBubble, 300);
+</script>
+
 </body>
 </html>

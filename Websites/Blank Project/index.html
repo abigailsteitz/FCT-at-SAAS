@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="main.css">
+  <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+
   <meta charset="UTF-8">
-  <title>FinFriends – Adopt a Fish!</title>
+  <title>Adoptable Fish – FinFriends</title>
+  <link rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to FinFriends, where we help you find the perfect fish companion. Explore our adoptable fish and meet our care team!">
 </head>
 <body>
+  <div id="bubble-container"></div>
+
   <h1>Welcome to FinFriends 🐠</h1>
   <p>At FinFriends, we help aquatic enthusiasts adopt adorable fish companions. Whether you're a beginner or an aquarium pro, we match you with the perfect finned friend!</p>
 
@@ -13,9 +20,34 @@
     <ul>
       <li><a href="fishtank.html">Meet Our Fish</a></li>
       <li><a href="staff.html">Our Care Team</a></li>
+      <li><a href="quiz.html">Take the Quiz</a></li> <!-- NEW LINK -->
     </ul>
   </nav>
+  <script>
+  // Create bubbles dynamically
+  const bubbleContainer = document.getElementById('bubble-container');
+
+  function createBubble() {
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+    const size = Math.random() * 30 + 10 + 'px';
+    bubble.style.width = size;
+    bubble.style.height = size;
+    bubble.style.left = Math.random() * 100 + 'vw';
+    bubble.style.animationDuration = (Math.random() * 8 + 5) + 's';
+    bubbleContainer.appendChild(bubble);
+
+    // Remove bubble after animation to prevent DOM overload
+    bubble.addEventListener('animationend', () => {
+      bubble.remove();
+    });
+  }
+
+  // Create a bubble every 300ms
+  setInterval(createBubble, 300);
+</script>
+
 </body>
 </html>
-
-
+<!-- This is the main page for FinFriends, introducing the fish adoption service. -->
+<!-- It includes links to the Fishtank and Staff pages. -->
