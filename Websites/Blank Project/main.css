@@ -1,1 +1,13 @@
 /* Your CSS goes in this file */
+/* Custom Theme */
+body {
+  color: rgb(242, 235, 233);
+	background-color: rgb(234, 169, 217);
+}
+
+.medium-image {
+  width: 250px;
+  height: 225px;
+  overflow: hidden;
+font-family:times new roman;
+}
