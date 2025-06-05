@@ -12,6 +12,206 @@
 
 <body>
   <!--Start of student website-->
-  
+  <div class="What food are you?">
+    <h1>Personality Quiz</h1>
+    <form id="quiz-form">
+      <!-- Question 1 -->
+      <div class="question">
+        <p>1. What is your favorite type of weather?</p>
+        <label>
+          <input type="radio" name="question1" value="sunny" />
+          Sunny
+        </label>
+        <label>
+          <input type="radio" name="question1" value="rainy" />
+          Rainy
+        </label>
+        <label>
+          <input type="radio" name="question1" value="snowy" />
+          Snowy
+        </label>
+        <label>
+          <input type="radio" name="question1" value="windy" />
+          Windy
+        </label>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <p>2. What is your favorite type of activity?</p>
+        <label>
+          <input type="radio" name="question2" value="reading" />
+          Reading
+        </label>
+        <label>
+          <input type="radio" name="question2" value="sports" />
+          Sports
+        </label>
+        <label>
+          <input type="radio" name="question2" value="traveling" />
+          Traveling
+        </label>
+        <label>
+          <input type="radio" name="question2" value="gaming" />
+          Gaming
+        </label>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <p>3. What is your favorite time of day?</p>
+        <label>
+          <input type="radio" name="question3" value="morning" />
+          Morning
+        </label>
+        <label>
+          <input type="radio" name="question3" value="afternoon" />
+          Afternoon
+        </label>
+        <label>
+          <input type="radio" name="question3" value="evening" />
+          Evening
+        </label>
+        <label>
+          <input type="radio" name="question3" value="night" />
+          Night
+        </label>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <p>4. What country would you most want to visit?</p>
+        <label>
+          <input type="radio" name="question4" value="brazil" />
+          Brazil
+        </label>
+        <label>
+          <input type="radio" name="question4" value="canada" />
+          Canada
+        </label>
+        <label>
+          <input type="radio" name="question4" value="italy" />
+          Italy
+        </label>
+        <label>
+          <input type="radio" name="question4" value="japan" />
+          Japan
+        </label>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">
+        <p>5. What is your favorite type of music?</p>
+        <label>
+          <input type="radio" name="question5" value="pop" />
+          Pop
+        </label>
+        <label>
+          <input type="radio" name="question5" value="rock" />
+          Rock
+        </label>
+        <label>
+          <input type="radio" name="question5" value="Rap" />
+          Rap
+        </label>
+        <label>
+          <input type="radio" name="question5" value="jazz" />
+          Jazz
+        </label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="result" class="result">
+      <!-- The result will be displayed here -->
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('quiz-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const answers = {
+        question1: document.querySelector('input[name="question1"]:checked')?.value,
+        question2: document.querySelector('input[name="question2"]:checked')?.value,
+        question3: document.querySelector('input[name="question3"]:checked')?.value,
+        question4: document.querySelector('input[name="question4"]:checked')?.value,
+        question5: document.querySelector('input[name="question5"]:checked')?.value,
+      };
+
+        let resultText = 'Your personality type is: ';
+        if (answers.question1 === 'sunny' && answers.question2 === 'sports' && answers.question3 === 'morning' && answers.question4 === 'brazil') {
+          resultText += 'You are a breakfast smoothie!';
+        } else if (answers.question1 === 'rainy' && answers.question2 === 'reading' && answers.question3 === 'afternoon' && answers.question5 === 'rock') {
+          resultText += 'You are a cozy hot chocolate with marshmallows!';
+        } else if (answers.question1 === 'snowy' && answers.question3 === 'evening' && answers.question4 === 'italy' && answers.question5 === 'Rap') {
+          resultText += 'You are a pizza with extra cheese!';
+        } else if (answers.question2 === 'traveling' && answers.question3 === 'night' && answers.question4 === 'japan' && answers.question5 === 'rap') {
+          resultText += 'You are a sushi platter!';
+        } else if (answers.question1 === 'sunny' && answers.question2 === 'reading' && answers.question3 === 'morning' && answers.question4 === 'canada') {
+          resultText += 'You are a fruit smoothie!';
+        } else if (answers.question1 === 'rainy' && answers.question2 === 'sports' && answers.question4 === 'brazil' && answers.question5 === 'rock') {
+          resultText += 'You are a hearty soup!';
+        } else if (answers.question1 === 'snowy' && answers.question3 === 'evening' && answers.question4 === 'italy' && answers.question5 === 'Rap') {
+          resultText += 'You are a warm pizza!';
+        } else if (answers.question1 === 'windy' && answers.question2 === 'traveling' && answers.question3 === 'afternoon' && answers.question5 === 'rap') {
+          resultText += 'You are a delicious ramen!';
+        } else if (answers.question1 === 'sunny' && answers.question3 === 'morning' && answers.question4 === 'brazil' && answers.question5 === 'pop') {
+          resultText += 'You are a refreshing smoothie bowl!';
+        } else if (answers.question1 === 'rainy' && answers.question2 === 'traveling' && answers.question3 === 'afternoon' && answers.question5 === 'rock') {
+          resultText += 'You are a warm maple syrup pancake!';
+        } else if (answers.question1 === 'snowy' && answers.question2 === 'reading' && answers.question4 === 'italy' && answers.question5 === 'Rap') {
+          resultText += 'You are a comforting lasagna!';
+        } else if (answers.question1 === 'windy' && answers.question2 === 'sports'  && answers.question4 === 'japan' && answers.question5 === 'jazz') {
+          resultText += 'You are a tasty sushi roll!';
+        } else if (answers.question1 === 'sunny' && answers.question2 === 'sports' && answers.question3 === 'afternoon'  && answers.question5 === 'pop') {
+          resultText += 'You are a vibrant fruit salad!';
+        } else if (answers.question2 === 'reading' && answers.question3 === 'morning' && answers.question4 === 'canada' && answers.question5 === 'rock') {
+          resultText += 'You are a cozy oatmeal!';
+        } else if (answers.question1 === 'snowy' && answers.question2 === 'gaming' && answers.question3 === 'evening'  && answers.question5 === 'Rap') {
+          resultText += 'You are a cheesy pizza!';
+        } else if (answers.question2 === 'traveling' && answers.question3 === 'night' && answers.question4 === 'japan' && answers.question5 === 'jazz') {
+          resultText += 'You are a savory sushi!';
+        } else if (answers.question1 === 'sunny' && answers.question3 === 'afternoon' && answers.question4 === 'brazil' && answers.question5 === 'pop') {
+          resultText += 'You are a refreshing iced tea!';
+        } else if (answers.question1 === 'rainy' && answers.question2 === 'sports' && answers.question3 === 'morning' && answers.question4 === 'canada') {
+          resultText += 'You are a hearty breakfast sandwich!';
+        } else if (answers.question1 === 'snowy' && answers.question2 === 'gaming'  && answers.question4 === 'italy' && answers.question5 === 'Rap') {
+          resultText += 'You are a comforting bowl of pasta!';
+        } else if (answers.question1 === '' && answers.question2 === 'traveling' && answers.question3 === 'night' && answers.question4 === 'japan' ) {
+          resultText += 'You are a delicious bento box!';
+        } else if (answers.question1 === 'sunny' && answers.question2 === 'gaming' && answers.question4 === 'brazil' && answers.question5 === 'pop') {
+          resultText += 'You are a tropical smoothie!';
+        } else if (answers.question1 === 'rainy' && answers.question3 === 'morning' && answers.question4 === 'canada' && answers.question5 === 'rock') {
+          resultText += 'You are a warm croissant!';
+        } else if (answers.question1 === 'snowy' && answers.question2 === 'reading' && answers.question3 === 'evening'  && answers.question5 === 'Rap') {
+          resultText += 'You are a comforting risotto!';
+        } else if (answers.question1 === 'windy' && answers.question2 === 'sports' && answers.question4 === 'japan' && answers.question5 === 'jazz') {
+          resultText += 'You are a tasty tempura!';
+        } else if (answers.question1 === 'sunny' && answers.question2 === 'sports' && answers.question3 === 'morning' && answers.question4 === 'brazil' ) {
+          resultText += 'You are a refreshing fruit juice!';
+        } else if (answers.question1 === 'rainy' && answers.question2 === 'reading' && answers.question3 === 'afternoon'  && answers.question5 === 'rock') {
+          resultText += 'You are a cozy tea with biscuits!';
+        } else if (answers.question1 === 'snowy' && answers.question3 === 'evening' && answers.question4 === 'italy' && answers.question5 === 'Rap') {
+          resultText += 'You are a delicious pasta dish!';
+        } else if (answers.question1 === 'windy' && answers.question2 === 'traveling' && answers.question3 === 'evening' && answers.question4 === 'japan' ) {
+          resultText += 'You are a savory sushi platter!';
+        } else if (answers.question1 === 'sunny' && answers.question2 === 'reading' && answers.question3 === 'afternoon' && answers.question5 === 'pop') {
+          resultText += 'You are a refreshing lemonade!';
+        } else if (answers.question1 === 'rainy' && answers.question2 === 'sports'  && answers.question4 === 'canada' && answers.question5 === 'rock') {
+          resultText += 'You are a hearty breakfast burrito!';
+        } else if (answers.question1 === 'snowy' && answers.question2 === 'gaming'  && answers.question4 === 'italy' && answers.question5 === 'Rap') {
+          resultText += 'You are a comforting bowl of soup!';
+        } else if (answers.question1 === 'windy' && answers.question2 === 'traveling' && answers.question3 === 'night' && answers.question4 === 'japan') {
+          resultText += 'You are a sad shell of your former self!';
+        } else {
+          resultText += 'You are a peanut butter and jelly sandwich!';
+        }
+
+
+      document.getElementById('result').textContent = resultText;
+    });
+  </script>
   <!--End student website-->
 </body>
