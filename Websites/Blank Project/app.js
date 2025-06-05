@@ -14,17 +14,16 @@ function seeResult() {
  
 
     if (document.getElementById("pink").checked) {
-        BraceletScore += 1;
+        BraceletScore += 1; 
     }
     if (document.getElementById("gold").checked) {
         RingScore += 1;
         BraceletScore += 1;
         NecklaceScore += 1;
-    
-    } else if (document.getElementById("silver").checked) {
+    } 
+    if (document.getElementById("silver").checked) {
         NecklaceScore += 1;
     }
-
     if (document.getElementById("ring").checked) {
         RingScore += 1;
     }
@@ -45,20 +44,37 @@ function seeResult() {
         NecklaceScore += 1;
     }
 
+    if (document.getElementById("eyes").checked) {
+        NecklaceScore += 1;
+    }
+    if (document.getElementById("nails").checked) {
+        BraceletScore += 1;
+        RingScore += 1;
+    }
+    if (document.getElementById("mornings").checked) {
+        BraceletScore += 1;
+    }
+    if (document.getElementById("evenings").checked) {
+        NecklaceScore += 1;
+    }
+    if (document.getElementById("neither").checked) {
+        RingScore += 1;
+    }
+    
     resetResult();
 
 
     var HighestScore = Math.max(RingScore, NecklaceScore, BraceletScore);
-    if (HighestScore === RingScore) {
+     if (HighestScore === RingScore && HighestScore === NecklaceScore && HighestScore === BraceletScore) {
+        document.getElementById("AllResult").style.display = "block";
+    }
+    else if (HighestScore === RingScore) {
         document.getElementById("RingResult").style.display = "block";
     }
-    if (HighestScore === NecklaceScore) {
+    else if (HighestScore === NecklaceScore) {
         document.getElementById("NecklaceResult").style.display = "block";
     }
-    if (HighestScore === BraceletScore) {
+    else if (HighestScore === BraceletScore) {
         document.getElementById("BraceletResult").style.display = "block";
-    }
-    if (HighestScore === 0) {
-        document.getElementById("Their All good for you! go with your gut!").style.display = "block";
     }
 }
