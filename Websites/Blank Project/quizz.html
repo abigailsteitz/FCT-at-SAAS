@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Quiz - ShopnShop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(24, 141, 195);
+      color: rgb(208, 212, 248);
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      text-shadow: 3px 3px rgb(77, 127, 128);
+      font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    }
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    label {
+      margin-left: 0.5rem;
+      margin-right: 1.5rem;
+    }
+    button {
+      background-color: rgb(142, 142, 142);
+      color: white;
+      padding: 8px 18px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin: 2rem 0 1rem 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: rgb(100, 100, 100);
+    }
+    img {
+      width: 50%;
+      border: 10px double white;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+    }
+    .result {
+      display: none;
+      margin-top: 2rem;
+    }
+  </style>
+  <script>
+    function seeResult() {
+      // Hide all results first
+      document.querySelectorAll('.result').forEach(div => div.style.display = 'none');
+      // Example: Show one result (customize logic as needed)
+      document.getElementById('Royalblue').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <ul style="list-style:none; padding:0; display:flex; justify-content:center; gap:1.5rem;">
+      <li><a href="./index.html" style="color:#fff;">Home</a></li>
+      <li><a href="./bydee.html" style="color:#fff;">Shop</a></li>
+      <li><a href="./about.html" style="color:#fff;">About Us</a></li>
+      <li><a href="./contact.html" style="color:#fff;">Contact</a></li>
+      <li><a href="./quizz.html" style="color:#fff;">Quizz</a></li>
+    </ul>
+  </nav>
+
+  <h1>What color best suits you?</h1>
+
+  <form>
+    <h2>Question 1: What's your favorite season?</h2>
+    <input type="radio" name="season" id="fall"><label for="fall">Fall</label>
+    <input type="radio" name="season" id="winter"><label for="winter">Winter</label>
+    <input type="radio" name="season" id="summer"><label for="summer">Summer</label>
+    <input type="radio" name="season" id="spring"><label for="spring">Spring</label>
+
+    <h2>Question 2: Do you prefer cool or warm tones?</h2>
+    <input type="radio" name="tone" id="warm"><label for="warm">Warm</label>
+    <input type="radio" name="tone" id="cool"><label for="cool">Cool</label>
+
+    <h2>Question 3: What's your favorite color?</h2>
+    <input type="radio" name="favcolor" id="red"><label for="red">Red</label>
+    <input type="radio" name="favcolor" id="orange"><label for="orange">Orange</label>
+    <input type="radio" name="favcolor" id="yellow"><label for="yellow">Yellow</label>
+    <input type="radio" name="favcolor" id="green"><label for="green">Green</label>
+    <input type="radio" name="favcolor" id="blue"><label for="blue">Blue</label>
+    <input type="radio" name="favcolor" id="indigo"><label for="indigo">Indigo</label>
+    <input type="radio" name="favcolor" id="violet"><label for="violet">Violet</label>
+    <input type="radio" name="favcolor" id="black"><label for="black">Black</label>
+    <input type="radio" name="favcolor" id="turquoise"><label for="turquoise">Turquoise</label>
+
+    <h2>Question 4: What's your hair color?</h2>
+    <input type="radio" name="hair" id="brunette"><label for="brunette">Brunette</label>
+    <input type="radio" name="hair" id="blonde"><label for="blonde">Blonde</label>
+    <input type="radio" name="hair" id="blackhair"><label for="blackhair">Black</label>
+    <input type="radio" name="hair" id="pink"><label for="pink">Pink</label>
+    <input type="radio" name="hair" id="bluehair"><label for="bluehair">Blue</label>
+
+    <h2>Question 5: What's your style?</h2>
+    <input type="radio" name="style" id="emo"><label for="emo">Emo</label>
+    <input type="radio" name="style" id="skater"><label for="skater">Skater</label>
+    <input type="radio" name="style" id="clean"><label for="clean">Clean Girl</label>
+    <input type="radio" name="style" id="preppy"><label for="preppy">Preppy</label>
+  </form>
+
+  <button onclick="seeResult()">See Result</button>
+
+  <div id="Royalblue" class="result">
+    <h1>Royal Blue</h1>
+    <img src="https://scuffers.com/cdn/shop/files/IMG_3832_91efc986-df19-43de-b1cc-f667812924c3_1024x.jpg?v=1741869983" alt="Royal Blue">
+  </div>
+  <div id="lightpink" class="result">
+    <h1>Light Pink</h1>
+    <img src="https://i.pinimg.com/736x/60/5f/35/605f35c071777584d27f784e38908a24.jpg" alt="Light Pink">
+  </div>
+  <div id="babyblue" class="result">
+    <h1>Baby Blue</h1>
+    <img src="https://i.pinimg.com/736x/1c/7b/f2/1c7bf24b57e1502b49eb1b1b26115169.jpg" alt="Baby Blue">
+  </div>
+  <div id="paleyellow" class="result">
+    <h1>Pale Yellow</h1>
+    <img src="https://i.pinimg.com/736x/f8/70/05/f870058c999fed52ea07f7a529bbe0b8.jpg" alt="Pale Yellow">
+  </div>
+  <div id="Black/Darkgrey" class="result">
+    <h1>Black / Dark Grey</h1>
+    <img src="https://i.pinimg.com/736x/f4/df/ae/f4dfae51897568263439b33a4797379b.jpg" alt="Black / Dark Grey">
+  </div>
+</body>
+</html>
