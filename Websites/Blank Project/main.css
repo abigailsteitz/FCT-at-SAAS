@@ -28,6 +28,19 @@ body {
 	  min-height: 100vh;
     margin-left: 160px;
     background-color: #f4f4f4;
+
+    
 	
   }
+
+    .image-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Optional: centers images horizontally */
+      gap: 10px; /* Optional: space between images */
+    }
+    .image-stack img {
+      max-width: 100%;
+      height: auto;
+    }
 
