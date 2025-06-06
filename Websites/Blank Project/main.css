@@ -13,3 +13,9 @@ body {
 #Frank {
     display: inline-block;
 }
+
+#SaturnResult,
+#NeptuneResult,
+#StayResult {
+    display: none;  
+}
