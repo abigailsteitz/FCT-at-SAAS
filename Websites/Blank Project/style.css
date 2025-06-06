@@ -24,3 +24,9 @@ body {
         margin: 8px 0;
     }
 }
+
+#wingerResult,
+#goalieResult,
+#strikerResult {
+    display: none;
+}
