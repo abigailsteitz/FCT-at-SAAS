@@ -73,29 +73,17 @@
     </div>
     <div class="main-content">
         <nav class="top-nav">
-            <div class="nav-content" style="display: flex; align-items: center;">
-                <!-- Newsletter button start -->
-                <div style="margin-right: 28px;">
+            <div class="nav-content">
+                <!-- Newsletter button moved to far left -->
+                <div class="newsletter-btn-wrapper">
                     <button 
-                        style="
-                            background: #7b5e3b;
-                            color: #fff;
-                            border: none;
-                            border-radius: 24px;
-                            padding: 10px 24px;
-                            font-size: 1em;
-                            font-weight: 600;
-                            cursor: pointer;
-                            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-                            transition: background 0.2s;
-                            letter-spacing: 1px;
-                        "
+                        class="newsletter-btn"
                         onclick="alert('Subscribe to our monthly newsletter coming soon!')"
                     >
                         Sign up for our newsletter
                     </button>
                 </div>
-                <!-- Newsletter button end -->
+                <!-- Logo and navigation links -->
                 <div class="nav-logo">
                     <a href="randomproject.html">
                         <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
@@ -111,16 +99,28 @@
                     <a href="../cart.html">Cart</a>
                 </div>
                 <!-- Theme switcher moved here -->
-                <button class="theme-switcher-btn" onclick="toggleTheme()" style="margin-left:24px;">Switch Theme</button>
+                <button class="theme-switcher-btn" onclick="toggleTheme()">Switch Theme</button>
                 <!-- Hamburger menu button -->
                 <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <!-- Spacer to push search bar to far right -->
-                <div style="flex:1 1 auto;"></div>
-                <!-- Search bar removed -->
+                <!-- Spacer to push content to far right -->
+                <div class="nav-spacer"></div>
+                <!-- Magnifying glass icon and search bar, both on nav bar and aligned -->
+<div style="display: flex; align-items: center; margin-left:24px;">
+    <span class="nav-search-icon-standalone" aria-hidden="true" style="display:flex;align-items:center;justify-content:center;height:44px;width:44px;">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:block;">
+            <circle cx="10" cy="10" r="8" stroke="#7b5e3b" stroke-width="2"/>
+            <line x1="16.2" y1="16.2" x2="21" y2="21" stroke="#7b5e3b" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </span>
+    <form class="nav-search nav-search-right" action="#" method="get" role="search" style="margin-left:3px; display:flex; align-items:center; margin-top:2px;">
+        <input type="text" name="q" aria-label="Search" placeholder="Search" style="margin-bottom:0; position:relative; top:-8px; left:-6px; outline:none; border:2px solid #fff;" />
+    </form>
+</div>
+                <!-- Newsletter button removed from right -->
             </div>
         </nav>
         <!-- Mobile nav overlay -->
@@ -143,8 +143,8 @@
                 </p>
             </div>
             <!-- Centered slideshow start -->
-            <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 32px 0;">
-                <div class="slideshow-container" style="margin: 0 auto;">
+            <div class="slideshow-outer">
+                <div class="slideshow-container">
                     <img id="slideshow-img" class="slide-img" src="https://i0.wp.com/stewartlighting.com/wp-content/uploads/2022/02/shutterstock_1483369076.jpg?fit=1000%2C667&ssl=1" alt="Driftwood Decor Photo"/>
                     <div class="arrow-controls">
                         <button class="arrow-btn" onclick="prevSlide()" aria-label="Previous">&#8592;</button>
@@ -153,20 +153,9 @@
                 </div>
             </div>
             <!-- Centered slideshow end -->
-            <div style="display: flex; justify-content: center; margin-bottom: 32px;">
+            <div class="quiz-btn-wrapper">
                 <a href="newpage.html">
-                    <button style="
-                        background: #7b5e3b;
-                        color: #fff;
-                        border: none;
-                        border-radius: 20px;
-                        padding: 12px 28px;
-                        font-size: 1.1em;
-                        font-weight: 600;
-                        cursor: pointer;
-                        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-                        transition: background 0.2s;
-                    ">Take the Personality Quiz</button>
+                    <button class="quiz-btn">Take the Personality Quiz</button>
                 </a>
             </div>
             <!-- Employee cards start -->
@@ -290,9 +279,10 @@
         // Apply theme on page load
         applyTheme();
     </script>
-    <footer style="width:100%;background:#dfd8cb;color:#7b5e3b;text-align:center;padding:28px 0 18px 0;font-size:1.1em;letter-spacing:0.5px;position:relative;z-index:2;margin-top:48px;">
+    <footer class="main-footer">
         <div>
-            Contact us: <a href="mailto:hello@driftwooddecor.com" style="color:#7b5e3b;text-decoration:underline;">hello@driftwooddecor.com</a>
+            <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo" style="height:32px;vertical-align:middle;margin-right:8px;"/>
+            Contact us: <a href="mailto:hello@driftwooddecor.com" class="footer-email">hello@driftwooddecor.com</a>
             <br>
             &copy; 2024 Driftwood Home Decor
         </div>
