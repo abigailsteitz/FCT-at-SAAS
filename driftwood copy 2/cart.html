@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart | Driftwood Home Decor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <a href="randomproject.html">
+                    <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
+                </a>
+                <a href="randomproject.html" style="text-decoration:none;">
+                    <span class="nav-logo-text">Driftwood</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="randomproject.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html" class="active">Cart</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container cart-container">
+        <div class="cart-title">Your Cart</div>
+        <table class="cart-table" id="cartTable">
+            <thead>
+                <tr>
+                    <th style="width:40%;">Product</th>
+                    <th style="width:15%;">Price</th>
+                    <th style="width:15%;">Qty</th>
+                    <th style="width:15%;">Total</th>
+                    <th style="width:15%;"></th>
+                </tr>
+            </thead>
+            <tbody id="cartBody">
+                <!-- JS will fill this -->
+            </tbody>
+            <tfoot>
+                <tr class="cart-total-row">
+                    <td colspan="3" style="text-align:right;">Cart Total:</td>
+                    <td id="cartTotal" style="font-weight:700;">$0.00</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        <div id="cartEmpty" class="cart-empty" style="display:none;">
+            Your cart is empty.<br>
+            <a href="shop.html" class="back-link" style="margin-top:18px;display:inline-block;">&larr; Continue Shopping</a>
+        </div>
+        <div class="cart-actions">
+            <button class="continue-btn" onclick="window.location.href='shop.html'">&larr; Continue Shopping</button>
+            <button class="checkout-btn" onclick="window.location.href='checkout.html'">Checkout</button>
+        </div>
+    </div>
+    <footer style="width:100%;background:#dfd8cb;color:#7b5e3b;text-align:center;padding:28px 0 18px 0;font-size:1.1em;letter-spacing:0.5px;position:relative;z-index:2;margin-top:48px;">
+        <div>
+            Contact us: <a href="mailto:hello@driftwooddecor.com" style="color:#7b5e3b;text-decoration:underline;">hello@driftwooddecor.com</a>
+            <br>
+            &copy; 2024 Driftwood Home Decor
+        </div>
+    </footer>
+    <script>
+        function renderCart() {
+            const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            const cartBody = document.getElementById('cartBody');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartEmpty = document.getElementById('cartEmpty');
+            cartBody.innerHTML = '';
+            let total = 0;
+            if (cart.length === 0) {
+                cartEmpty.style.display = 'block';
+                document.querySelector('.cart-table').style.display = 'none';
+                document.querySelector('.cart-actions').style.display = 'none';
+                return;
+            } else {
+                cartEmpty.style.display = 'none';
+                document.querySelector('.cart-table').style.display = '';
+                document.querySelector('.cart-actions').style.display = 'flex';
+            }
+            cart.forEach((item, idx) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <span style="font-weight:600;color:#7b5e3b;">${item.name}</span>
+                    </td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td>
+                        <input type="number" min="1" value="${item.qty}" style="width:48px;text-align:center;border-radius:8px;border:1px solid #c8bfae;padding:4px 0;" onchange="updateQty(${idx}, this.value)">
+                    </td>
+                    <td>$${(item.price * item.qty).toFixed(2)}</td>
+                    <td>
+                        <button class="cart-remove-btn" onclick="removeItem(${idx})">Remove</button>
+                    </td>
+                `;
+                cartBody.appendChild(row);
+                total += item.price * item.qty;
+            });
+            cartTotal.textContent = '$' + total.toFixed(2);
+        }
+        function removeItem(idx) {
+            let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            cart.splice(idx, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+        function updateQty(idx, val) {
+            let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            val = Math.max(1, parseInt(val) || 1);
+            cart[idx].qty = val;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+        window.onload = renderCart;
+    </script>
+</body>
+</html>

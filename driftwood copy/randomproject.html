@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driftwood Home Decor</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style copy.css">
     <!-- CSS moved to style.css -->
 </head>
 <body>
@@ -79,6 +79,7 @@
                     <button 
                         class="newsletter-btn"
                         onclick="alert('Subscribe to our monthly newsletter coming soon!')"
+                        id="newsletter-btn"
                     >
                         Sign up for our newsletter
                     </button>
@@ -91,15 +92,17 @@
                     <span class="nav-logo-text">Driftwood</span>
                 </div>
                 <div class="nav-links">
-                    <a href="#">Home</a>
-                    <a href="../shop.html">Shop</a>
-                    <a href="about.html">About</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="../contact.html">Contact</a>
-                    <a href="../cart.html">Cart</a>
+                    <a href="#" id="nav-home">Home</a>
+                    <a href="shop.html" id="nav-shop">Shop</a>
+                    <a href="about.html" id="nav-about">About</a>
+                    <a href="faq.html" id="nav-faq">FAQ</a>
+                    <a href="contact.html" id="nav-contact">Contact</a>
+                    <a href="cart.html" id="nav-cart">Cart</a>
                 </div>
                 <!-- Theme switcher moved here -->
                 <button class="theme-switcher-btn" onclick="toggleTheme()">Switch Theme</button>
+                <!-- Language switcher button -->
+                <button class="lang-switcher-btn" onclick="toggleLanguage()" style="margin-left:8px;">EN/ES</button>
                 <!-- Hamburger menu button -->
                 <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
                     <span></span>
@@ -110,14 +113,14 @@
                 <div class="nav-spacer"></div>
                 <!-- Magnifying glass icon and search bar, both on nav bar and aligned -->
 <div style="display: flex; align-items: center; margin-left:24px;">
-    <span class="nav-search-icon-standalone" aria-hidden="true" style="display:flex;align-items:center;justify-content:center;height:44px;width:44px;">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:block;">
+    <span class="nav-search-icon-standalone" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
             <circle cx="10" cy="10" r="8" stroke="#7b5e3b" stroke-width="2"/>
             <line x1="16.2" y1="16.2" x2="21" y2="21" stroke="#7b5e3b" stroke-width="2" stroke-linecap="round"/>
         </svg>
     </span>
-    <form class="nav-search nav-search-right" action="#" method="get" role="search" style="margin-left:3px; display:flex; align-items:center; margin-top:2px;">
-        <input type="text" name="q" aria-label="Search" placeholder="Search" style="margin-bottom:0; position:relative; top:-8px; left:-6px; outline:none; border:2px solid #fff;" />
+    <form class="nav-search nav-search-right nav-search-form" action="#" method="get" role="search">
+        <input type="text" name="q" aria-label="Search" placeholder="Search" class="nav-search-input" />
     </form>
 </div>
                 <!-- Newsletter button removed from right -->
@@ -127,18 +130,18 @@
         <div class="mobile-nav" id="mobileNav" aria-hidden="true">
             <div class="mobile-nav-links">
                 <a href="#" onclick="closeMobileNav()">Home</a>
-                <a href="../shop.html" onclick="closeMobileNav()">Shop</a>
+                <a href="shop.html" onclick="closeMobileNav()">Shop</a>
                 <a href="about.html" onclick="closeMobileNav()">About</a>
                 <a href="faq.html" onclick="closeMobileNav()">FAQ</a>
-                <a href="../contact.html" onclick="closeMobileNav()">Contact</a>
-                <a href="../cart.html" onclick="closeMobileNav()">Cart</a>
+                <a href="contact.html" onclick="closeMobileNav()">Contact</a>
+                <a href="cart.html" onclick="closeMobileNav()">Cart</a>
             </div>
             <!-- Mobile nav search removed -->
         </div>
         <div class="container">
             <div class="white-box">
-                <h1>Driftwood Home Decor</h1>
-                <p>
+                <h1 id="title-main">Driftwood Home Decor</h1>
+                <p id="desc-main">
                     Driftwood Home Decor is a curated home and lifestyle brand offering timeless, nature-inspired pieces that bring warmth, calm, and character into every space. From earthy ceramics to soft textiles and handcrafted decor, Driftwood blends organic materials with minimalist design — helping you create a home that feels as beautiful as it is grounded.
                 </p>
             </div>
@@ -155,137 +158,92 @@
             <!-- Centered slideshow end -->
             <div class="quiz-btn-wrapper">
                 <a href="newpage.html">
-                    <button class="quiz-btn">Take the Personality Quiz</button>
+                    <button class="quiz-btn" id="quiz-btn-label">Take the Personality Quiz</button>
                 </a>
             </div>
             <!-- Employee cards start -->
             <div class="employee-list">
-                <div class="employee-list-title">Our Team</div>
+                <div class="employee-list-title" id="team-title">Our Team</div>
                 <div class="employee-card">
                     <img src="https://thumbs.dreamstime.com/b/beautiful-girl-dreadlocks-young-woman-hairdress-against-summer-nature-41323139.jpg" alt="Jade"/>
-                    <div class="employee-name">Jade</div>
-                    <div class="employee-role">Lead Stylist</div>
-                    <div class="employee-desc">Creates unique, nature-inspired looks and guides our design vision.</div>
+                    <div class="employee-name" id="emp1-name">Jade</div>
+                    <div class="employee-role" id="emp1-role">Lead Stylist</div>
+                    <div class="employee-desc" id="emp1-desc">Creates unique, nature-inspired looks and guides our design vision.</div>
                 </div>
                 <div class="employee-card">
                     <img src="https://media.istockphoto.com/id/854442338/photo/looks-like-another-bright-and-successful-day.jpg?s=612x612&w=0&k=20&c=Ni1-ATPFgNku9JXy3TGK1tLTnA7vJWyTXYfSsAIItXk=" alt="James"/>
-                    <div class="employee-name">James</div>
-                    <div class="employee-role">Customer Experience</div>
-                    <div class="employee-desc">Ensures every guest feels welcome and helps with all inquiries.</div>
+                    <div class="employee-name" id="emp2-name">James</div>
+                    <div class="employee-role" id="emp2-role">Customer Experience</div>
+                    <div class="employee-desc" id="emp2-desc">Ensures every guest feels welcome and helps with all inquiries.</div>
                 </div>
                 <div class="employee-card">
                     <img src="https://media.istockphoto.com/id/1321204080/photo/smiling-plus-size-woman-using-her-smartphone-while-walking-home-from-the-marketplace-carrying.jpg?s=612x612&w=0&k=20&c=mcdOsoYEPC_Gmd_g_Wi7aRNzu-uw9Kq3yd8FZinZMcM=" alt="Maya"/>
-                    <div class="employee-name">Maya</div>
-                    <div class="employee-role">Shop Manager</div>
-                    <div class="employee-desc">Keeps the shop running smoothly and manages daily operations.</div>
+                    <div class="employee-name" id="emp3-name">Maya</div>
+                    <div class="employee-role" id="emp3-role">Shop Manager</div>
+                    <div class="employee-desc" id="emp3-desc">Keeps the shop running smoothly and manages daily operations.</div>
                 </div>
                 <div class="employee-card">
                     <img src="https://media.istockphoto.com/id/2205370986/photo/beautiful-flower-shop-owner.jpg?s=612x612&w=0&k=20&c=WjqEO3DhxbiKA_ZPAjqfGAcmRYbVyw4Rn6Ww6ehm_LU=" alt="Lila"/>
-                    <div class="employee-name">Lila</div>
-                    <div class="employee-role">Florist & Decorator</div>
-                    <div class="employee-desc">Arranges flowers and decor to bring warmth and beauty to every space.</div>
+                    <div class="employee-name" id="emp4-name">Lila</div>
+                    <div class="employee-role" id="emp4-role">Florist & Decorator</div>
+                    <div class="employee-desc" id="emp4-desc">Arranges flowers and decor to bring warmth and beauty to every space.</div>
                 </div>
                 <div class="employee-card">
                     <img src="https://thumbs.dreamstime.com/b/male-musician-working-nature-young-creative-man-wearing-eyeglasses-sitting-green-grass-outdoors-making-some-notes-196499837.jpg" alt="Eli"/>
-                    <div class="employee-name">Eli</div>
-                    <div class="employee-role">Creative Director</div>
-                    <div class="employee-desc">Leads branding and creative projects, ensuring a cohesive style.</div>
+                    <div class="employee-name" id="emp5-name">Eli</div>
+                    <div class="employee-role" id="emp5-role">Creative Director</div>
+                    <div class="employee-desc" id="emp5-desc">Leads branding and creative projects, ensuring a cohesive style.</div>
                 </div>
             </div>
             <!-- Employee cards end -->
         </div>
     </div>
-    <script>
-        const images = [
-            "https://i0.wp.com/stewartlighting.com/wp-content/uploads/2022/02/shutterstock_1483369076.jpg?fit=1000%2C667&ssl=1",
-            "https://i.pinimg.com/736x/81/cd/bb/81cdbb810a24359e2e2806cbe8ebb57c.jpg",
-            "https://www.thespruce.com/thmb/5yz1IGN5zBsRDsCWzl7NSEzxEK8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/loafhome-e56f050c9e43484cbe190ce3ab1ca3d3.jpg",
-            "https://www.bhg.com/thmb/jaD28JajtQv9FoMAnbHWyM0UGFw=/4000x0/filters:no_upscale():strip_icc()/Livingroom-Capture-One-Session13717-CiF-_0XRK7VA0sclpsCm2P-27fbe3d5f41d4cb49d047e345db4d00a.jpg"
-        ];
-        let current = 0;
-        function showSlide(idx) {
-            const img = document.getElementById('slideshow-img');
-            current = (idx + images.length) % images.length;
-            img.src = images[current];
-        }
-        function prevSlide() {
-            showSlide(current - 1);
-        }
-        function nextSlide() {
-            showSlide(current + 1);
-        }
-
-        // Touch swipe support for slideshow
-        (function() {
-            let startX = 0;
-            let endX = 0;
-            const img = document.getElementById('slideshow-img');
-            img.addEventListener('touchstart', function(e) {
-                if (e.touches.length === 1) {
-                    startX = e.touches[0].clientX;
-                }
-            });
-            img.addEventListener('touchmove', function(e) {
-                if (e.touches.length === 1) {
-                    endX = e.touches[0].clientX;
-                }
-            });
-            img.addEventListener('touchend', function() {
-                const diff = endX - startX;
-                if (Math.abs(diff) > 40) { // threshold for swipe
-                    if (diff < 0) {
-                        nextSlide();
-                    } else {
-                        prevSlide();
-                    }
-                }
-                startX = 0;
-                endX = 0;
-            });
-        })();
-
-        // Parallax scroll effect for image strip
-        window.addEventListener('scroll', function() {
-            const parallax = document.getElementById('parallaxImages');
-            // Move at 2x scroll speed (adjust as needed)
-            parallax.style.transform = `translateX(${-window.scrollY * 2}px)`;
-        });
-
-        // Parallax scroll effect for vertical side images
-        window.addEventListener('scroll', function() {
-            const scrollY = window.scrollY;
-            // Scroll both sides in the same direction (up)
-            document.getElementById('parallaxLeft').style.transform = `translateY(${-scrollY * 2}px)`;
-            document.getElementById('parallaxRight').style.transform = `translateY(${-scrollY * 2}px)`;
-        });
-
-        // Theme persistence across pages
-        function applyTheme() {
-            if (localStorage.getItem('theme') === 'dusty-blue') {
-                document.body.classList.add('dusty-blue');
-            } else {
-                document.body.classList.remove('dusty-blue');
-            }
-        }
-        function toggleTheme() {
-            if (document.body.classList.contains('dusty-blue')) {
-                document.body.classList.remove('dusty-blue');
-                localStorage.setItem('theme', 'default');
-            } else {
-                document.body.classList.add('dusty-blue');
-                localStorage.setItem('theme', 'dusty-blue');
-            }
-        }
-        // Apply theme on page load
-        applyTheme();
-    </script>
-    <footer class="main-footer">
-        <div>
-            <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo" style="height:32px;vertical-align:middle;margin-right:8px;"/>
-            Contact us: <a href="mailto:hello@driftwooddecor.com" class="footer-email">hello@driftwooddecor.com</a>
-            <br>
-            &copy; 2024 Driftwood Home Decor
+    <!-- Spin Wheel Modal (pointer at top center, pointing down) -->
+    <div id="spinWheelModal" class="spin-modal">
+      <div class="spin-modal-content">
+        <div class="spin-wheel-wrapper">
+          <div class="spin-pointer"></div>
+          <svg id="spinWheel" class="spin-svg" viewBox="0 0 200 200">
+            <!-- Sectors -->
+            <g>
+              <path d="M100,100 L100,0 A100,100 0 0,1 186.6,50 Z" fill="#a8bba2"></path>
+              <path d="M100,100 L186.6,50 A100,100 0 0,1 186.6,150 Z" fill="#cdd8c0"></path>
+              <path d="M100,100 L186.6,150 A100,100 0 0,1 100,200 Z" fill="#e8e4d9"></path>
+              <path d="M100,100 L100,200 A100,100 0 0,1 13.4,150 Z" fill="#f2f1ee"></path>
+              <path d="M100,100 L13.4,150 A100,100 0 0,1 13.4,50 Z" fill="#bcae9e"></path>
+              <path d="M100,100 L13.4,50 A100,100 0 0,1 100,0 Z" fill="#9aa88f"></path>
+            </g>
+            <!-- Centered inward-facing labels -->
+            <g font-size="10" font-weight="bold" fill="#333" text-anchor="middle" font-family="Arial, sans-serif">
+              <text x="140" y="35" transform="rotate(30 140 35)">50% OFF</text>
+              <text x="170" y="100" transform="rotate(90 170 100)">
+                <tspan x="170" dy="0">Buy One</tspan>
+                <tspan x="170" dy="1.2em">Get One</tspan>
+              </text>
+              <text x="140" y="165" transform="rotate(150 140 165)">$25 Gift Card</text>
+              <text x="60" y="165" transform="rotate(210 60 165)">10% OFF</text>
+              <text x="30" y="100" transform="rotate(270 30 100)">Mystery Gift</text>
+              <text x="60" y="35" transform="rotate(330 60 35)">Try Again</text>
+            </g>
+          </svg>
         </div>
-    </footer>
+        <button class="spin-btn" onclick="spinSVGWheel()">
+          <img src="C:\Users\SAAS_User\Downloads\undo-arrow.png" alt="Spin" style="height:1.2em;vertical-align:middle;margin-right:6px;"> Spin
+        </button>
+        <button class="spin-close" onclick="closeSpinModal()">✖ Close</button>
+      </div>
+    </div>
+    <!-- Trigger Button -->
+    <button 
+      id="spinToWinBtn"
+      onclick="document.getElementById('spinWheelModal').style.display='flex'"
+      style="background:#a8bba2; color:#7b5e3b; border:none; border-radius:20px; font-size:1.1em; font-weight:600; padding:12px 28px; position:fixed; left:24px; bottom:24px; z-index:10000; box-shadow:0 2px 8px rgba(0,0,0,0.07); cursor:pointer; transition:background 0.2s; display:flex; align-items:center;"
+    >
+      <img src="C:\Users\SAAS_User\Downloads\undo-arrow.png" alt="Spin" style="height:1.2em;vertical-align:middle;margin-right:6px;"> Spin to Win
+    </button>
+    <!-- Add main.js before lang.js -->
+    <script src="main.js"></script>
+    <script src="lang.js"></script>
 </body>
 </html>
+

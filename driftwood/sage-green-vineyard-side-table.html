@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sage Green Vineyard Side Table | Driftwood Home Decor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <a href="Websites/randomproject.html">
+                    <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
+                </a>
+                <span class="nav-logo-text">Driftwood</span>
+            </div>
+            <div class="nav-links">
+                <a href="Websites/randomproject.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="product-box" style="text-align:center;">
+            <img class="product-img" src="https://linqcdn.avbportal.com/images/9465fc29-5233-4f83-b54a-8a98e3d57848.jpg?w=160" alt="Sage Green Vineyard Side Table"/>
+            <h1>Sage Green Vineyard Side Table</h1>
+            <div class="price">$79.99</div>
+            <div class="desc">
+                A charming side table with a sage green finish, ideal for bedrooms or living rooms. Complements the Vineyard Coffee Table for a coordinated look.
+            </div>
+            <form id="addToCartForm" style="margin-bottom:18px;display:inline-block;">
+                <button type="submit" class="add-cart-btn">Add to Cart</button>
+            </form>
+            <div>
+                <a href="shop.html" class="back-link">&larr; Back to Store</a>
+            </div>
+        </div>
+    </div>
+    <script>
+document.getElementById('addToCartForm').onsubmit = function(e) {
+    e.preventDefault();
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const productId = 'sage-green-vineyard-side-table';
+    const price = 79.99;
+    let found = false;
+    for (let item of cart) {
+        if (item.id === productId) {
+            item.qty += 1;
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        cart.push({ id: productId, name: "Sage Green Vineyard Side Table", price: price, qty: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert('Added to cart!');
+};
+</script>
+</body>
+</html>

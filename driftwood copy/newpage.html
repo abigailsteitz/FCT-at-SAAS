@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Your Driftwood Decor Match!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f6f5f2; color: #3a5a6b; margin: 0; }
+        .quiz-container {
+            max-width: 480px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 32px 28px;
+        }
+        h1 { text-align: center; margin-bottom: 18px; }
+        .question { margin: 24px 0 12px 0; font-weight: 600; }
+        .answers label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            padding-left: 4px;
+        }
+        button {
+            background: #7b5e3b;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 22px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 18px;
+            transition: background 0.2s;
+        }
+        button:hover { background: #5d472a; }
+        .result {
+            margin-top: 32px;
+            padding: 18px;
+            background: #e3eaf1;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .result img {
+            margin-top: 12px;
+            max-width: 180px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>What Driftwood Decor Item Should You Buy?</h1>
+        <a href="randomproject.html" style="display:inline-block;margin-bottom:18px;">
+            <button type="button" style="
+                background: #e3eaf1;
+                color: #3a5a6b;
+                border: none;
+                border-radius: 18px;
+                padding: 8px 20px;
+                font-size: 1em;
+                font-weight: 600;
+                cursor: pointer;
+                margin-bottom: 10px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+                transition: background 0.2s;
+            ">Back to Home</button>
+        </a>
+        <form id="quizForm">
+            <div class="question">1. What's your ideal weekend?</div>
+            <div class="answers">
+                <label><input type="radio" name="q1" value="relax" required> Cozying up with a book or movie</label>
+                <label><input type="radio" name="q1" value="nature"> Exploring outdoors or gardening</label>
+                <label><input type="radio" name="q1" value="host"> Hosting friends or family</label>
+                <label><input type="radio" name="q1" value="creative"> Doing something crafty or creative</label>
+            </div>
+            <div class="question">2. Which color palette speaks to you?</div>
+            <div class="answers">
+                <label><input type="radio" name="q2" value="relax" required> Soft neutrals & calming blues</label>
+                <label><input type="radio" name="q2" value="nature"> Greens & earthy browns</label>
+                <label><input type="radio" name="q2" value="host"> Warm golds & terracotta</label>
+                <label><input type="radio" name="q2" value="creative"> Pops of color & playful patterns</label>
+            </div>
+            <div class="question">3. Pick a home vibe:</div>
+            <div class="answers">
+                <label><input type="radio" name="q3" value="relax" required> Calm & restful retreat</label>
+                <label><input type="radio" name="q3" value="nature"> Natural & organic</label>
+                <label><input type="radio" name="q3" value="host"> Welcoming & lively</label>
+                <label><input type="radio" name="q3" value="creative"> Artistic & unique</label>
+            </div>
+            <!-- New Question 4 -->
+            <div class="question">4. Which activity sounds most appealing?</div>
+            <div class="answers">
+                <label><input type="radio" name="q4" value="relax" required> Taking a relaxing bath</label>
+                <label><input type="radio" name="q4" value="nature"> Going for a hike</label>
+                <label><input type="radio" name="q4" value="host"> Cooking a meal for friends</label>
+                <label><input type="radio" name="q4" value="creative"> Rearranging or decorating a room</label>
+            </div>
+            <!-- New Question 5 -->
+            <div class="question">5. What is your favorite type of decor?</div>
+            <div class="answers">
+                <label><input type="radio" name="q5" value="relax" required> Soft blankets and pillows</label>
+                <label><input type="radio" name="q5" value="nature"> Plants and natural wood</label>
+                <label><input type="radio" name="q5" value="host"> Stylish dinnerware and mugs</label>
+                <label><input type="radio" name="q5" value="creative"> Unique shelves and art pieces</label>
+            </div>
+            <button type="submit">See My Result</button>
+        </form>
+        <div class="result" id="quizResult" style="display:none;"></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>

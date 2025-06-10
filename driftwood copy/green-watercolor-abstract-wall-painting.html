@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Green Watercolor Abstract Wall Painting | Driftwood Home Decor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <a href="Websites/randomproject.html">
+                    <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
+                </a>
+                <span class="nav-logo-text">Driftwood</span>
+            </div>
+            <div class="nav-links">
+                <a href="Websites/randomproject.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="product-box" style="text-align:center;">
+            <img class="product-img" src="https://papermoonartdesign.com/cdn/shop/products/WA232-watercolor-abstract-nature-botanical-green-aesthetic-printable-wall-art-03.jpg?v=1622491445&width=1445" alt="Green Watercolor Abstract Wall Painting"/>
+            <h1>Green Watercolor Abstract Wall Painting</h1>
+            <div class="price">$24.99</div>
+            <div class="desc">
+                Bring a touch of nature and modern art to your space with this beautiful green watercolor abstract wall painting. Perfect for living rooms, bedrooms, or offices seeking a calming, botanical vibe.
+            </div>
+            <form id="addToCartForm" style="margin-bottom:18px;display:inline-block;">
+                <button type="submit" class="add-cart-btn">Add to Cart</button>
+            </form>
+            <div>
+                <a href="shop.html" class="back-link">&larr; Back to Store</a>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.getElementById('addToCartForm').onsubmit = function(e) {
+        e.preventDefault();
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        const productId = 'green-watercolor-abstract-wall-painting';
+        const price = 24.99;
+        let found = false;
+        for (let item of cart) {
+            if (item.id === productId) {
+                item.qty += 1;
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            cart.push({ id: productId, name: "Green Watercolor Abstract Wall Painting", price: price, qty: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Added to cart!');
+    };
+    </script>
+</body>
+</html>

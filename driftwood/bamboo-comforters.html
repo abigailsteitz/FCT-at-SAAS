@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bamboo Comforters | Driftwood Home Decor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <a href="Websites/randomproject.html">
+                    <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
+                </a>
+                <a href="Websites/randomproject.html" style="text-decoration:none;">
+                    <span class="nav-logo-text">Driftwood</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="Websites/randomproject.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <img class="product-img" src="https://m.media-amazon.com/images/I/81kYqwqRK5L.jpg" alt="Bamboo Comforters"/>
+        <div class="product-title">Bamboo Comforters</div>
+        <div class="product-price">$49.99</div>
+        <div class="product-desc">
+            Experience ultimate softness and breathability with our bamboo comforters. Eco-friendly and perfect for year-round comfort.
+        </div>
+        <div style="text-align:center;">
+            <form id="addToCartForm" style="margin-bottom:18px;display:inline-block;">
+                <button type="submit" style="
+                    background:#7b5e3b;
+                    color:#fff;
+                    border:none;
+                    border-radius:24px;
+                    padding:12px 32px;
+                    font-size:1.1em;
+                    font-weight:600;
+                    cursor:pointer;
+                ">
+                    Add to Cart
+                </button>
+            </form>
+            <div>
+                <a href="shop.html" style="color:#7b5e3b;text-decoration:underline;font-size:1em;display:inline-block;margin-top:8px;">&larr; Back to Store</a>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.getElementById('addToCartForm').onsubmit = function(e) {
+        e.preventDefault();
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        const productId = 'bamboo-comforters';
+        const price = 49.99;
+        let found = false;
+        for (let item of cart) {
+            if (item.id === productId) {
+                item.qty += 1;
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            cart.push({ id: productId, name: "Bamboo Comforters", price: price, qty: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Added to cart!');
+    };
+    </script>
+</body>
+</html>

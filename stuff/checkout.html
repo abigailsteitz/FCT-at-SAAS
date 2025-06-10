@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout | Driftwood Home Decor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <a href="Websites/randomproject.html">
+                    <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
+                </a>
+                <a href="Websites/randomproject.html" style="text-decoration:none;">
+                    <span class="nav-logo-text">Driftwood</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="Websites/randomproject.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Checkout</h1>
+        <div class="order-summary" id="orderSummary"></div>
+        <form class="checkout-form" id="checkoutForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+            <label for="address">Shipping Address</label>
+            <textarea id="address" required></textarea>
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            <button class="checkout-btn" type="submit">Place Order</button>
+        </form>
+        <div class="success-message" id="successMsg" style="display:none;">
+            Thank you for your order! You will receive a confirmation email soon.
+        </div>
+    </div>
+    <script>
+        // Render order summary from cart
+        function renderOrderSummary() {
+            const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            const orderSummary = document.getElementById('orderSummary');
+            if (cart.length === 0) {
+                orderSummary.innerHTML = '<div class="cart-empty">Your cart is empty.</div>';
+                document.getElementById('checkoutForm').style.display = 'none';
+                return;
+            }
+            let html = '<ul>';
+            let total = 0;
+            for (let item of cart) {
+                html += `<li><span style="font-weight:600;">${item.name}</span> &times; ${item.qty} <span style="float:right;">$${(item.price * item.qty).toFixed(2)}</span></li>`;
+                total += item.price * item.qty;
+            }
+            html += '</ul>';
+            html += `<div class="order-total">Total: $${total.toFixed(2)}</div>`;
+            orderSummary.innerHTML = html;
+        }
+        renderOrderSummary();
+
+        // Handle checkout form
+        document.getElementById('checkoutForm').onsubmit = function(e) {
+            e.preventDefault();
+            // In a real app, send order to server here
+            localStorage.removeItem('cart');
+            document.getElementById('checkoutForm').style.display = 'none';
+            document.getElementById('orderSummary').style.display = 'none';
+            document.getElementById('successMsg').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
