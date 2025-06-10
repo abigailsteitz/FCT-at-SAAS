@@ -21,7 +21,7 @@ const results = {
         title: "You need a Tree Bookshelf!",
         desc: "You’re creative and bold. Our tree bookshelf is perfect for displaying your favorite books and art in a unique way.",
         img: "https://m.media-amazon.com/images/I/71pr1F0VWRL._AC_UF894,1000_QL80_.jpg",
-        link: "shelf.html"
+        link: "tree-bookshelf.html"
     },
     bamboo_comforter: {
         title: "You need Bamboo Comforters!",
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <img src="${res.img}" alt="${res.title}" style="max-width:180px;border-radius:10px;">
                 </a>
                 <br>
-                <a href="${res.link}">
+                <a href="randomproject.html">
                     <button type="button">See Product</button>
                 </a>
             `;

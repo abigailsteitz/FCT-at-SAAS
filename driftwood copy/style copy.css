@@ -1,4 +1,8 @@
 /* ...all CSS from <style>...</style> in randomproject.html... */
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #abbd90; /* lighter, yellower green */
@@ -7,7 +11,11 @@ body {
     padding: 32px 0;
     position: relative;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
 .top-nav {
     width: 100%;
     background: #dfd8cb;
@@ -22,6 +30,9 @@ body {
     margin-top: 0; /* remove margin for green strip */
 }
 .nav-content {
+    /* Move nav bar content 10px to the left */
+    margin-left: -10px;
+    margin-right: auto;
     width: 100%;
     max-width: 1100px;
     display: flex;
@@ -337,6 +348,7 @@ p {
 .main-content {
     position: relative;
     z-index: 2;
+    flex: 1 0 auto;
 }
 /* Hamburger styles */
 .hamburger {
@@ -949,6 +961,8 @@ body.dusty-blue form button[type="submit"]:hover {
     position: relative;
     z-index: 2;
     margin-top: 48px;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 .footer-email {
     color: #7b5e3b;

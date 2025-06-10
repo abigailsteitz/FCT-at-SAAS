@@ -47,6 +47,13 @@
                     Add to Cart
                 </button>
             </form>
+            <button 
+                type="button"
+                style="background:#bcae9e;color:#fff;border:none;border-radius:24px;padding:12px 32px;font-size:1.1em;font-weight:600;cursor:pointer;margin-bottom:18px;"
+                onclick="addToWishlist('Bamboo Comforters', 49.99)"
+            >
+                Add to Wishlist
+            </button>
             <div>
                 <a href="shop.html" style="color:#7b5e3b;text-decoration:underline;font-size:1em;display:inline-block;margin-top:8px;">&larr; Back to Store</a>
             </div>
@@ -72,6 +79,18 @@
         localStorage.setItem('cart', JSON.stringify(cart));
         alert('Added to cart!');
     };
+
+    function addToWishlist(name, price) {
+        let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+        const idx = wishlist.findIndex(item => item.name === name);
+        if (idx > -1) {
+            wishlist[idx].qty += 1;
+        } else {
+            wishlist.push({ name, price, qty: 1 });
+        }
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        alert(name + " added to your wishlist!");
+    }
     </script>
 </body>
 </html>

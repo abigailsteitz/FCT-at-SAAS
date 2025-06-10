@@ -96,8 +96,11 @@ function spinSVGWheel() {
     if (spinning) return;
     spinning = true;
     const wheel = document.getElementById('spinWheel');
+    // Ensure at least 720 degrees (2 full spins)
+    const minSpins = 2;
+    const minDegrees = 360 * minSpins;
     const extra = Math.floor(Math.random() * 360);
-    const totalRotation = 360 * 5 + extra;
+    const totalRotation = minDegrees + (360 * 3) + extra; // 5+ spins as before, but always at least 720deg
     wheel.style.transform = `rotate(${totalRotation}deg)`;
     const degree = (360 - (extra % 360)) % 360;
     const index = Math.floor(degree / 60);

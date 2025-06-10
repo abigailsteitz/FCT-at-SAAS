@@ -39,6 +39,9 @@
         <a href="https://m.media-amazon.com/images/I/81fQ7ANRlGL._AC_UF350,350_QL80_.jpg" target="_blank" rel="noopener">
             <img src="https://m.media-amazon.com/images/I/81fQ7ANRlGL._AC_UF350,350_QL80_.jpg" alt="">
         </a>
+        <a href="https://cdn.decorpad.com/photos/2017/07/20/m_green-and-brown-mediterranean-style-living-room.jpg" target="_blank" rel="noopener">
+            <img src="https://cdn.decorpad.com/photos/2017/07/20/m_green-and-brown-mediterranean-style-living-room.jpg" alt="">
+        </a>
     </div>
     <div class="parallax-side right" id="parallaxRight">
         <a href="https://hips.hearstapps.com/hmg-prod/images/green-living-rooms-michelle-1669649077.jpeg?crop=1xw:0.9999xh;center,top&resize=980:*" target="_blank" rel="noopener">
@@ -68,18 +71,22 @@
             <img src="https://edwardgeorgelondon.com/wp-content/uploads/2024/12/Master-bedrooms-sage-green-accent-wall-textured-bedding-minimalist-decor-sage-green-room-ideas-683x1024.webp" alt="">
         </a>
         <a href="https://blog.canadianloghomes.com/wp-content/uploads/2022/05/sage-green-kitchen-cabinets-1.jpg" target="_blank" rel="noopener">
-            <img src=https://blog.canadianloghomes.com/wp-content/uploads/2022/05/sage-green-kitchen-cabinets-1.jpg" alt="">
+            <img src="https://blog.canadianloghomes.com/wp-content/uploads/2022/05/sage-green-kitchen-cabinets-1.jpg" alt="">
+        </a>
+        <a href="https://ondecor.com/cdn/shop/products/il_fullxfull.4964167986_3a0a.jpg?v=1727646547&width=1946" target="_blank" rel="noopener">
+            <img src="https://ondecor.com/cdn/shop/products/il_fullxfull.4964167986_3a0a.jpg?v=1727646547&width=1946" alt="">
         </a>
     </div>
     <div class="main-content">
         <nav class="top-nav">
-            <div class="nav-content">
+            <div class="nav-content" style="margin-left:130px;">
                 <!-- Newsletter button moved to far left -->
                 <div class="newsletter-btn-wrapper">
                     <button 
                         class="newsletter-btn"
                         onclick="alert('Subscribe to our monthly newsletter coming soon!')"
                         id="newsletter-btn"
+                        data-i18n="newsletter_btn"
                     >
                         Sign up for our newsletter
                     </button>
@@ -89,20 +96,21 @@
                     <a href="randomproject.html">
                         <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
                     </a>
-                    <span class="nav-logo-text">Driftwood</span>
+                    <span class="nav-logo-text" data-i18n="brand">Driftwood</span>
                 </div>
                 <div class="nav-links">
-                    <a href="#" id="nav-home">Home</a>
-                    <a href="shop.html" id="nav-shop">Shop</a>
-                    <a href="about.html" id="nav-about">About</a>
-                    <a href="faq.html" id="nav-faq">FAQ</a>
-                    <a href="contact.html" id="nav-contact">Contact</a>
-                    <a href="cart.html" id="nav-cart">Cart</a>
+                    <a href="#" id="nav-home" data-i18n="nav_home">Home</a>
+                    <a href="shop.html" id="nav-shop" data-i18n="nav_shop">Shop</a>
+                    <a href="about.html" id="nav-about" data-i18n="nav_about">About</a>
+                    <a href="faq.html" id="nav-faq" data-i18n="nav_faq">FAQ</a>
+                    <a href="contact.html" id="nav-contact" data-i18n="nav_contact">Contact</a>
+                    <a href="cart.html" id="nav-cart" data-i18n="nav_cart">Cart</a>
+                    <a href="wishlist.html" id="nav-wishlist" data-i18n="nav_wishlist">Wishlist</a>
                 </div>
                 <!-- Theme switcher moved here -->
-                <button class="theme-switcher-btn" onclick="toggleTheme()">Switch Theme</button>
+                <button class="theme-switcher-btn" onclick="toggleTheme()" data-i18n="theme_switch">Switch Theme</button>
                 <!-- Language switcher button -->
-                <button class="lang-switcher-btn" onclick="toggleLanguage()" style="margin-left:8px;">EN/ES</button>
+                <button class="lang-switcher-btn" onclick="toggleLanguage()" style="margin-left:8px;" data-i18n="lang_switch">EN/ES/FR</button>
                 <!-- Hamburger menu button -->
                 <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
                     <span></span>
@@ -140,8 +148,8 @@
         </div>
         <div class="container">
             <div class="white-box">
-                <h1 id="title-main">Driftwood Home Decor</h1>
-                <p id="desc-main">
+                <h1 id="title-main" data-i18n="main_title">Driftwood Home Decor</h1>
+                <p id="desc-main" data-i18n="main_desc">
                     Driftwood Home Decor is a curated home and lifestyle brand offering timeless, nature-inspired pieces that bring warmth, calm, and character into every space. From earthy ceramics to soft textiles and handcrafted decor, Driftwood blends organic materials with minimalist design — helping you create a home that feels as beautiful as it is grounded.
                 </p>
             </div>
@@ -158,41 +166,41 @@
             <!-- Centered slideshow end -->
             <div class="quiz-btn-wrapper">
                 <a href="newpage.html">
-                    <button class="quiz-btn" id="quiz-btn-label">Take the Personality Quiz</button>
+                    <button class="quiz-btn" id="quiz-btn-label" data-i18n="quiz_btn">Take the Personality Quiz</button>
                 </a>
             </div>
             <!-- Employee cards start -->
             <div class="employee-list">
-                <div class="employee-list-title" id="team-title">Our Team</div>
+                <div class="employee-list-title" id="team-title" data-i18n="emp1_name">Our Team</div>
                 <div class="employee-card">
                     <img src="https://thumbs.dreamstime.com/b/beautiful-girl-dreadlocks-young-woman-hairdress-against-summer-nature-41323139.jpg" alt="Jade"/>
-                    <div class="employee-name" id="emp1-name">Jade</div>
-                    <div class="employee-role" id="emp1-role">Lead Stylist</div>
-                    <div class="employee-desc" id="emp1-desc">Creates unique, nature-inspired looks and guides our design vision.</div>
+                    <div class="employee-name" id="emp1-name" data-i18n="emp1_name">Jade</div>
+                    <div class="employee-role" id="emp1-role" data-i18n="emp1_role">Lead Stylist</div>
+                    <div class="employee-desc" id="emp1-desc" data-i18n="emp1_desc">Creates unique, nature-inspired looks and guides our design vision.</div>
                 </div>
                 <div class="employee-card">
                     <img src="https://media.istockphoto.com/id/854442338/photo/looks-like-another-bright-and-successful-day.jpg?s=612x612&w=0&k=20&c=Ni1-ATPFgNku9JXy3TGK1tLTnA7vJWyTXYfSsAIItXk=" alt="James"/>
-                    <div class="employee-name" id="emp2-name">James</div>
-                    <div class="employee-role" id="emp2-role">Customer Experience</div>
-                    <div class="employee-desc" id="emp2-desc">Ensures every guest feels welcome and helps with all inquiries.</div>
+                    <div class="employee-name" id="emp2-name" data-i18n="emp2_name">James</div>
+                    <div class="employee-role" id="emp2-role" data-i18n="emp2_role">Customer Experience</div>
+                    <div class="employee-desc" id="emp2-desc" data-i18n="emp2_desc">Ensures every guest feels welcome and helps with all inquiries.</div>
                 </div>
                 <div class="employee-card">
                     <img src="https://media.istockphoto.com/id/1321204080/photo/smiling-plus-size-woman-using-her-smartphone-while-walking-home-from-the-marketplace-carrying.jpg?s=612x612&w=0&k=20&c=mcdOsoYEPC_Gmd_g_Wi7aRNzu-uw9Kq3yd8FZinZMcM=" alt="Maya"/>
-                    <div class="employee-name" id="emp3-name">Maya</div>
-                    <div class="employee-role" id="emp3-role">Shop Manager</div>
-                    <div class="employee-desc" id="emp3-desc">Keeps the shop running smoothly and manages daily operations.</div>
+                    <div class="employee-name" id="emp3-name" data-i18n="emp3_name">Maya</div>
+                    <div class="employee-role" id="emp3-role" data-i18n="emp3_role">Shop Manager</div>
+                    <div class="employee-desc" id="emp3-desc" data-i18n="emp3_desc">Keeps the shop running smoothly and manages daily operations.</div>
                 </div>
                 <div class="employee-card">
                     <img src="https://media.istockphoto.com/id/2205370986/photo/beautiful-flower-shop-owner.jpg?s=612x612&w=0&k=20&c=WjqEO3DhxbiKA_ZPAjqfGAcmRYbVyw4Rn6Ww6ehm_LU=" alt="Lila"/>
-                    <div class="employee-name" id="emp4-name">Lila</div>
-                    <div class="employee-role" id="emp4-role">Florist & Decorator</div>
-                    <div class="employee-desc" id="emp4-desc">Arranges flowers and decor to bring warmth and beauty to every space.</div>
+                    <div class="employee-name" id="emp4-name" data-i18n="emp4_name">Lila</div>
+                    <div class="employee-role" id="emp4-role" data-i18n="emp4_role">Florist & Decorator</div>
+                    <div class="employee-desc" id="emp4-desc" data-i18n="emp4_desc">Arranges flowers and decor to bring warmth and beauty to every space.</div>
                 </div>
                 <div class="employee-card">
                     <img src="https://thumbs.dreamstime.com/b/male-musician-working-nature-young-creative-man-wearing-eyeglasses-sitting-green-grass-outdoors-making-some-notes-196499837.jpg" alt="Eli"/>
-                    <div class="employee-name" id="emp5-name">Eli</div>
-                    <div class="employee-role" id="emp5-role">Creative Director</div>
-                    <div class="employee-desc" id="emp5-desc">Leads branding and creative projects, ensuring a cohesive style.</div>
+                    <div class="employee-name" id="emp5-name" data-i18n="emp5_name">Eli</div>
+                    <div class="employee-role" id="emp5-role" data-i18n="emp5_role">Creative Director</div>
+                    <div class="employee-desc" id="emp5-desc" data-i18n="emp5_desc">Leads branding and creative projects, ensuring a cohesive style.</div>
                 </div>
             </div>
             <!-- Employee cards end -->
@@ -227,10 +235,10 @@
             </g>
           </svg>
         </div>
-        <button class="spin-btn" onclick="spinSVGWheel()">
+        <button class="spin-btn" onclick="spinSVGWheel()" data-i18n="spin_btn">
           <img src="C:\Users\SAAS_User\Downloads\undo-arrow.png" alt="Spin" style="height:1.2em;vertical-align:middle;margin-right:6px;"> Spin
         </button>
-        <button class="spin-close" onclick="closeSpinModal()">✖ Close</button>
+        <button class="spin-close" onclick="closeSpinModal()" data-i18n="spin_close">✖ Close</button>
       </div>
     </div>
     <!-- Trigger Button -->
@@ -244,6 +252,14 @@
     <!-- Add main.js before lang.js -->
     <script src="main.js"></script>
     <script src="lang.js"></script>
+    <footer class="main-footer">
+        <div>
+            <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo" class="footer-logo"/>
+            <span data-i18n="footer_contact_label">Contact us:</span> <a href="mailto:hello@driftwooddecor.com" class="footer-email" id="footer-contact">hello@driftwooddecor.com</a>
+            <br>
+            <span data-i18n="footer_copyright">&copy; 2024 Driftwood Home Decor</span>
+        </div>
+    </footer>
 </body>
 </html>
 

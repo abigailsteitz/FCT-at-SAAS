@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wishlist | Driftwood Home Decor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style copy.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-content" style="margin-left:50px;">
+            <div class="nav-logo">
+                <a href="randomproject.html">
+                    <img src="C:\Users\SAAS_User\Downloads\download.png" alt="Logo"/>
+                </a>
+                <a href="randomproject.html" style="text-decoration:none;">
+                    <span class="nav-logo-text">Driftwood</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="randomproject.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Cart</a>
+                <a href="wishlist.html" class="active">Wishlist</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container cart-container">
+        <div class="cart-title">Your Wishlist</div>
+        <table class="cart-table" id="wishlistTable">
+            <thead>
+                <tr>
+                    <th style="width:40%;">Product</th>
+                    <th style="width:15%;">Price</th>
+                    <th style="width:15%;">Qty</th>
+                    <th style="width:15%;">Total</th>
+                    <th style="width:15%;"></th>
+                </tr>
+            </thead>
+            <tbody id="wishlistBody">
+                <!-- JS will fill this -->
+            </tbody>
+            <tfoot>
+                <tr class="cart-total-row">
+                    <td colspan="3" style="text-align:right;">Wishlist Total:</td>
+                    <td id="wishlistTotal" style="font-weight:700;">$0.00</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        <div id="wishlistEmpty" class="cart-empty" style="display:none;">
+            Your wishlist is empty.<br>
+            <a href="shop.html" class="back-link" style="margin-top:18px;display:inline-block;">&larr; Continue Shopping</a>
+        </div>
+        <div class="cart-actions">
+            <button class="continue-btn" onclick="window.location.href='shop.html'">&larr; Continue Shopping</button>
+        </div>
+    </div>
+    <footer style="width:100%;background:#dfd8cb;color:#7b5e3b;text-align:center;padding:28px 0 18px 0;font-size:1.1em;letter-spacing:0.5px;position:relative;z-index:2;margin-top:48px;">
+        <div>
+            Contact us: <a href="mailto:hello@driftwooddecor.com" style="color:#7b5e3b;text-decoration:underline;">hello@driftwooddecor.com</a>
+            <br>
+            &copy; 2024 Driftwood Home Decor
+        </div>
+    </footer>
+    <script>
+        function renderWishlist() {
+            const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+            const wishlistBody = document.getElementById('wishlistBody');
+            const wishlistTotal = document.getElementById('wishlistTotal');
+            const wishlistEmpty = document.getElementById('wishlistEmpty');
+            wishlistBody.innerHTML = '';
+            let total = 0;
+            if (wishlist.length === 0) {
+                wishlistEmpty.style.display = 'block';
+                document.querySelector('.cart-table').style.display = 'none';
+                document.querySelector('.cart-actions').style.display = 'none';
+                return;
+            } else {
+                wishlistEmpty.style.display = 'none';
+                document.querySelector('.cart-table').style.display = '';
+                document.querySelector('.cart-actions').style.display = 'flex';
+            }
+            wishlist.forEach((item, idx) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <span style="font-weight:600;color:#7b5e3b;">${item.name}</span>
+                    </td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td>
+                        <input type="number" min="1" value="${item.qty}" style="width:48px;text-align:center;border-radius:8px;border:1px solid #c8bfae;padding:4px 0;" onchange="updateWishlistQty(${idx}, this.value)">
+                    </td>
+                    <td>$${(item.price * item.qty).toFixed(2)}</td>
+                    <td>
+                        <button class="cart-remove-btn" onclick="removeWishlistItem(${idx})">Remove</button>
+                    </td>
+                `;
+                wishlistBody.appendChild(row);
+                total += item.price * item.qty;
+            });
+            wishlistTotal.textContent = '$' + total.toFixed(2);
+        }
+        function removeWishlistItem(idx) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+            wishlist.splice(idx, 1);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            renderWishlist();
+        }
+        function updateWishlistQty(idx, val) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+            val = Math.max(1, parseInt(val) || 1);
+            wishlist[idx].qty = val;
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            renderWishlist();
+        }
+        window.onload = renderWishlist;
+    </script>
+</body>
+</html>
