@@ -1,0 +1,69 @@
+<head>
+  <!--This is the title at the top of your browser tab. Search engines will also use this to display to users-->
+  <title>Quiz Website</title>
+  <!--This tag brings in the CSS you write to add style to your webpage-->
+  <link rel="stylesheet" href="main.css" />
+  <!--This tag brings in the JavaScript you write to add behavior to your webpage-->
+  <script src="personalityquiz.js"></script>
+</head>
+<body>
+  <h1>What fruit are you if you are currently taking this quiz?</h1>
+
+  <h2>Question 1: What's your favorite color?</h2>
+  <input type="radio" name="color" id="Red">
+  <label>Red</label><br>
+  <input type="radio" name="color" id="Green">
+  <label>Green</label><br>
+  <input type="radio" name="color" id="Blue">
+  <label>Blue</label><br>
+
+  <h2>Question 2: How do you move?</h2>
+  <input type="radio" name="travel" id="Walk">
+  <label>Walk</label><br>
+  <input type="radio" name="travel" id="Swim">
+  <label>Swim</label><br>
+  <input type="radio" name="travel" id="SwimUpsideDown">
+  <label>Swim upside down</label><br>
+
+  <h2>Question 3: Can you be drowned in water?</h2>
+  <input type="radio" name="ocean" id="Yes">
+  <label>Yes</label><br>
+  <input type="radio" name="ocean" id="No">
+  <label>No</label><br>
+
+  <h2>Question 4: How would escape from being chased?</h2>
+  <input type="radio" name="chase" id="Fight">
+  <label>Fight back</label><br>
+  <input type="radio" name="chase" id="Run">
+  <label>Run</label><br>
+  <input type="radio" name="chase" id="Secrete">
+  <label>Secret acid, ink, or slime</label><br>
+  <input type="radio" name="chase" id="Diplomacy">
+  <label>Use diplomacy</label><br>
+
+  <h2>Question 5: Are you smart?</h2>
+  <input type="radio" name="int" id="Of course">
+  <label>Yo, I'm a web designer, of course</label><br>
+  <input type="radio" name="int" id="Probably not">
+  <label>Probably not</label><br>
+  <input type="radio" name="int" id="Head empty">
+  <label>Head empty</label><br>
+  <input type="radio" name="int" id="Existential Crisis">
+  <label>Define "smart". Define "you". Define "are".</label>
+  <br>
+  <br>
+
+  <button onclick="seeResult()">See Result</button>
+  <div id="AppleResult">
+    <h1>You're an Apple</h1>
+  </div>
+  <div id="MangoResult">
+    <h1>You're a Mango</h1>
+  </div>
+  <div id="StrawberryResult">
+    <h1>You're a Strawberry</h1>
+  </div>
+  <div id="GrapeResult">
+    <h1>You're a Grape</h1>
+  </div>
+</body>
