@@ -14,7 +14,7 @@ header {
 
 nav a {
     margin : 0 15px;
-    color : #84e6f8;
+    color : #ff94d2;
     text-decoration : none;
     font-size : bold;
 }
@@ -27,15 +27,46 @@ nav a :hover {
     padding : 30px;
 }
 
-.product, .employee {
-    background-color : #1b3e82;
+.product {
+    background-color : #7a1f1f;
+    border-radius : 10px;
+    padding : 20px;
+    margin: 15px;
+    width : 30%;
+    height : 300px;
+    text-align : center;
+    display: inline-block
+}
+
+.employee {
+    background-color : #7a1f1f;
     border-radius : 10px;
     padding : 20px;
     width : 30%;
     text-align : center;
 }
 
+.card {
+    margin : 15px;
+    height : 300px;
+    display: inline-block;
+    vertical-align: top;
+    overflow:hidden;
+}
+
 .product img, .employee img {
-    width : 100px;
+    width : 150px;
     border-radius : 8px;
+}
+
+#Hat,
+#BlackShorts,
+#BlueShorts,
+#WhiteTank,
+#BlackHoodie,
+#BlackSweatshirt,
+#WhiteSweatshirt,
+#BlackJeans,
+#BlueJeans {
+    display: none;
 }
