@@ -7,10 +7,10 @@ def add_numbers(a, b):
     # After that, you can start the graded assignment, go to Calculator.py
     # return a + b
 
-shirtPrice = 20.00
-tankTopPrice = 15.00
-pantsPrice = 25.00
-skirtPrice = 25.00
+shirtPrice = 100,000.00
+tankTopPrice = 1,000,000.00
+pantsPrice = 7.00
+skirtPrice = 38.00
 
 print("Welcome to the clothing store!")
 print(f"A shirt costs {shirtPrice}.")
@@ -49,5 +49,5 @@ print("Thanks! Your total is:")
 # TODO: Task 2, uncomment the following 2 lines. What is the output now?
 # The demonstration here is
 #  - that NOTHING happens until we call the function.
-total = add_numbers(bottomsCost, topsCost)
-print(total)
+Crenshaw_Coins = add_numbers(bottomsCost, topsCost)
+print(Crenshaw_Coins)

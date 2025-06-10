@@ -15,6 +15,14 @@ for i in range(len(data)):
     
 print("Smallest: " + str(smallestSoFar))
 
+# Find the largest
+largestSoFar = data[0]
+for i in range(len(data)):
+  if data[i] > largestSoFar:
+    largestSoFar = data[i]
+    
+print("Largest: " + str(largestSoFar))
+
 # The largest looks similar
 
 # Find the sum
@@ -24,4 +32,7 @@ for i in range(len(data)):
   
 print("Sum: " + str(sumSoFar))
 
-# Find the average looks similar
+# Find the average looks similar  
+# Take the numbers add them togather then divide by the amount of numbers
+Average = sumSoFar / (len(data))
+print("Average: " + str(Average))
