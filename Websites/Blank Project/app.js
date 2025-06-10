@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function buy() {
     alert("Thank you for your purchase!");
+    sessionStorage.setItem('cart', JSON.stringify({}));
+    window.location.href = "thankYou.html";
 }
 
 function loadCart() {
